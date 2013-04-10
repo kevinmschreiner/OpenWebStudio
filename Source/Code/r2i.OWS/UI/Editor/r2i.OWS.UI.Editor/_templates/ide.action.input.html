@@ -1,0 +1,91 @@
+   <table class=Normal width=100% border=0 cellpadding=1 cellspacing=0>
+    <tr>
+     <td class=SubHead width=151>URL</td>
+     <td><input name=frmActionInput_URL id=frmActionInput_URL type=textbox style="width:100%;"></td>
+    </tr>   
+    <tr>
+     <td class=SubHead width=151>Authentication Type</td>
+     <td>
+      <input type="radio" id=frmActionInput_Auth name=frmActionInput_Auth onclick="onfrmActionInput_AuthToggle()" value="0">No Authentication<br>     
+      <input type="radio" id=frmActionInput_Auth name=frmActionInput_Auth onclick="onfrmActionInput_AuthToggle()" value="1">Basic Authentication<br>
+      <input type="radio" id=frmActionInput_Auth name=frmActionInput_Auth onclick="onfrmActionInput_AuthToggle()" value="3">Digest Authentication<br>   
+	  <input type="radio" id=frmActionInput_Auth name=frmActionInput_Auth onclick="onfrmActionInput_AuthToggle()" value="2">Windows Authentication
+     </td>
+    </tr>	
+    <tr>
+     <td class=SubHead width=151><div id=dfrm0>User Name</div></td>
+     <td><div id=dfrm1><input name=frmActionInput_UserName id=frmActionInput_UserName type=textbox style="width:100%;"></div></td>
+    </tr>	
+    <tr>
+     <td class=SubHead width=151><div id=dfrm2>Password</div></td>
+     <td ><div id=dfrm3><input name=frmActionInput_Password id=frmActionInput_Password type=textbox style="width:100%;"></div></td>
+    </tr>	
+    <tr>
+     <td class=SubHead width=151><div id=dfrm4>Domain<br></td>
+     <td ><div id=dfrm5><input name=frmActionInput_Domain id=frmActionInput_Domain type=textbox style="width:100%;"><br></div></td>
+    </tr>	
+    <tr>
+     <td class=SubHead width=151>Content Type</td>
+     <td><input name=frmActionInput_ContentType id=frmActionInput_ContentType type=textbox style="width:100%;"></td>
+    </tr>	
+    <tr>
+     <td class=SubHead width=151>Headers (Request)</td>
+     <td><textarea wrap=offname=frmActionInput_Headers id=frmActionInput_Headers style="height: 150px; width:100%;" richtext=true ></textarea></td>
+    </tr>	    
+    <tr>
+     <td class=SubHead width=151>Query Parameters</td>
+     <td><input name=frmActionInput_QueryParameters id=frmActionInput_QueryParameters type=textbox style="width:100%;"></td>
+    </tr>	
+    <tr>
+     <td class=SubHead width=151>Data (Body)</td>
+     <td><textarea wrap=offname=frmActionInput_Data id=frmActionInput_Data style="height: 150px; width:100%;" richtext=true ></textarea></td>
+    </tr>	
+    <tr>
+     <td class=SubHead width=151>Method</td>
+     <td>
+     <select name=frmActionInput_Method id=frmActionInput_Method style="width:100%;" onchange="onfrmActionInput_MethodToggle()">
+      <option Value="get">Get</option>
+      <option Value="put">Put</option>
+      <option Value="post">Post</option>            
+      <option Value="delete">Delete</option>
+      <option Value="soap">Soap</option>
+     </select>
+     </td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151><div id=dfrm6>Soap Action</div></td>
+     <td><div id=dfrm7><input name=frmActionInput_SoapAction id=frmActionInput_SoapAction type=textbox style="width:100%;"></div></td>
+    </tr>	
+    <tr>
+     <td class=SubHead width=151><div id=dfrm8>Soap Result Tag</div></td>
+     <td><div id=dfrm9><input name=frmActionInput_SoapResult id=frmActionInput_SoapResult type=textbox style="width:100%;"></div></td>
+    </tr>	
+    <tr>
+     <td class=SubHead width=151>Response Format</td>
+     <td>
+     <select name=frmActionInput_ResponseFormat id=frmActionInput_ResponseFormat style="width:100%;" onchange="onfrmActionInput_ResponseFormatToggle()">
+      <option Value="text">Text</option>
+      <option Value="xml">XML</option>
+      <option Value="binary">Binary</option>
+     </select>
+     </td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151>Variable Type</td>
+     <td>
+     <select name=frmActionInput_VariableType id=frmActionInput_VariableType style="width:100%;">
+      <option value="&amp;lt;Session&amp;gt;">&lt;Session&gt;</option>
+      <option value="&amp;lt;Action&amp;gt;">&lt;Action&gt;</option>
+      <option value="&amp;lt;Cookie&amp;gt;">&lt;Cookie&gt;</option>
+     </select>
+     </td>
+    </tr>	
+    <tr>
+     <td class=SubHead width=151>Name</td>
+     <td><input name=frmActionInput_Name id=frmActionInput_Name type=textbox style="width:100%;"></td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151><div id=dfrm10>XML Path</div></td>
+     <td><div id=dfrm11><input name=frmActionInput_XMLPath id=frmActionInput_XMLPath type=textbox style="width:100%;"></div></td>
+    </tr>
+   </table>

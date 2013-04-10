@@ -1,0 +1,348 @@
+#01/13/2009#
+Many updates include a modifications:
+1. Expansion of Input and Query actions to support Digest Authentication
+2. Modification of File action to allow for multiple consumption of form elements
+3. Expansion of Action Query Variable to allow for multiple formatters to be applied to a variable value
+4. Modification of Variable and Action Value handling to reduce complexity
+5. Correct to Firewall Formatter
+6. Correction to Replace Formatter
+7. Expansion of JSON and XML Query to allow for Digest Authentication
+8. Correction to Alternate Token to correct issue with shared state value
+9. Expansion of Sort Token to allow for additional Querystring and target objects, similar to the use of ows.Fetch
+10.Corrections throughout a number of javascript libraries to eliminate references to beta and other.
+11.Module Title assignment corrected
+12.Action Input corrected to replace tokens for the ContentType
+13.Action Input corrected to replace tokens for the Soap Action
+14.Corrected Email Action to support multiple addresses for TO,CC and BCC
+15.Modified handling of Querystring, Session, Viewstate, Form and Cookie variable types to support empty values.
+16.Correction to handling of Intramodule Communication Messages to resolve incoming message conflicts.
+17.Changed handling of Sessions, Sessionless runtime is now fully supported.
+18.Added Caching options for all queries.
+19.Added STRIPHTML adjustment to support multiple parameters. For Example: [$Value,"{STRIPHTML:a,p,div,script,style}"]
+20.Added CAST formatter to convert JSON to an Object and an Object to a JSON string. Will be used in upcoming OWS Python action. (ejw)
+21.Added Assignments: <System> Page.Response.Headers.Clear;  <System> Page.Response.Clear;  <System> Page.Response.End; 
+22.Fixed debugging for new configurations. (ejw)
+23.Fixed Input action without a content type set explicitly. (ejw)
+24.Extended Functionality of Configuration Loader to allow for multiple configuration files which operate in incremental fashion.
+25.Extended Configurations to include both admin and ui javascript libraries. All libraries are now plugin based
+26.Extended UI javascript library functionality to allow for inclusions of Javascript libraries, marked as UI, from the General Settings
+27.Corrected Bug in GoTo which caused the operations to execute multiple times
+28.Corrected Bug in Admin for settings the GoTo Configurations and Regions
+29.Corrected loading of configuration file which caused unloading of configs from memory when file was left locked.
+30.Modified Build file to generate Upgrade, Install and Source PA's
+#03/25/09#
+1. Enhanced the runtime to provide a bit more cleanup during high Requests Per Second utilization
+2. Modified the core runtime to override the module cache value. When Module Cache is enabled in OWS, Page References were left out of caching. No they are cached in the header of the module.
+3. Modified Quickbuilder to create actions into a new region at the root of the config, rather than a child of the query action.
+4. Modified Quickbuilder to generate the javascript include changes into the configuration javascriptIncludes
+5. Corrected installation bug which left openwebstudio.217.config out fo the PA
+6. Removed exception thrown when no configuration is specified within the callback querystring.
+7. Modified Ajax functionality to include the ability for Progressive Enhancement. Non Ajax driven page loads, with SEO compatible AJAX integration.
+8. Extended the DotNetNuke wrapper to support the ability to create a schedule that executes a configuration. Only requirement is setting the FullTypeName to "r2i.OWS.Wrapper.DNN.Interface.Scheduler, r2i.OWS.Wrapper.DotNetNuke.Interface" and the Dependencies to the GUID of the ConfigurationID.
+9. Extended the Email Action to support SSL.
+10.Corrected bug, Query Actions with child redirect actions failed to redirect.
+11.Corrected bug, collision with DNN Help module
+12.Corrected Paging and Status, an issue was caused in IE that added extra padding below the div paging and status elements.
+#04/20/09#
+1. Added <SYSTEM> Query to get information about Cookie, Forms, Querystring, Context, User, Portal, et al.
+2. Made publishing non-modal and created keybinds for save, open and new configurations.
+3. Added OpenControl Token for inserting the output of one configuration into the output of another
+4. Correcting Paging logic
+5. Extended Growler notifications, included into each of the default interfaces.
+6. Extended Growler warnings to include a warning whenever debugging is enabled.
+7. Corrected IE7 Issue with paging
+%05/21/09#
+1. Correction to Paging logic for Postbacks (was off due to zero based index)
+2. Correction to Admin.css for upgrades
+3. Correction to Sort logic for PA's - Session variable for tracking sort now contains configurationID and moduleID
+4. Expansion of General Tab to include ConfigurationID
+5. Expansion of General Tab to include Help on ConfigurationID (How to use it for OpenControl,PA Module/Module Settings, Page)
+6. Inclusion of Macros.vb, Macros.config and ChangeLog.txt in Source zip.
+7. Changed version number to 02.01.10
+#05/22/09#
+1. Another correction to pager - FIRST was broken by the LAST update...
+2. Changed version number to 02.01.11
+#06/03/09#
+1. Corrected ModuleCommunication messages for SkinObjects and ModuleSettings
+2. Corrected Sort Tag issue which was created in 02.01.11 when sorting was modified for multiple module control interfaces
+3. Corrected Paging issue that caused the pager to dissapear in IE7
+4. Corrected Paging issue that cause the pager to operate incorrectly in Ajax mode.
+5. Corrected spelling error in Quickbuilder
+6. Corrected Quickbuilder generation for Prefix and Postfix of querystring parameters
+7. Corrected Quickbuilder to leave the Primary Key field out of the INSERT list.
+8. Changed version number to 02.01.12
+#06/08/09#
+1. Corrected ModuleCommunication messages for SkinObjects and ModuleSettings
+2. Added additional logging to smtp exception in Utilities.SendEMail.
+#07/02/09#
+1. Corrected Google Chrome bug with Action tree keyboard detection
+2. Corrected Firefox 3.5 issue with JSON namespace and saving configurations
+3. Corrected IE8 issue with Validation library
+4. Added Query Action ability to Execute Query with Custom Connectionstring
+5. Added ability to generate text images with File action
+6. Added ability to retrieve the current OWS Version via [OWSVersion,System]
+7. Corredted Thickbox issues with latest version of jquery
+8. Added current version check to About page
+9. Added Querystring debugging to the Statistics within Debug
+10.Corrected Debugging for Configurations executed by the Scheduler
+11.Changed version number to 02.01.13
+#07/13/2009#
+1. Moved Graphics library for Engine into Utilities
+2. Added MeasureString formatter to return the width/height of a specific string with font and size identified
+3. Added EncodeJavascript formatter to return the javascript encoded version of the value
+4. Modified the Installation files for 5.x support issues
+5. Added Pager token to generate a custom formatted pager: {PAGER, Current="", Pages="", Format="", CurrentFormat="", LeftFormat="", DisabledLeftFormat="", RightFormat="", DisabledRightFormat="", EmptyFormat=""}
+#08/05/2009#
+1. Corrected History Page token for Progressive enhancement based modules.
+2. Corrected Validation library which caused problems when used with Ventrian Articles module
+3. Corrected issue causing PortalID to return as root portal in some instances
+4. Corrected onload functionality - custom load function now executes properly.
+5. Modified Upgrade from ListX to OWS to change the default order of regions to Variables,Actions followed by Template.
+6. Changed version number to 02.01.14
+#08/06/2009#
+1. Corrected Build 02.01.14 to contain correct ows.js file
+2. Changed version number to 02.01.15
+#08/13/2009#
+1. Extended SendEmail utility to support alternate SMTP port number, given format <host>:<port>
+2. Extended the Debugging information within the Email Action
+#08/14/2009#
+1. Modified the Copy/Paste logic to allow for Copy and Paste between configurations, sites, tabs and browsers
+2. Corrected XML Query issue when using Transform/Source for items which have a complex tag structure.
+3. Corrected iSearchable bug caused when CacheName and CacheTime were implemented (02.01.10)
+4. Changed version number to 02.01.16
+#09/04/2009#
+1. Corrected Sliding Expiration problem within Cacheing of Query results. Now a negative cache time is a sliding expiration while a positive cache time is an absolute expiration
+2. Modified Import/Export behaviour to copy module settings properly.
+3. Corrected File Action - Compression failed for Form input elements.
+4. Corrected File Action Admin - Transformation Type was not displaying properly within the list.
+#09/18/2009#
+1. Changed version number to 02.01.17
+#11/3/2009#
+1. Added CheckExists function to control interface.Import of XML from iPortable will ONLY insert a configuration that doesnt exist already. No Updates will occur.
+2. Added Samples to Framework Project for maintenance into /Framework/Samples, these samples include:
+3. Sample: Captcha.Example.Using.Recaptcha
+4. Sample: Country.Region.AJAX.Dropdown
+5. Sample: Directory.List.With.Version.And.Image.Dimensions
+6. Sample: DotNetNuke.Create.Portal (uses the new DotNetNuke Extension)
+7. Sample: Example.Image.Text.Writer
+8. Sample: Sample.Files.Upload.Download.Compress
+9. Sample: Simple.List.Query.With.Grouping
+10.Sample: Simple.List.Query
+11.Sample: Simple.Notes.Add.Edit.List
+12.Sample: Wrapper.Test.Routine
+#11/5/2009#
+1. Added DotNetNuke.Wrapper.Extensions - Adds new Query plugin:
+        <DOTNETNUKE.PORTALS>
+			<METHOD>Create,Alias</METHOD>
+           <PARAMETERS> 
+			<!--THE FOLLOWING ARE USED FOR CREATE:-->
+              <PORTALNAME></PORTALNAME> 
+              <PORTALALIAS></PORTALALIAS> 
+              <ISCHILD></ISCHILD> 
+              <HOMEDIRECTORY></HOMEDIRECTORY> 
+              <TITLE></TITLE> 
+              <KEYWORDS></KEYWORDS> 
+              <DESCRIPTION></DESCRIPTION> 
+              <FIRSTNAME></FIRSTNAME> 
+              <LASTNAME></LASTNAME> 
+              <PASSWORD></PASSWORD> 
+              <EMAIL></EMAIL> 
+              <TEMPLATE></TEMPLATE> 
+              <USERNAME></USERNAME> 
+        <!--THE FOLLOWING ARE USED FOR ALIAS: (ALIAS CAN BE COMMA DELIMITED-->
+              <ALIAS></ALIAS>  
+           </PARAMETERS> 
+        </DOTNETNUKE.PORTALS> 
+#12/1/2009#
+1. Added Prepend/Append to Assignment action. 
+2. Fixed assignment to header/footer/title to work the same way as all other assignments.
+3. Fixed Basic Authentication Bug within INPUT action
+4. Added HTTP Request Headers block to Input Action (colon delimiter between key/value, carriage return between Headers)
+5. Added HTTP Request Headers block to JSON Query (colon delimiter between key/value, carriage return between Headers)
+6. Added HTTP Request Headers block to XML Query (colon delimiter between key/value, carriage return between Headers)
+7. Added Request Headers to Debug
+#12/14/2009#
+1. Modified Debug to provide expand/collapse for Statistics Group
+2. Added HTTP Request methods for Input Action: PUT,DELETE
+3. Added HTTP Request methods for XML Query: PUT,DELETE
+4. Added HTTP Request methods for JSON Query: PUT,DELETE
+5. Added Filter Capability for Admin Configuration List
+6. Added DIRECTORY,DOTNETNUKE.PORTAL,JSON,SYSTEM,XML Query formats to Editor ribbon
+7. Corrected Administration Icon in iActionable Container elements
+8. Changed version number to 02.01.18
+#1/25/2009#
+1. Modified Wrapper to support iPortable Actions
+2. Modified Region to support Import and Export
+3. Modified Export logic to support Action variables and Query Result Export
+4. Modified Import logic to support Action variables and Query Result Import
+5. Modified Query action to support Query with previously executed Name and no Query assigned, for reading existing Cached results.
+6. Modified File Action to support UNC paths.
+7. Modified Validation library to properly support Date datatype validtions.
+8. Modified jQuery library to resolve support between 4.X and 5.X versions of DNN (if jquery is included, it checks before self registering).
+9. Modified jQuery NoConflict check, if jQuery is included by default, noConflict is ignored, and $jq mirrors jQuery $.
+10.Modfifed Encrypt/Decrypt to support both MD5 and SHA1.
+11.Corrected Administration Icon in iActionable Container elements
+#2/10/2010#
+12.Extended the Form source to store the Form Field value as the content of a stream when the Form Source field value is NOT a form File and IS present in the form.
+13.Extended iSearchable to support Debugging
+14.Modified Query Action to support reuse of result with Query Action of Same Name and No Query defined.
+15.Extended iPortable Import to support Debugging
+16.Extended iPortable Export to support Debugging
+17.Corrected File Action Image Resizing (ghost border) problem.
+18.Extended Render.Variable to include [ModuleTitle,System]
+19.Extended ALTERNATE to include True/False as optional First parameter. When True, the Index is ignored and each request increments the Alternator.
+20.Extended Module Settings to include View and Settings configurations.
+21.Extended Module Settings to include OWS Visible flag, to hide OpenWebStudio functionality once the configurations have been chosen.
+22.Added Samples - Release will coincide with tutorials to accompany each of the provided samples.
+23.Changed version number to 02.01.19
+#2/14/2010#
+1. Corrected XML Query handling, resolving [*INDEX].
+2. Corrected XML Query handling HTML Decode properly
+2. Changed version number to 02.01.19.01
+#2/22/2010#
+1. Modified Email Action to support defining the Email Server parameters.
+2. Modified File Action to correct Email Attachment assignment of Content Type
+3. Modified File Action to support overriding File Name and Content Type
+4. Modified File Action to allow ** wildcard for recursive searching of subdirectories.
+5. Change Build Version to 02.01.19.02
+#3/22/2010#
+1. Modified File Action to remove foreslash from Filename during Compress transformation.
+2. Added Encode Formatter with syntax [$Value,{ENCODE:type}] where type can be - UTF7,UTF8,UTF32,UNICODE,BIGENDIAN,ASCII,PIGLATIN,BODI,UBBIDUBBI,BACKSLANG,IZZLE
+3. Added Sample.Three.Columns.With.Alternate
+4. Added Sample.XML.Feed
+5. Added Sample.jQuery.DatePicker
+6. Added Sample.Encode.Formatter
+7. Added Sample.Compress.Portal.Files.With.Extension.Filter
+8. Added Sample.Custom.Pager.Using.lxPager
+9. Added Sample.Custom.Paging
+10.Enhanced OWS.js layer to better consume the Status Messages (2.2 will be released with custom status messages per module)
+11.Extended File Action Image Transformation to include Filters and Text Writing on images
+13.Added BreakWord formatter to conveniently end a string at or near the closet word break given a requested length
+14.Added a Count Formatter to get a Count of the Remaining or Preceding columns from the current point which contain the same value.
+15.Added a Replicate Formatter to repeat a value N times
+16.Changed Build Version to 02.01.19.03
+#07/23/2010#
+1. Corrected Encoding issues, changing ASCII encoding in all places to UTF8 to support localization
+2. Modified Action:Input and XML Query to support localization
+3. Extended IIF, Math and conditional logic to support String delimiting (',") properly. The original version had issues when mathematical symbols were contained within string blocks.
+4. Extended IIF, Math and conditional logic to support Date and Timespan mathematics. Any Date can be compared, or altered using standard US date syntax (MM/dd/yyyy hh:mm:ss.ff tt). Date mathematics requires placing the Date value between a pair of pound signs (#).
+	a. Comparison: #01/01/2010 10:00 AM# > #01/01/2010 9:00:AM# (All comparison symbols are supported
+	b. Manipulation: #01/02/2010 10:00 AM# - #01/01/2010 10:00 AM# yields a Timespan in date format: #00/01/00 00:00:00.00#
+	c. Manipulation: #01/02/2010 10:00 AM# + #05/00/00#  yields a new date: #06/02/2010 10:00 AM#
+	d. When the Timespan contains y,m and d - the timespan is not distinguishable from a date itself, so a timespan would need to have a trailing "ts" to identify it. For example: #01/01/2010# + #01/01/01 ts# yields #02/02/2011#
+	e. When the manipulation is performed on date as both the left and right values, a timespan is the result
+	f. When the manipulation is performed on date as the left, and timespan as the right, a date is the result
+	g. When the manipulation is performed on timespan as the left and date as the right, a date is the result
+5. Added GUID and UNIQUEIDENTIFIER as system values, used to generate a new random Guid on each call
+6. Extended OWS.js to include OWS specific variables
+7. Extended Action:Assignment to include assignment to runtime settings (General Properties) of the current configuration. The following settings are assigned by setting the assignment type to System, and Name to "configuration.???" where ??? is the name (non cased).
+	a. AutoRefreshInterval - a number identifying how frequently to automatically refresh (in milliseconds)
+	b. EnableAjax - identifying that ajax is enabled for the configuration
+	c. EnableAjaxCustomPaging - Enables lxPager functionality for the configuration
+	d. EnableAjaxCustomStatus - Enables customization of the status value
+	e. EnableAjaxManual - identifies that the module will display no results and a physical ows.Fetch call will need to be made to display the configuration.
+	f. EnableAjaxPageHistory - identifies that the URL will track the page hist within the url
+	g. EnableAjaxPaging - identifies that Ajax will be set to progressively enhanced Ajax paging functionality
+	h. EnabeAplhaFilter - displayes the alphabetic filter at the top of the module
+	i. EnableCustomPaging - identifies that the query will support custom paging (the second table will contain the page stats)
+	j. EnableForcedQuerySplit - identifies that GO will split the Queries to separate statements
+	k. RecordsPerPage - the total records to display per page
+	l. EnableHideOnNoQuery - the module will be automatically hidden when no query template is defined
+	m. EnableHideOnNoResults - the module will be automatically hidden when no results are found after executing the template query
+	n. EnableMultipleColumnSorting - when True, all columns are tracked for sort, when false, only one column is allowed at a time
+	o. EnablePageSelection - displays the Page selection in non Ajax mode
+	p. EnableQueryDebug - begins logging the debug of the current request from this action on for all users
+	q. EnableQueryDebugAdmin - begins logging the debug of the current request from this action on for admin users
+	r. EnableQueryDebugEdit - begins logging the debug of the current request from this action on for edit users
+	s. EnableQueryDebugErrorLog - begins logging the debug of the current request from this action on when SQL throws an exception
+	t. EnableQueryDebugSuper - begins logging the debug of the current request from this action on for super users
+	u. EnableRecordsPerPage - places the records per page selector above the output
+8. Added Custom Connection to File Action
+9. Extended all Custom Connections to allow OleDB,ODBC and SQL Client (Native)
+10.Added [ROWNUMBER,System] ([INDEX,SYSTEM]) to return the index number of the current row.
+11.Added [ROWS,System] to return the total number of rows
+12.Changed Build Version to 02.01.20.00
+#07/24/2010#
+1. Corrected the [INDEX,SYstem] handling to remove handling for *INDEX which conflicts with the Input Action.
+2. Changed Build Version to 02.01.21.00
+#08/28/2010#
+1. Added Folder deletion with wildcards. TO delete all the files in a folder For example a folder named FolderTest inside the Portals/0 directory the syntax is: /Portals/0/**FolderTest/FolderTest
+2. Changed Build Version to 02.01.21.01
+#10/12/2010#
+1. Added the following encryption tokens:
+	a. [CRYPTOGRAPHY.KEY.RIJNDAEL,System] - returns a unique key usable with the Rijndael Algorithm
+	b. [CRYPTOGRAPHY.KEY.TRIPLEDES,System] - returns a unique key usable with the TripleDes Algorithm
+	c. [CRYPTOGRAPHY.KEY.DES,System] - returns a unique key usable with the DES Algorithm
+	d. [CRYPTOGRAPHY.KEY.RC2,System] - returns a unique key usable with the RC2 Algorithm
+2. Added the following encryption formatters:
+	a. [$.........,{ENCRYPT_RIJNDAEL:key}]
+	b. [$.........,{ENCRYPT_TRIPLEDES:key}]
+	c. [$.........,{ENCRYPT_DES:key}]
+	d. [$.........,{ENCRYPT_RC2:key}]
+3. Corrected Right Bracket Escape issue with jRibbon.
+#10/13/2010#
+1. Extended Input Action to support identification (internal) of UTF8 String Encoding on local variables.
+2. Extended File Action to support automatic String to Binary conversion of UTF8 String Encoded local variables.
+#10/25/2010#
+1. Extended Assignment Action to support Response RedirectLocation
+#1/26/2011#
+1. Extended Assignment to support Attributes JSON Block assignments of meta tags. 
+   For example Type: <SYSTEM> Name:Page.Meta.{name:"METATAGNAME",property:"METATAGPROPERTY"} Value:"Testing" would add to the page header:
+   <meta property="METATAGPROPERTY" name="METATAGNAME" content="Testing"/>
+#4/01/2011#
+1. Corrected issue with Module Title not changing within PA modules
+2. Resolved naming conflict of NewtonSoft Json.Net library. To continue backwards compatibility to .Net 1.X and 2.X, we built a custom build of NewtonSoft JSON.net
+3. Changed Build Version to Production release 02.02.00.00
+#5/05/2011#
+1. Corrected issue with Cryptography Key Generation
+2. Changed Build Version to Production release 02.02.02.00
+#7/20/2011#
+1. Corrected runtime to support DNN6. DotNetNuke 6 has an issue with Menu Breaks which use a tilda as the title. The issue throws an exception from DDRMenu with an object reference error.
+2. Changed Build Version to Production release 02.02.03.00
+#11/15/2011#
+1. Correction to GetPassword call for unauthenticated users causing DotNetNuke to throw an exception
+2. Changed Build Version to production release 02.02.04.00
+#08/28/2012#
+1. Several corrections to support DNN 6.1/6.2/6.2.2 releases.
+2. Changed Build Version to production release 02.02.05.00
+#09/19/2012#
+1. Added new logic for the UI as Editor.aspx
+2. Added new service logic for UI as /_services/...
+3. Extended System Query to include the Query token logic.
+4. Extended System Query to include Form.Files
+5. Changed Build Version to production release 02.02.07.00 (beta)
+6. Added configuration.showAll assignment to <System> Collection
+7. Changed Build Version to production release 02.02.08.00 (beta)
+#01/28/2013#
+1. Changed Build Version to porudction release 02.02.09.00
+#02/14/2013#
+1. Extended FILE Formatter to include FILE.IMAGE.ORIENTATION which provides output of topleft,topright etc based on EXIF Orientation
+2. Extended FILE Formatter to include FILE.IMAGE.ROTIATION which provides a rotation angle to rotate the image to the correct visual position based on EXIF Orientation
+3. Extended FILE Action to include Image Rotation Transform. For all Angles divisible by 90, add X,Y or XY to the end of the angle to perform a rotate and flip. Setting the Angle to a an angle which is not divisible by 90 does not support the X/Y flip and uses the Graphics component to rotate which sometimes causes Memory exceptions due to the handling of the GDI+ library in IIS.
+4. Corrected Administration Link in Menu (DNN7)
+5. Adjusted build to better support DNN6/DNN7 installation routines
+6. Changed Official Build Version to production release 02.02.14.00
+#03/01/2013#
+1. Adjusted File Action to properly close files open into memory
+2. Adjusted File Action to allow loading into Context for direct stream manipulation
+3. Adjusted Admin interface file action handling and features
+4. Added Smart Crop feature for files. When Smart crop is used, the system will attempt to locate the beginning and end of the image contained within a white/black space region, and crop the image around that region, then perform the resize.
+5. Added Crop feature for files cropping in image when given the Width/Height X/Y parameters.
+6. Changed Official Build Version to production release 02.02.15.00
+#03/26/2013
+1. Changed the handling of the reflected fields within the UserInfo object to support reflection of returned objects. Previously any returned object from the profile would be converted to a string. For example:
+	[UserInfo.Profile.PreferredTimeZone,System] would return (UTC-05:00) Eastern Time (US & Canada)
+   No child properties were supported. Now, however you can use any of the sub properties of the underlying object:
+	Timezone: [UserInfo.Profile.PreferredTimeZone,System]
+	Timezone Identifier: [UserInfo.Profile.PreferredTimeZone.Id,System]
+	Timezone Daylight Name: [UserInfo.Profile.PreferredTimeZone.DaylightName,System]
+	Timezone Display Name: [UserInfo.Profile.PreferredTimeZone.DisplayName,System]
+	Timezone Standard Name: [UserInfo.Profile.PreferredTimeZone.StandardName,System]
+	Timezone Supports Daylight Savings: [UserInfo.Profile.PreferredTimeZone.SupportsDaylightSavingTime,System]
+	Timezone Utc: [UserInfo.Profile.PreferredTimeZone.Utc,System]
+	Timezone Base Offset: [UserInfo.Profile.PreferredTimeZone.BaseUtcOffset,System]
+	Timezone Base Offset (Minutes): [UserInfo.Profile.PreferredTimeZone.BaseUtcOffset.TotalMinutes,System]
+2. Changed Official Build Version to production release 02.02.16.00
+#04/08/2013
+3. Added "Action" parameter to assign the result of a JSON query directly to an Action variable
+4. Added "Action.NAME.reflected.properties,System" logic for utilizing different sections of JSON objects stored as an action variable

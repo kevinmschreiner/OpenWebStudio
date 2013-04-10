@@ -1,0 +1,28 @@
+ALTER TABLE {databaseOwner}{objectQualifier}OpenWebStudio_Log ADD SessionId varchar(50)
+GO
+ALTER PROCEDURE {databaseOwner}{objectQualifier}OpenWebStudio_Log_Add(@ConfigurationId uniqueidentifier, @SettingName varchar(50), @SettingValue ntext, @UserID int, @SessionID varchar(50))
+AS
+INSERT INTO {databaseOwner}{objectQualifier}OpenWebStudio_Log([Date],ConfigurationId,SettingName,SettingValue,UserID,SessionID)
+VALUES (getdate(),@ConfigurationId,@SettingName,@SettingValue,@UserID,@SessionID)
+SELECT SCOPE_IDENTITY()
+GO
+ALTER TABLE {databaseOwner}{objectQualifier}OpenWebStudio_Repository ALTER COLUMN ConfigurationID uniqueidentifier NOT NULL
+GO
+DELETE FROM {databaseOwner}{objectQualifier}OpenWebStudio_Repository where configurationid not in (select configurationid from 
+{databaseOwner}{objectQualifier}OpenWebStudio_Settings)
+GO
+ALTER TABLE {databaseOwner}{objectQualifier}OpenWebStudio_Repository  WITH CHECK ADD  CONSTRAINT FK_OpenWebStudio_Repository_Settings 
+FOREIGN KEY(ConfigurationID)
+REFERENCES {databaseOwner}{objectQualifier}OpenWebStudio_Settings (ConfigurationID)
+GO
+ALTER TABLE {databaseOwner}{objectQualifier}OpenWebStudio_Repository CHECK CONSTRAINT FK_OpenWebStudio_Repository_Settings
+GO
+DELETE FROM {databaseOwner}{objectQualifier}OpenWebStudio_Log where configurationid not in (select configurationid from 
+{databaseOwner}{objectQualifier}OpenWebStudio_Settings)
+GO
+ALTER TABLE {databaseOwner}{objectQualifier}OpenWebStudio_Log  WITH CHECK ADD  CONSTRAINT FK_OpenWebStudio_Log_Settings 
+FOREIGN KEY(ConfigurationId)
+REFERENCES {databaseOwner}{objectQualifier}OpenWebStudio_Settings (ConfigurationID)
+GO
+ALTER TABLE {databaseOwner}{objectQualifier}OpenWebStudio_Log CHECK CONSTRAINT FK_OpenWebStudio_Log_Settings
+GO

@@ -1,0 +1,209 @@
+   <table class=Normal width=100% border=0 cellpadding=1 cellspacing=0>
+    <tr>
+     <td class=SubHead width=151>Source Type</td>
+     <td>
+     <select name=frmSourceType id=frmSourceType onchange="onfrmSourceType_Toggle()">
+	  <option value=""></option>	 
+      <option value="Path">Directory / File Path</option>
+      <option value="Variable">Runtime Value</option>
+      <option value="SQL">SQL Query</option>
+     </select>
+     </td>
+    </tr>   
+    <tr>
+     <td width=151><div id=fi0 class=SubHead>Variable Type</div></td>
+     <td><div id=fi1>
+     <select name=frmSourceVariableType id=frmSourceVariableType>
+      <option value="&amp;lt;Form&amp;gt;">&lt;Form&gt;</option>
+	  <option value="&amp;lt;Session&amp;gt;">&lt;Session&gt;</option>
+      <option value="&amp;lt;ViewState&amp;gt;">&lt;ViewState&gt;</option>
+      <option value="&amp;lt;Action&amp;gt;">&lt;Action&gt;</option>
+      <option value="&amp;lt;Cookie&amp;gt;">&lt;Cookie&gt;</option>
+      <option value="&amp;lt;QueryString&amp;gt;">&lt;QueryString&gt;</option>
+      <option value="&amp;lt;Custom&amp;gt;">&lt;Custom&gt;</option>
+     </select></div>
+     </td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151><div id=fi2>Source</div></td>
+     <td><div id=fi3><input name=frmSource id=frmSource type=textbox style="width:100%;"></div></td>
+    </tr>
+    <tr>
+     <td width=151>
+     <div class=SubHead id=fi4>Source Query</div>
+     </td>
+     <td><div id=fi5><textarea wrap=off name=frmSourceQuery id=frmSourceQuery style="height: 150px; width:100%;" richtext=true></textarea></div></td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151><div id=fy4>Custom Connection</div></td>
+     <td><div id=fy5><input name=frmSourceConnection id=frmSourceConnection type=textbox style="width:100%;"></div></td>
+    </tr>	
+    <tr>
+     <td class=SubHead width=151>Destination Type</td>
+     <td>
+     <select name=frmDestinationType id=frmDestinationType onchange="onfrmDestinationType_Toggle()">
+	  <option value=""></option>	 
+      <option value="Path">Directory / File Path</option>
+      <option value="Variable">Runtime Value</option>
+      <option value="SQL">SQL Query</option>
+	  <option value="Response">Outgoing Response</option>
+	  <option value="EmailAttachment">Email Attachment</option>
+     </select>
+     </td>
+    </tr>  
+    <tr>
+     <td class=SubHead width=151><div id=fi6>Response Type</div></td>
+     <td><div id=fi7><input name=frmResponseType id=frmResponseType type=textbox style="width:100%;"></div></td>
+    </tr> 	
+    <tr>
+     <td width=151><div id=fi8 class=SubHead>Variable Type</div></td>
+     <td><div id=fi9>
+     <select name=frmResultVariableType id=frmResultVariableType>
+	  <option value="&amp;lt;Session&amp;gt;">&lt;Session&gt;</option>
+      <option value="&amp;lt;ViewState&amp;gt;">&lt;ViewState&gt;</option>
+      <option value="&amp;lt;Action&amp;gt;">&lt;Action&gt;</option>
+      <option value="&amp;lt;Cookie&amp;gt;">&lt;Cookie&gt;</option>
+     </select></div>
+     </td>
+    </tr>
+    <tr>
+     <td width=151><div id=fi10 class=SubHead> 
+		<input type=checkbox id="frmChkRunAsProcess" style="left-margin: -2px">Run As Process	 +
+	 </div></td>
+	  <td><div id=fi11><input name=frmFileProcessName id=frmFileProcessName type=textbox style="width:100%;"></div></td>
+    </tr> 	
+    <tr>
+     <td width=151><div id=fi12 class=SubHead> 
+		&nbsp;	 
+	 </div></td>
+	  <td><div id=fi13><input type=checkbox id="frmChkFirstRow" style="left-margin: -2px">First Row Contains Column Names</div></td>
+    </tr>
+    <tr>
+     <td width=151>
+     <div class=SubHead id=fi14>Column Mapping</div>
+     </td>
+     <td><div id=fi15></div></td>
+    </tr>
+    <tr>
+     <td width=151>
+     <div class=SubHead id=fi16>Destination Query</div>
+     </td>
+     <td><div id=fi17><textarea wrap=off name=frmDestinationQuery id=frmDestinationQuery style="height: 150px; width:100%;" richtext=true></textarea></div></td>
+    </tr>	
+    <tr>
+     <td class=SubHead width=151>Destination</td>
+     <td><input name=frmDestination id=frmDestination type=textbox style="width:100%;"></td>
+    </tr>
+    <tr>
+     <td width=151>Transformation</td>
+     <td>
+     <select name=frmTransformation id=frmTransformation onchange="onfrmTransformation_Toggle()">
+	  <option value=""></option>
+	  <option value="Image">Image</option>
+	  <option value="File">File</option>	  
+     </select>
+     </td>
+    </tr>	
+    <tr>
+     <td width=151><div id=fi18>File Operation</div></td>
+     <td><div id=fi19>
+     <select name=frmFileOperation id="frmFileOperation">
+	  <option value="copy">Copy Source to Target</option>
+	  <option value="move">Move Source to Target</option>
+	  <option value="delete">Delete Source</option>	  
+	  <option value="extract">Decompress Source into Target</option>		  
+      <option value="compress">Compress Source into Target</option>	  
+      <option value="csv">CSV Delimited (SQL Source Only)</option>
+      <option value="tab">Tab Delimited (SQL Source Only)</option>
+     </select></div>
+     </td>
+    </tr>	
+    <tr>
+     <td width=151><div id=fi20>Image Operation</div></td>
+     <td><div id=fi21>
+     <select name=frmImageTransformType id="frmImageTransformType"  onchange="onfrmImageTransformType_Toggle()">
+	  <option value="Size">Resize</option>
+	  <option value="Draw.Text">Draw Text</option>
+     </select></div>
+     </td>
+    </tr>	    
+    <tr>
+     <td width=151><div id=fi22>Image Width</div></td>
+     <td><div id=fi23>
+     <input name=frmImageWidth id=frmImageWidth type=textbox style="width:100px;">&nbsp;<select name=frmImageWidthType id="frmImageWidthType">
+	  <option value="px">pixels</option>
+	  <option value=""%>percent</option>
+     </select></div>
+     </td>
+    </tr>		
+    <tr>
+     <td width=151><div id=fi24>Image Height</div></td>
+     <td><div id=fi25>
+     <input name=frmImageHeight id=frmImageHeight type=textbox style="width:100px;">&nbsp;<select name=frmImageHeightType id="frmImageHeightType">
+	  <option value="px">pixels</option>
+	  <option value=""%>percent</option>
+     </select></div>
+     </td>
+    </tr>	
+    <tr>
+     <td width=151><div id=fi26>Image Quality</div></td>
+     <td><div id=fi27>
+     <input name=frmImageQuality id=frmImageQuality type=textbox style="width:100px;"></div>
+     </td>
+    </tr>	
+    <tr>
+     <td width=151><div id=fi28>Text</div></td>
+     <td><div id=fi29>
+     <input name=frmImageText id=frmImageText type=textbox  style="width:100%;"></div>
+     </td>
+    </tr>	   
+    <tr>
+     <td width=151><div id=fi30>X</div></td>
+     <td><div id=fi31>
+     <input name=frmImageX id=frmImageX type=textbox style="width:100px;"></div>
+     </td>
+    </tr>	 
+    <tr>
+     <td width=151><div id=fi32>Y</div></td>
+     <td><div id=fi33>
+     <input name=frmImageY id=frmImageY type=textbox style="width:100px;"></div>
+     </td>
+    </tr>	        	
+    <tr>
+     <td width=151><div id=fi34>Font Family</div></td>
+     <td><div id=fi35>
+     <input name=frmImageFont id=frmImageFont type=textbox style="width:100px;"></div>
+     </td>
+    </tr>		
+    <tr>
+     <td width=151><div id=fi36>Font Size</div></td>
+     <td><div id=fi37>
+     <input name=frmImageSize id=frmImageSize type=textbox style="width:100px;">&nbsp;<select name=frmImageSizeType id="frmImageSizeType">
+	  <option value="px">pixels</option>
+	  <option value="pt">points</option>
+     </select></div>
+     </td>
+    </tr>	
+    <tr>
+     <td width=151><div id=fi38>Fore Color</div></td>
+     <td><div id=fi39>
+     <input name=frmImageColor id=frmImageColor type=textbox style="width:100px;"></div>
+     </td>
+    </tr>    
+    <tr>
+     <td width=151><div id=fi40>Background Color</div></td>
+     <td><div id=fi41>
+     <input name=frmImageBGColor id=frmImageBGColor type=textbox style="width:100px;"></div>
+     </td>
+    </tr>
+    <tr>
+     <td width=151><div id=fi42>Warp Text</div></td>
+     <td><div id=fi43>
+      <input type="checkbox" name=frmImageWarp value="1">Skew / Warp<br/>     
+      <input type="checkbox" name=frmImageWarp value="2">Distort / Ripple<br/>
+      <input type="checkbox" name=frmImageWarp value="3">Jitter<br/>
+      <input type="checkbox" name=frmImageWarp value="4">Splinter / Thrash<br/>
+      <input type="checkbox" name=frmImageWarp value="5">Warp Background (using selected warps)
+     </td>
+    </tr>    
+   </table>

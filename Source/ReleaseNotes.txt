@@ -1,0 +1,4 @@
+This installation will install the OpenWebStudio module and runtime components. The install will override the existing 
+base config. If changes were manually made to the OpenWebStudio.Config file, please backup that file to make sure that
+no data is lost.
+**USERS WHO ARE UPGRADING: MAKE SURE YOU CLEAR YOUR BROWSER CACHE TO GET THE LATEST JAVASCRIPT LIBRARIES FOR THE ADMIN**

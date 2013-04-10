@@ -1,0 +1,16 @@
+   <table class=Normal width=100% border=0 cellpadding=1 cellspacing=0>
+     <tr>
+      <td class="SubHead" width="151">Configuration</td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="hidden" name=frmActionGoto_Name id=frmActionGoto_Name /><div id=fi1>
+     <select name=frmActionGoto_ConfigurationID id=frmActionGoto_ConfigurationID onchange="onGotoConfigChanged();">
+      <option value="">Select a Configuration</option>
+     </select>&nbsp;<a href="#" onclick="loadConfigurationChoices_Goto(sysGetSelect($('frmActionGoto_ConfigurationID')));return false;">refresh</a></div></td>
+     </tr>
+     <tr>
+      <td class="SubHead" width="151">Region</td>
+      <td class="Normal" style="HEIGHT: 19px"><div id=fi1>
+     <select name=frmActionGoto_Region id=frmActionGoto_Region>
+      <option value="">Select a Region</option>
+     </select>&nbsp;<a href="#" onclick="configRegions=0;loadConfigurationRegions_Goto(sysGetSelect($('frmActionGoto_ConfigurationID')));return false;">refresh</a></div></td>
+     </tr>
+   </table>

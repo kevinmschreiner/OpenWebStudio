@@ -1,0 +1,553 @@
+﻿--DROP TABLES
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_Settings') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table {databaseOwner}{objectQualifier}OpenWebStudio_Settings
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_Log') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table {databaseOwner}{objectQualifier}OpenWebStudio_Log
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_Package') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table {databaseOwner}{objectQualifier}OpenWebStudio_Package
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_PackageItem') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table {databaseOwner}{objectQualifier}OpenWebStudio_PackageItem
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_Repository') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table {databaseOwner}{objectQualifier}OpenWebStudio_Repository
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_Draft') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table {databaseOwner}{objectQualifier}OpenWebStudio_Draft
+GO
+
+--DROP PROCEDURES
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_DeletePackage') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_DeletePackage
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_DeletePackageItem') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_DeletePackageItem
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetPackage') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetPackage
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetPackageItem') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetPackageItem
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetPackageItems') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetPackageItems
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_Log_Add') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_Log_Add
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_Repository_Rollback') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_Repository_Rollback
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_SetPackage') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_SetPackage
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_SetPackageItem') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_SetPackageItem
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_AddSetting') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_AddSetting
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_AddSettingDraft') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_AddSettingDraft
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_UpdateSetting') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_UpdateSetting
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_UpdateSettingDraft') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_UpdateSettingDraft
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_UpdateSetting') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_UpdateSetting
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetConfigNameByConfigurationId') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetConfigNameByConfigurationId
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetSetting') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetSetting
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetSettingDate') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetSettingDate
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetSettingDraft') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetSettingDraft
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetSettingDraftOwners') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetSettingDraftOwners
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetSettings') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetSettings
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetSetting') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetSetting
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_UpdateSetting') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_UpdateSetting
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_UpdateSettingDraft') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_UpdateSettingDraft
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_DeleteSettingDraft') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_DeleteSettingDraft
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetConfigurationList') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetConfigurationList
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetConfigurationIdByConfigurationName') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetConfigurationIdByConfigurationName
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_CheckExistingConfiguration') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_CheckExistingConfiguration
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_UpgradeConfiguration') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_UpgradeConfiguration
+GO
+
+
+--CREATE TABLES
+CREATE TABLE {databaseOwner}{objectQualifier}OpenWebStudio_Settings (
+	[ConfigurationID] [uniqueidentifier] NOT NULL DEFAULT (newid()),
+	[ConfigurationName] [nvarchar](255)  NULL,
+	[SettingValue] [ntext] NULL,
+	[LastUpdated] [datetime] NULL,	
+	CONSTRAINT [PK_{objectQualifier}OpenWebStudio_Settings] PRIMARY KEY CLUSTERED 
+	(
+	[ConfigurationID] ASC
+	)  ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+CREATE TABLE {databaseOwner}{objectQualifier}OpenWebStudio_Log (
+	[LogID] [int] IDENTITY(1,1) NOT NULL,
+	[ConfigurationId] [uniqueidentifier] NOT NULL,
+	[Date] [datetime] NOT NULL,
+	[SettingName] [varchar](50)  NULL,
+	[SettingValue] [ntext]  NULL,
+	[UserID] [int] NULL,
+ CONSTRAINT [PK_{objectQualifier}OpenWebStudio_Log] PRIMARY KEY CLUSTERED 
+(
+	[LogID] ASC
+)  ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+CREATE TABLE {databaseOwner}{objectQualifier}OpenWebStudio_Package (
+	[PackageID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](255)  NULL,
+	[Description] [varchar](500)  NULL,
+	[Company] [varchar](50)  NULL,
+	[Author] [varchar](50)  NULL,
+	[Version] [varchar](15)  NULL,
+	[UniqueID] [varchar](80)  NULL,
+	[PortalID] [int] NULL,
+	[UserID] [int] NULL,
+	[Status] [int] NULL,
+	[StatusDate] [datetime] NULL,
+	[StatusMessage] [ntext] NULL,	
+	CONSTRAINT [PK_{objectQualifier}OpenWebStudio_Package] PRIMARY KEY CLUSTERED 
+	(
+	[PackageID] ASC
+	)  ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+CREATE TABLE {databaseOwner}{objectQualifier}OpenWebStudio_PackageItem (
+	[PackageItemID] [int] IDENTITY(1,1) NOT NULL,
+	[PackageID] [int] NULL,
+	[ParentPackageItemID] [int] NULL,
+	[ItemType] [varchar](25)  NULL,
+	[ItemName] [varchar](255)  NULL,
+	[ItemDescription] [varchar](500)  NULL,
+	[ItemPath] [varchar](255)  NULL,
+	[SourceID] [int] NULL,
+	[DestinationID] [int] NULL,
+	[Status] [int] NULL,
+	[StatusDate] [datetime] NULL,
+	[Content] [image] NULL,
+	[StatusMessage] [ntext]  NULL,
+	[SequenceNumber] [int] NULL,	
+	CONSTRAINT [PK_{objectQualifier}OpenWebStudio_PackageItem] PRIMARY KEY CLUSTERED 
+	(
+	[PackageItemID] ASC
+	)  ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+CREATE TABLE {databaseOwner}{objectQualifier}OpenWebStudio_Repository (
+	[RepositoryID] [int] IDENTITY(1,1) NOT NULL,
+	[ConfigurationID] [uniqueidentifier] NULL,
+	[Date] [datetime] NOT NULL,
+	[SettingValue] [ntext] NULL,
+	[ActionTaken] [char](1) NULL,
+	[Comment] [varchar](500) NULL,	
+	CONSTRAINT [PK_{objectQualifier}OpenWebStudio_Repository] PRIMARY KEY CLUSTERED 
+	(
+	[RepositoryID] ASC
+	)  ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+CREATE TABLE {databaseOwner}{objectQualifier}OpenWebStudio_Draft (
+	[DraftID] [int] IDENTITY(1,1) NOT NULL,
+	[ConfigurationID] [uniqueidentifier] NULL,
+	[UserID] [int] NOT NULL,
+	[isLocked] [bit] NOT NULL,
+	[SettingDate] [datetime] NOT NULL,
+	[SettingValue] [ntext] NULL,
+	[CreatedDate] [datetime] NULL,	
+	CONSTRAINT [PK_{objectQualifier}OpenWebStudio_Draft] PRIMARY KEY CLUSTERED 
+	(
+	[DraftID] ASC
+	)  ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+
+--CREATE PROCEDURES
+CREATE Procedure {databaseOwner}{objectQualifier}OpenWebStudio_DeletePackage(@PackageID int)
+AS
+	Delete from {databaseOwner}{objectQualifier}OpenWebStudio_PackageItem where PackageID = @PackageID
+	Delete from {databaseOwner}{objectQualifier}OpenWebStudio_Package where PackageID = @PackageID
+GO
+
+CREATE Procedure {databaseOwner}{objectQualifier}OpenWebStudio_DeletePackageItem(@PackageItemID int)
+AS
+Delete from {databaseOwner}{objectQualifier}OpenWebStudio_PackageItem where PackageItemID = @PackageItemID
+GO
+
+CREATE Procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetPackage(@byPackageID int = null, @byName varchar(255) = null, @byUniqueID varchar(80) = null, @PortalID int)
+AS
+if @byPackageID <= 0 
+	SET @byPackageID = null
+declare @r bit
+set @r = 0
+IF @r = 0 AND not @byPackageID is null and EXISTS(Select * from {databaseOwner}{objectQualifier}OpenWebStudio_Package where PackageID = @byPackageID and PortalID = @PortalID)
+BEGIN
+	Select * from {databaseOwner}{objectQualifier}OpenWebStudio_Package where PackageID = @byPackageID and PortalID = @PortalID
+	SET @r = 1
+END
+IF @r = 0  and not @byUniqueID is null and EXISTS(Select * from {databaseOwner}{objectQualifier}OpenWebStudio_Package where UniqueID = @byUniqueID and PortalID = @PortalID)
+BEGIN
+	Select * from {databaseOwner}{objectQualifier}OpenWebStudio_Package where UniqueID = @byUniqueID and PortalID = @PortalID
+	SET @r = 1
+END
+IF @r = 0 and not @byName is null
+BEGIN
+	Select * from {databaseOwner}{objectQualifier}OpenWebStudio_Package where Name = @byName and PortalID = @PortalID
+	SET @r = 1
+END
+GO
+
+CREATE Procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetPackageItem(@PackageID int, @PackageItemID int, @SourceID int = null, @ItemType varchar(25) = null)
+AS
+if @PackageItemID <= 0
+	SET @PackageItemID = null
+if @PackageItemID is null and not @SourceID is null and not @ItemType is null
+BEGIN
+	Select * from {databaseOwner}{objectQualifier}OpenWebStudio_PackageItem where PackageID = @PackageID and SourceID = @SourceID and ItemType = @ItemType
+END
+ELSE
+BEGIN
+	Select * from {databaseOwner}{objectQualifier}OpenWebStudio_PackageItem where PackageItemID = @PackageItemID
+END
+GO
+
+CREATE Procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetPackageItems(@PackageID int)
+AS
+Select * from {databaseOwner}{objectQualifier}OpenWebStudio_PackageItem (nolock) where PackageID = @PackageID
+ order by SequenceNumber
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}OpenWebStudio_Log_Add(@ConfigurationId uniqueidentifier, @SettingName varchar(50), @SettingValue ntext, @UserID int)
+AS
+INSERT INTO {databaseOwner}{objectQualifier}OpenWebStudio_Log([Date],ConfigurationId,SettingName,SettingValue,UserID)
+VALUES (getdate(),@ConfigurationId,@SettingName,@SettingValue,@UserID)
+SELECT SCOPE_IDENTITY()
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}OpenWebStudio_Repository_Rollback(@RepositoryID int)
+AS
+declare @ConfigurationId uniqueidentifier
+select @ConfigurationId = ConfigurationId from {databaseOwner}{objectQualifier}OpenWebStudio_Repository where RepositoryID = @RepositoryID
+DELETE FROM {databaseOwner}{objectQualifier}OpenWebStudio_Repository where ConfigurationId=@ConfigurationId and RepositoryID > @RepositoryID
+UPDATE x set x.SettingValue = r.SettingValue FROM
+{databaseOwner}{objectQualifier}OpenWebStudio_Settings x JOIN {databaseOwner}{objectQualifier}OpenWebStudio_Repository r ON x.ConfigurationId = r.ConfigurationId 
+ and r.RepositoryID = @RepositoryID
+GO
+
+CREATE Procedure {databaseOwner}{objectQualifier}OpenWebStudio_SetPackage(@PackageID int, @Name varchar(255), @Description varchar(500),
+@Company varchar(50), @Author varchar(50), @Version varchar(15), @UniqueID varchar(80), @PortalID int, @UserID int,
+@Status int, @StatusDate datetime,@StatusMessage ntext)
+AS
+IF @PackageID is null or @PackageID < 1
+BEGIN
+	INSERT INTO {databaseOwner}{objectQualifier}OpenWebStudio_Package(Name,Description,Company,Author,Version,UniqueID,PortalID,UserID,Status,StatusDate,StatusMessage)
+	VALUES (@Name,@Description,@Company,@Author,@Version,@UniqueID,@PortalID,@UserID,@Status,@StatusDate,@StatusMessage)
+
+	SELECT SCOPE_IDENTITY() PackageID
+END
+ELSE
+BEGIN
+	UPDATE {databaseOwner}{objectQualifier}OpenWebStudio_Package
+	Set 	Name= @Name,
+		Description = @Description,
+		Company = @Company,
+		Author = @Author,
+		Version = @Version,
+		UniqueID = @UniqueID,
+		PortalID = @PortalID,
+		UserID = @UserID,
+		Status = @Status,
+		StatusDate = @StatusDate,
+		StatusMessage=@StatusMessage
+	Where
+		PackageID = @PackageID 
+
+	IF @Status = 1
+	UPDATE {databaseOwner}{objectQualifier}OpenWebStudio_PackageItem
+	Set Status = 1 where PackageID = @PackageID
+
+	Select @PackageID PackageID
+END
+GO
+
+CREATE Procedure {databaseOwner}{objectQualifier}OpenWebStudio_SetPackageItem(@SequenceNumber int, @PackageItemID int, @PackageID int, @ParentPackageItemID int,@ItemType varchar(25),@ItemName varchar(255),@ItemDescription varchar(500),@ItemPath varchar(255), @SourceID int,@DestinationID int,@Status int,@StatusDate datetime,@StatusMessage ntext,@Content image)
+AS
+	IF @PackageItemID is null or @PackageItemID < 1
+	BEGIN
+		INSERT INTO {databaseOwner}{objectQualifier}OpenWebStudio_PackageItem(SequenceNumber,PackageID,ParentPackageItemID,ItemType,ItemName,
+							ItemDescription,ItemPath,SourceID,DestinationID,Status,
+							StatusDate,StatusMessage,Content)
+		VALUES (@SequenceNumber,@PackageID,@ParentPackageItemID,@ItemType,@ItemName,@ItemDescription,@ItemPath,@SourceID,@DestinationID,@Status,@StatusDate,@StatusMessage,@Content)
+		SELECT SCOPE_IDENTITY() PackageItemID
+	END
+	ELSE
+	BEGIN
+		UPDATE {databaseOwner}{objectQualifier}OpenWebStudio_PackageItem
+		SET
+			SequenceNumber=@SequenceNumber,
+			PackageID=@PackageID,
+			ParentPackageItemID=@ParentPackageItemID,
+			ItemType=@ItemType,
+			ItemName=@ItemName,
+			ItemDescription=@ItemDescription,
+			ItemPath=@ItemPath,
+			SourceID=@SourceID,
+			DestinationID=@DestinationID,
+			Status=@Status,
+			StatusDate=@StatusDate,
+			StatusMessage=@StatusMessage,
+			Content=@Content
+		WHERE
+			PackageItemID = @PackageItemID
+		SELECT @PackageItemID PackageItemID
+	END
+GO
+
+CREATE procedure {databaseOwner}{objectQualifier}OpenWebStudio_AddSetting
+@ConfigurationID [uniqueidentifier],
+@ConfigurationName varchar(255),
+@SettingValue  ntext
+as
+
+insert into {databaseOwner}{objectQualifier}OpenWebStudio_Settings ( 
+  ConfigurationID,
+  ConfigurationName,
+  SettingValue,
+  LastUpdated
+) 
+values ( 
+  @ConfigurationID,
+  @ConfigurationName,
+  @SettingValue,
+  getdate() 
+)
+
+INSERT INTO {databaseOwner}{objectQualifier}OpenWebStudio_Repository (
+	[Date], 
+	[ConfigurationID],
+	[SettingValue],
+	[ActionTaken])
+SELECT
+	getdate(), @ConfigurationID, @SettingValue, 'I'
+
+GO
+
+CREATE procedure {databaseOwner}{objectQualifier}OpenWebStudio_AddSettingDraft
+@UserID	int,
+@ConfigurationID [uniqueidentifier],
+@SettingValue  ntext
+as
+
+insert into {databaseOwner}{objectQualifier}OpenWebStudio_Draft ( 
+  UserId,
+  ConfigurationID,
+  SettingValue,
+  SettingDate,
+  CreatedDate,
+  isLocked 
+) 
+values ( 
+  @UserId,
+  @ConfigurationID,
+  @SettingValue,
+  getdate(),
+  getdate(),
+  0
+)
+GO
+
+CREATE procedure {databaseOwner}{objectQualifier}OpenWebStudio_DeleteSettingDraft
+@UserId int,
+@ConfigurationID [uniqueidentifier]
+as
+DELETE
+from   {databaseOwner}{objectQualifier}OpenWebStudio_Draft
+where  ConfigurationID = @ConfigurationID
+and		UserId = @UserId
+GO
+
+CREATE procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetConfigNameByConfigurationId
+	@ConfigurationID [uniqueidentifier]
+as
+select ConfigurationName
+from   {databaseOwner}{objectQualifier}OpenWebStudio_Settings 
+where  ConfigurationID = @ConfigurationID
+GO
+
+CREATE procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetSetting
+@ConfigurationID [uniqueidentifier]
+as
+select SettingValue
+from   {databaseOwner}{objectQualifier}OpenWebStudio_Settings 
+where  ConfigurationID = @ConfigurationID
+GO
+
+CREATE  procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetSettingDate
+@ConfigurationID [uniqueidentifier]
+as
+select LastUpdated
+from   {databaseOwner}{objectQualifier}OpenWebStudio_Settings 
+where  ConfigurationID = @ConfigurationID
+GO
+
+CREATE procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetSettingDraft
+@UserId int,
+@ConfigurationID [uniqueidentifier]
+as
+select SettingValue,SettingDate,CreatedDate
+from   {databaseOwner}{objectQualifier}OpenWebStudio_Draft
+where  ConfigurationID = @ConfigurationID
+and		UserId = @UserId
+GO
+
+CREATE procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetSettingDraftOwners
+@ConfigurationID [uniqueidentifier]
+as
+select UserId
+from   {databaseOwner}{objectQualifier}OpenWebStudio_Draft
+where  ConfigurationID = @ConfigurationID
+and		isLocked = 1
+GO
+
+CREATE procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetSettings
+	@ConfigurationID [uniqueidentifier]
+as
+select SettingValue
+from   {databaseOwner}{objectQualifier}OpenWebStudio_Settings 
+where  ConfigurationID = @ConfigurationID
+GO
+
+CREATE procedure {databaseOwner}{objectQualifier}OpenWebStudio_UpdateSetting
+@ConfigurationID [uniqueidentifier],
+@ConfigurationName varchar(255),
+@SettingValue  ntext
+as
+update {databaseOwner}{objectQualifier}OpenWebStudio_Settings
+set    SettingValue = @SettingValue,
+        ConfigurationName = @ConfigurationName,
+		LastUpdated = getdate()
+where  ConfigurationID = @ConfigurationID
+
+INSERT INTO {databaseOwner}{objectQualifier}OpenWebStudio_Repository (
+	[Date], 
+	[ConfigurationID],
+	[SettingValue],
+	[ActionTaken])
+SELECT
+	getdate(), @ConfigurationID, @SettingValue, 'U'
+
+GO
+
+CREATE procedure {databaseOwner}{objectQualifier}OpenWebStudio_UpdateSettingDraft
+@UserId int,
+@ConfigurationID [uniqueidentifier],
+@SettingValue  ntext,
+@isLocked bit
+as
+update {databaseOwner}{objectQualifier}OpenWebStudio_Draft
+set    SettingValue = @SettingValue, isLocked = @isLocked, SettingDate=getdate()
+where  ConfigurationID = @ConfigurationID
+and UserId = @UserId
+GO
+
+CREATE  procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetConfigurationIdByConfigurationName
+	@ConfigurationName nvarchar(255)
+as
+
+select ConfigurationId
+from   {databaseOwner}{objectQualifier}OpenWebStudio_Settings 
+where  ConfigurationName = @ConfigurationName
+GO
+
+CREATE  procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetConfigurationList
+as
+select ConfigurationId, ConfigurationName
+from   {databaseOwner}{objectQualifier}OpenWebStudio_Settings
+GO
+
+CREATE  procedure {databaseOwner}{objectQualifier}OpenWebStudio_CheckExistingConfiguration
+@ConfigurationID [uniqueidentifier]
+as
+
+Select ConfigurationID from {databaseOwner}{objectQualifier}OpenWebStudio_Settings 
+where  ConfigurationID = @ConfigurationID
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}OpenWebStudio_UpgradeConfiguration(@pageId int, @ModuleID int)
+AS
+--CHANGE THE MODULE DEFINITION ID
+declare @OWS_ModuleDefID int
+select @OWS_ModuleDefID = ModuleDefID from {databaseOwner}{objectQualifier}ModuleDefinitions where FriendlyName='OWS'
+UPDATE {databaseOwner}{objectQualifier}Modules Set ModuleDefID=@OWS_ModuleDefID
+Where ModuleID = @ModuleID
+
+--CREATE THE NEW CONFIGURATION ID
+declare @ConfigurationID uniqueidentifier
+select @ConfigurationID = newid()
+while Exists(Select ConfigurationID from {databaseOwner}{objectQualifier}OpenWebStudio_Settings where ConfigurationID=@ConfigurationID)
+	select @ConfigurationID = newid()
+
+--MIGRATE THE CONFIGURATION
+INSERT INTO {databaseOwner}{objectQualifier}OpenWebStudio_Settings(ConfigurationID,ConfigurationName,SettingValue,LastUpdated)
+Select @ConfigurationID,'Upgrade: Tab-' + CAST(@pageId as varchar(10)) + ' Module-' + CAST(@ModuleID as varchar(10)), SettingValue,LastUpdated from {databaseOwner}{objectQualifier}xListSettings where ModuleID=@ModuleID and TabID=@pageId
+
+--SET THE MODULESETTING
+Delete from {databaseOwner}{objectQualifier}ModuleSettings where ModuleID=@ModuleID and SettingName='ConfigurationID'
+INSERT INTO {databaseOwner}{objectQualifier}ModuleSettings(ModuleID,SettingName,SettingValue)
+Values (@ModuleID,'ConfigurationID',@ConfigurationID)
+
+Select @ConfigurationID ConfigurationID
+GO
+
+--UPDATE LISTX CODE BASE FOR OWS UPGRADING
+UPDATE mc
+set ControlSrc = 'DesktopModules/ListX/ListX.Installer.ascx'
+from
+	{databaseOwner}{objectQualifier}desktopmodules dm join 
+		{databaseOwner}{objectQualifier}moduledefinitions d on 
+			dm.DesktopModuleID = d.DesktopModuleID
+			and d.FriendlyName = 'ListX'
+	join {databaseOwner}{objectQualifier}modulecontrols mc on 
+			mc.moduledefid = d.ModuleDefID and mc.ControlKey='Settings'

@@ -1,0 +1,43 @@
+   <table class=Normal width=100% border=0 cellpadding=1 cellspacing=0>
+    <tr>
+     <td class=SubHead width=151>Name</td>
+     <td><input onsave="this.value" parameter="Name" type=textbox style="width:100%;" value="${Name}"></td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151>Connection</td>
+     <td><input onsave="this.value" parameter="Connection" type=textbox style="width:100%;" value="${Connection}"></td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151>Cache (seconds)</td>
+     <td> 
+     <input onsave="this.value" parameter="CacheTime" value="${CacheTime}" type=textbox style="width:200px;">
+     <span class=SubHead>&nbsp;Cache (Name)&nbsp;</span>
+     <input onsave="this.value" parameter="CacheName" value="${CacheName}" type=textbox style="width:200px;">  
+     &nbsp;<input onsave="(this.checked?'true':'false')" parameter="CacheShared" {{if CacheShared=='true'}}checked{{/if}} type="checkbox" style="left-margin: -2px">Shared   
+     </td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151>Run as Process</td>
+     <td><input onsave="(this.checked?'true':'false')" parameter="IsProcess" {{if IsProcess=='true'}}checked{{/if}} type="checkbox"/></td>
+    </tr>		
+    <tr>
+     <td class=SubHead width=151>
+	 <!--
+	 Query<br><a href='javascript:QueryExecute();'>(Execute&nbsp;Query)</a> 
+	 -->
+     </td>
+     <td id=cActionQuery_Query><textarea wrap=off onsave="this.value" parameter="Query" style="height: 150px; width:100%;" richtext=true >${Query}</textarea></td>
+    </tr>
+	<!--
+    <tr>
+     <td class=SubHead width=151> 
+	 <div id=qry1>Results<br><a href='javascript:QuickBuilder();'>(Quick&nbsp;Builder)</a><br><a href='javascript:ColumnClip();'>(Column&nbsp;Clip)</a><br></div> 	 
+	 </td>
+     <td><div id=qry2>
+	 </div>
+	 </td>
+    </tr>		
+    <tr>	
+	<td colspan=2><div id="qryQB"></div></td></tr>	
+	-->
+   </table>

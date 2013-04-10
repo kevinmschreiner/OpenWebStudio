@@ -1,0 +1,7 @@
+D:\Work\Current\Corporate\OpenWebStudio\Source\Build\r2i.OWS.SqlDataProvider.dll
+D:\Work\Current\Corporate\OpenWebStudio\Source\Build\r2i.OWS.SqlDataProvider.pdb
+D:\Work\Current\Corporate\OpenWebStudio\Source\Build\r2i.OWS.SqlDataProvider.xml
+D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\SqlDataProvider\obj\Release\r2i.OWS.SqlDataProvider.dll
+D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\SqlDataProvider\obj\Release\r2i.OWS.SqlDataProvider.xml
+D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\SqlDataProvider\obj\Release\r2i.OWS.SqlDataProvider.pdb
+D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\SqlDataProvider\obj\Release\r2i.OWS.SqlDataProvider.vbprojResolveAssemblyReference.cache

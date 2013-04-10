@@ -1,0 +1,9 @@
+D:\Work\Current\Corporate\OpenWebStudio\Source\Build\r2i.OWS.Wrapper.DNN.Extensions.dll
+D:\Work\Current\Corporate\OpenWebStudio\Source\Build\r2i.OWS.Wrapper.DNN.Extensions.pdb
+D:\Work\Current\Corporate\OpenWebStudio\Source\Build\r2i.OWS.Wrapper.DotNetNuke.Extensions.xml
+D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions\obj\Release\Resources.resources
+D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions\obj\Release\r2i.OWS.Wrapper.DNN.Extensions.dll
+D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Extensions.xml
+D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions\obj\Release\r2i.OWS.Wrapper.DNN.Extensions.pdb
+D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.3.vbprojResolveAssemblyReference.cache
+D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.3.vbproj.GenerateResource.Cache

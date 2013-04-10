@@ -1,0 +1,513 @@
+<?xml version="1.0"?>
+<!-- targets to be executed, when omitted from command line default is run -->
+<project name="OpenWebStudio" default="BuildAndZip">
+	<target name="init">
+		<property name="nant.settings.currentframework" value="net-2.0" />
+
+		<property name="bin.dir" value="./Build/" />
+		<property name="controls.dir" value="controls" />
+		<property name="localresource.dir" value="App_LocalResources" />
+		<property name="globalresource.dir" value="App_GlobalResources" />
+
+		<property name="binZip" value="_Install" />
+		<property name="srcZip" value="_Source" />
+		<property name="samplesZip" value="_Examples" />
+		<property name="professionalZip" value="_Professional" />
+    
+		<property name="rootWeb" value="http://localhost/" overwrite="false" />
+		<property name="webAlias" value="DotNetNuke_2" overwrite="false" />
+		<property name="verbose" value="true" overwrite="false" />
+
+		<!-- ModuleName value should be set specific to the project -->
+		<property name="ModuleName" value="OWS"  overwrite="false"  />
+		<property name="BuildName" value="r2i.OpenWebStudio" overwrite="false" />
+		<property name="BuildType" value="" overwrite="false" />
+
+		<property name="Wrapper.solution" value="Source.sln" />
+    <property name="Wrapper.solution.macros" value="Macros.vb" />
+    <property name="Wrapper.solution.macros.config" value="Macros.config" />
+    <property name="Wrapper.solution.changes" value="ChangeLog.txt" />    
+    <property name="Wrapper.build" value="DotNetNuke.build" />
+		<property name="Wrapper.name" value="DotNetNuke" />
+		<property name="Wrapper.dll" value="r2i.OWS.Wrapper.DotNetNuke.dll" />
+		<property name="Wrapper.dir" value=".\Code\r2i.OWS\Wrappers\DotNetNuke\Wrapper" />
+		<property name="Wrapper.dllPath" value="${bin.dir}/${Wrapper.dll}" />
+
+		<property name="Json.dll" value="r2i.OWS.Newtonsoft.Json.dll" />
+		<property name="Json.dllPath" value="${bin.dir}/${Json.dll}" />
+		
+		<!-- This is where your packaged zips will build to from within the module folder -->
+		<property name="package.dir" value=".\Packages\${Wrapper.name}" overwrite="false" />
+
+		<!-- This is where your resource.zip will be built so it can be zipped and distributed with the release install zips -->
+		<property name="resourcezip.dir" value="ResourceZip" />
+
+		<property name="UI.dir" value=".\Code\r2i.OWS\UI" />
+		<property name="UI.dll" value="r2i.OWS.UI.Dnn" />
+
+		<property name="Engine.dir" value=".\Code\r2i.OWS\Engine" />
+		<property name="Engine.dll" value="r2i.OWS.Engine" />
+
+		<property name="Framework.dir" value=".\Code\r2i.OWS\Framework" />
+		<property name="Framework.dll" value="r2i.OWS.Framework" />
+		
+		<property name="SqlDataProvider.dir" value=".\Code\r2i.OWS\Wrappers\DotNetNuke\SqlDataProvider" />
+		<property name="SqlDataProvider.dll" value="r2i.OWS.SqlDataProvider" />
+
+		<property name="Interfaces.dir" value=".\Code\r2i.OWS\Wrappers\DotNetNuke\Interface" />
+		<property name="Interfaces.dll" value="r2i.OWS.Wrapper.DotNetNuke.Interface" />
+
+    <property name="Extensions.dir" value=".\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions" />
+    <property name="Extensions.dll" value="r2i.OWS.Wrapper.DNN.Extensions" />
+
+		<property name="ProExtensions.dir" value=".\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Professional.Extensions" />
+		<property name="ProExtensions.dll" value="r2i.OWS.Wrapper.DNN.Professional.Extensions" />
+		<property name="ProExtensions.dllPath" value="${bin.dir}/${ProExtensions.dll}.dll" />
+
+		<property name="debug" value="false" overwrite="false" />
+		<property name="config" value="Debug" if="${debug}" />
+		<property name="config" value="Release" unless="${debug}" />
+
+    <sysinfo failonerror="false"/>
+
+		<if test="${verbose}">
+			<echo message="solutionName: Source" />
+			<echo message="debug:        ${debug}" />
+			<echo message="config:       ${config}" />
+		</if>
+
+	</target>
+
+	<target name="Compile" depends="init">
+		<exec program="${sys.env.windir}\Microsoft.NET\Framework\v4.0.30319\msbuild.exe" failonerror="true">
+			<arg value="Source.sln" />
+			<arg value="/p:Configuration=Release" />
+			<arg value="/p:Platform=&quot;Any CPU&quot;" />
+		</exec>
+	</target>
+
+	<!-- It is important that this target does not run before the Compile target since it will lock the assembly -->
+	<target name="VersionInfo" >
+    <property name="version" value="${fileversioninfo::get-file-version(fileversioninfo::get-version-info(Wrapper.dllPath))}" />
+		<property name="proversion" value="${fileversioninfo::get-file-version(fileversioninfo::get-version-info(ProExtensions.dllPath))}" />
+		<property name="xshortVersion" value="${string::substring(version,0,string::last-index-of(version,'.'))}" />
+    <property name="shortVersion" value="${version}" />
+
+		<if test="${verbose}">
+			<echo message="shortVersion: ${shortVersion}" />
+			<echo message="version: ${version}" />
+		</if>
+
+	</target>
+
+	<target name="CleanPackageBin" depends="init VersionInfo">
+		<delete file="${package.dir}/${BuildName}_${Wrapper.name}_${shortVersion}${BuildType}${binZip}.zip" if="${file::exists('${package.dir}/${BuildName}_${Wrapper.name}_${shortVersion}${BuildType}${binZip}.zip')}" />
+	</target>
+
+	<target name="CleanPackageSource" depends="init VersionInfo">
+		<delete file="${package.dir}/${BuildName}_${Wrapper.name}_${shortVersion}${BuildType}${srcZip}.zip" if="${file::exists('${package.dir}/${BuildName}_${Wrapper.name}_${shortVersion}${BuildType}${srcZip}.zip')}" />
+	</target>
+
+	<target name="CleanPackageAll" depends="init">
+		<delete dir="${package.dir}" if="${directory::exists(package.dir)}" />
+	</target>
+
+  <target name="CleanPackageSamples" depends="init">
+    <delete file="${package.dir}/${BuildName}_${Wrapper.name}_${shortVersion}${BuildType}${samplesZip}.zip" if="${file::exists('${package.dir}/${BuildName}_${Wrapper.name}_${shortVersion}${BuildType}${samplesZip}.zip')}" />
+  </target>
+
+	<target name="CleanPackageProfessional" depends="init">
+		<delete file="${package.dir}/${BuildName}_${Wrapper.name}_${shortVersion}${BuildType}${professionalZip}.zip" if="${file::exists('${package.dir}/${BuildName}_${Wrapper.name}_${shortVersion}${BuildType}${professionalZip}.zip')}" />
+	</target>
+
+	<!-- check for resourcezip folder, delete it and its contents if it exists -->
+	<target name="CleanResourceZip" depends="init">
+		<delete dir="${resourcezip.dir}" if="${directory::exists(resourcezip.dir)}" />
+	</target>
+
+	<!-- Begin area for creating resourcezip for installable PA zips (should depend on target that clears where this will build zip file to)-->
+	<target name="CreateResourceZip" depends="CleanResourceZip">
+		<!-- create a flat directory to zip for install -->
+		<mkdir dir="temp" unless="${directory::exists('temp')}" />
+		<!-- DO NOT flatten this as we want to retain folder structure in this and ONLY this zip -->
+		<copy todir="temp" flatten="true">
+			<fileset>
+				<!-- Tell nant what files to grab -->
+				<!-- everything included here ends up in resource.zip, this should be excluded in the CreateBinZip -->
+				<include name="${UI.dir}/*.aspx" />
+				<include name="${UI.dir}/*.html" />
+				<include name="${UI.dir}/*.css" />
+				<include name="${UI.dir}/*.resx" />
+				<include name="${Wrapper.dir}/*.ascx" />
+				<include name="${Wrapper.dir}/*.aspx" />
+				<include name="${Wrapper.dir}/Admin.aspx.resx" />
+				
+				<exclude name="**/ListX.Installer.ascx" />
+				<exclude name="**/Resources.zip" />
+				<exclude name="**/_sgbak/*" />
+				<exclude name="**/.svn/*" />
+				<exclude name="**/thumbs.db" />
+				<exclude name="**/*.zip" />
+				<exclude name="**/*.scc" />
+				<exclude name="**/*.vssscc" />
+			</fileset>
+		</copy>
+		<mkdir dir="temp/Images" unless="${directory::exists('temp/Images')}" />
+		<copy todir="temp/Images" flatten="true" >
+			<fileset>
+				<!-- Tell nant what files to grab -->
+				<!-- everything included here ends up in resource.zip, this should be excluded in the CreateBinZip -->
+				<include name="${UI.dir}/Images/*" />
+				<exclude name="**/Resources.zip" />
+				<exclude name="**/_sgbak/*" />
+				<exclude name="**/thumbs.db" />
+				<exclude name="**/.svn/*" />
+				<exclude name="**/*.zip" />
+				<exclude name="**/*.scc" />
+				<exclude name="**/*.vssscc" />
+			</fileset>
+		</copy>
+		<mkdir dir="temp/Scripts" unless="${directory::exists('temp/Scripts')}" />
+		<copy todir="temp/Scripts" flatten="true">
+			<fileset>
+				<!-- Tell nant what files to grab -->
+				<!-- everything included here ends up in resource.zip, this should be excluded in the CreateBinZip -->
+				<include name="${UI.dir}/Scripts/*.js" />
+				<include name="${UI.dir}/Scripts/*.css" />
+				
+				<exclude name="**/Resources.zip" />
+				<exclude name="**/_sgbak/*" />
+				<exclude name="**/thumbs.db" />
+				<exclude name="**/*.zip" />
+				<exclude name="**/.svn/*" />
+				<exclude name="**/*.scc" />
+				<exclude name="**/*.vssscc" />
+			</fileset>
+		</copy>
+    <mkdir dir="temp/App_LocalResources" unless="${directory::exists('temp/App_LocalResources')}" />
+    <copy todir="temp/App_LocalResources" flatten="true">
+      <fileset>
+        <!-- Tell nant what files to grab -->
+        <!-- everything included here ends up in resource.zip, this should be excluded in the CreateBinZip -->
+        <include name="${Wrapper.dir}/PackageCreator.ascx.resx" />
+      </fileset>
+    </copy>
+    
+    <mkdir dir="${resourcezip.dir}" unless="${directory::exists(resourcezip.dir)}" />
+		<zip zipfile="${resourcezip.dir}/Resources.zip">
+			<fileset basedir="temp">
+				<include name="**/*" />
+				<exclude name="**/*.dll" />
+			</fileset>
+		</zip>
+
+		<!--Delete temp directory -->
+		<delete dir="temp" failonerror="false" />
+
+	</target>
+	<!-- End area for resourcezip creation -->
+
+	<!-- Begin area for creating resourcezip for installable PA zips (should depend on target that clears where this will build zip file to)-->
+	<target name="CreateResourceSourceZip" depends="CleanResourceZip">
+		<!-- create a flat directory to zip for install -->
+		<mkdir dir="temp" unless="${directory::exists('temp')}" />
+		<!-- DO NOT flatten this as we want to retain folder structure in this and ONLY this zip -->
+		<copy todir="temp" flatten="false">
+			<fileset>
+				<!-- Tell nant what files to grab -->
+				<!-- everything included here ends up in resource.zip, this should be excluded in the CreateBinZip -->
+				<include name="${Wrapper.solution}" />
+        <include name="${Wrapper.solution.macros}" />
+        <include name="${Wrapper.solution.macros.config}" />
+        <include name="${Wrapper.solution.changes}" />
+        <include name="${Wrapper.build}" />
+				<include name="${UI.dir}/**/*.*" />
+				<include name="${Engine.dir}/**/*.*" />
+				<include name="${Framework.dir}/**/*.*" />
+				<include name="${SqlDataProvider.dir}/**/*.*" />
+				<include name="${Interfaces.dir}/**/*.*" />
+        <include name="${Extensions.dir}/**/*.*" />
+				<include name="${Wrapper.dir}/**/*.*" />
+				<include name="${bin.dir}/${Json.dll}" />
+				
+				<exclude name="**/bin/**" />
+				<exclude name="**/obj/**" />
+				<exclude name="**/Resources.zip" />
+				<exclude name="**/_sgbak/*" />
+				<exclude name="**/thumbs.db" />
+				<exclude name="**/*.zip" />
+				<exclude name="**/*.scc" />
+				<exclude name="**/*.vssscc" />
+				<exclude name="**/*.vspscc" />
+			</fileset>
+		</copy>
+
+		<mkdir dir="${resourcezip.dir}" unless="${directory::exists(resourcezip.dir)}" />
+		<zip zipfile="${resourcezip.dir}/Resources.zip">
+			<fileset basedir="temp">
+				<include name="**/*" />
+				<exclude name="**/*.dll" />
+			</fileset>
+		</zip>
+
+		<!--Delete temp directory -->
+		<delete dir="temp" failonerror="false" />
+
+	</target>
+	<!-- End area for resourceSourcezip creation -->
+
+	<!-- Begin area for creating installable PA (should depend on target that clears where this will build zip file to AND resourcezip as this is part of installable PA)-->
+	<target name="CreateBinZip" depends="CleanPackageBin CreateResourceZip">
+		<!-- DO flatten this as we want to retain folder structure in this and ONLY this zip -->
+		<copy todir="temp" flatten="true">
+				  
+			<fileset>
+				<include name="**${resourcezip.dir}/Resources.zip" />
+				<include name="${bin.dir}/r2i.OWS.UI.dll" /> <!-- Replace this with ${UI.dir} -->
+				<include name="${bin.dir}/${Engine.dll}.dll" />
+				<include name="${bin.dir}/${Framework.dll}.dll" />
+				<include name="${bin.dir}/${SqlDataProvider.dll}.dll" />
+				<include name="${bin.dir}/${Wrapper.dll}" />
+				<include name="${bin.dir}/${Interfaces.dll}.dll" />
+        <include name="${bin.dir}/${Extensions.dll}.dll" />
+				<include name="${bin.dir}/${Json.dll}" />
+				<include name="${SqlDataProvider.dir}/*.SqlDataProvider" />
+				<include name="${Wrapper.dir}/ListX.Installer.ascx" />
+				<include name="${Wrapper.dir}/openwebstudio.config" />
+				<include name="${Wrapper.dir}/openwebstudio.216.config" />
+				<include name="${Wrapper.dir}/openwebstudio.217.config" />
+				<include name="${Wrapper.dir}/openwebstudio.218.config" />
+        <include name="${Wrapper.dir}/openwebstudio.2114.config" />
+        <include name="${Wrapper.dir}/openwebstudio.2126.config" />
+				<include name="${Wrapper.dir}/openwebstudio.2127.config" />
+        <include name="${Extensions.dir}/openwebstudio.dotnetnuke_extensions.config" />
+				<include name="${Wrapper.dir}/r2i.OWS.dnn" />
+        <include name="${Wrapper.dir}/r2i.OWS.dnn5" />
+      </fileset>
+		</copy>
+
+		<mkdir dir="${package.dir}" unless="${directory::exists(package.dir)}" />
+		<zip zipfile="${package.dir}/${BuildName}_${Wrapper.name}_${shortVersion}${BuildType}${binZip}.zip">
+			<fileset basedir="temp">
+				<include name="**/*" />
+			</fileset>
+		</zip>
+
+		<!--Delete temp directory -->
+		<delete dir="temp" failonerror="false" />
+	</target>
+	<!-- End area for installable PA -->
+
+	<!-- Begin area for creating installable PA (should depend on target that clears where this will build zip file to AND resourcezip as this is part of installable PA)-->
+	<target name="CreateProfessionalBinZip" depends="CleanPackageBin CreateResourceZip">
+		<!-- DO flatten this as we want to retain folder structure in this and ONLY this zip -->
+		<copy todir="temp" flatten="true">
+
+			<fileset>
+				<include name="**${resourcezip.dir}/Resources.zip" />
+				<include name="${bin.dir}/r2i.OWS.UI.dll" />
+				<!-- Replace this with ${UI.dir} -->
+				<include name="${bin.dir}/${Engine.dll}.dll" />
+				<include name="${bin.dir}/${Framework.dll}.dll" />
+				<include name="${bin.dir}/${SqlDataProvider.dll}.dll" />
+				<include name="${bin.dir}/${Wrapper.dll}" />
+				<include name="${bin.dir}/${Interfaces.dll}.dll" />
+				<include name="${bin.dir}/${Extensions.dll}.dll" />
+				<include name="${bin.dir}/${Json.dll}" />
+				<include name="${SqlDataProvider.dir}/*.SqlDataProvider" />
+				<include name="${Wrapper.dir}/ListX.Installer.ascx" />
+				<include name="${Wrapper.dir}/openwebstudio.config" />
+				<include name="${Wrapper.dir}/openwebstudio.216.config" />
+				<include name="${Wrapper.dir}/openwebstudio.217.config" />
+				<include name="${Wrapper.dir}/openwebstudio.218.config" />
+				<include name="${Wrapper.dir}/openwebstudio.2114.config" />
+				<include name="${Wrapper.dir}/openwebstudio.2126.config" />
+				<include name="${Wrapper.dir}/openwebstudio.2127.config" />
+				<include name="${Extensions.dir}/openwebstudio.dotnetnuke_extensions.config" />
+				<include name="${Wrapper.dir}/r2i.OWS.Professional.dnn" />
+        <include name="${Wrapper.dir}/r2i.OWS.Professional.dnn5" />
+				<include name="${ProExtensions.dir}/openwebstudio.dotnetnuke_pro_extensions.config" />
+				<include name="${bin.dir}/${ProExtensions.dll}.dll" />
+			</fileset>
+		</copy>
+
+		<mkdir dir="${package.dir}" unless="${directory::exists(package.dir)}" />
+		<zip zipfile="${package.dir}/${BuildName}_${Wrapper.name}_${proversion}${BuildType}${professionalZip}.zip">
+			<fileset basedir="temp">
+				<include name="**/*" />
+			</fileset>
+		</zip>
+
+		<!--Delete temp directory -->
+		<delete dir="temp" failonerror="false" />
+	</target>
+	<!-- End area for installable PA -->
+	
+  <!-- Begin area for creating installable upgrade PA (should depend on target that clears where this will build zip file to AND resourcezip as this is part of installable PA)-->
+  <target name="CreateUpgradeZip" depends="CleanPackageBin CreateResourceZip">
+    <!-- DO flatten this as we want to retain folder structure in this and ONLY this zip -->
+    <copy todir="temp" flatten="true">
+
+      <fileset>
+        <include name="**${resourcezip.dir}/Resources.zip" />
+        <include name="${bin.dir}/r2i.OWS.UI.dll" />
+        <!-- Replace this with ${UI.dir} -->
+        <include name="${bin.dir}/${Engine.dll}.dll" />
+        <include name="${bin.dir}/${Framework.dll}.dll" />
+        <include name="${bin.dir}/${SqlDataProvider.dll}.dll" />
+        <include name="${bin.dir}/${Wrapper.dll}" />
+        <include name="${bin.dir}/${Interfaces.dll}.dll" />
+        <include name="${bin.dir}/${Extensions.dll}.dll" />
+        <include name="${bin.dir}/${Json.dll}" />
+        <include name="${SqlDataProvider.dir}/*.SqlDataProvider" />
+        <include name="${Wrapper.dir}/ListX.Installer.ascx" />
+        <include name="${Wrapper.dir}/openwebstudio.config" />
+        <include name="${Wrapper.dir}/openwebstudio.216.config" />
+        <include name="${Wrapper.dir}/openwebstudio.217.config" />
+		    <include name="${Wrapper.dir}/openwebstudio.218.config" />
+        <include name="${Wrapper.dir}/openwebstudio.2114.config" />
+        <include name="${Wrapper.dir}/openwebstudio.2126.config" />
+		  <include name="${Wrapper.dir}/openwebstudio.2127.config" />
+        <include name="${Extensions.dir}/openwebstudio.dotnetnuke_extensions.config" />
+		  <include name="${Wrapper.dir}/r2i.OWS.Upgrade.dnn" />
+        <include name="${Wrapper.dir}/r2i.OWS.Upgrade.dnn5" />
+
+	  </fileset>
+    </copy>
+
+    <mkdir dir="${package.dir}" unless="${directory::exists(package.dir)}" />
+    <zip zipfile="${package.dir}/${BuildName}_${Wrapper.name}_${shortVersion}${BuildType}${binZip}.upgrade.zip">
+      <fileset basedir="temp">
+        <include name="**/*" />
+      </fileset>
+    </zip>
+
+    <!--Delete temp directory -->
+    <delete dir="temp" failonerror="false" />
+  </target>
+  <!-- End area for installable PA -->
+
+	<!-- Begin area for creating installable upgrade PA (should depend on target that clears where this will build zip file to AND resourcezip as this is part of installable PA)-->
+	<target name="CreateProUpgradeZip" depends="CleanPackageBin CreateResourceZip">
+		<!-- DO flatten this as we want to retain folder structure in this and ONLY this zip -->
+		<copy todir="temp" flatten="true">
+
+			<fileset>
+				<include name="**${resourcezip.dir}/Resources.zip" />
+				<include name="${bin.dir}/r2i.OWS.UI.dll" />
+				<!-- Replace this with ${UI.dir} -->
+				<include name="${bin.dir}/${Engine.dll}.dll" />
+				<include name="${bin.dir}/${Framework.dll}.dll" />
+				<include name="${bin.dir}/${SqlDataProvider.dll}.dll" />
+				<include name="${bin.dir}/${Wrapper.dll}" />
+				<include name="${bin.dir}/${Interfaces.dll}.dll" />
+				<include name="${bin.dir}/${Extensions.dll}.dll" />
+				<include name="${bin.dir}/${Json.dll}" />
+				<include name="${SqlDataProvider.dir}/*.SqlDataProvider" />
+				<include name="${Wrapper.dir}/ListX.Installer.ascx" />
+				<include name="${Wrapper.dir}/openwebstudio.config" />
+				<include name="${Wrapper.dir}/openwebstudio.216.config" />
+				<include name="${Wrapper.dir}/openwebstudio.217.config" />
+				<include name="${Wrapper.dir}/openwebstudio.218.config" />
+				<include name="${Wrapper.dir}/openwebstudio.2114.config" />
+				<include name="${Wrapper.dir}/openwebstudio.2126.config" />
+				<include name="${Wrapper.dir}/openwebstudio.2127.config" />
+				<include name="${Extensions.dir}/openwebstudio.dotnetnuke_extensions.config" />
+				<include name="${Wrapper.dir}/r2i.OWS.ProUpgrade.dnn" />
+        <include name="${Wrapper.dir}/r2i.OWS.ProUpgrade.dnn5" />
+				<include name="${ProExtensions.dir}/openwebstudio.dotnetnuke_pro_extensions.config" />
+				<include name="${bin.dir}/${ProExtensions.dll}.dll" />
+
+			</fileset>
+		</copy>
+
+		<mkdir dir="${package.dir}" unless="${directory::exists(package.dir)}" />
+		<zip zipfile="${package.dir}/${BuildName}_${Wrapper.name}_${proversion}${BuildType}${professionalZip}.upgrade.zip">
+			<fileset basedir="temp">
+				<include name="**/*" />
+			</fileset>
+		</zip>
+
+		<!--Delete temp directory -->
+		<delete dir="temp" failonerror="false" />
+	</target>
+	<!-- End area for installable PA -->
+	
+  <!-- Begin area for distributable source code zip (should depend on target that clears where this will build zip file to)-->
+  <target name="CreateSrcZip" depends="CleanPackageSource CreateResourceSourceZip">
+    <!-- DO flatten this as we want to retain folder structure in this and ONLY this zip -->
+    <copy todir="temp" flatten="true">
+      <fileset>
+        <include name="**${resourcezip.dir}/Resources.zip" />
+        <include name="${bin.dir}/r2i.OWS.UI.dll" />
+        <include name="${bin.dir}/${Engine.dll}.dll" />
+        <include name="${bin.dir}/${Framework.dll}.dll" />
+        <include name="${bin.dir}/${SqlDataProvider.dll}.dll" />
+        <include name="${bin.dir}/${Wrapper.dll}" />
+        <include name="${bin.dir}/${Interfaces.dll}.dll" />
+        <include name="${bin.dir}/${Extensions.dll}.dll" />
+        <include name="${bin.dir}/${Json.dll}" />
+        <include name="${SqlDataProvider.dir}/*.SqlDataProvider" />
+        <include name="${Wrapper.dir}/ListX.Installer.ascx" />
+        <include name="${Wrapper.dir}/openwebstudio.config" />
+        <include name="${Wrapper.dir}/openwebstudio.216.config" />
+        <include name="${Wrapper.dir}/openwebstudio.217.config" />
+		    <include name="${Wrapper.dir}/openwebstudio.218.config" />
+        <include name="${Wrapper.dir}/openwebstudio.2114.config" />
+        <include name="${Wrapper.dir}/openwebstudio.2126.config" />
+		  <include name="${Wrapper.dir}/openwebstudio.2127.config" />
+        <include name="${Extensions.dir}/openwebstudio.dotnetnuke_extensions.config" />
+				<include name="${Wrapper.dir}/r2i.OWS.dnn" />
+        <include name="${Wrapper.dir}/r2i.OWS.dnn5" />
+			</fileset>
+		</copy>
+
+		<mkdir dir="${package.dir}" unless="${directory::exists(package.dir)}" />
+		<zip zipfile="${package.dir}/${BuildName}_${Wrapper.name}_${shortVersion}${BuildType}${srcZip}.zip">
+			<fileset basedir="temp">
+				<include name="**/*" />
+			</fileset>
+		</zip>
+
+		<!--Delete temp directory -->
+		<delete dir="temp" failonerror="false" />
+
+	</target>
+	<!-- End area for distributable source code zip -->
+
+  <!-- Begin area for distributable samples zip-->
+  <target name="CreateSamplesZip" depends="CleanPackageSamples">
+    <!-- DO flatten this as we want to retain folder structure in this and ONLY this zip -->
+    <copy todir="temp" flatten="true">
+      <fileset basedir="${Framework.dir}/Samples">
+        <include name="**/*.json" />
+        <include name="**/*.js" />
+        <include name="**/*.css" />
+      </fileset>
+    </copy>
+
+    <mkdir dir="${package.dir}" unless="${directory::exists(package.dir)}" />
+    <zip zipfile="${package.dir}/${BuildName}_${Wrapper.name}_${shortVersion}${BuildType}${samplesZip}.zip">
+      <fileset basedir="temp">
+        <include name="**/*" />
+      </fileset>
+    </zip>
+
+    <!--Delete temp directory -->
+    <delete dir="temp" failonerror="false" />
+
+  </target>
+  <!-- End area for distributable source code zip -->
+  
+	<!--  SYNTHETIC TASKS  -->
+	<target name="build" depends="Compile" description="This target compiles the application.
+	" />
+
+	<target name="BuildAndZip" depends="build CreateSrcZip CreateBinZip CreateProfessionalBinZip CreateUpgradeZip CreateProUpgradeZip CreateSamplesZip" description="This target compiles the application and then creates four zip files: 
+	              - one that only contains the compiled code and runtime files 
+	      	      - one is the resourceszip for installable pa's
+	              - one with compiled code and source code.
+                - the samples
+	" />
+
+</project>

@@ -1,0 +1,53 @@
+	<table cellspacing="0" cellpadding="0" border="0" width="100"% style="font-size: 12px;">
+		<tr>
+			<td>Query - <i><i>The SQL Statement to execute against your database to obtain the list of all searchable content</i></i></td>
+		</tr>
+		<tr>
+			<td class="SubHead">
+				<textarea wrap=off onsave="this.value" parameter="Query" style="height: 150px; width:100%;" richtext=true>${Query}</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td class="SubHead">
+				<table cellpadding="0" border="0" width="100"%>
+					<tbody><tr>
+						<td nowrap="" width="150" class="SubHead">Title</td>
+						<td nowrap="" colspan="3" class="Normal">
+							<input type="text" style="width: 100%;" onsave="this.value" parameter="Title" value="${Title}"/></td>
+					</tr>
+					<tr>
+						<td nowrap="" width="150" class="SubHead">Author (UserID)</td>
+						<td nowrap="" class="Normal">
+							<input type="text" style="width: 100%;" onsave="this.value" parameter="Author" value="${Author}"/></td>
+						<td nowrap="" width="150" class="SubHead">Published Date</td>
+						<td nowrap="" width="150" class="Normal">
+							<input type="text" style="width: 100%;" onsave="this.value" parameter="Date" value="${Date}"/></td>
+					</tr>
+					<tr>
+						<td nowrap="" width="150" class="SubHead">Link Parameters</td>
+						<td nowrap="" class="Normal">
+							<input type="text" style="width: 100%;" onsave="this.value" parameter="Querystring" value="${Querystring}"/></td>
+						<td nowrap="" width="150" class="SubHead">Search Key</td>
+						<td nowrap="" width="150" class="Normal">
+							<input type="text" style="width: 100%;" onsave="this.value" parameter="Key" value="${Key}"/></td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+		<tr>
+			<td>Description - <i>The format used to display and describe the description of the search result items.</i></td>
+		</tr>
+		<tr>
+			<td class="SubHead">
+				<textarea wrap=off onsave="this.value" parameter="Description" style="height: 150px; width:100%;" richtext=true>${Description}</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>Content - <i>The format used for the content of the search items, this content is used for searching directly within the search interface.</i></td>
+		</tr>
+		<tr>
+			<td class="SubHead">
+				<textarea wrap=off onsave="this.value" parameter="Content" style="height: 150px; width:100%;" richtext=true>${Content}</textarea>
+			</td>
+		</tr>
+	</table>

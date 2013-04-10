@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<dotnetnuke version="02.02.16" type="Package">
+  <packages>
+    <package name="OWS" type="Module" version="02.02.16">
+      <friendlyName>OWS</friendlyName>
+      <description>Open Web Studio - Universal Presentation Layer for building Interactive Web systems.</description>
+      <iconFile>images/ows.32.gif</iconFile>
+      <owner>
+        <name>Kevin M Schreiner</name>
+        <organization />
+        <url />
+        <email />
+      </owner>
+      <license>The license for this package is not currently included within the installation file, please check with the vendor for full license details.</license>
+      <releaseNotes>This package has no Release Notes</releaseNotes>
+      <components>
+        <component type="Script">
+          <scripts>
+            <basePath>DesktopModules\OWS</basePath>
+            <script type="Install">
+              <name>02.00.00.SqlDataProvider</name>
+              <version>02.00.00</version>
+            </script>
+            <script type="Install">
+              <name>02.00.01.SqlDataProvider</name>
+              <version>02.00.01</version>
+            </script>
+            <script type="Install">
+              <name>02.00.02.SqlDataProvider</name>
+              <version>02.00.02</version>
+            </script>
+            <script type="Install">
+              <name>02.00.03.SqlDataProvider</name>
+              <version>02.00.03</version>
+            </script>
+            <script type="Install">
+              <name>02.00.04.SqlDataProvider</name>
+              <version>02.00.04</version>
+            </script>
+            <script type="UnInstall">
+              <name>Uninstall.SqlDataProvider</name>
+<version>02.02.16</version>
+            </script>
+          </scripts>
+        </component>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>OWS</moduleName>
+            <foldername>OWS</foldername>
+            <businessControllerClass>R2i.OWS.Wrapper.DNN.ControlInterface, r2i.OWS.Wrapper.DotNetNuke</businessControllerClass>
+            <supportedFeatures>
+              <supportedFeature type="Portable" />
+              <supportedFeature type="Searchable" />
+            </supportedFeatures>
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>OWS</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>DesktopModules/OWS/dnn.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile>images/ows.32.gif</iconFile>
+                    <helpUrl />
+                    <supportsPopUps>False</supportsPopUps>
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                  <moduleControl>
+                    <controlKey>Package</controlKey>
+                    <controlSrc>DesktopModules/OWS/PackageCreator.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle>Package</controlTitle>
+                    <controlType>Edit</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <supportsPopUps>False</supportsPopUps>
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                  <moduleControl>
+                    <controlKey>Settings</controlKey>
+                    <controlSrc>DesktopModules/OWS/InstallerDnn.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle>Open Web Studio Settings</controlTitle>
+                    <controlType>Edit</controlType>
+                    <iconFile>images/ows.32.gif</iconFile>
+                    <helpUrl />
+                    <supportsPopUps>False</supportsPopUps>
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+          <eventMessage>
+            <processorType>DotNetNuke.Entities.Modules.EventMessageProcessor, DotNetNuke</processorType>
+            <processorCommand>UpgradeModule</processorCommand>
+            <attributes>
+              <businessControllerClass>R2i.OWS.Wrapper.DNN.ControlInterface, r2i.OWS.Wrapper.DotNetNuke</businessControllerClass>
+              <desktopModuleID>[DESKTOPMODULEID]</desktopModuleID>
+              <upgradeVersionsList>02.00.00,02.00.01,02.00.02,02.00.03,02.00.04</upgradeVersionsList>
+            </attributes>
+          </eventMessage>
+        </component>
+        <component type="ResourceFile">
+          <resourceFiles>
+            <basePath>/DesktopModules/OWS</basePath>
+            <resourceFile>
+              <name>Resources.zip</name>
+            </resourceFile>
+          </resourceFiles>
+        </component>
+        <component type="Assembly">
+          <assemblies>
+            <assembly>
+              <name>r2i.OWS.UI.dll</name>
+              <sourceFileName>r2i.OWS.UI.dll</sourceFileName>
+<version>02.02.16</version>
+            </assembly>
+            <assembly>
+              <name>r2i.OWS.Engine.dll</name>
+              <sourceFileName>r2i.OWS.Engine.dll</sourceFileName>
+<version>02.02.16</version>
+            </assembly>
+            <assembly>
+              <name>r2i.OWS.Framework.dll</name>
+              <sourceFileName>r2i.OWS.Framework.dll</sourceFileName>
+<version>02.02.16</version>
+            </assembly>
+            <assembly>
+              <name>r2i.OWS.SqlDataProvider.dll</name>
+              <sourceFileName>r2i.OWS.SqlDataProvider.dll</sourceFileName>
+<version>02.02.16</version>
+            </assembly>
+            <assembly>
+              <name>r2i.OWS.Wrapper.DotNetNuke.dll</name>
+              <sourceFileName>r2i.OWS.Wrapper.DotNetNuke.dll</sourceFileName>
+<version>02.02.16</version>
+            </assembly>
+            <assembly>
+              <name>r2i.OWS.Wrapper.DotNetNuke.Interface.dll</name>
+              <sourceFileName>r2i.OWS.Wrapper.DotNetNuke.Interface.dll</sourceFileName>
+<version>02.02.16</version>
+            </assembly>
+            <assembly>
+              <name>r2i.OWS.Wrapper.DNN.Extensions.dll</name>
+              <sourceFileName>r2i.OWS.Wrapper.DNN.Extensions.dll</sourceFileName>
+<version>02.02.16</version>
+            </assembly>
+            <assembly>
+              <name>r2i.OWS.Wrapper.DNN.Professional.Extensions.dll</name>
+              <sourceFileName>r2i.OWS.Wrapper.DNN.Professional.Extensions.dll</sourceFileName>
+<version>02.02.16</version>
+            </assembly>
+            <assembly>
+              <name>r2i.OWS.Newtonsoft.Json.dll</name>
+              <sourceFileName>r2i.OWS.Newtonsoft.Json.dll</sourceFileName>
+<version>02.02.16</version>
+            </assembly>
+          </assemblies>
+        </component>
+
+        <component type="File">
+          <files>
+            <basePath>DesktopModules\OWS</basePath>
+            <file>
+              <path>../ListX</path>
+              <name>ListX.Installer.ascx</name>
+              <sourceFileName>ListX.Installer.ascx</sourceFileName>
+            </file>
+            <file>
+              <path>../../</path>
+              <name>openwebstudio.config</name>
+              <sourceFileName>openwebstudio.config</sourceFileName>
+            </file>
+            <file>
+              <path>../../</path>
+              <name>openwebstudio.216.config</name>
+              <sourceFileName>openwebstudio.216.config</sourceFileName>
+            </file>
+            <file>
+              <path>../../</path>
+              <name>openwebstudio.217.config</name>
+              <sourceFileName>openwebstudio.217.config</sourceFileName>
+            </file>
+            <file>
+              <path>../../</path>
+              <name>openwebstudio.218.config</name>
+              <sourceFileName>openwebstudio.218.config</sourceFileName>
+            </file>
+            <file>
+              <path>../../</path>
+              <name>openwebstudio.2114.config</name>
+              <sourceFileName>openwebstudio.2114.config</sourceFileName>
+            </file>
+            <file>
+              <path>../../</path>
+              <name>openwebstudio.2126.config</name>
+              <sourceFileName>openwebstudio.2126.config</sourceFileName>
+            </file>
+            <file>
+              <path>../../</path>
+              <name>openwebstudio.2127.config</name>
+              <sourceFileName>openwebstudio.2127.config</sourceFileName>
+            </file>
+            <file>
+              <path>../../</path>
+              <name>openwebstudio.dotnetnuke_extensions.config</name>
+              <sourceFileName>openwebstudio.dotnetnuke_extensions.config</sourceFileName>
+            </file>
+            <file>
+              <path>../../</path>
+              <name>openwebstudio.dotnetnuke_pro_extensions.config</name>
+              <sourceFileName>openwebstudio.dotnetnuke_pro_extensions.config</sourceFileName>
+            </file>
+          </files>
+        </component>
+      </components>
+    </package>
+  </packages>
+</dotnetnuke>

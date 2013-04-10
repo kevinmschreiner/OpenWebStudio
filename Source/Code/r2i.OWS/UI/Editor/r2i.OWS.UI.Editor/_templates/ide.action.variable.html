@@ -1,0 +1,79 @@
+   <table class=Normal width=100% border=0 cellpadding=1 cellspacing=0>
+    <tr>
+     <td class=SubHead width=151>Variable Type</td>
+     <td colspan=3>
+     <select name=frmActionVariable_VariableType id=frmActionVariable_VariableType style="width:100%;">
+      <option value="&lt;Action&gt;">&lt;Action&gt;</option>
+      <option value="&lt;Cookie&gt;">&lt;Cookie&gt;</option>
+      <option value="&lt;Cache&gt;">&lt;Cache&gt;</option>
+      <option value="&lt;Context&gt;">&lt;Context&gt;</option>      
+      <option value="&lt;Custom&gt;">&lt;Custom&gt;</option>
+      <option value="&lt;Form&gt;">&lt;Form&gt;</option>
+      <option value="&lt;Message&gt;">&lt;Message&gt;</option>
+	  <option value="&lt;QueryString&gt;">&lt;QueryString&gt;</option>
+      <option value="&lt;Session&gt;">&lt;Session&gt;</option>
+      <option value="&lt;ViewState&gt;">&lt;ViewState&gt;</option>
+      <option value="TabId">TabId</option>
+      <option value="ModuleId">ModuleId</option>
+      <option value="Owner">Owner</option>
+      <option value="PageNumber">PageNumber</option>
+      <option value="PageSize">PageSize</option>
+      <option value="PortalAlias">PortalAlias</option>
+      <option value="PortalId">PortalId</option>
+      <option value="Qualifier">Qualifier</option>
+      <option value="UserId">UserId</option>	  
+     </select>
+     </td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151>Source</td>
+     <td colspan=3><input name=frmActionVariable_Source id=frmActionVariable_Source type=textbox style="width:100%;"></td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151>Data Type</td>
+     <td colspan=3>
+     <select name=frmActionVariable_VariableDataType id=frmActionVariable_VariableDataType style="width:100%;">
+      <option value="Any">Any</option>
+      <option value="Boolean">Boolean</option>
+      <option value="Date">Date</option>
+      <option value="Guid">Guid</option>
+      <option value="Number">Number</option>
+     </select>
+     </td>
+    </tr>    
+    <tr>
+     <td class=SubHead width=151>Formatters</td>
+     <td colspan=3><input name=frmActionVariable_Formatters id=frmActionVariable_Formatters type=textbox style="width:100%;"></td>
+    </tr>    
+    <tr>
+     <td class=SubHead width=151>Target</td>
+     <td colspan=3><input name=frmActionVariable_Target id=frmActionVariable_Target type=textbox style="width:100%;"></td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151>
+	 Target Left
+     </td>
+     <td><input name=frmActionVariable_Left id=frmActionVariable_Left type=textbox style="width:100%;"></td>
+     <td class=SubHead width=100>
+	 Target Right
+     </td>	 
+     <td><input name=frmActionVariable_Right id=frmActionVariable_Right type=textbox style="width:100%;"></td>	 
+    </tr>
+    <tr>
+     <td class=SubHead width=151>Empty Target</td>
+     <td colspan=3><input name=frmActionVariable_Empty id=frmActionVariable_Empty type=textbox style="width:100%;"></td>
+    </tr>	
+    <tr>
+     <td class=SubHead width=151 valign=top>Security</td>
+     <td colspan=3>
+	 Protect Against SQL Injection<br>
+	 <input type=checkbox id="frmActionVariable_PSQL" style="left-margin: -2px">Escape Single Quotes<br>
+	 Protect Against HTML Injection<br>
+	 <input type=checkbox id="frmActionVariable_PHTML" style="left-margin: -2px">Escape HTML Symbols<br>
+	 Protect Against CODE Injection<br>
+      <input type="radio" id=frmActionVariable_PCode name=frmActionVariable_PCode value="0">Do not escape code tags<br>     
+	  <input type="radio" id=frmActionVariable_PCode name=frmActionVariable_PCode value="1">Escape code tags ONCE - Rendering tags on OUTPUT<br>
+      <input type="radio" id=frmActionVariable_PCode name=frmActionVariable_PCode value="2">Escape code tags TWICE - Displaying tags on OUTPUT
+	 </td>
+    </tr>		
+   </table>

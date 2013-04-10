@@ -1,0 +1,63 @@
+   <table class=Normal width=100% border=0 cellpadding=1 cellspacing=0>
+    <tr>
+     <td class=SubHead width=151>Variable Type</td>
+     <td>
+     <select onsave="this.options[this.selectedIndex].value" parameter="Type" style="width:100%;">
+      <option value="&amp;lt;Session&amp;gt;" 		{{if Type=='&lt;Session&gt;'}}selected{{/if}}>&lt;Session&gt;</option>
+      <option value="&amp;lt;ViewState&amp;gt;"		{{if Type=='&lt;ViewState&gt;'}}selected{{/if}}>&lt;ViewState&gt;</option>
+      <option value="&amp;lt;Action&amp;gt;"			{{if Type=='&lt;Action&gt;'}}selected{{/if}}>&lt;Action&gt;</option>
+      <option value="&amp;lt;Cache&amp;gt;"			{{if Type=='&lt;Cache&gt;'}}selected{{/if}}>&lt;Cache&gt;</option>
+      <option value="&amp;lt;Context&amp;gt;"		{{if Type=='&lt;Context&gt;'}}selected{{/if}}>&lt;Context&gt;</option>
+      <option value="&amp;lt;Cookie&amp;gt;"			{{if Type=='&lt;Cookie&gt;'}}selected{{/if}}>&lt;Cookie&gt;</option>
+      <option value="&amp;lt;Module Setting&amp;gt;"	{{if Type=='&lt;Module Setting&gt;'}}selected{{/if}}>&lt;Module Setting&gt;</option>
+      <option value="&amp;lt;Tab Module Setting&amp;gt;" {{if Type=='&lt;Tab Module Setting&gt;'}}selected{{/if}}>&lt;Tab Module Setting&gt;</option>
+      <option value="&amp;lt;UserInfo&amp;gt;"		{{if Type=='&lt;UserInfo&gt;'}}selected{{/if}}>&lt;UserInfo&gt;</option>
+      <option value="&amp;lt;System&amp;gt;"			{{if Type=='&lt;System&gt;'}}selected{{/if}}>&lt;System&gt;</option>
+      <option value="CONTROL.HEADER"					{{if Type=='CONTROL.HEADER'}}selected{{/if}}>Control.Header</option>   
+      <option value="CONTROL.FOOTER"					{{if Type=='CONTROL.FOOTER'}}selected{{/if}}>Control.Footer</option>   
+      <option value="FILTER"							{{if Type=='FILTER'}}selected{{/if}}>Filter</option>      
+      <option value="MODULETITLE"					{{if Type=='MODULETITLE'}}selected{{/if}}>ModuleTitle</option>
+      <option value="PAGETITLE"						{{if Type=='PAGETITLE'}}selected{{/if}}>PageTitle</option>
+	  <!--
+      //<option value="PAGEDESCRIPTION">PageDescription</option>
+      //<option value="PAGEKEYWORDS">PageKeywords</option>
+      //<option value="PAGEAUTHOR">PageAuthor</option>
+      //<option value="PAGECOPYRIGHT">PageCopyright</option>
+      //<option value="PAGEGENERATOR">PageGenerator</option>
+	  -->
+      <option value="PAGESIZE"						{{if Type=='PAGESIZE'}}selected{{/if}}>PageSize</option>
+      <option value="PAGENUMBER"						{{if Type=='PAGENUMBER'}}selected{{/if}}>PageNumber</option>
+      <option value="CACHECONTROL"					{{if Type=='CACHECONTROL'}}selected{{/if}}>Response.CacheControl</option>
+      <option value="CONTENTDISPOSITION"				{{if Type=='CONTENTDISPOSITION'}}selected{{/if}}>Response.ContentDisposition</option>
+      <option value="REDIRECTLOCATION"				{{if Type=='REDIRECTLOCATION'}}selected{{/if}}>Response.RedirectLocation</option>
+      <option value="CONTENTTYPE"					{{if Type=='CONTENTTYPE'}}selected{{/if}}>Response.ContentType</option>
+      <option value="PRAGMA"							{{if Type=='PRAGMA'}}selected{{/if}}>Response.Pragma</option>
+      <option value="STATUS"							{{if Type=='STATUS'}}selected{{/if}}>Response.Status</option>
+      <option value="STATUSCODE"						{{if Type=='STATUSCODE'}}selected{{/if}}>Response.StatusCode</option>
+      <option value="STATUSDESCRIPTION"				{{if Type=='STATUSDESCRIPTION'}}selected{{/if}}>Response.StatusDescription</option>
+      <option value="SEARCH"							{{if Type=='SEARCH'}}selected{{/if}}>Search</option>
+      <option value="SORT"							{{if Type=='SORT'}}selected{{/if}}>Sort</option>
+     </select>
+     </td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151>Name</td>
+     <td><input onsave="this.value" parameter="Name" value="${Name}" type=textbox style="width:100%;"></td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151>
+     <input  onsave="(this.checked?'true':'false')" parameter="SkipProcessing" {{if SkipProcessing=='true'}}checked{{/if}} type="checkbox"/>
+     Value (Ignore Tags)
+     </td>
+     <td><textarea wrap=off onsave="this.value" parameter="Value" style="height: 150px; width:100%;" richtext=true>${Value}</textarea></td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151>Assignment Type</td>
+     <td>
+      <input type="radio" onsave="(this.checked?this.value:null)" parameter="AssignmentType" {{if AssignmentType=='0'}}checked{{/if}} value="0">Assign     
+      <input type="radio" onsave="(this.checked?this.value:null)" parameter="AssignmentType" {{if AssignmentType=='1'}}checked{{/if}} value="1">Append
+      <input type="radio" onsave="(this.checked?this.value:null)" parameter="AssignmentType" {{if AssignmentType=='3'}}checked{{/if}} value="3">Prepend
+      <input type="radio" onsave="(this.checked?this.value:null)" parameter="AssignmentType" {{if AssignmentType=='2'}}checked{{/if}} value="2">Increment     
+     </td>
+    </tr>
+   </table>

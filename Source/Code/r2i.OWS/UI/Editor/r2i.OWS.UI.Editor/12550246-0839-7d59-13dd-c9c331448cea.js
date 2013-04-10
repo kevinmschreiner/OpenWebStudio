@@ -1,0 +1,26 @@
+({
+	params:{pre:'',post:''},
+	load:function() {
+		var scripts = document.getElementsByTagName('script');
+		var myScript = scripts[scripts.length-1];
+		return this.parse(myScript.src.replace(/^[^\?]+\??/,''));
+	},
+	parse:function( query ) {
+		   if ( ! query ) return this;
+		   var Pairs = query.split(/[;&]/);
+		   for ( var i = 0; i < Pairs.length; i++ ) {
+			  var KeyVal = Pairs[i].split('=');
+			  if ( ! KeyVal || KeyVal.length != 2 ) continue;
+			  var key = unescape( KeyVal[0] );
+			  var val = unescape( KeyVal[1] );
+			  val = val.replace(/\+/g, ' ');
+			  this.params[key] = val;
+		   }
+		   return this;
+		},
+	run:function(c){
+		(new Function("c",this.params.pre+'c'+this.params.post))(c);
+	}
+}).load().run(
+{"Name":"Example.Twitter.Er","ConfigurationID":"12550246-0839-7d59-13dd-c9c331448cea","searchItems":[],"queryItems":[],"listItems":[],"messageItems":[{"Index":1,"Level":0,"Parameters":{"Type":"CONTROL.HEADER","Name":"Search Form","Value":"<span class=\"SubHead\">Search Term</span>\n<input id=\"frmTwitterSearch\" name=\"frmTwitterSearch\" value=\"[|COALESCE,|frmTwitterSearch,Form,\"#ows\",text,{ENCODEHTML}]\"/>\n<select id=\"frmTwitterRPP\" name=\"frmTwitterRPP\">\n\t<option {IIF,\"[|frmTwitterSearch,Form]=10\",\"selected\",\"\"}>10</option>\n\t<option {IIF,\"[|frmTwitterSearch,Form]=10\",\"selected\",\"\"}>20</option>\n\t<option {IIF,\"[|frmTwitterSearch,Form]=10\",\"selected\",\"\"}>30</option>\n\t<option {IIF,\"[|frmTwitterSearch,Form]=10\",\"selected\",\"\"}>40</option>\n\t<option {IIF,\"[|frmTwitterSearch,Form]=10\",\"selected\",\"\"}>50</option>\n</select>\n<button onclick=\"ows.Fetch('[ModuleID,System]',-1,'');return false;\">Search</button>\n","SkipProcessing":"false","AssignmentType":"0"},"ActionType":"Action-Assignment","ChildActions":[]},{"Index":2,"Level":0,"Parameters":{"Type":"Query-Query","GroupStatement":"","GroupIndex":"","Value":"<JSON>\n<PATH>http://search.twitter.com/search.json?q=[|COALESCE,|frmTwitterSearch,Form,{ENCODEURI}]&rpp=[|frmTwitterRPP,Form]</PATH>\n<GET><QUERY></QUERY></GET>\n<COLUMNS>\n<ROOT>results</ROOT>\n<COLUMN><NAME>icon</NAME><XPATH>profile_image_url</XPATH></COLUMN>\n<COLUMN><NAME>author</NAME><XPATH>from_user</XPATH></COLUMN>\n<COLUMN><NAME>text</NAME><XPATH>text</XPATH></COLUMN>\n<COLUMN><NAME>created</NAME><XPATH>created_at</XPATH></COLUMN>\n<COLUMN><NAME>id</NAME><XPATH>id</XPATH></COLUMN>\n<COLUMN><NAME>next</NAME><XPATH>next_page</COLUMN>\n</COLUMNS>\n</JSON>","Connection":"","Filter":"","CacheTime":"","CacheName":"","CacheShared":"false"},"ActionType":"Template","ChildActions":[]},{"Index":3,"Level":0,"Parameters":{"Type":"Group-Header","GroupStatement":"","GroupIndex":"","Value":"<div style=\"width:686px;border-top:1px solid gray;\">","Connection":"","Filter":"","CacheTime":"","CacheName":"","CacheShared":"false"},"ActionType":"Template","ChildActions":[{"Index":4,"Level":0,"Parameters":{"Type":"Detail-Detail","GroupStatement":"","GroupIndex":"","Value":"<div id=\"twitter[id]\" style=\"border-bottom: 1px solid gray; padding-bottom: 10px;\">\n\t<div style=\"float:left; width:100px;\"><img src=\"[|icon]\" align=\"right\" /></div>\n\t<div style=\"float:left; width:556px;padding-left:10px;\"><b>[|author]</b>: [|text]<br/><i>[|created]</i></div>\n\t<div style=\"clear:both;\"></div>\n</div>","Connection":"","Filter":"","CacheTime":"","CacheName":"","CacheShared":"false"},"ActionType":"Template","ChildActions":[]}]},{"Index":5,"Level":0,"Parameters":{"Type":"Group-Footer","GroupStatement":"","GroupIndex":"","Value":"</div>","Connection":"","Filter":"","CacheTime":"","CacheName":"","CacheShared":"false"},"ActionType":"Template","ChildActions":[]}],"recordsPerPage":0,"enableAlphaFilter":false,"enablePageSelection":false,"enableRecordsPerPage":false,"enableCustomPaging":false,"enableExcelExport":false,"enableHide_OnNoQuery":false,"enableHide_OnNoResults":false,"enableAdvancedParsing":true,"enableCompoundIIFConditions":true,"enableQueryDebug":false,"enableQueryDebug_Edit":false,"enableQueryDebug_Admin":false,"enableQueryDebug_Super":true,"enableQueryDebug_Log":false,"enableQueryDebug_ErrorLog":false,"autoRefreshInterval":"","skipRedirectActions":false,"skipSubqueryDebugging":false,"enableAdmin_Edit":true,"enableAdmin_Admin":false,"enableAdmin_Super":false,"BotRecordCount":0,"BotPageVariableName":null,"enableBotShowAllRecords":false,"enableBotDetection":false,"BotNonAjaxText":null,"disableOpenScript":false,"enableSilverlight":false,"enableAJAX":true,"enableAJAXPaging":false,"enableAJAXCustomPaging":false,"enableAJAXCustomStatus":false,"enableAJAXPageHistory":false,"customAJAXPageHistory":"","enableAJAXManual":false,"includeJavascriptUtilities":false,"includeJavascriptValidation":false,"javascriptInclude":null,"javascriptOnComplete":"","enableMultipleColumnSorting":false,"ModuleCommunicationMessageType":"","showAll":true,"useExplicitSystemVariables":false,"enabledForcedQuerySplit":false,"query":"","filter":"","customConnection":"","listItem":"","listAItem":"","defaultItem":"","noqueryItem":"","SearchQuery":"","SearchTitle":"","SearchLink":"","SearchAuthor":"","SearchDate":"","SearchKey":"","SearchContent":"","SearchDescription":"","Header":null,"Footer":null,"Title":null,"Version":"20"}
+);

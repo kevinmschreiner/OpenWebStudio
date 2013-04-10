@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{27C726CC-44E3-439C-A84B-805CE9454FD6}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>r2i.OWS.Engine</AssemblyName>
+    <AssemblyOriginatorKeyFile>keypair.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>
+    </RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>Windows</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <SignAssembly>false</SignAssembly>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\Build\</OutputPath>
+    <DocumentationFile>r2i.OWS.Engine.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\..\Build\</OutputPath>
+    <DocumentationFile>r2i.OWS.Engine.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>Full</DebugType>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="r2i.OWS.Newtonsoft.Json">
+      <HintPath>..\..\..\References\r2i.OWS.Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpZipLib, Version=0.81.0.1407, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\SharpZipLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\DataProvider.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\ToolbarController.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\Controller.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Engine.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EngineSingleton.vb" />
+    <Compile Include="Packaging\Common.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packaging\Courier.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packaging\Delivery.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packaging\Designer.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packaging\Installer.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packaging\Package.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Packaging\Wrapper.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Plugins\Actions\Utilities\ConfigurationWriter.vb" />
+    <Compile Include="Plugins\Actions\Action.Assignment.vb" />
+    <Compile Include="Plugins\Actions\Action.Comment.vb" />
+    <Compile Include="Plugins\Actions\Action.Condition.Else.vb" />
+    <Compile Include="Plugins\Actions\Action.Condition.If.Else.vb" />
+    <Compile Include="Plugins\Actions\Action.Condition.If.vb" />
+    <Compile Include="Plugins\Actions\Action.Delay.vb" />
+    <Compile Include="Plugins\Actions\Action.Email.vb" />
+    <Compile Include="Plugins\Actions\Action.Execute.vb" />
+    <Compile Include="Plugins\Actions\Action.File.vb" />
+    <Compile Include="Plugins\Actions\Action.Filter.vb" />
+    <Compile Include="Plugins\Actions\Action.Goto.vb" />
+    <Compile Include="Plugins\Actions\Action.Input.vb" />
+    <Compile Include="Plugins\Actions\Action.Log.vb" />
+    <Compile Include="Plugins\Actions\Action.Loop.vb" />
+    <Compile Include="Plugins\Actions\Action.Message.vb" />
+    <Compile Include="Plugins\Actions\Action.Output.vb" />
+    <Compile Include="Plugins\Actions\Action.Redirect.vb" />
+    <Compile Include="Plugins\Actions\Action.Region.vb" />
+    <Compile Include="Plugins\Actions\Action.Search.vb" />
+    <Compile Include="Plugins\Actions\Action.Template.Variable.vb" />
+    <Compile Include="Plugins\Actions\Action.Template.vb" />
+    <Compile Include="Plugins\Actions\Runtime.vb" />
+    <Compile Include="Plugins\Actions\Utilities\Execute_ThreadedMessageActionProcess.vb" />
+    <Compile Include="Plugins\Actions\Utilities\FileImport_ThreadedMessageActionProcess.vb" />
+    <Compile Include="Plugins\Actions\Utilities\MessageAction_Filter_Options.vb" />
+    <Compile Include="Plugins\Actions\Utilities\ReflectionReader.vb" />
+    <Compile Include="Plugins\Actions\Utilities\ThreadedMessageActionProcess.vb" />
+    <Compile Include="Plugins\Actions\Utilities\ThreadedMessageHandler.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Depricated.Decrypt.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Depricated.Encrypt.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.SHA1Hash.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Split.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Count.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.BreakWord.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Encode.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.MeasureString.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.EncodeJavascript.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.0.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.CanEdit.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Contains.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.DecodeHtml.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.DecodeUri.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Decrypt.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Diff.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.EncodeHtml.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.EncodeUri.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.EncodeWiki.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Encrypt.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.EndsWith.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Escape.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Exists.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.File.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Firewall.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.FriendlyUrl.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.IndexOf.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.IsDate.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.isEmpty.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.IsInRole.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.IsNumeric.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.IsSuperUser.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.LastIndexOf.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Left.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Length.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.List.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Lower.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.MapParentUrl.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.MapPath.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.MapUrl.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.MD5Hash.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Mid.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Pad.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.ParentPath.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Replace.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Replicate.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.ReverseParentPath.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.ReversePath.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Right.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.SqlFind.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.StartsWith.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.StripHtml.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Tab.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Trim.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Unescape.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Upper.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Url.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Wiki.vb" />
+    <Compile Include="Plugins\Queries\Query.Database.vb" />
+    <Compile Include="Plugins\Queries\Query.Directory.vb" />
+    <Compile Include="Plugins\Queries\Query.JSON.vb" />
+    <Compile Include="Plugins\Queries\Query.System.vb" />
+    <Compile Include="Plugins\Queries\Query.XML.vb" />
+    <Compile Include="Plugins\Renderers\Render.OpenControl.vb" />
+    <Compile Include="Plugins\Renderers\Render.Action.vb" />
+    <Compile Include="Plugins\Renderers\Render.Actions.vb" />
+    <Compile Include="Plugins\Renderers\Render.Alternate.vb" />
+    <Compile Include="Plugins\Renderers\Render.Cast.vb" />
+    <Compile Include="Plugins\Renderers\Render.CheckItem.vb" />
+    <Compile Include="Plugins\Renderers\Render.CheckList.vb" />
+    <Compile Include="Plugins\Renderers\Render.CheckListItem.vb" />
+    <Compile Include="Plugins\Renderers\Render.Coalesce.vb" />
+    <Compile Include="Plugins\Renderers\Render.Columns.vb" />
+    <Compile Include="Plugins\Renderers\Render.Count.vb" />
+    <Compile Include="Plugins\Renderers\Render.Filter.vb" />
+    <Compile Include="Plugins\Renderers\Render.FilterTag.vb" />
+    <Compile Include="Plugins\Renderers\Render.Format.vb" />
+    <Compile Include="Plugins\Renderers\Render.IIF.vb" />
+    <Compile Include="Plugins\Renderers\Render.Locale.vb" />
+    <Compile Include="Plugins\Renderers\Render.Math.vb" />
+    <Compile Include="Plugins\Renderers\Render.Radio.vb" />
+    <Compile Include="Plugins\Renderers\Render.Select.vb" />
+    <Compile Include="Plugins\Renderers\Render.Set.vb" />
+    <Compile Include="Plugins\Renderers\Render.Sort.vb" />
+    <Compile Include="Plugins\Renderers\Render.SortHeader.vb" />
+    <Compile Include="Plugins\Renderers\Render.SortTag.vb" />
+    <Compile Include="Plugins\Renderers\Render.SubQuery.vb" />
+    <Compile Include="Plugins\Renderers\Render.Sum.vb" />
+    <Compile Include="Plugins\Renderers\Render.TextEditor.vb" />
+    <Compile Include="Plugins\Renderers\Render.Variable.vb" />
+    <Compile Include="Plugins\Renderers\Render.Pager.vb" />
+    <Compile Include="Utilities\AuthenticationHelper.vb" />
+    <Compile Include="Utilities\Graphics.vb" />
+    <Compile Include="Utilities\ObjectMappingHelper\DataMappingAttribute.vb" />
+    <Compile Include="Utilities\ObjectMappingHelper\MappingInfoCache.vb" />
+    <Compile Include="Utilities\ObjectMappingHelper\ObjectMapper.vb" />
+    <Compile Include="Utilities\ObjectMappingHelper\PropertyMappingInfo.vb" />
+    <Compile Include="Utilities\PostClient.vb" />
+    <Compile Include="Utilities\Security\Cryptography.vb" />
+    <Compile Include="Utilities\Utilities.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Scripts\02.00.00.SqlDataProvider" />
+    <None Include="keypair.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Framework\r2i.OWS.Framework.vbproj">
+      <Project>{090810F1-8B14-4F74-A6C5-D6D39FDD1CD9}</Project>
+      <Name>r2i.OWS.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Plugins\Renderers\Render.Stub.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

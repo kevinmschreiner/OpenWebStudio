@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{732582D0-0709-4A13-A010-46AFCE2E93CA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>r2i.OWS.Wrapper.DNN</RootNamespace>
+    <AssemblyName>r2i.OWS.Wrapper.DotNetNuke</AssemblyName>
+    <MyType>Windows</MyType>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <OptionStrict>On</OptionStrict>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\..\..\Build\</OutputPath>
+    <DocumentationFile>r2i.OWS.Core.DNN.xml</DocumentationFile>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>Full</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\Build\</OutputPath>
+    <DocumentationFile>r2i.OWS.Core.DNN.xml</DocumentationFile>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetNuke, Version=6.0.0.2962, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\References\DotNetNuke.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="r2i.OWS.Framework" />
+    <Import Include="r2i.OWS.Framework.DataAccess" />
+    <Import Include="r2i.OWS.Framework.Entities" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.aspx.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Admin.aspx.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.aspx.vb">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\BaseParentControl.vb" />
+    <Compile Include="Controls\OpenPage.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataAccess\AjaxMsgParams.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\CDefault.vb" />
+    <Compile Include="DataAccess\DesktopModuleInfo.vb" />
+    <Compile Include="DataAccess\Factories\CDefaultFactory.vb" />
+    <Compile Include="DataAccess\Factories\ConfigurationFactory.vb" />
+    <Compile Include="DataAccess\Factories\DeliveryFactory.vb" />
+    <Compile Include="DataAccess\Factories\DesignFactory.vb" />
+    <Compile Include="DataAccess\Factories\DesktopFactory.vb" />
+    <Compile Include="DataAccess\Factories\EngineFactory.vb" />
+    <Compile Include="DataAccess\Factories\InstallerFactory.vb" />
+    <Compile Include="DataAccess\Factories\LogFactory.vb" />
+    <Compile Include="DataAccess\Factories\ModuleActionFactory.vb" />
+    <Compile Include="DataAccess\Factories\ModuleControlInfoFactory.vb" />
+    <Compile Include="DataAccess\Factories\ModuleDefinitionFactory.vb" />
+    <Compile Include="DataAccess\Factories\ModuleFactory.vb" />
+    <Compile Include="DataAccess\Factories\ModulePermissionFactory.vb" />
+    <Compile Include="DataAccess\Factories\PortalModuleBaseUIFactory.vb" />
+    <Compile Include="DataAccess\Factories\PortalSettingsFactory.vb" />
+    <Compile Include="DataAccess\Factories\ProviderConfigurationFactory.vb" />
+    <Compile Include="DataAccess\Factories\ProviderFactory.vb" />
+    <Compile Include="DataAccess\Factories\RepositoryFactory.vb" />
+    <Compile Include="DataAccess\Factories\RoleFactory.vb" />
+    <Compile Include="DataAccess\Factories\SecurityFactory.vb" />
+    <Compile Include="DataAccess\Factories\SkinFactory.vb" />
+    <Compile Include="DataAccess\Factories\TabFactory.vb" />
+    <Compile Include="DataAccess\Factories\TabPermissionFactory.vb" />
+    <Compile Include="DataAccess\Factories\UserFactory.vb" />
+    <Compile Include="DataAccess\Installer.vb" />
+    <Compile Include="DataAccess\IPersistent.vb" />
+    <Compile Include="DataAccess\Log.vb" />
+    <Compile Include="DataAccess\Module.vb" />
+    <Compile Include="DataAccess\ModuleAction.vb" />
+    <Compile Include="DataAccess\ModuleActionCollection.vb" />
+    <Compile Include="DataAccess\ModuleCommunicate.vb" />
+    <Compile Include="DataAccess\ModuleControlInfo.vb" />
+    <Compile Include="DataAccess\ModuleDefinitionInfo.vb" />
+    <Compile Include="DataAccess\ModuleInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\ModulePermissionCollection.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\ModulePermissionInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccess\PageInfo.vb" />
+    <Compile Include="DataAccess\PortalModuleBaseUI.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataAccess\PortalSettings.vb" />
+    <Compile Include="DataAccess\Provider.vb" />
+    <Compile Include="DataAccess\ProviderConfiguration.vb" />
+    <Compile Include="DataAccess\Repository.vb" />
+    <Compile Include="DataAccess\Role.vb" />
+    <Compile Include="DataAccess\Skin.vb" />
+    <Compile Include="DataAccess\SkinInfo.vb" />
+    <Compile Include="DataAccess\TabInfo.vb" />
+    <Compile Include="DataAccess\TabPermissionCollection.vb" />
+    <Compile Include="DataAccess\TabPermissionInfo.vb" />
+    <Compile Include="DataAccess\User.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DNNSingleton.vb" />
+    <Compile Include="Entities\CDefaultController.vb" />
+    <Compile Include="Entities\ConfigurationController.vb" />
+    <Compile Include="Entities\DataController.vb" />
+    <Compile Include="Entities\DeliveryController.vb" />
+    <Compile Include="Entities\DesignController.vb" />
+    <Compile Include="Entities\DesktopModuleController.vb" />
+    <Compile Include="Entities\DnnAbstractFactory.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\EngineController.vb" />
+    <Compile Include="Entities\InstallerController.vb" />
+    <Compile Include="Entities\LogController.vb" />
+    <Compile Include="Entities\ModuleActionController.vb" />
+    <Compile Include="Entities\ModuleControlInfoController.vb" />
+    <Compile Include="Entities\ModuleController.vb" />
+    <Compile Include="Entities\ModuleDefinitionController.vb" />
+    <Compile Include="Entities\ModulePermissionController.vb" />
+    <Compile Include="Entities\OWSModuleController.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\PageInfoController.vb" />
+    <Compile Include="Entities\PortalModuleBaseUIController.vb" />
+    <Compile Include="Entities\PortalSettingsController.vb" />
+    <Compile Include="Entities\ProviderConfigurationController.vb" />
+    <Compile Include="Entities\ProviderController.vb" />
+    <Compile Include="Entities\RepositoryController.vb" />
+    <Compile Include="Entities\RoleController.vb" />
+    <Compile Include="Entities\SecurityController.vb" />
+    <Compile Include="Entities\SkinController.vb" />
+    <Compile Include="Entities\TabController.vb" />
+    <Compile Include="Entities\TabPermissionController.vb" />
+    <Compile Include="Entities\UserController.vb" />
+    <Compile Include="IM.aspx.vb">
+      <DependentUpon>IM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="installerDnn.ascx.vb">
+      <DependentUpon>installerDnn.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PackageCreator.ascx.vb">
+      <DependentUpon>PackageCreator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ControlInterface.vb" />
+    <Compile Include="dnn.ascx.vb">
+      <DependentUpon>dnn.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleSettings.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Controls\OpenCallbackControl.vb" />
+    <Compile Include="Controls\OpenControl.vb" />
+    <Compile Include="SkinObject.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_services\Authenticate.aspx.Designer.vb">
+      <DependentUpon>Authenticate.aspx.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="_services\Authenticate.aspx.vb">
+      <DependentUpon>Authenticate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin.aspx.resx">
+      <DependentUpon>Admin.aspx.vb</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Admin.aspx.designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="installerDnn.ascx.resx">
+      <DependentUpon>installerDnn.ascx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dnn.ascx.resx">
+      <DependentUpon>dnn.ascx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageCreator.ascx.resx">
+      <DependentUpon>PackageCreator.ascx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_services\Authenticate.aspx.resx">
+      <DependentUpon>Authenticate.aspx.vb</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Authenticate.aspx.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="r2i.OWS.Professional.dnn5">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="r2i.OWS.ProUpgrade.dnn5">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="r2i.OWS.Upgrade.dnn5">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="r2i.OWS.dnn5">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="openwebstudio.2114.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="openwebstudio.2126.config" />
+    <None Include="openwebstudio.2127.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="openwebstudio.216.config" />
+    <None Include="openwebstudio.217.config" />
+    <None Include="openwebstudio.218.config" />
+    <None Include="openwebstudio.config" />
+    <None Include="r2i.OWS.dnn">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="r2i.OWS.Professional.dnn">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="r2i.OWS.ProUpgrade.dnn">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="r2i.OWS.Upgrade.dnn">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Engine\r2i.OWS.Engine.vbproj">
+      <Project>{27C726CC-44E3-439C-A84B-805CE9454FD6}</Project>
+      <Name>r2i.OWS.Engine</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\r2i.OWS.Framework.vbproj">
+      <Project>{090810F1-8B14-4F74-A6C5-D6D39FDD1CD9}</Project>
+      <Name>r2i.OWS.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\UI\r2i.OWS.UI.vbproj">
+      <Project>{35C1EAB0-3221-43BA-81B9-C81CBF98B96C}</Project>
+      <Name>r2i.OWS.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin.aspx">
+    </Content>
+    <Content Include="IM.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="installerDnn.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="PackageCreator.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="dnn.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ListX.Installer.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="_services\Authenticate.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

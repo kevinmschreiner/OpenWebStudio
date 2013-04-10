@@ -1,0 +1,14 @@
+ <table class=Normal width=100% border=0 cellpadding=1 cellspacing=0>
+    <tr>
+     <td class=SubHead width=151>Delay Metric</td>
+     <td>
+     <input type="radio" onsave="(this.checked?this.value:null)" parameter="Type" {{if Type=='Millisecond'}}checked{{/if}} value="Millisecond">Milliseconds
+	 <input type="radio" onsave="(this.checked?this.value:null)" parameter="Type" {{if Type=='Second'}}checked{{/if}} value="Second">Seconds     
+	 <input type="radio" onsave="(this.checked?this.value:null)" parameter="Type" {{if Type=='Minute'}}checked{{/if}} value="Minute">Minutes     	 
+	 </td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151>Value</td>
+     <td><input onsave="this.value" parameter="Value" value="${Value}" type=textbox style="width:100%;"></td>
+    </tr>
+   </table>

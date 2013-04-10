@@ -1,0 +1,13 @@
+   <table class=Normal width=100% border=0 cellpadding=1 cellspacing=0>
+    <tr>
+     <td class=SubHead width=151>Type</td>
+     <td>
+      <input type="radio" onsave="(this.checked?this.value:null)" parameter="Type" name="REDIRECT" {{if Type=='Link'}}checked{{/if}} value="Link">URL Link     
+      <input type="radio" onsave="(this.checked?this.value:null)" name="REDIRECT" {{if Type=='Tab'}}checked{{/if}} value="Tab">Page
+     </td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151>Value</td>
+     <td><input onsave="this.value" parameter="Value" value="{{if Type=='Link'}}${Link}{{/if}}{{if Type=='Tab'}}${Tab}{{/if}}" style="width:100%;"></td>
+    </tr>
+   </table>

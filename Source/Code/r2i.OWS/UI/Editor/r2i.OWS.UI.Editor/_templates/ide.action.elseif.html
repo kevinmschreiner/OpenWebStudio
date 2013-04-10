@@ -1,0 +1,37 @@
+   <table class=Normal width=100% border=0 cellpadding=1 cellspacing=0>
+    <tr>
+     <td class=SubHead width=151>Condition Type</td>
+     <td><div id=TypePrompt>
+     <select name=frmActionCondition_LogicType id=frmActionCondition_LogicType onchange='onClick_Action_Convert(this.options[this.selectedIndex].value);'>
+      <option value="Condition-If">If</option>
+      <option value="Condition-ElseIf" selected>Else-If</option>
+      <option value="Condition-Else">Else</option>
+     </select>  
+      <input type="radio" id=frmActionCondition_ConditionType name=frmActionCondition_ConditionType value="False" onclick="onfrmActionCondition_ConditionTypeToggle( this.value);">Standard     
+      <input type="radio" id=frmActionCondition_ConditionType name=frmActionCondition_ConditionType value="True" onclick="onfrmActionCondition_ConditionTypeToggle( this.value);">Advanced (Compound)
+	  </div>
+     </td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151><div id=lfthandLabel>Left Condition</div></td>
+     <td><div id=lfthandPrompt><input name=frmActionCondition_ConditionLeft id=frmActionCondition_ConditionLeft type=textbox style="width:100%;"></div></td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151><div id=operatorLabel>Comparison</div></td>
+     </td>
+     <td><div id=operatorPrompt>
+     <select name=frmActionCondition_ConditionOperator id=frmActionCondition_ConditionOperator>
+      <option value="=">=</option>
+      <option value="&lt;&gt;">&lt;&gt;</option>
+      <option value="&lt;">&lt;</option>
+      <option value="&gt;">&gt;</option>
+      <option value="&lt;=">&lt;=</option>
+      <option value="&gt;=">&gt;=</option>
+     </select>     
+     </div></td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151><div id=rhthandLabel>Right Condition</div></td>
+     <td><div id=rhthandPrompt><input name=frmActionCondition_ConditionRight id=frmActionCondition_ConditionRight type=textbox style="width:100%;"></div></td>
+    </tr>
+   </table>

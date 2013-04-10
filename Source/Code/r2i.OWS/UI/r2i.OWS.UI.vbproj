@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{35C1EAB0-3221-43BA-81B9-C81CBF98B96C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>r2i.OWS.UI</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>keypair.snk</AssemblyOriginatorKeyFile>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\Build\</OutputPath>
+    <DocumentationFile>r2i.OWS.UI.DNN.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>Full</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\Build\</OutputPath>
+    <DocumentationFile>r2i.OWS.UI.DNN.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugSymbols>true</DebugSymbols>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="r2i.OWS.Newtonsoft.Json">
+      <HintPath>..\..\..\References\r2i.OWS.Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="OpenControlBase.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Configuration.New.Text" />
+    <None Include="keypair.snk" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Engine\r2i.OWS.Engine.vbproj">
+      <Project>{27C726CC-44E3-439C-A84B-805CE9454FD6}</Project>
+      <Name>r2i.OWS.Engine</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Framework\r2i.OWS.Framework.vbproj">
+      <Project>{090810F1-8B14-4F74-A6C5-D6D39FDD1CD9}</Project>
+      <Name>r2i.OWS.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin.css" />
+    <Content Include="Images\Action_Move.gif" />
+    <Content Include="Images\add.gif" />
+    <Content Include="Images\blogs.gif" />
+    <Content Include="Images\Clip.gif" />
+    <Content Include="Images\Code.gif" />
+    <Content Include="Images\collapse.gif" />
+    <Content Include="Images\copy.gif" />
+    <Content Include="Images\delete.gif" />
+    <Content Include="Images\dotted.gif" />
+    <Content Include="Images\dottedangle.gif" />
+    <Content Include="Images\dottedup.gif" />
+    <Content Include="Images\edit.gif" />
+    <Content Include="Images\Event.gif" />
+    <Content Include="Images\expand.gif" />
+    <Content Include="Images\export.gif" />
+    <Content Include="Images\FBL.gif" />
+    <Content Include="Images\FBR.gif" />
+    <Content Include="Images\Find.gif" />
+    <Content Include="Images\forum.gif" />
+    <Content Include="Images\help.gif" />
+    <Content Include="Images\HTL.gif" />
+    <Content Include="Images\HTR.gif" />
+    <Content Include="Images\import.gif" />
+    <Content Include="Images\Item.gif" />
+    <Content Include="Images\Lock.gif" />
+    <Content Include="Images\login.gif" />
+    <Content Include="Images\me.gif" />
+    <Content Include="Images\mnuback.gif" />
+    <Content Include="Images\mnuback2.gif" />
+    <Content Include="Images\mnuback3.gif" />
+    <Content Include="Images\mnuback4.gif" />
+    <Content Include="Images\mnuback5.gif" />
+    <Content Include="Images\mnuback6.gif" />
+    <Content Include="Images\mnuback7.gif" />
+    <Content Include="Images\mnuback8.gif" />
+    <Content Include="Images\mnuback9.gif" />
+    <Content Include="Images\mnubock.gif" />
+    <Content Include="Images\move.gif" />
+    <Content Include="Images\open.gif" />
+    <Content Include="Images\ows.16.gif" />
+    <Content Include="Images\ows.32.gif" />
+    <Content Include="Images\ows.gif" />
+    <Content Include="Images\paste.gif" />
+    <Content Include="Images\publish.gif" />
+    <Content Include="Images\questions.gif" />
+    <Content Include="Images\r2iows.gif" />
+    <Content Include="Images\Repo.gif" />
+    <Content Include="Images\rotator.gif" />
+    <Content Include="Images\rotatorx.gif" />
+    <Content Include="Images\rotator_blue.gif" />
+    <Content Include="Images\rotator_gray.gif" />
+    <Content Include="Images\rotator_pulse.gif" />
+    <Content Include="Images\rotator_violet.gif" />
+    <Content Include="Images\Save.gif" />
+    <Content Include="Images\saved.gif" />
+    <Content Include="Images\search.gif" />
+    <Content Include="Images\spacer.gif" />
+    <Content Include="Images\Splitter.gif" />
+    <Content Include="Images\srotator.gif" />
+    <Content Include="Images\support.gif" />
+    <Content Include="Images\ticket.gif" />
+    <Content Include="Images\wiki.gif" />
+    <Content Include="Scripts\Admin_Actions.js" />
+    <Content Include="Scripts\Admin_Core.js" />
+    <Content Include="Scripts\Admin_GrowlSettings.js" />
+    <Content Include="Scripts\Admin_keybindings.js" />
+    <Content Include="Scripts\Admin_OnLoad.js" />
+    <Content Include="Scripts\Admin_OnRender.js" />
+    <Content Include="Scripts\Admin_QuickBuilder.js" />
+    <Content Include="Scripts\Admin_Ribbon.js" />
+    <Content Include="Scripts\Admin_Selector.js" />
+    <Content Include="Scripts\Config.js" />
+    <Content Include="Scripts\jquery.growl.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.noconflict.js" />
+    <Content Include="Scripts\jquery.thickbox.css" />
+    <Content Include="Scripts\jquery.thickbox.js" />
+    <Content Include="Scripts\jRibbon.js" />
+    <Content Include="Scripts\json.js" />
+    <Content Include="Scripts\OWS.Community.js" />
+    <Content Include="Scripts\OWS.Debug.js" />
+    <Content Include="Scripts\OWS.js" />
+    <Content Include="Scripts\OWS.Utilities.js" />
+    <Content Include="Scripts\OWS.Validation.js" />
+    <Content Include="Scripts\Tools.Debug.js" />
+    <Content Include="Scripts\Tools.Repository.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" / -->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1448</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+</Project>

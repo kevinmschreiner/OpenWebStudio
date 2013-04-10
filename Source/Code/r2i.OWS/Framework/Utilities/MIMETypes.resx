@@ -1,0 +1,1335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="fif" xml:space="preserve">
+    <value>application/fractals</value>
+  </data>
+  <data name="spl" xml:space="preserve">
+    <value>application/futuresplash</value>
+  </data>
+  <data name="hta" xml:space="preserve">
+    <value>application/hta</value>
+  </data>
+  <data name="hqx" xml:space="preserve">
+    <value>application/mac-binhex40</value>
+  </data>
+  <data name="infopathxml" xml:space="preserve">
+    <value>application/ms-infopath.xml</value>
+  </data>
+  <data name="vsi" xml:space="preserve">
+    <value>application/ms-vsi</value>
+  </data>
+  <data name="accdb" xml:space="preserve">
+    <value>application/msaccess</value>
+  </data>
+  <data name="one" xml:space="preserve">
+    <value>application/msonenote</value>
+  </data>
+  <data name="doc" xml:space="preserve">
+    <value>application/msword</value>
+  </data>
+  <data name="pdf" xml:space="preserve">
+    <value>application/pdf</value>
+  </data>
+  <data name="p10" xml:space="preserve">
+    <value>application/pkcs10</value>
+  </data>
+  <data name="p7m" xml:space="preserve">
+    <value>application/pkcs7-mime</value>
+  </data>
+  <data name="p7s" xml:space="preserve">
+    <value>application/pkcs7-signature</value>
+  </data>
+  <data name="cer" xml:space="preserve">
+    <value>application/pkix-cert</value>
+  </data>
+  <data name="crl" xml:space="preserve">
+    <value>application/pkix-crl</value>
+  </data>
+  <data name="ps" xml:space="preserve">
+    <value>application/postscript</value>
+  </data>
+  <data name="spt" xml:space="preserve">
+    <value>application/ScriptGen</value>
+  </data>
+  <data name="sdp" xml:space="preserve">
+    <value>application/sdp</value>
+  </data>
+  <data name="setpay" xml:space="preserve">
+    <value>application/set-payment-initiation</value>
+  </data>
+  <data name="setreg" xml:space="preserve">
+    <value>application/set-registration-initiation</value>
+  </data>
+  <data name="edn" xml:space="preserve">
+    <value>application/vnd.adobe.edn</value>
+  </data>
+  <data name="pdx" xml:space="preserve">
+    <value>application/vnd.adobe.pdx</value>
+  </data>
+  <data name="rmf" xml:space="preserve">
+    <value>application/vnd.adobe.rmf</value>
+  </data>
+  <data name="xdp" xml:space="preserve">
+    <value>application/vnd.adobe.xdp+xml</value>
+  </data>
+  <data name="xfd" xml:space="preserve">
+    <value>application/vnd.adobe.xfd+xml</value>
+  </data>
+  <data name="xfdf" xml:space="preserve">
+    <value>application/vnd.adobe.xfdf</value>
+  </data>
+  <data name="fdf" xml:space="preserve">
+    <value>application/vnd.fdf</value>
+  </data>
+  <data name="grv" xml:space="preserve">
+    <value>application/vnd.groove-injector</value>
+  </data>
+  <data name="gsa" xml:space="preserve">
+    <value>application/vnd.groove-space-archive</value>
+  </data>
+  <data name="gta" xml:space="preserve">
+    <value>application/vnd.groove-tool-archive</value>
+  </data>
+  <data name="vcg" xml:space="preserve">
+    <value>application/vnd.groove-vcard</value>
+  </data>
+  <data name="xls" xml:space="preserve">
+    <value>application/vnd.ms-excel</value>
+  </data>
+  <data name="xlam" xml:space="preserve">
+    <value>application/vnd.ms-excel.addin.macroEnabled.12</value>
+  </data>
+  <data name="xlsb" xml:space="preserve">
+    <value>application/vnd.ms-excel.sheet.binary.macroEnabled.12</value>
+  </data>
+  <data name="xlsm" xml:space="preserve">
+    <value>application/vnd.ms-excel.sheet.macroEnabled.12</value>
+  </data>
+  <data name="xltm" xml:space="preserve">
+    <value>application/vnd.ms-excel.template.macroEnabled.12</value>
+  </data>
+  <data name="mpf" xml:space="preserve">
+    <value>application/vnd.ms-mediapackage</value>
+  </data>
+  <data name="thmx" xml:space="preserve">
+    <value>application/vnd.ms-officetheme</value>
+  </data>
+  <data name="rels" xml:space="preserve">
+    <value>application/vnd.ms-package.relationships+xml</value>
+  </data>
+  <data name="sst" xml:space="preserve">
+    <value>application/vnd.ms-pki.certstore</value>
+  </data>
+  <data name="pko" xml:space="preserve">
+    <value>application/vnd.ms-pki.pko</value>
+  </data>
+  <data name="cat" xml:space="preserve">
+    <value>application/vnd.ms-pki.seccat</value>
+  </data>
+  <data name="stl" xml:space="preserve">
+    <value>application/vnd.ms-pki.stl</value>
+  </data>
+  <data name="ppt" xml:space="preserve">
+    <value>application/vnd.ms-powerpoint</value>
+  </data>
+  <data name="ppam" xml:space="preserve">
+    <value>application/vnd.ms-powerpoint.addin.macroEnabled.12</value>
+  </data>
+  <data name="pptm" xml:space="preserve">
+    <value>application/vnd.ms-powerpoint.presentation.macroEnabled.12</value>
+  </data>
+  <data name="sldm" xml:space="preserve">
+    <value>application/vnd.ms-powerpoint.slide.macroEnabled.12</value>
+  </data>
+  <data name="ppsm" xml:space="preserve">
+    <value>application/vnd.ms-powerpoint.slideshow.macroEnabled.12</value>
+  </data>
+  <data name="potm" xml:space="preserve">
+    <value>application/vnd.ms-powerpoint.template.macroEnabled.12</value>
+  </data>
+  <data name="pub" xml:space="preserve">
+    <value>application/vnd.ms-publisher</value>
+  </data>
+  <data name="vdx" xml:space="preserve">
+    <value>application/vnd.ms-visio.viewer</value>
+  </data>
+  <data name="docm" xml:space="preserve">
+    <value>application/vnd.ms-word.document.macroEnabled.12</value>
+  </data>
+  <data name="dotm" xml:space="preserve">
+    <value>application/vnd.ms-word.template.macroEnabled.12</value>
+  </data>
+  <data name="wpl" xml:space="preserve">
+    <value>application/vnd.ms-wpl</value>
+  </data>
+  <data name="xps" xml:space="preserve">
+    <value>application/vnd.ms-xpsdocument</value>
+  </data>
+  <data name="pptx" xml:space="preserve">
+    <value>application/vnd.openxmlformats-officedocument.presentationml.presentation</value>
+  </data>
+  <data name="sldx" xml:space="preserve">
+    <value>application/vnd.openxmlformats-officedocument.presentationml.slide</value>
+  </data>
+  <data name="ppsx" xml:space="preserve">
+    <value>application/vnd.openxmlformats-officedocument.presentationml.slideshow</value>
+  </data>
+  <data name="potx" xml:space="preserve">
+    <value>application/vnd.openxmlformats-officedocument.presentationml.template</value>
+  </data>
+  <data name="xlsx" xml:space="preserve">
+    <value>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</value>
+  </data>
+  <data name="xltx" xml:space="preserve">
+    <value>application/vnd.openxmlformats-officedocument.spreadsheetml.template</value>
+  </data>
+  <data name="docx" xml:space="preserve">
+    <value>application/vnd.openxmlformats-officedocument.wordprocessingml.document</value>
+  </data>
+  <data name="dotx" xml:space="preserve">
+    <value>application/vnd.openxmlformats-officedocument.wordprocessingml.template</value>
+  </data>
+  <data name="vsd" xml:space="preserve">
+    <value>application/vnd.visio</value>
+  </data>
+  <data name="adobebridge" xml:space="preserve">
+    <value>application/x-bridge-url</value>
+  </data>
+  <data name="z" xml:space="preserve">
+    <value>application/x-compress</value>
+  </data>
+  <data name="tgz" xml:space="preserve">
+    <value>application/x-compressed</value>
+  </data>
+  <data name="etd" xml:space="preserve">
+    <value>application/x-ebx</value>
+  </data>
+  <data name="gz" xml:space="preserve">
+    <value>application/x-gzip</value>
+  </data>
+  <data name="ins" xml:space="preserve">
+    <value>application/x-internet-signup</value>
+  </data>
+  <data name="iii" xml:space="preserve">
+    <value>application/x-iphone</value>
+  </data>
+  <data name="jnlp" xml:space="preserve">
+    <value>application/x-java-jnlp-file</value>
+  </data>
+  <data name="jtx" xml:space="preserve">
+    <value>application/x-jtx+xps</value>
+  </data>
+  <data name="latex" xml:space="preserve">
+    <value>application/x-latex</value>
+  </data>
+  <data name="nix" xml:space="preserve">
+    <value>application/x-mix-transfer</value>
+  </data>
+  <data name="mxp" xml:space="preserve">
+    <value>application/x-mmxp</value>
+  </data>
+  <data name="amc" xml:space="preserve">
+    <value>application/x-mpeg</value>
+  </data>
+  <data name="asx" xml:space="preserve">
+    <value>application/x-mplayer2</value>
+  </data>
+  <data name="application" xml:space="preserve">
+    <value>application/x-ms-application</value>
+  </data>
+  <data name="vsto" xml:space="preserve">
+    <value>application/x-ms-vsto</value>
+  </data>
+  <data name="wmd" xml:space="preserve">
+    <value>application/x-ms-wmd</value>
+  </data>
+  <data name="wmz" xml:space="preserve">
+    <value>application/x-ms-wmz</value>
+  </data>
+  <data name="xbap" xml:space="preserve">
+    <value>application/x-ms-xbap</value>
+  </data>
+  <data name="p12" xml:space="preserve">
+    <value>application/x-pkcs12</value>
+  </data>
+  <data name="p7b" xml:space="preserve">
+    <value>application/x-pkcs7-certificates</value>
+  </data>
+  <data name="p7r" xml:space="preserve">
+    <value>application/x-pkcs7-certreqresp</value>
+  </data>
+  <data name="qtl" xml:space="preserve">
+    <value>application/x-quicktimeplayer</value>
+  </data>
+  <data name="rtsp" xml:space="preserve">
+    <value>application/x-rtsp</value>
+  </data>
+  <data name="swf" xml:space="preserve">
+    <value>application/x-shockwave-flash</value>
+  </data>
+  <data name="skype" xml:space="preserve">
+    <value>application/x-skype</value>
+  </data>
+  <data name="sit" xml:space="preserve">
+    <value>application/x-stuffit</value>
+  </data>
+  <data name="tar" xml:space="preserve">
+    <value>application/x-tar</value>
+  </data>
+  <data name="man" xml:space="preserve">
+    <value>application/x-troff-man</value>
+  </data>
+  <data name="xpi" xml:space="preserve">
+    <value>application/x-xpinstall;app=firefox</value>
+  </data>
+  <data name="zip" xml:space="preserve">
+    <value>application/x-zip-compressed</value>
+  </data>
+  <data name="xaml" xml:space="preserve">
+    <value>application/xaml+xml</value>
+  </data>
+  <data name="xml" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="_3gp" xml:space="preserve">
+    <value>audio/3gpp</value>
+  </data>
+  <data name="_3g2" xml:space="preserve">
+    <value>audio/3gpp2</value>
+  </data>
+  <data name="aac" xml:space="preserve">
+    <value>audio/aac</value>
+  </data>
+  <data name="aiff" xml:space="preserve">
+    <value>audio/aiff</value>
+  </data>
+  <data name="amr" xml:space="preserve">
+    <value>audio/AMR</value>
+  </data>
+  <data name="au" xml:space="preserve">
+    <value>audio/basic</value>
+  </data>
+  <data name="mid" xml:space="preserve">
+    <value>audio/mid</value>
+  </data>
+  <data name="mp3" xml:space="preserve">
+    <value>audio/mp3</value>
+  </data>
+  <data name="mp4" xml:space="preserve">
+    <value>audio/mp4</value>
+  </data>
+  <data name="m3u" xml:space="preserve">
+    <value>audio/mpegurl</value>
+  </data>
+  <data name="pls" xml:space="preserve">
+    <value>audio/scpls</value>
+  </data>
+  <data name="qcp" xml:space="preserve">
+    <value>audio/vnd.qcelp</value>
+  </data>
+  <data name="wav" xml:space="preserve">
+    <value>audio/wav</value>
+  </data>
+  <data name="caf" xml:space="preserve">
+    <value>audio/x-caf</value>
+  </data>
+  <data name="gsm" xml:space="preserve">
+    <value>audio/x-gsm</value>
+  </data>
+  <data name="m4a" xml:space="preserve">
+    <value>audio/x-m4a</value>
+  </data>
+  <data name="m4b" xml:space="preserve">
+    <value>audio/x-m4b</value>
+  </data>
+  <data name="m4p" xml:space="preserve">
+    <value>audio/x-m4p</value>
+  </data>
+  <data name="wax" xml:space="preserve">
+    <value>audio/x-ms-wax</value>
+  </data>
+  <data name="wma" xml:space="preserve">
+    <value>audio/x-ms-wma</value>
+  </data>
+  <data name="bmp" xml:space="preserve">
+    <value>image/bmp</value>
+  </data>
+  <data name="gif" xml:space="preserve">
+    <value>image/gif</value>
+  </data>
+  <data name="jp2" xml:space="preserve">
+    <value>image/jp2</value>
+  </data>
+  <data name="jpg" xml:space="preserve">
+    <value>image/jpeg</value>
+  </data>
+  <data name="pict" xml:space="preserve">
+    <value>image/pict</value>
+  </data>
+  <data name="png" xml:space="preserve">
+    <value>image/png</value>
+  </data>
+  <data name="svg" xml:space="preserve">
+    <value>image/svg+xml</value>
+  </data>
+  <data name="tif" xml:space="preserve">
+    <value>image/tiff</value>
+  </data>
+  <data name="mdi" xml:space="preserve">
+    <value>image/vnd.ms-modi</value>
+  </data>
+  <data name="ico" xml:space="preserve">
+    <value>image/x-icon</value>
+  </data>
+  <data name="pntg" xml:space="preserve">
+    <value>image/x-macpaint</value>
+  </data>
+  <data name="qtif" xml:space="preserve">
+    <value>image/x-quicktime</value>
+  </data>
+  <data name="sgi" xml:space="preserve">
+    <value>image/x-sgi</value>
+  </data>
+  <data name="targa" xml:space="preserve">
+    <value>image/x-targa</value>
+  </data>
+  <data name="wlz" xml:space="preserve">
+    <value>interface/x-winamp-lang</value>
+  </data>
+  <data name="wsz" xml:space="preserve">
+    <value>interface/x-winamp-skin</value>
+  </data>
+  <data name="wal" xml:space="preserve">
+    <value>interface/x-winamp3-skin</value>
+  </data>
+  <data name="dwfx" xml:space="preserve">
+    <value>model/vnd.dwfx+xps</value>
+  </data>
+  <data name="ics" xml:space="preserve">
+    <value>text/calendar</value>
+  </data>
+  <data name="css" xml:space="preserve">
+    <value>text/css</value>
+  </data>
+  <data name="dlm" xml:space="preserve">
+    <value>text/dlm</value>
+  </data>
+  <data name="gvp" xml:space="preserve">
+    <value>text/google-video-pointer</value>
+  </data>
+  <data name="_323" xml:space="preserve">
+    <value>text/h323</value>
+  </data>
+  <data name="htm" xml:space="preserve">
+    <value>text/html</value>
+  </data>
+  <data name="uls" xml:space="preserve">
+    <value>text/iuls</value>
+  </data>
+  <data name="txt" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="wsc" xml:space="preserve">
+    <value>text/scriptlet</value>
+  </data>
+  <data name="htt" xml:space="preserve">
+    <value>text/webviewhtml</value>
+  </data>
+  <data name="htc" xml:space="preserve">
+    <value>text/x-component</value>
+  </data>
+  <data name="iqy" xml:space="preserve">
+    <value>text/x-ms-iqy</value>
+  </data>
+  <data name="odc" xml:space="preserve">
+    <value>text/x-ms-odc</value>
+  </data>
+  <data name="rqy" xml:space="preserve">
+    <value>text/x-ms-rqy</value>
+  </data>
+  <data name="vcf" xml:space="preserve">
+    <value>text/x-vcard</value>
+  </data>
+  <data name="avi" xml:space="preserve">
+    <value>video/avi</value>
+  </data>
+  <data name="flc" xml:space="preserve">
+    <value>video/flc</value>
+  </data>
+  <data name="mpeg" xml:space="preserve">
+    <value>video/mpeg</value>
+  </data>
+  <data name="mov" xml:space="preserve">
+    <value>video/quicktime</value>
+  </data>
+  <data name="sdv" xml:space="preserve">
+    <value>video/sd-video</value>
+  </data>
+  <data name="m4v" xml:space="preserve">
+    <value>video/x-m4v</value>
+  </data>
+  <data name="wm" xml:space="preserve">
+    <value>video/x-ms-wm</value>
+  </data>
+  <data name="wmv" xml:space="preserve">
+    <value>video/x-ms-wmv</value>
+  </data>
+  <data name="wmx" xml:space="preserve">
+    <value>video/x-ms-wmx</value>
+  </data>
+  <data name="wvx" xml:space="preserve">
+    <value>video/x-ms-wvx</value>
+  </data>
+  <data name="_3gp2" xml:space="preserve">
+    <value>video/3gpp2</value>
+  </data>
+  <data name="_3gpp" xml:space="preserve">
+    <value>video/3gpp</value>
+  </data>
+  <data name="abdata" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="accda" xml:space="preserve">
+    <value>application/msaccess</value>
+  </data>
+  <data name="accdc" xml:space="preserve">
+    <value>application/msaccess</value>
+  </data>
+  <data name="accde" xml:space="preserve">
+    <value>application/msaccess</value>
+  </data>
+  <data name="accdr" xml:space="preserve">
+    <value>application/msaccess</value>
+  </data>
+  <data name="accdt" xml:space="preserve">
+    <value>application/msaccess</value>
+  </data>
+  <data name="actproj" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="addin" xml:space="preserve">
+    <value>text/xml</value>
+  </data>
+  <data name="ade" xml:space="preserve">
+    <value>application/msaccess</value>
+  </data>
+  <data name="adp" xml:space="preserve">
+    <value>application/msaccess</value>
+  </data>
+  <data name="adts" xml:space="preserve">
+    <value>audio/aac</value>
+  </data>
+  <data name="ai" xml:space="preserve">
+    <value>application/postscript</value>
+  </data>
+  <data name="aif" xml:space="preserve">
+    <value>audio/aiff</value>
+  </data>
+  <data name="aifc" xml:space="preserve">
+    <value>audio/aiff</value>
+  </data>
+  <data name="asa" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="asax" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="ascx" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="asf" xml:space="preserve">
+    <value>video/x-ms-asf</value>
+  </data>
+  <data name="ashx" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="asm" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="asmx" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="asp" xml:space="preserve">
+    <value>text/asp</value>
+  </data>
+  <data name="aspx" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="c" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="cc" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="cd" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="cdda" xml:space="preserve">
+    <value>audio/aiff</value>
+  </data>
+  <data name="cfc" xml:space="preserve">
+    <value>application/x-cfc</value>
+  </data>
+  <data name="cfm" xml:space="preserve">
+    <value>application/x-cfm</value>
+  </data>
+  <data name="_class" xml:space="preserve">
+    <value>java/*</value>
+  </data>
+  <data name="cod" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="collection" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="config" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="coverage" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="cpp" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="crt" xml:space="preserve">
+    <value>application/x-x509-ca-cert</value>
+  </data>
+  <data name="cs" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="csdproj" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="csproj" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="csv" xml:space="preserve">
+    <value>application/vnd.ms-excel</value>
+  </data>
+  <data name="cur" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="cxx" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="data" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="datasource" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="dbs" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="def" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="der" xml:space="preserve">
+    <value>application/x-x509-ca-cert</value>
+  </data>
+  <data name="dib" xml:space="preserve">
+    <value>image/bmp</value>
+  </data>
+  <data name="dll" xml:space="preserve">
+    <value>application/x-msdownload</value>
+  </data>
+  <data name="dot" xml:space="preserve">
+    <value>application/msword</value>
+  </data>
+  <data name="dsp" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="dsw" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="dtd" xml:space="preserve">
+    <value>application/xml-dtd</value>
+  </data>
+  <data name="dtsconfig" xml:space="preserve">
+    <value>text/xml</value>
+  </data>
+  <data name="dv" xml:space="preserve">
+    <value>video/x-dv</value>
+  </data>
+  <data name="eml" xml:space="preserve">
+    <value>message/rfc822</value>
+  </data>
+  <data name="eps" xml:space="preserve">
+    <value>application/postscript</value>
+  </data>
+  <data name="etp" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="exe" xml:space="preserve">
+    <value>application/x-msdownload</value>
+  </data>
+  <data name="ext" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="fky" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="h" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="hpp" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="html" xml:space="preserve">
+    <value>text/html</value>
+  </data>
+  <data name="hxa" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="hxc" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="hxd" xml:space="preserve">
+    <value>application/octet-stream</value>
+  </data>
+  <data name="hxe" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="hxf" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="hxh" xml:space="preserve">
+    <value>application/octet-stream</value>
+  </data>
+  <data name="hxi" xml:space="preserve">
+    <value>application/octet-stream</value>
+  </data>
+  <data name="hxk" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="hxq" xml:space="preserve">
+    <value>application/octet-stream</value>
+  </data>
+  <data name="hxr" xml:space="preserve">
+    <value>application/octet-stream</value>
+  </data>
+  <data name="hxs" xml:space="preserve">
+    <value>application/octet-stream</value>
+  </data>
+  <data name="hxt" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="hxv" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="hxw" xml:space="preserve">
+    <value>application/octet-stream</value>
+  </data>
+  <data name="hxx" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="i" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="icl" xml:space="preserve">
+    <value>icon library</value>
+  </data>
+  <data name="icns" xml:space="preserve">
+    <value>image/mac icon</value>
+  </data>
+  <data name="icpr" xml:space="preserve">
+    <value>image/icon project</value>
+  </data>
+  <data name="idl" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="il" xml:space="preserve">
+    <value>icon library</value>
+  </data>
+  <data name="inc" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="inl" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="ipproj" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="isp" xml:space="preserve">
+    <value>application/x-internet-signup</value>
+  </data>
+  <data name="java" xml:space="preserve">
+    <value>text/java</value>
+  </data>
+  <data name="jfif" xml:space="preserve">
+    <value>image/jpeg</value>
+  </data>
+  <data name="jpe" xml:space="preserve">
+    <value>image/jpeg</value>
+  </data>
+  <data name="jpeg" xml:space="preserve">
+    <value>image/jpeg</value>
+  </data>
+  <data name="js" xml:space="preserve">
+    <value>application/x-javascript</value>
+  </data>
+  <data name="jsl" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="jsx" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="jsxbin" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="kci" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="lgn" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="lmf" xml:space="preserve">
+    <value>application/vnd.ms-livemeeting</value>
+  </data>
+  <data name="lmf_ms" xml:space="preserve">
+    <value>application/vnd.ms-livemeeting</value>
+  </data>
+  <data name="ls" xml:space="preserve">
+    <value>application/x-javascript</value>
+  </data>
+  <data name="lst" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="m1v" xml:space="preserve">
+    <value>video/mpeg</value>
+  </data>
+  <data name="mac" xml:space="preserve">
+    <value>image/x-macpaint</value>
+  </data>
+  <data name="mak" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="map" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="master" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="mda" xml:space="preserve">
+    <value>application/msaccess</value>
+  </data>
+  <data name="mdb" xml:space="preserve">
+    <value>application/msaccess</value>
+  </data>
+  <data name="mde" xml:space="preserve">
+    <value>application/msaccess</value>
+  </data>
+  <data name="mdp" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="mfp" xml:space="preserve">
+    <value>application/x-shockwave-flash</value>
+  </data>
+  <data name="mht" xml:space="preserve">
+    <value>message/rfc822</value>
+  </data>
+  <data name="mhtml" xml:space="preserve">
+    <value>message/rfc822</value>
+  </data>
+  <data name="midi" xml:space="preserve">
+    <value>audio/mid</value>
+  </data>
+  <data name="mk" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="mocha" xml:space="preserve">
+    <value>application/x-javascript</value>
+  </data>
+  <data name="movie" xml:space="preserve">
+    <value>video/x-sgi-movie</value>
+  </data>
+  <data name="mp2" xml:space="preserve">
+    <value>video/mpeg</value>
+  </data>
+  <data name="mp2v" xml:space="preserve">
+    <value>video/mpeg</value>
+  </data>
+  <data name="mpa" xml:space="preserve">
+    <value>video/mpeg</value>
+  </data>
+  <data name="mpe" xml:space="preserve">
+    <value>video/mpeg</value>
+  </data>
+  <data name="mpg" xml:space="preserve">
+    <value>video/mpeg</value>
+  </data>
+  <data name="mpv2" xml:space="preserve">
+    <value>video/mpeg</value>
+  </data>
+  <data name="mqv" xml:space="preserve">
+    <value>video/quicktime</value>
+  </data>
+  <data name="nil" xml:space="preserve">
+    <value>icon library</value>
+  </data>
+  <data name="nmw" xml:space="preserve">
+    <value>application/nmwb</value>
+  </data>
+  <data name="nws" xml:space="preserve">
+    <value>message/rfc822</value>
+  </data>
+  <data name="odh" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="odl" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="ols" xml:space="preserve">
+    <value>application/vnd.ms-publisher</value>
+  </data>
+  <data name="onepkg" xml:space="preserve">
+    <value>application/msonenote</value>
+  </data>
+  <data name="orderedtest" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="p7c" xml:space="preserve">
+    <value>application/pkcs7-mime</value>
+  </data>
+  <data name="pct" xml:space="preserve">
+    <value>image/pict</value>
+  </data>
+  <data name="pfx" xml:space="preserve">
+    <value>application/x-pkcs12</value>
+  </data>
+  <data name="pic" xml:space="preserve">
+    <value>image/pict</value>
+  </data>
+  <data name="pl" xml:space="preserve">
+    <value>application/x-perl</value>
+  </data>
+  <data name="plg" xml:space="preserve">
+    <value>text/html</value>
+  </data>
+  <data name="pnt" xml:space="preserve">
+    <value>image/x-macpaint</value>
+  </data>
+  <data name="pot" xml:space="preserve">
+    <value>application/vnd.ms-powerpoint</value>
+  </data>
+  <data name="ppa" xml:space="preserve">
+    <value>application/vnd.ms-powerpoint</value>
+  </data>
+  <data name="pps" xml:space="preserve">
+    <value>application/vnd.ms-powerpoint</value>
+  </data>
+  <data name="psess" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="pwz" xml:space="preserve">
+    <value>application/vnd.ms-powerpoint</value>
+  </data>
+  <data name="py" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="pyw" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="qht" xml:space="preserve">
+    <value>text/x-html-insertion</value>
+  </data>
+  <data name="qhtm" xml:space="preserve">
+    <value>text/x-html-insertion</value>
+  </data>
+  <data name="qt" xml:space="preserve">
+    <value>video/quicktime</value>
+  </data>
+  <data name="qti" xml:space="preserve">
+    <value>image/x-quicktime</value>
+  </data>
+  <data name="rat" xml:space="preserve">
+    <value>application/rat-file</value>
+  </data>
+  <data name="rc" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="rc2" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="rct" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="rdlc" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="resx" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="rgs" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="rmi" xml:space="preserve">
+    <value>audio/mid</value>
+  </data>
+  <data name="rmp" xml:space="preserve">
+    <value>application/vnd.rn-rn_music_package</value>
+  </data>
+  <data name="rpt" xml:space="preserve">
+    <value>application/x-rpt</value>
+  </data>
+  <data name="rsrc" xml:space="preserve">
+    <value>image/mac icon</value>
+  </data>
+  <data name="rtf" xml:space="preserve">
+    <value>application/msword</value>
+  </data>
+  <data name="rul" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="s" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="sct" xml:space="preserve">
+    <value>text/scriptlet</value>
+  </data>
+  <data name="sd2" xml:space="preserve">
+    <value>audio/x-sd2</value>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="shtml" xml:space="preserve">
+    <value>text/html</value>
+  </data>
+  <data name="sis" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="sitemap" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="skin" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="slk" xml:space="preserve">
+    <value>application/vnd.ms-excel</value>
+  </data>
+  <data name="sln" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="snd" xml:space="preserve">
+    <value>audio/basic</value>
+  </data>
+  <data name="snippet" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="sol" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="sor" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="spc" xml:space="preserve">
+    <value>application/x-pkcs7-certificates</value>
+  </data>
+  <data name="srf" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="ssisdeploymentmanifest" xml:space="preserve">
+    <value>text/xml</value>
+  </data>
+  <data name="stm" xml:space="preserve">
+    <value>text/html</value>
+  </data>
+  <data name="svc" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="svgz" xml:space="preserve">
+    <value>image/svg+xml</value>
+  </data>
+  <data name="tab" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="tdl" xml:space="preserve">
+    <value>text/xml</value>
+  </data>
+  <data name="testrunconfig" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="tlh" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="tli" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="trx" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="udf" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="udt" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="user" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="usr" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="vb" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="vbdproj" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="vbproj" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="vcproj" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="vddproj" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="vdp" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="vdproj" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="viw" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="vjp" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="vjsproj" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="vscontent" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="vsl" xml:space="preserve">
+    <value>application/vnd.visio</value>
+  </data>
+  <data name="vsmdi" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="vspolicy" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="vspolicydef" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="vspscc" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="vss" xml:space="preserve">
+    <value>application/vnd.visio</value>
+  </data>
+  <data name="vsscc" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="vssettings" xml:space="preserve">
+    <value>text/xml</value>
+  </data>
+  <data name="vssscc" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="vst" xml:space="preserve">
+    <value>application/vnd.visio</value>
+  </data>
+  <data name="vstemplate" xml:space="preserve">
+    <value>text/xml</value>
+  </data>
+  <data name="vsu" xml:space="preserve">
+    <value>application/vnd.visio</value>
+  </data>
+  <data name="vsw" xml:space="preserve">
+    <value>application/vnd.visio</value>
+  </data>
+  <data name="vsx" xml:space="preserve">
+    <value>application/vnd.visio</value>
+  </data>
+  <data name="vtx" xml:space="preserve">
+    <value>application/vnd.visio</value>
+  </data>
+  <data name="wave" xml:space="preserve">
+    <value>audio/wav</value>
+  </data>
+  <data name="wbk" xml:space="preserve">
+    <value>application/msword</value>
+  </data>
+  <data name="wdp" xml:space="preserve">
+    <value>image/vnd.ms-photo</value>
+  </data>
+  <data name="wiz" xml:space="preserve">
+    <value>application/msword</value>
+  </data>
+  <data name="workspace" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="wsdl" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="xdr" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="xht" xml:space="preserve">
+    <value>application/xhtml+xml</value>
+  </data>
+  <data name="xhtml" xml:space="preserve">
+    <value>application/xhtml+xml</value>
+  </data>
+  <data name="xla" xml:space="preserve">
+    <value>application/vnd.ms-excel</value>
+  </data>
+  <data name="xlk" xml:space="preserve">
+    <value>application/vnd.ms-excel</value>
+  </data>
+  <data name="xll" xml:space="preserve">
+    <value>application/vnd.ms-excel</value>
+  </data>
+  <data name="xlm" xml:space="preserve">
+    <value>application/vnd.ms-excel</value>
+  </data>
+  <data name="xlt" xml:space="preserve">
+    <value>application/vnd.ms-excel</value>
+  </data>
+  <data name="xlw" xml:space="preserve">
+    <value>application/vnd.ms-excel</value>
+  </data>
+  <data name="xmta" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="xoml" xml:space="preserve">
+    <value>text/plain</value>
+  </data>
+  <data name="xsc" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="xsd" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="xsl" xml:space="preserve">
+    <value>text/xml</value>
+  </data>
+  <data name="xslt" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+  <data name="xss" xml:space="preserve">
+    <value>application/xml</value>
+  </data>
+</root>

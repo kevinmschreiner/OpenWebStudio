@@ -1,0 +1,47 @@
+   <table class=Normal width=100% border=0 cellpadding=1 cellspacing=0>
+    <tr>
+     <td class=SubHead width=151>Template</td>
+     <td>
+     <select onsave="this.options[this.selectedIndex].value" parameter="Type" onchange="hideShowGroup(this.options[this.selectedIndex],$(this).parent().parent().parent(),'grp','group',[0,1,2]);" style="width:100%;">
+      <option grp=1 value="Query-Query" {{if Type=='Query-Query'}}selected{{/if}}>Query</option>
+      <option grp=0 value="Group-Header" {{if Type=='Group-Header'}}selected{{/if}}>Header</option>
+      <option grp=0 value="Group-Footer" {{if Type=='Group-Footer'}}selected{{/if}}>Footer</option>
+      <option grp=2 value="Detail-Detail" {{if Type=='Detail-Detail'}}selected{{/if}}>Detail</option>
+      <option grp=2 value="Detail-Alternate" {{if Type=='Detail-Alternate'}}selected{{/if}}>Detail (Alternate)</option>
+      <option grp=2 value="Detail-NoResults" {{if Type=='Detail-NoResults'}}selected{{/if}}>Detail (No Results)</option>
+      <option grp=2 value="Detail-NoQuery" {{if Type=='Detail-NoQuery'}}selected{{/if}}>Detail (No Query)</option>
+     </select>
+     </td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151><div group="0">Group Statement</div></td>
+     <td><div group="0"><input onsave="this.value" parameter="GroupStatement" value="${GroupStatement}" type=textbox style="width:100%;"></div></td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151><div group="0">Index</div></td>
+     <td><div group="0"><input onsave="this.value" parameter="GroupIndex" value="${GroupIndex}" type=textbox style="width:100%;"></div></td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151>
+	 Content
+     </td>
+     <td><textarea wrap=off onsave="this.value" parameter="Value" style="height: 150px; width:100%;" richtext=true>${Value}</textarea></td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151><div group="1">Cache (seconds)</div></td>
+     <td><div group="1"> 
+     <input onsave="this.value" parameter="QueryCacheTime" value="${QueryCacheTime}" type=textbox style="width:200px;">
+     <span class=SubHead>&nbsp;Cache (Name)&nbsp;</span>
+     <input onsave="this.value" parameter="QueryCacheName" value="${QueryCacheName}" type=textbox style="width:200px;">  
+     &nbsp;<input type=checkbox onsave="(this.checked?true:false)" parameter="QueryCacheShared" {{if typeof QueryCacheShared!='undefined' && QueryCacheShared=='true'}}checked{{/if}} style="left-margin: -2px">Shared   
+     </div></td>
+    </tr>	
+    <tr>
+     <td class=SubHead width=151><div group="1">Filter</div></td>
+     <td><div group="1"><input onsave="this.value" parameter="QueryFilter" value="${QueryFilter}" type=textbox style="width:100%;"></div></td>
+    </tr>	
+    <tr>
+     <td class=SubHead width=151><div group="1">Custom Connection</div></td>
+     <td><div group="1"><input onsave="this.value" parameter="QueryConnection" value="${QueryConnection}" type=textbox style="width:100%;"></div></td>
+    </tr>	
+	</table>

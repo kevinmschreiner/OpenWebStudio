@@ -1,0 +1,9 @@
+<script type="text/html" id="tmp_ideActions" onbind="$(that).find('.splitbutton').button().next().button({text:false,icons:{primary:'ui-icon-triangle-1-s'}}).parent().buttonset();">
+			<div>
+				<button class="splitbutton" action="${Code}" onclick="ide.${Type}s.add.apply(ide,[$(this).attr('action')]);return false;">${Name}</button>
+				<button class="buttonsplit" onclick="ide.actions.toggle.apply(ide,[this]);">?</button>
+				<div class="help ui-state-highlight ui-corner-all" action="${Code}">
+					<p><strong>${Name}</strong>: ${Description}</p>
+				</div>
+			</div>
+</script>			

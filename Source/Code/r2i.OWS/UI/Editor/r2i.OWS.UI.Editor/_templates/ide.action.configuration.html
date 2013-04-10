@@ -1,0 +1,183 @@
+  <table class="Normal" width="100%" border="0" cellpadding="1" cellspacing="0">
+    <tr>
+      <td class="SubHead" align="right" width="200">Name:&nbsp;</td>
+      <td class="Normal" style="HEIGHT: 19px"><input id="txtName" style="width:100%;"></td>
+    </tr>
+    <tr>
+      <td class="SubHead" align="right" width="200">Id:&nbsp;</td>
+      <td class="Normal" style="HEIGHT: 19px"><i><span id="lblConfigurationId"></span></i></td>
+    </tr>
+    <tr>
+      <td class="SubHead" align="right" width="200">Paging Properties:&nbsp;</td>
+      <td class="Normal" style="HEIGHT: 19px"><input id="txtRPP" width="50px">&nbsp;Records per Page</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="checkbox" id="chkShowAll">Show All Records</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="checkbox" id="chkRPP" style="left-margin: -2px">Show Records Per Page</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="checkbox" id="chkPageSelection" style="left-margin: -2px">Show Page Selection</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="checkbox" id="chkCustomPaging" style="left-margin: -2px">Use Custom Paging</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"></td>
+    </tr>
+    <tr>
+      <td class="SubHead" align="right" width="200">Filters and Sorting:&nbsp;</td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="checkbox" id="chkAlphabet" style="left-margin: -2px">Show Alphabetic Filter</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="checkbox" id="chkMultiSort" style="left-margin: -2px">Allow Multi-column Sorting</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"></td>
+    </tr>
+    <tr>
+      <td class="SubHead" align="right" width="200">Ajax Integration:&nbsp;</td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="checkbox" onclick="if(this.checked) $('chkEnableAjaxPaging').checked=false;" id="chkEnableAjax" style="left-margin: -2px">Enable Ajax Interaction</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="checkbox" onclick="if(this.checked) $('chkEnableAjax').checked=false;" id="chkEnableAjaxPaging" style="left-margin: -2px">Enable Ajax Interaction (Progressive Enhancement)</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="checkbox" id="chkEnableAjaxManual" style="left-margin: -2px">Ajax Interaction - Manual Load</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="checkbox" id="chkAjaxCustomStatus" style="left-margin: -2px">Ajax Interaction - Custom Status</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="checkbox" id="chkAjaxCustomPaging" style="left-margin: -2px">Ajax Interaction - Custom Paging</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="checkbox" id="chkAjaxPageHistory" style="left-margin: -2px">Ajax Interaction - Enable Ajax Page History</td>
+    </tr>
+    <tr>
+      <td class="SubHead" align="right" width="200">&nbsp;</td>
+      <td class="Normal" style="HEIGHT: 19px"><input id="txtAjaxPageHistory" width="50px">&nbsp;Custom Page History Anchor Text</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"><input id="txtAjaxAutoRefresh" width="150px">&nbsp;Milliseconds between Automatic Refresh</td>
+    </tr>
+    <tr>
+      <td class="SubHead" align="right" width="200"></td>
+      <td class="SubHead" style="HEIGHT: 19px"></td>
+    </tr>
+    <tr>
+      <td class="SubHead" align="right" width="200">Include:&nbsp;</td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="checkbox" id="chkJavascriptUtilities" style="left-margin: -2px">Utilities Javascript</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="checkbox" id="chkJavascriptValidation" style="left-margin: -2px">Validation Javascript</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="SubHead" style="HEIGHT: 19px"></td>
+    </tr>
+    <tr>
+      <td class="SubHead" align="right" width="200">Integration:&nbsp;</td>
+      <td class="Normal" style="HEIGHT: 19px"><input id="txtModuleMessageType" width="150px">&nbsp;Message Type for External Module Communication Listener</td>
+    </tr>
+    <tr>
+      <td class="SubHead" align="right" width="200"></td>
+      <td class="Normal" style="HEIGHT: 19px"><input id="txtJavascriptOnComplete" width="150px">&nbsp;Javascript Function (Name) to execute after Load completes</td>
+    </tr>
+    <tr>
+      <td class="SubHead" align="right" width="200"></td>
+      <td class="Normal" style="HEIGHT: 19px"></td>
+    </tr>
+    <tr>
+      <td class="SubHead" align="right" width="200">Debugging:&nbsp;</td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="checkbox" id="chkDebugging_All" style="left-margin: -2px">Display for All Users</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="checkbox" id="chkDebugging_Editors" style="left-margin: -2px">Display for Edit Users</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="checkbox" id="chkDebugging_Administrators" style="left-margin: -2px">Display for Admin Users</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="checkbox" id="chkDebugging_SuperUsers" style="left-margin: -2px">Display for Super Users</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="checkbox" id="chkDebugging_IgnoreRedirections" style="left-margin: -2px">Skip Redirect Actions</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="checkbox" id="chkDebugging_IgnoreSubquery" style="left-margin: -2px">Skip Subquery Debugging</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"></td>
+    </tr>
+    <tr style="display:none;">
+      <td class="SubHead" align="right" width="200">Administration:&nbsp;</td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="radio" name="chkAdmin" value="Edit" style="left-margin: -2px">Edit Users</td>
+    </tr>
+    <tr style="display:none;">
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="radio" name="chkAdmin" value="Admin" style="left-margin: -2px">Admin Users</td>
+    </tr>
+    <tr style="display:none;">
+      <td></td>
+      <td class="Normal" style="HEIGHT: 19px"><input type="radio" name="chkAdmin" value="Super" style="left-margin: -2px">Super Users</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="SubHead" style="HEIGHT: 19px"></td>
+    </tr>
+    <tr>
+      <td class="SubHead" valign="top" align="right" width="200">Options:&nbsp;</td>
+      <td class="Normal" style="HEIGHT: 19px">
+        <div style="display: none;">
+         <input type="checkbox" id="chkUseListX" style="left-margin: -2px">Use the ListX Script tags, in place of Open Script
+        </div>
+        <div>
+          <input type="checkbox" id="chkUseExplicit" style="left-margin: -2px">Use Explicit System Variables [Name,System] or [*Name]
+       </div>
+       <div style="display: none;">
+          <input type="checkbox" checked="checked" id="chkUseAdvancedParsing" style="left-margin: -2px">Use Advanced Parsing (Not Backwards Compatible)
+       </div>
+       <div>
+          <input type="checkbox" id="chkUseCompoundIIFConditions" style="left-margin: -2px">Use Compound Conditions and Math in IIF tags
+       </div>
+       <div>
+          <input type="checkbox" id="chkUseGoSplit" style="left-margin: -2px">Use Query Command Separation on GO
+        </div>
+        <div style="display: none;">
+          <input type="checkbox" id="chkExcelExport" style="left-margin: -2px">Enable Excel Export (depricated)
+        </div>
+        <div style="display: none;">
+          <input type="checkbox" id="chkMasterTemplate" style="left-margin: -2px">Master Template&nbsp;
+        </div>
+        <div style="display: none;">
+          <input type="checkbox" id="chkUseSilverlight" style="left-margin: -2px">Use Silverlight for rendering
+        </div>
+      </td>
+    </tr>
+  </table>

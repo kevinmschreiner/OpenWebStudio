@@ -1,0 +1,82 @@
+   <table class=Normal width=100% border=0 cellpadding=1 cellspacing=0>
+    <tr>
+     <td class=SubHead width=151>From</td>
+     <td><input onsave="this.value" parameter="From" value="${From}" type=textbox style="width:100%;"></td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151>To</td>
+     <td><input onsave="this.value" parameter="To" value="${To}" type=textbox style="width:100%;"></td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151>Cc</td>
+     <td><input onsave="this.value" parameter="Cc" value="${Cc}" type=textbox style="width:100%;"></td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151>Bcc</td>
+     <td><input onsave="this.value" parameter="Bcc" value="${Bcc}" type=textbox style="width:100%;"></td>
+    </tr>  
+    <tr>
+     <td class=SubHead width=151>Subject</td>
+     <td><input onsave="this.value" parameter="Subject" value="${Subject}" type=textbox style="width:100%;"></td>
+    </tr>  
+    <tr>
+     <td class=SubHead width=151>Format</td>
+     <td>
+      <input type="radio" onsave="(this.checked?this.value:null)" parameter="Format" {{if Format=='text'}}checked{{/if}} value="text">Text     
+      <input type="radio" onsave="(this.checked?this.value:null)" parameter="Format" {{if Format=='html'}}checked{{/if}} value="html">Html
+     </td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151>
+     Body
+     </td>
+     <td><textarea wrap=off onsave="this.value" parameter="Body" style="height: 150px; width:100%;" richtext=true>${Body}</textarea></td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151>Result</td>
+     <td class=Normal><I>When the Email attempt is completed, the result can be identified as either successful (True) or as a failure (Message). In the option below, specify the type and name of the target variable which will house the actual result response of the email attempt.</I>
+     </td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151>Variable Type</td>
+     <td>
+     <select onsave="this.options[this.selectedIndex].value" parameter="VariableType" style="width:100%;">
+      <option value="&amp;lt;Session&amp;gt;" {{if Type=='&lt;Session&gt;'}}selected{{/if}}>&lt;Session&gt;</option>
+      <option value="&amp;lt;ViewState&amp;gt;" {{if Type=='&lt;ViewState&gt;'}}selected{{/if}}>&lt;ViewState&gt;</option>
+      <option value="&amp;lt;Action&amp;gt;" {{if Type=='&lt;Action&gt;'}}selected{{/if}}>&lt;Action&gt;</option>
+      <option value="&amp;lt;Cookie&amp;gt;" {{if Type=='&lt;Cookie&gt;'}}selected{{/if}}>&lt;Cookie&gt;</option>
+     </select>
+     </td>
+    </tr>
+    <tr>
+     <td class=SubHead width=151>Name</td>
+     <td><input onsave="this.value" parameter="Name" value="${Name}" type=textbox style="width:100%;"></td>
+    </tr>
+   </table>
+   <div id='divServer' style='border:1px solid #ccc;text-align:center;'><a href='#' onclick="this.style.display='none';document.getElementById('objEmailServer').style.display='block';return false;">Click here to Adjust SMTP Server Settings</a></div>+
+   <table id='objEmailServer' style='display:none;' class=Normal width=100% border=0 cellpadding=1 cellspacing=0>   
+    <tr>
+     <td class=SubHead width=151>Server</td>
+     <td><input onsave="this.value" parameter="SServer" value="${SServer}" type=textbox style="width:100%;"><br/><i>Provide the Address of the Server. If a specific port is required, add a colon followed by the port (ie. pop.gmail.com:995)</td>
+    </tr>   
+    <tr>
+     <td class=SubHead width=151>Authentication Type</td>
+     <td>
+      <input type="radio" onsave="(this.checked?this.value:null)" parameter="SAuth" {{if Format=='0'}}checked{{/if}} value="0">Anonymous<br>
+      <input type="radio" onsave="(this.checked?this.value:null)" parameter="SAuth" {{if Format=='1'}}checked{{/if}} value="1">Basic Authentication<br>   
+	  <input type="radio" onsave="(this.checked?this.value:null)" parameter="SAuth" {{if Format=='2'}}checked{{/if}} value="2">NTLM Authentication
+     </td>
+    </tr>	
+    <tr>
+     <td class=SubHead width=151>User Name</td>
+     <td><input onsave="this.value" parameter="SUser" value="${SUser}" type=textbox style="width:100%;"></td>
+    </tr>	
+    <tr>
+     <td class=SubHead width=151>Password</td>
+     <td ><input onsave="this.value" parameter="SPass" value="${SPass}" type=textbox style="width:100%;"></td>
+    </tr>	
+    <tr>
+     <td class=SubHead width=151>Use SSL</td>
+     <td ><input type=checkbox onsave="(this.checked?true:false)" parameter="SSSL" {{if SSSL=='true'}}checked{{/if}} style="left-margin: -2px">Server requires SSL<br></td>
+    </tr>	
+   </table>   
