@@ -6,7 +6,22 @@ r2i.OWS.UI
 </name>
 </assembly>
 <members>
-<member name="P:My.Resources.Resources.ResourceManager">
+<member name="P:r2i.OWS.UI.OpenControlBase.ModulePath">
+	<summary>
+ Root path for currently executing control
+ </summary>
+	<remarks>Don't confuse this with <seealso cref="P:r2i.OWS.UI.OpenControlBase.BasePath">BasePath</seealso></remarks>
+</member><member name="P:r2i.OWS.UI.OpenControlBase.BasePath">
+	<summary>
+ Root path for OWS install (location of IM.aspx)
+ </summary>
+	<remarks>Don't confuse this with <seealso cref="P:r2i.OWS.UI.OpenControlBase.ModulePath">ModulePath</seealso></remarks>
+</member><member name="M:r2i.OWS.UI.OpenControlBase.Callback_Custom">
+	<summary>
+ Use this to perform custom callback actions (like, for loading lists, etc.)
+ </summary>
+	<remarks></remarks>
+</member><member name="P:My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
@@ -27,21 +42,6 @@ r2i.OWS.UI
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
-</member><member name="P:r2i.OWS.UI.OpenControlBase.ModulePath">
-	<summary>
- Root path for currently executing control
- </summary>
-	<remarks>Don't confuse this with <seealso cref="P:r2i.OWS.UI.OpenControlBase.BasePath">BasePath</seealso></remarks>
-</member><member name="P:r2i.OWS.UI.OpenControlBase.BasePath">
-	<summary>
- Root path for OWS install (location of IM.aspx)
- </summary>
-	<remarks>Don't confuse this with <seealso cref="P:r2i.OWS.UI.OpenControlBase.ModulePath">ModulePath</seealso></remarks>
-</member><member name="M:r2i.OWS.UI.OpenControlBase.Callback_Custom">
-	<summary>
- Use this to perform custom callback actions (like, for loading lists, etc.)
- </summary>
-	<remarks></remarks>
 </member>
 </members>
 </doc>

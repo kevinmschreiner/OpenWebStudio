@@ -278,6 +278,23 @@ Namespace r2i.OWS.Framework.Utilities
             End If
             Return Nothing
         End Function
+        Public Shared Function XMLPropertyParse_Quick_FromClose(ByRef Source As String, ByVal Name As String) As String
+            Dim iS_s As Integer
+            Dim iS_e As Integer
+            Dim iS_l As Integer
+            iS_s = Source.ToUpper.IndexOf("</" & Name.ToUpper & ">")
+            If iS_s > 0 Then
+                iS_l = Name.Length + 2
+                iS_e = Source.Substring(0, iS_s - 1).ToUpper().LastIndexOf("<" & Name.ToUpper)
+                If iS_e >= 0 Then
+                    iS_e = Source.IndexOf(">", iS_e)
+                    If (iS_e >= 0) Then
+                        Return Source.Substring(iS_e + 1, iS_s - (iS_e + 1))
+                    End If
+                End If
+            End If
+            Return Nothing
+        End Function
 
 #End Region
 #Region "Permission Utilities"

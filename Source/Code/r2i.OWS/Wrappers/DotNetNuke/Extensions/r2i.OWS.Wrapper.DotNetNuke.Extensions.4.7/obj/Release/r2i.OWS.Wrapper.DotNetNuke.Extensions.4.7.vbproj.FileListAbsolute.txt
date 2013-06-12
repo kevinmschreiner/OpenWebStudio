@@ -12,3 +12,17 @@ D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\
 D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\obj\Release\r2i.OWS.Wrapper.DNN.Extensions.pdb
 D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7.vbprojResolveAssemblyReference.cache
 D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7.vbproj.GenerateResource.Cache
+D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\bin\Release\r2i.OWS.Wrapper.DNN.Extensions.dll
+D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\bin\Release\r2i.OWS.Wrapper.DNN.Extensions.pdb
+D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\bin\Release\r2i.OWS.Wrapper.DotNetNuke.Extensions._4._7.xml
+D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\bin\Release\DotNetNuke.dll
+D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\bin\Release\r2i.OWS.Framework.dll
+D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\bin\Release\r2i.OWS.Newtonsoft.Json.dll
+D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\bin\Release\r2i.OWS.Framework.pdb
+D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\bin\Release\r2i.OWS.Framework.xml
+D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7.vbprojResolveAssemblyReference.cache
+D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\obj\Release\Resources.resources
+D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7.vbproj.GenerateResource.Cache
+D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\obj\Release\r2i.OWS.Wrapper.DNN.Extensions.dll
+D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Extensions._4._7.xml
+D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\obj\Release\r2i.OWS.Wrapper.DNN.Extensions.pdb

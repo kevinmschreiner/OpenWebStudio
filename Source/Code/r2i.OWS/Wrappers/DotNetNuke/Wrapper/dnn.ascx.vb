@@ -46,6 +46,7 @@ Partial Public Class Dnn
         Wrapper.DNN.Entities.WrapperFactory.Create()
     End Sub
     Private Sub onModuleCommunicationEvent(ByVal Caller As Object, ByVal Text As String, ByVal Value As String, ByVal Sender As String, ByVal Target As String) Handles xdnn.ModuleCommunication
+
         RaiseEvent ModuleCommunication(Caller, New ModuleCommunicationEventArgs(Text, Value, Sender, Target))
     End Sub
 

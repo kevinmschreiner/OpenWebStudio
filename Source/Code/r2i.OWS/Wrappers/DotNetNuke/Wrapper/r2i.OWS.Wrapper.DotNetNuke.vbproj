@@ -281,6 +281,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="openwebstudio.2128.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="r2i.OWS.Professional.dnn5">
       <SubType>Designer</SubType>
     </None>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<dotnetnuke version="02.02.16" type="Package">
+<dotnetnuke version="02.02.18" type="Package">
   <packages>
-    <package name="OWS" type="Module" version="02.02.16">
+    <package name="OWS" type="Module" version="02.02.18">
       <friendlyName>OWS</friendlyName>
       <description>Open Web Studio - Universal Presentation Layer for building Interactive Web systems.</description>
       <iconFile>images/ows.32.gif</iconFile>
@@ -39,7 +39,7 @@
             </script>
             <script type="UnInstall">
               <name>Uninstall.SqlDataProvider</name>
-<version>02.02.16</version>
+<version>02.02.18</version>
             </script>
           </scripts>
         </component>
@@ -117,47 +117,47 @@
             <assembly>
               <name>r2i.OWS.UI.dll</name>
               <sourceFileName>r2i.OWS.UI.dll</sourceFileName>
-<version>02.02.16</version>
+<version>02.02.18</version>
             </assembly>
             <assembly>
               <name>r2i.OWS.Engine.dll</name>
               <sourceFileName>r2i.OWS.Engine.dll</sourceFileName>
-<version>02.02.16</version>
+<version>02.02.18</version>
             </assembly>
             <assembly>
               <name>r2i.OWS.Framework.dll</name>
               <sourceFileName>r2i.OWS.Framework.dll</sourceFileName>
-<version>02.02.16</version>
+<version>02.02.18</version>
             </assembly>
             <assembly>
               <name>r2i.OWS.SqlDataProvider.dll</name>
               <sourceFileName>r2i.OWS.SqlDataProvider.dll</sourceFileName>
-<version>02.02.16</version>
+<version>02.02.18</version>
             </assembly>
             <assembly>
               <name>r2i.OWS.Wrapper.DotNetNuke.dll</name>
               <sourceFileName>r2i.OWS.Wrapper.DotNetNuke.dll</sourceFileName>
-<version>02.02.16</version>
+<version>02.02.18</version>
             </assembly>
             <assembly>
               <name>r2i.OWS.Wrapper.DotNetNuke.Interface.dll</name>
               <sourceFileName>r2i.OWS.Wrapper.DotNetNuke.Interface.dll</sourceFileName>
-<version>02.02.16</version>
+<version>02.02.18</version>
             </assembly>
             <assembly>
               <name>r2i.OWS.Wrapper.DNN.Extensions.dll</name>
               <sourceFileName>r2i.OWS.Wrapper.DNN.Extensions.dll</sourceFileName>
-<version>02.02.16</version>
+<version>02.02.18</version>
             </assembly>
             <assembly>
               <name>r2i.OWS.Wrapper.DNN.Professional.Extensions.dll</name>
               <sourceFileName>r2i.OWS.Wrapper.DNN.Professional.Extensions.dll</sourceFileName>
-<version>02.02.16</version>
+<version>02.02.18</version>
             </assembly>
             <assembly>
               <name>r2i.OWS.Newtonsoft.Json.dll</name>
               <sourceFileName>r2i.OWS.Newtonsoft.Json.dll</sourceFileName>
-<version>02.02.16</version>
+<version>02.02.18</version>
             </assembly>
           </assemblies>
         </component>

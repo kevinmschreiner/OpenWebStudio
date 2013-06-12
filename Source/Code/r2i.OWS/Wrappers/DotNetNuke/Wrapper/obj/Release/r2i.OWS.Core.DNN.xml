@@ -6,35 +6,56 @@ r2i.OWS.Wrapper.DotNetNuke
 </name>
 </assembly>
 <members>
-<member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Admin_aspx.ResourceManager">
+<member name="F:r2i.OWS.Wrapper.DNN.Authenticate.ows">
+	<summary>
+ows control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
-</member><member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Admin_aspx.Culture">
+</member><member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Resources.Culture">
 	<summary>
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
-</member><member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Admin_aspx.OWS_Configuration_Events">
-	<summary>
-  Looks up a localized string similar to {"Name":"OWS.Configuration.EventLog","ConfigurationID":"12029631-8826-86ee-cd1e-9da1abf43dcf","searchItems":[],"queryItems":null,"listItems":null,"messageItems":[{"Index":1,"Level":0,"Parameters":{"Name":"OnLoad","RenderType":"0","skipDebug":"False","includeSearch":"False"},"ActionType":"Action-Region","ChildActions":[{"Index":2,"Level":0,"Parameters":{"Type":"&amp;lt;Action&amp;gt;","Name":"StatusMessage","Value":"","SkipProcessing":"false","AssignmentType":"0"},"ActionType":"Action-Assignment","ChildActions":[]}, [rest of string was truncated]";.
-</summary>
-</member><member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Admin_aspx.OWS_Configuration_List">
-	<summary>
-  Looks up a localized string similar to {"Name":"OWSConfiguration.List","ConfigurationID":"12025045-0297-2e6a-f9a5-00171c237eb2","searchItems":[],"queryItems":[],"listItems":[],"messageItems":[{"Index":1,"Level":0,"Parameters":{"Name":"OnLoad","RenderType":"0","skipDebug":"False","includeSearch":"False"},"ActionType":"Action-Region","ChildActions":[{"Index":2,"Level":0,"Parameters":{"Type":"&amp;lt;Action&amp;gt;","Name":"StatusMessage","Value":"","SkipProcessing":"false","AssignmentType":"0"},"ActionType":"Action-Assignment","ChildActions":[]},{"Index": [rest of string was truncated]";.
-</summary>
-</member><member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Admin_aspx.OWS_Configuration_List_Exporter">
-	<summary>
-  Looks up a localized string similar to {"Name":"OWSConfiguration.List","ConfigurationID":"12025045-0297-2e6a-f9a5-00171c237eb2","searchItems":[],"queryItems":[],"listItems":[],"messageItems":[{"Index":1,"Level":0,"Parameters":{"Name":"OnLoad","RenderType":"0","skipDebug":"False","includeSearch":"False"},"ActionType":"Action-Region","ChildActions":[{"Index":2,"Level":1,"Parameters":{"Value":"Place all general operations within this region as a starting point. This includes Template and Variable assignments."},"ActionType":"Action-Comment","ChildA [rest of string was truncated]";.
-</summary>
-</member><member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Admin_aspx.OWS_Configuration_Repository">
-	<summary>
-  Looks up a localized string similar to {"Name":"OWS.Configuration.Repository","ConfigurationID":"12029631-8826-86ee-cd1e-9da1abf43dce","searchItems":[],"queryItems":null,"listItems":null,"messageItems":[{"Index":1,"Level":0,"Parameters":{"Name":"OnLoad","RenderType":"0","skipDebug":"False","includeSearch":"False"},"ActionType":"Action-Region","ChildActions":[{"Index":2,"Level":0,"Parameters":{"Name":"Query Variables","RenderType":"0","skipDebug":"False","includeSearch":"False"},"ActionType":"Action-Region","ChildActions":[{"Index":3,"Level":0,"P [rest of string was truncated]";.
-</summary>
-</member><member name="T:r2i.OWS.Wrapper.DNN.My.Resources.Admin_aspx">
+</member><member name="T:r2i.OWS.Wrapper.DNN.My.Resources.Resources">
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
+</member><member name="P:r2i.OWS.Wrapper.DNN.Module.ModuleActions">
+ ----------------------------------------------------------------------------- 
+ <summary> 
+ Registers the module actions required for interfacing with the portal framework 
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+	<history>
+	</history> 
+ ----------------------------------------------------------------------------- 
+
+</member><member name="P:r2i.OWS.Wrapper.DNN.Dnn.ModuleActions">
+ ----------------------------------------------------------------------------- 
+ <summary> 
+ Registers the module actions required for interfacing with the portal framework 
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+	<history>
+	</history> 
+ ----------------------------------------------------------------------------- 
+
+</member><member name="M:r2i.OWS.Wrapper.DNN.DnnSingleton.#ctor(System.Web.HttpContext)">
+	<summary> 
+ Initializes a new instance of the <see cref="T:r2i.OWS.Wrapper.DNN.DnnSingleton"/> class. 
+ </summary>
+	<param name="ctx">The CTX.</param>
 </member><member name="M:r2i.OWS.Wrapper.DNN.DataAccess.Factories.ProviderFactory.CreateObject(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean)">
  -----------------------------------------------------------------------------
  <summary>
@@ -68,56 +89,35 @@ r2i.OWS.Wrapper.DotNetNuke
  </history>
  -----------------------------------------------------------------------------
 
-</member><member name="P:r2i.OWS.Wrapper.DNN.Dnn.ModuleActions">
- ----------------------------------------------------------------------------- 
- <summary> 
- Registers the module actions required for interfacing with the portal framework 
- </summary>
-	<value></value>
-	<returns></returns>
-	<remarks></remarks>
-	<history>
-	</history> 
- ----------------------------------------------------------------------------- 
-
-</member><member name="M:r2i.OWS.Wrapper.DNN.DnnSingleton.#ctor(System.Web.HttpContext)">
-	<summary> 
- Initializes a new instance of the <see cref="T:r2i.OWS.Wrapper.DNN.DnnSingleton"/> class. 
- </summary>
-	<param name="ctx">The CTX.</param>
-</member><member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Resources.ResourceManager">
+</member><member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Admin_aspx.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
-</member><member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Resources.Culture">
+</member><member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Admin_aspx.Culture">
 	<summary>
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
-</member><member name="T:r2i.OWS.Wrapper.DNN.My.Resources.Resources">
+</member><member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Admin_aspx.OWS_Configuration_Events">
+	<summary>
+  Looks up a localized string similar to {"Name":"OWS.Configuration.EventLog","ConfigurationID":"12029631-8826-86ee-cd1e-9da1abf43dcf","searchItems":[],"queryItems":null,"listItems":null,"messageItems":[{"Index":1,"Level":0,"Parameters":{"Name":"OnLoad","RenderType":"0","skipDebug":"False","includeSearch":"False"},"ActionType":"Action-Region","ChildActions":[{"Index":2,"Level":0,"Parameters":{"Type":"&amp;lt;Action&amp;gt;","Name":"StatusMessage","Value":"","SkipProcessing":"false","AssignmentType":"0"},"ActionType":"Action-Assignment","ChildActions":[]}, [rest of string was truncated]";.
+</summary>
+</member><member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Admin_aspx.OWS_Configuration_List">
+	<summary>
+  Looks up a localized string similar to {"Name":"OWSConfiguration.List","ConfigurationID":"12025045-0297-2e6a-f9a5-00171c237eb2","searchItems":[],"queryItems":[],"listItems":[],"messageItems":[{"Index":1,"Level":0,"Parameters":{"Name":"OnLoad","RenderType":"0","skipDebug":"False","includeSearch":"False"},"ActionType":"Action-Region","ChildActions":[{"Index":2,"Level":0,"Parameters":{"Type":"&amp;lt;Action&amp;gt;","Name":"StatusMessage","Value":"","SkipProcessing":"false","AssignmentType":"0"},"ActionType":"Action-Assignment","ChildActions":[]},{"Index": [rest of string was truncated]";.
+</summary>
+</member><member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Admin_aspx.OWS_Configuration_List_Exporter">
+	<summary>
+  Looks up a localized string similar to {"Name":"OWSConfiguration.List","ConfigurationID":"12025045-0297-2e6a-f9a5-00171c237eb2","searchItems":[],"queryItems":[],"listItems":[],"messageItems":[{"Index":1,"Level":0,"Parameters":{"Name":"OnLoad","RenderType":"0","skipDebug":"False","includeSearch":"False"},"ActionType":"Action-Region","ChildActions":[{"Index":2,"Level":1,"Parameters":{"Value":"Place all general operations within this region as a starting point. This includes Template and Variable assignments."},"ActionType":"Action-Comment","ChildA [rest of string was truncated]";.
+</summary>
+</member><member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Admin_aspx.OWS_Configuration_Repository">
+	<summary>
+  Looks up a localized string similar to {"Name":"OWS.Configuration.Repository","ConfigurationID":"12029631-8826-86ee-cd1e-9da1abf43dce","searchItems":[],"queryItems":null,"listItems":null,"messageItems":[{"Index":1,"Level":0,"Parameters":{"Name":"OnLoad","RenderType":"0","skipDebug":"False","includeSearch":"False"},"ActionType":"Action-Region","ChildActions":[{"Index":2,"Level":0,"Parameters":{"Name":"Query Variables","RenderType":"0","skipDebug":"False","includeSearch":"False"},"ActionType":"Action-Region","ChildActions":[{"Index":3,"Level":0,"P [rest of string was truncated]";.
+</summary>
+</member><member name="T:r2i.OWS.Wrapper.DNN.My.Resources.Admin_aspx">
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
-</member><member name="F:r2i.OWS.Wrapper.DNN.Authenticate.ows">
-	<summary>
-ows control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="P:r2i.OWS.Wrapper.DNN.Module.ModuleActions">
- ----------------------------------------------------------------------------- 
- <summary> 
- Registers the module actions required for interfacing with the portal framework 
- </summary>
-	<value></value>
-	<returns></returns>
-	<remarks></remarks>
-	<history>
-	</history> 
- ----------------------------------------------------------------------------- 
-
 </member>
 </members>
 </doc>

@@ -10,10 +10,10 @@ D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Framework\obj\Debug\
 D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Build\r2i.OWS.Framework.dll
 D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Build\r2i.OWS.Framework.pdb
 D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Build\r2i.OWS.Framework.xml
-D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Framework\obj\Debug\r2i.OWS.Framework.vbprojResolveAssemblyReference.cache
 D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Framework\obj\Debug\Resources.resources
 D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Framework\obj\Debug\MIMETypes.resources
 D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Framework\obj\Debug\r2i.OWS.Framework.vbproj.GenerateResource.Cache
 D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Framework\obj\Debug\r2i.OWS.Framework.dll
 D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Framework\obj\Debug\r2i.OWS.Framework.xml
 D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Framework\obj\Debug\r2i.OWS.Framework.pdb
+D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Framework\obj\Debug\r2i.OWS.Framework.vbprojResolveAssemblyReference.cache
