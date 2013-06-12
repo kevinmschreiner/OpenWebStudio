@@ -346,3 +346,5 @@ Many updates include a modifications:
 #04/08/2013
 3. Added "Action" parameter to assign the result of a JSON query directly to an Action variable
 4. Added "Action.NAME.reflected.properties,System" logic for utilizing different sections of JSON objects stored as an action variable
+#06/05/2013
+1. Corrected File Action leaving the file locked after using RESPONSE as the target

@@ -14,25 +14,6 @@ r2i.OWS.Engine
 	<param name="Properties">Optional list of Property Names in the Objects() to construct the columns. If <i>null</i> then all properties will be used.</param>
 	<param name="TableName">Optional name for the table to retrun.</param>
 	<returns>DataTable</returns>
-</member><member name="M:r2i.OWS.Engine.#ctor(System.Web.HttpContext@,System.Object,r2i.OWS.Framework.UI.Control@,System.Boolean,r2i.OWS.Framework.DataAccess.IUser,System.Web.UI.StateBag@,System.Collections.Hashtable@,r2i.OWS.Framework.DataAccess.IPortalSettings@,System.Collections.Generic.SortedList{System.String,System.String}@,System.String,System.String,System.String,System.Guid,r2i.OWS.Framework.Settings@,System.String,System.String,r2i.OWS.Framework.Debugger@,System.Boolean)">
-	<summary>
- Creates a new instance of the rendering engine
- </summary>
-	<param name="Context"></param>
-	<param name="Caller"></param>
-	<param name="curUserInfo"></param>
-	<param name="View"></param>
-	<param name="ModuleSettingsHash"></param>
-	<param name="PortalSettingsObj"></param>
-	<param name="CapturedMessages"></param>
-	<param name="ModuleID"></param>
-	<param name="TabID"></param>
-	<param name="Config"></param>
-	<param name="ClientID">Unique ID for calling control. NOTE: if the platform requires different delimiters, you should set those BEFORE passing in this value</param>
-	<param name="ModulePath"></param>
-	<param name="DebugWriter"></param>
-	<param name="canEdit"></param>
-	<remarks></remarks>
 </member><member name="F:SequenceStatus.Deleted">
 	<summary>
  The sequence is inside the original
@@ -388,6 +369,25 @@ r2i.OWS.Engine
  files and merge them into a new file with differences
  highlighted
  </summary>
+</member><member name="M:r2i.OWS.Engine.#ctor(System.Web.HttpContext@,System.Object,r2i.OWS.Framework.UI.Control@,System.Boolean,r2i.OWS.Framework.DataAccess.IUser,System.Web.UI.StateBag@,System.Collections.Hashtable@,r2i.OWS.Framework.DataAccess.IPortalSettings@,System.Collections.Generic.SortedList{System.String,System.String}@,System.String,System.String,System.String,System.Guid,r2i.OWS.Framework.Settings@,System.String,System.String,r2i.OWS.Framework.Debugger@,System.Boolean)">
+	<summary>
+ Creates a new instance of the rendering engine
+ </summary>
+	<param name="Context"></param>
+	<param name="Caller"></param>
+	<param name="curUserInfo"></param>
+	<param name="View"></param>
+	<param name="ModuleSettingsHash"></param>
+	<param name="PortalSettingsObj"></param>
+	<param name="CapturedMessages"></param>
+	<param name="ModuleID"></param>
+	<param name="TabID"></param>
+	<param name="Config"></param>
+	<param name="ClientID">Unique ID for calling control. NOTE: if the platform requires different delimiters, you should set those BEFORE passing in this value</param>
+	<param name="ModulePath"></param>
+	<param name="DebugWriter"></param>
+	<param name="canEdit"></param>
+	<remarks></remarks>
 </member>
 </members>
 </doc>
