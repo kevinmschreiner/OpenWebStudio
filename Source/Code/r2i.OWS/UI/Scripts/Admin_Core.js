@@ -122,10 +122,10 @@ if( typeof Array.prototype.unshift==='undefined' ) {
 // -- 4umi additional functions
 
 // Array.forEach( function ) - Apply a function to each element
-Array.prototype.forEach = function( f ) {
- var i = this.length, j, l = this.length;
- for( i=0; i<l; i++ ) { if( ( j = this[i] ) ) { f( j ); } }
-};
+//Array.prototype.forEach = function( f ) {
+// var i = this.length, j, l = this.length;
+// for( i=0; i<l; i++ ) { if( ( j = this[i] ) ) { f( j ); } }
+//};
 
 // Array.indexOf( value, begin, strict ) - Return index of the first element that matches value
 Array.prototype.indexOf = function( v, b, s ) {
@@ -1429,15 +1429,27 @@ function sysGetCheck(objTarget,byvalue)
 	    return null;        
     }
 }
-function sysGetText(objTarget)
-{
-	//CHECK FOR RICHTEXT ATTRIBUTE
-	if (objTarget.tagName.toUpperCase()=='TEXTAREA')
-	{	
-		return objTarget.value;
-	}
-	else
-		return objTarget.value;
+function sysGetText(objTarget) {
+    //CHECK FOR RICHTEXT ATTRIBUTE
+    if (objTarget.tagName.toUpperCase() == 'TEXTAREA') {
+        if (objTarget.nextElementSibling.className.match(/(CodeMirror)/g)) {
+            var preTags = objTarget.nextElementSibling.querySelectorAll('pre.CodeMirror-line');
+            var line = '';
+            for (var i = 0; i < preTags.length; i++) {
+                if (i < (preTags.length - 1)) {
+                    line += preTags[i].innerText + '\n';
+                } else {
+                    line += preTags[i].innerText;
+                }
+            }
+            line = line.replace(/[\u200B-\u200D\uFEFF]/g, '');
+            return line;
+        } else {
+            return objTarget.value;
+        }
+    }
+    else
+        return objTarget.value;
 }
 function sysShortenSummary(value,length)
 {

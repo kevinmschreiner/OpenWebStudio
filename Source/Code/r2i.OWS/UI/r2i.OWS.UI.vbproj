@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -19,10 +20,16 @@
     <SccProvider>SubversionScc</SccProvider>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
-    <OldToolsVersion>3.5</OldToolsVersion>
+    <OldToolsVersion>4.0</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -114,6 +121,165 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <Content Include="Scripts\CodeMirror\.gitattributes" />
+    <Content Include="Scripts\CodeMirror\.gitignore" />
+    <Content Include="Scripts\CodeMirror\.npmignore" />
+    <Content Include="Scripts\CodeMirror\.travis.yml" />
+    <Content Include="Scripts\CodeMirror\addon\comment\comment.js" />
+    <Content Include="Scripts\CodeMirror\addon\comment\continuecomment.js" />
+    <Content Include="Scripts\CodeMirror\addon\dialog\dialog.css" />
+    <Content Include="Scripts\CodeMirror\addon\dialog\dialog.js" />
+    <Content Include="Scripts\CodeMirror\addon\display\autorefresh.js" />
+    <Content Include="Scripts\CodeMirror\addon\display\fullscreen.css" />
+    <Content Include="Scripts\CodeMirror\addon\display\fullscreen.js" />
+    <Content Include="Scripts\CodeMirror\addon\display\panel.js" />
+    <Content Include="Scripts\CodeMirror\addon\display\placeholder.js" />
+    <Content Include="Scripts\CodeMirror\addon\display\rulers.js" />
+    <Content Include="Scripts\CodeMirror\addon\edit\closebrackets.js" />
+    <Content Include="Scripts\CodeMirror\addon\edit\closetag.js" />
+    <Content Include="Scripts\CodeMirror\addon\edit\continuelist.js" />
+    <Content Include="Scripts\CodeMirror\addon\edit\matchbrackets.js" />
+    <Content Include="Scripts\CodeMirror\addon\edit\matchtags.js" />
+    <Content Include="Scripts\CodeMirror\addon\edit\trailingspace.js" />
+    <Content Include="Scripts\CodeMirror\addon\emmet\dist\emmet.js" />
+    <Content Include="Scripts\CodeMirror\addon\emmet\dist\index.html" />
+    <Content Include="Scripts\CodeMirror\addon\emmet\editor.js" />
+    <Content Include="Scripts\CodeMirror\addon\emmet\emmet.js" />
+    <Content Include="Scripts\CodeMirror\addon\emmet\gulpfile.js" />
+    <Content Include="Scripts\CodeMirror\addon\emmet\index.html" />
+    <Content Include="Scripts\CodeMirror\addon\emmet\plugin.js" />
+    <Content Include="Scripts\CodeMirror\addon\fold\brace-fold.js" />
+    <Content Include="Scripts\CodeMirror\addon\fold\comment-fold.js" />
+    <Content Include="Scripts\CodeMirror\addon\fold\foldcode.js" />
+    <Content Include="Scripts\CodeMirror\addon\fold\foldgutter.css" />
+    <Content Include="Scripts\CodeMirror\addon\fold\foldgutter.js" />
+    <Content Include="Scripts\CodeMirror\addon\fold\indent-fold.js" />
+    <Content Include="Scripts\CodeMirror\addon\fold\markdown-fold.js" />
+    <Content Include="Scripts\CodeMirror\addon\fold\xml-fold.js" />
+    <Content Include="Scripts\CodeMirror\addon\hint\anyword-hint.js" />
+    <Content Include="Scripts\CodeMirror\addon\hint\css-hint.js" />
+    <Content Include="Scripts\CodeMirror\addon\hint\html-hint.js" />
+    <Content Include="Scripts\CodeMirror\addon\hint\javascript-hint.js" />
+    <Content Include="Scripts\CodeMirror\addon\hint\show-hint.css" />
+    <Content Include="Scripts\CodeMirror\addon\hint\show-hint.js" />
+    <Content Include="Scripts\CodeMirror\addon\hint\sql-hint.js" />
+    <Content Include="Scripts\CodeMirror\addon\hint\xml-hint.js" />
+    <Content Include="Scripts\CodeMirror\addon\lint\coffeescript-lint.js" />
+    <Content Include="Scripts\CodeMirror\addon\lint\css-lint.js" />
+    <Content Include="Scripts\CodeMirror\addon\lint\html-lint.js" />
+    <Content Include="Scripts\CodeMirror\addon\lint\javascript-lint.js" />
+    <Content Include="Scripts\CodeMirror\addon\lint\json-lint.js" />
+    <Content Include="Scripts\CodeMirror\addon\lint\lint.css" />
+    <Content Include="Scripts\CodeMirror\addon\lint\lint.js" />
+    <Content Include="Scripts\CodeMirror\addon\lint\yaml-lint.js" />
+    <Content Include="Scripts\CodeMirror\addon\merge\merge.css" />
+    <Content Include="Scripts\CodeMirror\addon\merge\merge.js" />
+    <Content Include="Scripts\CodeMirror\addon\mode\loadmode.js" />
+    <Content Include="Scripts\CodeMirror\addon\mode\multiplex.js" />
+    <Content Include="Scripts\CodeMirror\addon\mode\multiplex_test.js" />
+    <Content Include="Scripts\CodeMirror\addon\mode\overlay.js" />
+    <Content Include="Scripts\CodeMirror\addon\mode\simple.js" />
+    <Content Include="Scripts\CodeMirror\addon\runmode\colorize.js" />
+    <Content Include="Scripts\CodeMirror\addon\runmode\runmode-standalone.js" />
+    <Content Include="Scripts\CodeMirror\addon\runmode\runmode.js" />
+    <Content Include="Scripts\CodeMirror\addon\runmode\runmode.node.js" />
+    <Content Include="Scripts\CodeMirror\addon\scroll\annotatescrollbar.js" />
+    <Content Include="Scripts\CodeMirror\addon\scroll\scrollpastend.js" />
+    <Content Include="Scripts\CodeMirror\addon\scroll\simplescrollbars.css" />
+    <Content Include="Scripts\CodeMirror\addon\scroll\simplescrollbars.js" />
+    <Content Include="Scripts\CodeMirror\addon\search\jump-to-line.js" />
+    <Content Include="Scripts\CodeMirror\addon\search\match-highlighter.js" />
+    <Content Include="Scripts\CodeMirror\addon\search\matchesonscrollbar.css" />
+    <Content Include="Scripts\CodeMirror\addon\search\matchesonscrollbar.js" />
+    <Content Include="Scripts\CodeMirror\addon\search\search.js" />
+    <Content Include="Scripts\CodeMirror\addon\search\searchcursor.js" />
+    <Content Include="Scripts\CodeMirror\addon\selection\active-line.js" />
+    <Content Include="Scripts\CodeMirror\addon\selection\mark-selection.js" />
+    <Content Include="Scripts\CodeMirror\addon\selection\selection-pointer.js" />
+    <Content Include="Scripts\CodeMirror\addon\tern\tern.css" />
+    <Content Include="Scripts\CodeMirror\addon\tern\tern.js" />
+    <Content Include="Scripts\CodeMirror\addon\tern\worker.js" />
+    <Content Include="Scripts\CodeMirror\addon\wrap\hardwrap.js" />
+    <Content Include="Scripts\CodeMirror\AUTHORS" />
+    <Content Include="Scripts\CodeMirror\bower.json" />
+    <Content Include="Scripts\CodeMirror\CHANGELOG.md" />
+    <Content Include="Scripts\CodeMirror\CONTRIBUTING.md" />
+    <Content Include="Scripts\CodeMirror\demo\activeline.html" />
+    <Content Include="Scripts\CodeMirror\demo\anywordhint.html" />
+    <Content Include="Scripts\CodeMirror\demo\bidi.html" />
+    <Content Include="Scripts\CodeMirror\demo\btree.html" />
+    <Content Include="Scripts\CodeMirror\demo\buffers.html" />
+    <Content Include="Scripts\CodeMirror\demo\changemode.html" />
+    <Content Include="Scripts\CodeMirror\demo\closebrackets.html" />
+    <Content Include="Scripts\CodeMirror\demo\closetag.html" />
+    <Content Include="Scripts\CodeMirror\demo\complete.html" />
+    <Content Include="Scripts\CodeMirror\demo\emacs.html" />
+    <Content Include="Scripts\CodeMirror\demo\folding.html" />
+    <Content Include="Scripts\CodeMirror\demo\fullscreen.html" />
+    <Content Include="Scripts\CodeMirror\demo\hardwrap.html" />
+    <Content Include="Scripts\CodeMirror\demo\html5complete.html" />
+    <Content Include="Scripts\CodeMirror\demo\indentwrap.html" />
+    <Content Include="Scripts\CodeMirror\demo\lint.html" />
+    <Content Include="Scripts\CodeMirror\demo\loadmode.html" />
+    <Content Include="Scripts\CodeMirror\demo\marker.html" />
+    <Content Include="Scripts\CodeMirror\demo\markselection.html" />
+    <Content Include="Scripts\CodeMirror\demo\matchhighlighter.html" />
+    <Content Include="Scripts\CodeMirror\demo\matchtags.html" />
+    <Content Include="Scripts\CodeMirror\demo\merge.html" />
+    <Content Include="Scripts\CodeMirror\demo\multiplex.html" />
+    <Content Include="Scripts\CodeMirror\demo\mustache.html" />
+    <Content Include="Scripts\CodeMirror\demo\panel.html" />
+    <Content Include="Scripts\CodeMirror\demo\placeholder.html" />
+    <Content Include="Scripts\CodeMirror\demo\preview.html" />
+    <Content Include="Scripts\CodeMirror\demo\requirejs.html" />
+    <Content Include="Scripts\CodeMirror\demo\resize.html" />
+    <Content Include="Scripts\CodeMirror\demo\rulers.html" />
+    <Content Include="Scripts\CodeMirror\demo\runmode.html" />
+    <Content Include="Scripts\CodeMirror\demo\search.html" />
+    <Content Include="Scripts\CodeMirror\demo\simplemode.html" />
+    <Content Include="Scripts\CodeMirror\demo\simplescrollbars.html" />
+    <Content Include="Scripts\CodeMirror\demo\spanaffectswrapping_shim.html" />
+    <Content Include="Scripts\CodeMirror\demo\sublime.html" />
+    <Content Include="Scripts\CodeMirror\demo\tern.html" />
+    <Content Include="Scripts\CodeMirror\demo\theme.html" />
+    <Content Include="Scripts\CodeMirror\demo\trailingspace.html" />
+    <Content Include="Scripts\CodeMirror\demo\variableheight.html" />
+    <Content Include="Scripts\CodeMirror\demo\vim.html" />
+    <Content Include="Scripts\CodeMirror\demo\visibletabs.html" />
+    <Content Include="Scripts\CodeMirror\demo\widget.html" />
+    <Content Include="Scripts\CodeMirror\demo\xmlcomplete.html" />
+    <Content Include="Scripts\CodeMirror\doc\activebookmark.js" />
+    <Content Include="Scripts\CodeMirror\doc\compress.html" />
+    <Content Include="Scripts\CodeMirror\doc\docs.css" />
+    <Content Include="Scripts\CodeMirror\doc\internals.html" />
+    <Content Include="Scripts\CodeMirror\doc\logo.png" />
+    <Content Include="Scripts\CodeMirror\doc\logo.svg" />
+    <Content Include="Scripts\CodeMirror\doc\manual.html" />
+    <Content Include="Scripts\CodeMirror\doc\realworld.html" />
+    <Content Include="Scripts\CodeMirror\doc\releases.html" />
+    <Content Include="Scripts\CodeMirror\doc\reporting.html" />
+    <Content Include="Scripts\CodeMirror\doc\upgrade_v2.2.html" />
+    <Content Include="Scripts\CodeMirror\doc\upgrade_v3.html" />
+    <Content Include="Scripts\CodeMirror\doc\upgrade_v4.html" />
+    <Content Include="Scripts\CodeMirror\doc\yinyang.png" />
+    <Content Include="Scripts\CodeMirror\keymap\emacs.js" />
+    <Content Include="Scripts\CodeMirror\keymap\sublime.js" />
+    <Content Include="Scripts\CodeMirror\keymap\vim.js" />
+    <Content Include="Scripts\CodeMirror\lib\codemirror.css" />
+    <Content Include="Scripts\CodeMirror\lib\codemirror.js" />
+    <Content Include="Scripts\CodeMirror\LICENSE" />
+    <Content Include="Scripts\CodeMirror\mode\index.html" />
+    <Content Include="Scripts\CodeMirror\mode\meta.js" />
+    <Content Include="Scripts\CodeMirror\package.json" />
+    <Content Include="Scripts\CodeMirror\README.md" />
+    <Content Include="Scripts\CodeMirror\addon\emmet\.gitignore" />
+    <Content Include="Scripts\CodeMirror\addon\emmet\package.json" />
+    <Content Include="Scripts\CodeMirror\addon\emmet\README.md" />
+    <Content Include="Scripts\CodeMirror\bin\authors.sh" />
+    <Content Include="Scripts\CodeMirror\bin\compress" />
+    <Content Include="Scripts\CodeMirror\bin\lint" />
+    <Content Include="Scripts\CodeMirror\bin\release" />
+    <Content Include="Scripts\CodeMirror\bin\source-highlight" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Engine\r2i.OWS.Engine.vbproj">
@@ -199,6 +365,69 @@
     <Content Include="Scripts\Admin_QuickBuilder.js" />
     <Content Include="Scripts\Admin_Ribbon.js" />
     <Content Include="Scripts\Admin_Selector.js" />
+    <Content Include="Scripts\CodeMirror\index.html" />
+    <Content Include="Scripts\CodeMirror\test\comment_test.js" />
+    <Content Include="Scripts\CodeMirror\test\doc_test.js" />
+    <Content Include="Scripts\CodeMirror\test\driver.js" />
+    <Content Include="Scripts\CodeMirror\test\emacs_test.js" />
+    <Content Include="Scripts\CodeMirror\test\index.html" />
+    <Content Include="Scripts\CodeMirror\test\lint.js" />
+    <Content Include="Scripts\CodeMirror\test\mode_test.css" />
+    <Content Include="Scripts\CodeMirror\test\mode_test.js" />
+    <Content Include="Scripts\CodeMirror\test\multi_test.js" />
+    <Content Include="Scripts\CodeMirror\test\phantom_driver.js" />
+    <Content Include="Scripts\CodeMirror\test\run.js" />
+    <Content Include="Scripts\CodeMirror\test\scroll_test.js" />
+    <Content Include="Scripts\CodeMirror\test\search_test.js" />
+    <Content Include="Scripts\CodeMirror\test\sql-hint-test.js" />
+    <Content Include="Scripts\CodeMirror\test\sublime_test.js" />
+    <Content Include="Scripts\CodeMirror\test\test.js" />
+    <Content Include="Scripts\CodeMirror\test\vim_test.js" />
+    <Content Include="Scripts\CodeMirror\theme\3024-day.css" />
+    <Content Include="Scripts\CodeMirror\theme\3024-night.css" />
+    <Content Include="Scripts\CodeMirror\theme\abcdef.css" />
+    <Content Include="Scripts\CodeMirror\theme\ambiance-mobile.css" />
+    <Content Include="Scripts\CodeMirror\theme\ambiance.css" />
+    <Content Include="Scripts\CodeMirror\theme\base16-dark.css" />
+    <Content Include="Scripts\CodeMirror\theme\base16-light.css" />
+    <Content Include="Scripts\CodeMirror\theme\bespin.css" />
+    <Content Include="Scripts\CodeMirror\theme\blackboard.css" />
+    <Content Include="Scripts\CodeMirror\theme\cobalt.css" />
+    <Content Include="Scripts\CodeMirror\theme\colorforth.css" />
+    <Content Include="Scripts\CodeMirror\theme\dracula.css" />
+    <Content Include="Scripts\CodeMirror\theme\eclipse.css" />
+    <Content Include="Scripts\CodeMirror\theme\elegant.css" />
+    <Content Include="Scripts\CodeMirror\theme\erlang-dark.css" />
+    <Content Include="Scripts\CodeMirror\theme\hopscotch.css" />
+    <Content Include="Scripts\CodeMirror\theme\icecoder.css" />
+    <Content Include="Scripts\CodeMirror\theme\isotope.css" />
+    <Content Include="Scripts\CodeMirror\theme\lesser-dark.css" />
+    <Content Include="Scripts\CodeMirror\theme\liquibyte.css" />
+    <Content Include="Scripts\CodeMirror\theme\material.css" />
+    <Content Include="Scripts\CodeMirror\theme\mbo.css" />
+    <Content Include="Scripts\CodeMirror\theme\mdn-like.css" />
+    <Content Include="Scripts\CodeMirror\theme\midnight.css" />
+    <Content Include="Scripts\CodeMirror\theme\monokai.css" />
+    <Content Include="Scripts\CodeMirror\theme\neat.css" />
+    <Content Include="Scripts\CodeMirror\theme\neo.css" />
+    <Content Include="Scripts\CodeMirror\theme\night.css" />
+    <Content Include="Scripts\CodeMirror\theme\paraiso-dark.css" />
+    <Content Include="Scripts\CodeMirror\theme\paraiso-light.css" />
+    <Content Include="Scripts\CodeMirror\theme\pastel-on-dark.css" />
+    <Content Include="Scripts\CodeMirror\theme\railscasts.css" />
+    <Content Include="Scripts\CodeMirror\theme\rubyblue.css" />
+    <Content Include="Scripts\CodeMirror\theme\seti.css" />
+    <Content Include="Scripts\CodeMirror\theme\solarized.css" />
+    <Content Include="Scripts\CodeMirror\theme\the-matrix.css" />
+    <Content Include="Scripts\CodeMirror\theme\tomorrow-night-bright.css" />
+    <Content Include="Scripts\CodeMirror\theme\tomorrow-night-eighties.css" />
+    <Content Include="Scripts\CodeMirror\theme\ttcn.css" />
+    <Content Include="Scripts\CodeMirror\theme\twilight.css" />
+    <Content Include="Scripts\CodeMirror\theme\vibrant-ink.css" />
+    <Content Include="Scripts\CodeMirror\theme\xq-dark.css" />
+    <Content Include="Scripts\CodeMirror\theme\xq-light.css" />
+    <Content Include="Scripts\CodeMirror\theme\yeti.css" />
+    <Content Include="Scripts\CodeMirror\theme\zenburn.css" />
     <Content Include="Scripts\Config.js" />
     <Content Include="Scripts\jquery.growl.js" />
     <Content Include="Scripts\jquery.js" />
@@ -218,6 +447,127 @@
   <ItemGroup>
     <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scripts\CodeMirror\mode\apl\" />
+    <Folder Include="Scripts\CodeMirror\mode\asciiarmor\" />
+    <Folder Include="Scripts\CodeMirror\mode\asn.1\" />
+    <Folder Include="Scripts\CodeMirror\mode\asterisk\" />
+    <Folder Include="Scripts\CodeMirror\mode\brainfuck\" />
+    <Folder Include="Scripts\CodeMirror\mode\clike\" />
+    <Folder Include="Scripts\CodeMirror\mode\clojure\" />
+    <Folder Include="Scripts\CodeMirror\mode\cmake\" />
+    <Folder Include="Scripts\CodeMirror\mode\cobol\" />
+    <Folder Include="Scripts\CodeMirror\mode\coffeescript\" />
+    <Folder Include="Scripts\CodeMirror\mode\commonlisp\" />
+    <Folder Include="Scripts\CodeMirror\mode\crystal\" />
+    <Folder Include="Scripts\CodeMirror\mode\css\" />
+    <Folder Include="Scripts\CodeMirror\mode\cypher\" />
+    <Folder Include="Scripts\CodeMirror\mode\dart\" />
+    <Folder Include="Scripts\CodeMirror\mode\diff\" />
+    <Folder Include="Scripts\CodeMirror\mode\django\" />
+    <Folder Include="Scripts\CodeMirror\mode\dockerfile\" />
+    <Folder Include="Scripts\CodeMirror\mode\dtd\" />
+    <Folder Include="Scripts\CodeMirror\mode\dylan\" />
+    <Folder Include="Scripts\CodeMirror\mode\d\" />
+    <Folder Include="Scripts\CodeMirror\mode\ebnf\" />
+    <Folder Include="Scripts\CodeMirror\mode\ecl\" />
+    <Folder Include="Scripts\CodeMirror\mode\eiffel\" />
+    <Folder Include="Scripts\CodeMirror\mode\elm\" />
+    <Folder Include="Scripts\CodeMirror\mode\erlang\" />
+    <Folder Include="Scripts\CodeMirror\mode\factor\" />
+    <Folder Include="Scripts\CodeMirror\mode\fcl\" />
+    <Folder Include="Scripts\CodeMirror\mode\forth\" />
+    <Folder Include="Scripts\CodeMirror\mode\fortran\" />
+    <Folder Include="Scripts\CodeMirror\mode\gas\" />
+    <Folder Include="Scripts\CodeMirror\mode\gfm\" />
+    <Folder Include="Scripts\CodeMirror\mode\gherkin\" />
+    <Folder Include="Scripts\CodeMirror\mode\go\" />
+    <Folder Include="Scripts\CodeMirror\mode\groovy\" />
+    <Folder Include="Scripts\CodeMirror\mode\haml\" />
+    <Folder Include="Scripts\CodeMirror\mode\handlebars\" />
+    <Folder Include="Scripts\CodeMirror\mode\haskell-literate\" />
+    <Folder Include="Scripts\CodeMirror\mode\haskell\" />
+    <Folder Include="Scripts\CodeMirror\mode\haxe\" />
+    <Folder Include="Scripts\CodeMirror\mode\htmlembedded\" />
+    <Folder Include="Scripts\CodeMirror\mode\htmlmixed\" />
+    <Folder Include="Scripts\CodeMirror\mode\http\" />
+    <Folder Include="Scripts\CodeMirror\mode\idl\" />
+    <Folder Include="Scripts\CodeMirror\mode\jade\" />
+    <Folder Include="Scripts\CodeMirror\mode\javascript\" />
+    <Folder Include="Scripts\CodeMirror\mode\jinja2\" />
+    <Folder Include="Scripts\CodeMirror\mode\jsx\" />
+    <Folder Include="Scripts\CodeMirror\mode\julia\" />
+    <Folder Include="Scripts\CodeMirror\mode\livescript\" />
+    <Folder Include="Scripts\CodeMirror\mode\lua\" />
+    <Folder Include="Scripts\CodeMirror\mode\markdown\" />
+    <Folder Include="Scripts\CodeMirror\mode\mathematica\" />
+    <Folder Include="Scripts\CodeMirror\mode\mirc\" />
+    <Folder Include="Scripts\CodeMirror\mode\mllike\" />
+    <Folder Include="Scripts\CodeMirror\mode\modelica\" />
+    <Folder Include="Scripts\CodeMirror\mode\mscgen\" />
+    <Folder Include="Scripts\CodeMirror\mode\mumps\" />
+    <Folder Include="Scripts\CodeMirror\mode\nginx\" />
+    <Folder Include="Scripts\CodeMirror\mode\nsis\" />
+    <Folder Include="Scripts\CodeMirror\mode\ntriples\" />
+    <Folder Include="Scripts\CodeMirror\mode\octave\" />
+    <Folder Include="Scripts\CodeMirror\mode\oz\" />
+    <Folder Include="Scripts\CodeMirror\mode\pascal\" />
+    <Folder Include="Scripts\CodeMirror\mode\pegjs\" />
+    <Folder Include="Scripts\CodeMirror\mode\perl\" />
+    <Folder Include="Scripts\CodeMirror\mode\php\" />
+    <Folder Include="Scripts\CodeMirror\mode\pig\" />
+    <Folder Include="Scripts\CodeMirror\mode\properties\" />
+    <Folder Include="Scripts\CodeMirror\mode\protobuf\" />
+    <Folder Include="Scripts\CodeMirror\mode\puppet\" />
+    <Folder Include="Scripts\CodeMirror\mode\python\" />
+    <Folder Include="Scripts\CodeMirror\mode\q\" />
+    <Folder Include="Scripts\CodeMirror\mode\rpm\" />
+    <Folder Include="Scripts\CodeMirror\mode\rst\" />
+    <Folder Include="Scripts\CodeMirror\mode\ruby\" />
+    <Folder Include="Scripts\CodeMirror\mode\rust\" />
+    <Folder Include="Scripts\CodeMirror\mode\r\" />
+    <Folder Include="Scripts\CodeMirror\mode\sass\" />
+    <Folder Include="Scripts\CodeMirror\mode\scheme\" />
+    <Folder Include="Scripts\CodeMirror\mode\shell\" />
+    <Folder Include="Scripts\CodeMirror\mode\sieve\" />
+    <Folder Include="Scripts\CodeMirror\mode\slim\" />
+    <Folder Include="Scripts\CodeMirror\mode\smalltalk\" />
+    <Folder Include="Scripts\CodeMirror\mode\smarty\" />
+    <Folder Include="Scripts\CodeMirror\mode\solr\" />
+    <Folder Include="Scripts\CodeMirror\mode\soy\" />
+    <Folder Include="Scripts\CodeMirror\mode\sparql\" />
+    <Folder Include="Scripts\CodeMirror\mode\spreadsheet\" />
+    <Folder Include="Scripts\CodeMirror\mode\sql\" />
+    <Folder Include="Scripts\CodeMirror\mode\stex\" />
+    <Folder Include="Scripts\CodeMirror\mode\stylus\" />
+    <Folder Include="Scripts\CodeMirror\mode\swift\" />
+    <Folder Include="Scripts\CodeMirror\mode\tcl\" />
+    <Folder Include="Scripts\CodeMirror\mode\textile\" />
+    <Folder Include="Scripts\CodeMirror\mode\tiddlywiki\" />
+    <Folder Include="Scripts\CodeMirror\mode\tiki\" />
+    <Folder Include="Scripts\CodeMirror\mode\toml\" />
+    <Folder Include="Scripts\CodeMirror\mode\tornado\" />
+    <Folder Include="Scripts\CodeMirror\mode\troff\" />
+    <Folder Include="Scripts\CodeMirror\mode\ttcn-cfg\" />
+    <Folder Include="Scripts\CodeMirror\mode\ttcn\" />
+    <Folder Include="Scripts\CodeMirror\mode\turtle\" />
+    <Folder Include="Scripts\CodeMirror\mode\twig\" />
+    <Folder Include="Scripts\CodeMirror\mode\vbscript\" />
+    <Folder Include="Scripts\CodeMirror\mode\vb\" />
+    <Folder Include="Scripts\CodeMirror\mode\velocity\" />
+    <Folder Include="Scripts\CodeMirror\mode\verilog\" />
+    <Folder Include="Scripts\CodeMirror\mode\vhdl\" />
+    <Folder Include="Scripts\CodeMirror\mode\vue\" />
+    <Folder Include="Scripts\CodeMirror\mode\xml\" />
+    <Folder Include="Scripts\CodeMirror\mode\xquery\" />
+    <Folder Include="Scripts\CodeMirror\mode\yaml-frontmatter\" />
+    <Folder Include="Scripts\CodeMirror\mode\yaml\" />
+    <Folder Include="Scripts\CodeMirror\mode\z80\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <!-- Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" / -->
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -246,5 +596,6 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
 </Project>
