@@ -33,8 +33,22 @@ Partial Public Class Admin
     Public Function CSSLibrary(ByVal isHeader As Boolean) As String
         Return "<link rel=""stylesheet"" type=""text/css"" href=""admin.css?v=" & Version(False) & """/>"
     End Function
+    Public Function CodeMirrorCss() As String
+        Dim cmcss As String
+        cmcss = ""
+        cmcss += "<link rel=""stylesheet"" type=""text/css"" href=""Scripts/CodeMirror/lib/codemirror.css?v=" & Version(False) & """/> \n"
+        cmcss += "<link rel=""stylesheet"" type=""text/css"" href=""Scripts/CodeMirror/theme/dracula.css?v=" & Version(False) & """/> \n"
+        cmcss += "<link rel=""stylesheet"" type=""text/css"" href=""Scripts/CodeMirror/addon/hint/show-hint.css?v=" & Version(False) & """/> \n"
+        cmcss += "<link rel=""stylesheet"" type=""text/css"" href=""Scripts/CodeMirror/addon/dialog/dialog.css?v=" & Version(False) & """/>"
+        Return cmcss
+    End Function
     Public Function PageTitle(ByVal isHeader As Boolean) As String
         Return "<title>Open Web Studio " & Version(True) & "</title>"
+    End Function
+    Public Function CodeMirrorConfig() As String
+        Dim str As String = ""
+            str += "<script type=""text/javascript"" src=""/Scripts/Codemirror/codeMirrorConfig.js?v=" & Version(False) & """></script>"
+        Return str
     End Function
     Public Function JavascriptLibrary(ByVal isHeader As Boolean) As String
         Dim sectionInclude As r2i.OWS.Framework.Config.SectionItem
