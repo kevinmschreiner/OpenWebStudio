@@ -1,0 +1,438 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+r2i.OWS.Engine
+</name>
+</assembly>
+<members>
+<member name="M:r2i.OWS.Engine.#ctor(System.Web.HttpContext@,System.Object,r2i.OWS.Framework.UI.Control@,System.Boolean,r2i.OWS.Framework.DataAccess.IUser,System.Web.UI.StateBag@,System.Collections.Hashtable@,r2i.OWS.Framework.DataAccess.IPortalSettings@,System.Collections.Generic.SortedList{System.String,System.String}@,System.String,System.String,System.String,System.Guid,r2i.OWS.Framework.Settings@,System.String,System.String,r2i.OWS.Framework.Debugger@,System.Boolean)">
+ <summary>
+ Creates a new instance of the rendering engine
+ </summary>
+ <param name="Context"></param>
+ <param name="Caller"></param>
+ <param name="curUserInfo"></param>
+ <param name="View"></param>
+ <param name="ModuleSettingsHash"></param>
+ <param name="PortalSettingsObj"></param>
+ <param name="CapturedMessages"></param>
+ <param name="ModuleID"></param>
+ <param name="TabID"></param>
+ <param name="Config"></param>
+ <param name="ClientID">Unique ID for calling control. NOTE: if the platform requires different delimiters, you should set those BEFORE passing in this value</param>
+ <param name="ModulePath"></param>
+ <param name="DebugWriter"></param>
+ <param name="canEdit"></param>
+ <remarks></remarks>
+</member>
+<member name="M:r2i.OWS.Framework.Utilities.Engine.Utility.CollectionToDataTable(System.Collections.ICollection,System.Collections.Generic.List{System.String},System.String)">
+ <summary>
+ Construct a datatable from the objects given
+ </summary>
+ <param name="Objects">Collection of objects. These provide data for the rows.</param>
+ <param name="Properties">Optional list of Property Names in the Objects() to construct the columns. If <i>null</i> then all properties will be used.</param>
+ <param name="TableName">Optional name for the table to retrun.</param>
+ <returns>DataTable</returns>
+</member>
+<member name="T:SequenceStatus">
+ <summary>
+ When we compare two files, we say we delete or add
+ some sub sequences in the original file to result
+ in the modified file. This is to define the strong
+ type for identifying the status of a such sequence.
+ </summary>
+</member>
+<member name="F:SequenceStatus.Deleted">
+ <summary>
+ The sequence is inside the original
+ file but not in the modified file
+ </summary>
+</member>
+<member name="F:SequenceStatus.Inserted">
+ <summary>
+ The sequence is inside the modifed
+ file but not in the original file
+ </summary>
+</member>
+<member name="F:SequenceStatus.NoChange">
+ <summary>
+ The sequence is in both the origianl
+ and the modified files
+ </summary>
+</member>
+<member name="T:Sequence">
+ <summary>
+ Data structure for marking start and end indexes of a
+ sequence
+ </summary>
+</member>
+<member name="M:Sequence.#ctor">
+ <summary>
+ Default constructor
+ </summary>
+</member>
+<member name="M:Sequence.#ctor(System.Int32,System.Int32)">
+ <summary>
+ Overloaded Constructor that takes the start
+ and end indexes of the sequence. Note that
+ the interval is open on right hand side, say,
+ it is like [startIndex, endIndex).
+ </summary>
+ <param name="startIndex">
+ The starting index of the sequence
+ </param>
+ <param name="endIndex">
+ The end index of the sequence.
+ </param>
+</member>
+<member name="F:Sequence.StartIndex">
+ <summary>
+ The start index of the sequence
+ </summary>
+</member>
+<member name="F:Sequence.EndIndex">
+ <summary>
+ The end index of the sequence. It is
+ open end.
+ </summary>
+</member>
+<member name="T:MiddleSnake">
+ <summary>
+ This class defines middle common sequence in the original
+ file and the modified file. It is called middle in the
+ sense that it is the common sequence when the furthest
+ forward reaching path in the top-down seaching first overlaps
+ the furthest backward reaching path in the bottom up search.
+ See the listed reference at the top for more details.
+ </summary>
+</member>
+<member name="F:MiddleSnake.Source">
+ <summary>
+ The indexes of middle snake in source sequence
+ </summary>
+</member>
+<member name="F:MiddleSnake.Destination">
+ <summary>
+ The indexes of middle snake in the destination
+ sequence
+ </summary>
+</member>
+<member name="F:MiddleSnake.SES_Length">
+ <summary>
+ The length of the Shortest Edit Script for the
+ path this snake is found.
+ </summary>
+</member>
+<member name="T:IntVector">
+ <summary>
+ An array indexer class that maps the index of an integer
+ array from -N ~ +N to 0 ~ 2N.
+ </summary>
+</member>
+<member name="T:Word">
+ <summary>
+ This class defines the data type for representing a
+ word. The word may have leading or tailing html tags
+ or other special characters. Those prefix or suffix
+ are not compared.
+ </summary>
+</member>
+<member name="M:Word.#ctor">
+ <summary>
+ Default constructor
+ </summary>
+</member>
+<member name="M:Word.#ctor(System.String,System.String,System.String)">
+ <summary>
+ Overloaded constructor
+ </summary>
+ <param name="word">
+ The word
+ </param>
+ <param name="prefix">
+ The prefix of the word, such as html tags
+ </param>
+ <param name="suffix">
+ The suffix of the word, such as spaces.
+ </param>
+</member>
+<member name="P:Word.word">
+ <summary>
+ The word itself
+ </summary>
+</member>
+<member name="P:Word.Prefix">
+ <summary>
+ The prefix of the word
+ </summary>
+</member>
+<member name="P:Word.Suffix">
+ <summary>
+ The suffix of the word
+ </summary>
+</member>
+<member name="M:Word.reconstruct">
+ <summary>
+ Reconstruct the text string from the word
+ itself without any other decoration.
+ </summary>
+ <returns>
+ Constructed string</returns>
+</member>
+<member name="M:Word.reconstruct(System.String,System.String)">
+ <summary>
+ Overloaded function reconstructing the text
+ string with additional decoration around the
+ _word.
+ </summary>
+ <param name="beginTag">
+ The begining html tag to mark the _word
+ </param>
+ <param name="endTag">
+ The end html tag to mark the _word
+ </param>
+ <returns>
+ The constructed string
+ </returns>
+</member>
+<member name="M:Word.CompareTo(System.Object)">
+ <summary>
+ Implementation of the CompareTo. It compares
+ the _word field.
+ </summary>
+ <param name="obj"></param>
+ <returns></returns>
+</member>
+<member name="T:WordsCollection">
+ <summary>
+ Strongly typed collection of Word object
+ </summary>
+</member>
+<member name="M:WordsCollection.#ctor">
+ <summary>
+ Default constructor
+ </summary>
+</member>
+<member name="M:WordsCollection.#ctor(System.Collections.ArrayList)">
+ <summary>
+ Constructor to populate collection from an ArrayList
+ </summary>
+ <param name="list" type="ArrayList">
+ ArrayList of Words
+ </param>
+</member>
+<member name="M:WordsCollection.Add(Word)">
+ <summary>
+ Add a Word object to the collection
+ </summary>
+ <param name="item" type="Word">
+ Word object
+ </param>
+ <returns type="integer">
+ Zero based index of the added Word object in
+ the colleciton
+ </returns>
+</member>
+<member name="M:WordsCollection.Insert(System.Int32,Word)">
+ <summary>
+ Add Word object to the collection at specified index
+ </summary>
+ <param name="index" type="integer">
+ Zero based index
+ </param>
+ <param name="item" type="Word">
+ Word object
+ </param>
+</member>
+<member name="M:WordsCollection.Remove(Word)">
+ <summary>
+ Remove the Word object from collection
+ </summary>
+ <param name="item" type="Word">
+ Word object to be removed
+ </param>
+</member>
+<member name="M:WordsCollection.Contains(Word)">
+ <summary>
+ Check if the Word object is in the collection
+ </summary>
+ <param name="item" type="Word">
+ Word object
+ </param>
+ <returns type="bool">
+ Boolean value of the checking result
+ </returns>
+</member>
+<member name="M:WordsCollection.IndexOf(Word)">
+ <summary>
+ Returns zero based index of the Word object in
+ the collection
+ </summary>
+ <param name="item" type="Word">
+ Word object to be checked for index
+ </param>
+ <returns type="integer">
+ Zero based index of Word object in the collection
+ </returns>
+</member>
+<member name="P:WordsCollection.Item(System.Int32)">
+ <summary>
+ Array indexing operator -- get Word object at
+ the index
+ </summary>
+</member>
+<member name="M:WordsCollection.CopyTo(WordsCollection,System.Int32)">
+ <summary>
+ Copy this WordsCollection to another one
+ starting at the specified index position
+ </summary>
+ <param name="col" type="WordsCollection">
+ WordsCollection to be copied to
+ </param>
+ <param name="index" type="integer">
+ Starting index to begin copy operations
+ </param>
+</member>
+<member name="M:WordsCollection.CopyTo(WordsCollection)">
+ <summary>
+ Overloaded. Copy this WordsCollection to another one
+ starting at the index zero
+ </summary>
+ <param name="col" type="WordCollection">
+ WordsCollection to copy to
+ </param>
+</member>
+<member name="T:HtmlTextParser">
+ <summary>
+ The class defines static method that processes html text
+ string in such a way that the text is striped out into
+ separate english words with html tags and some special
+ characters as the prefix or suffix of the words. This way,
+ the original html text string can be reconstructed to
+ retain the original appearance by concating each word
+ object in the collection in such way as word.prefix +
+ word.word + word.suffix.
+
+ The generated words collection will be used to compare
+ the difference with another html text string in such format.
+ </summary>
+</member>
+<member name="M:HtmlTextParser.parse(System.String)">
+ <summary>
+ Static method that parses the passed-in string into
+ Words collection
+ </summary>
+ <param name="s">
+ String
+ </param>
+ <returns>
+ Words Collection
+ </returns>
+</member>
+<member name="M:HtmlTextParser.processWord(WordsCollection,System.String,System.String,System.String)">
+ <summary>
+ Further processing of a string
+ </summary>
+ <param name="words">
+ Collection that new word(s) will be added in
+ </param>
+ <param name="prefix">
+ prefix come with the string
+ </param>
+ <param name="word">
+ A string that may be a real word or have leading or tailing
+ special character
+ </param>
+ <param name="suffix">
+ suffix comes with the string.
+ </param>
+</member>
+<member name="T:Merger">
+ <summary>
+ The class provides functionality to compare two html
+ files and merge them into a new file with differences
+ highlighted
+ </summary>
+</member>
+<member name="P:Merger.WordsInOriginalFile">
+ <summary>
+ Return the number of words in the parsed original file.
+ </summary>
+</member>
+<member name="P:Merger.WordsInModifiedFile">
+ <summary>
+ Return the number of words in the parsed modified file
+ </summary>
+</member>
+<member name="M:Merger.findMiddleSnake(Sequence,Sequence)">
+ <summary>
+ In the edit graph for the sequences src and des, search for the
+ optimal(shortest) path from (src.StartIndex, des.StartIndex) to
+ (src.EndIndex, des.EndIndex).
+
+ The searching starts from both ends of the graph and when the
+ furthest forward reaching overlaps with the furthest backward
+ reaching, the overlapped point is reported as the middle point
+ of the shortest path.
+
+ See the listed reference for the detailed description of the
+ algorithm
+ </summary>
+ <param name="src">
+ Represents a (sub)sequence of _original
+ </param>
+ <returns>
+ The found middle snake
+ </returns>
+</member>
+<member name="M:Merger.doMerge(Sequence,Sequence)">
+ <summary>
+ The function merges the two sequences and returns the merged
+ html text string with deleted(exists in source sequence but
+ not in destination sequence) and added(exists in destination
+ but not in source) decorated extra html tags defined in class
+ commentoff and class added.
+ </summary>
+ <param name="src">
+ The source sequence
+ </param>
+ <returns>
+ The merged html string
+ </returns>
+</member>
+<member name="M:Merger.constructText(Sequence,SequenceStatus)">
+ <summary>
+ The function returns a html text string reconstructed
+ from the sub collection of words its starting and ending
+ indexes are marked by parameter seq and its collection is
+ denoted by parameter status. If the status is "deleted",
+ then the _original collection is used, otherwise, _modified
+ is used.
+ </summary>
+ <param name="seq">
+ Sequence object that marks the start index and end
+ index of the sub sequence
+ </param>
+ <param name="status">
+ Denoting the status of the sequence. When its value is
+ Deleted or Added, some extra decoration will be added
+ around the word.
+ </param>
+ <returns>
+ The html text string constructed
+ </returns>
+</member>
+<member name="M:Merger.merge">
+ <summary>
+ The public function merges the two copies of
+ files stored inside this class. The html tags
+ of the destination file is used in the merged
+ file.
+ </summary>
+ <returns>
+ The merged file
+ </returns>
+</member>
+</members>
+</doc>

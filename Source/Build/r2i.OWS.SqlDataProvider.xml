@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+r2i.OWS.SqlDataProvider
+</name>
+</assembly>
+<members>
+<member name="T:r2i.OWS.SqlDataProvider">
+ -----------------------------------------------------------------------------
+ <summary>
+ The SqlDataProvider Class is an SQL Server implementation of the DataProvider Abstract
+ class that provides the DataLayer for the Toolbar Module.
+ </summary>
+ <remarks>
+ </remarks>
+ <history>
+ 	[kschreiner]	5/9/2005	Moved Toolbar to a separate Project
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+</members>
+</doc>

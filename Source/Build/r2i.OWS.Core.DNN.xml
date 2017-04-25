@@ -1,0 +1,147 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+r2i.OWS.Wrapper.DotNetNuke
+</name>
+</assembly>
+<members>
+<member name="T:r2i.OWS.Wrapper.DNN.My.Resources.Admin_aspx">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Admin_aspx.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Admin_aspx.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Admin_aspx.OWS_Configuration_Events">
+<summary>
+  Looks up a localized string similar to {&quot;Name&quot;:&quot;OWS.Configuration.EventLog&quot;,&quot;ConfigurationID&quot;:&quot;12029631-8826-86ee-cd1e-9da1abf43dcf&quot;,&quot;searchItems&quot;:[],&quot;queryItems&quot;:null,&quot;listItems&quot;:null,&quot;messageItems&quot;:[{&quot;Index&quot;:1,&quot;Level&quot;:0,&quot;Parameters&quot;:{&quot;Name&quot;:&quot;OnLoad&quot;,&quot;RenderType&quot;:&quot;0&quot;,&quot;skipDebug&quot;:&quot;False&quot;,&quot;includeSearch&quot;:&quot;False&quot;},&quot;ActionType&quot;:&quot;Action-Region&quot;,&quot;ChildActions&quot;:[{&quot;Index&quot;:2,&quot;Level&quot;:0,&quot;Parameters&quot;:{&quot;Type&quot;:&quot;&amp;lt;Action&amp;gt;&quot;,&quot;Name&quot;:&quot;StatusMessage&quot;,&quot;Value&quot;:&quot;&quot;,&quot;SkipProcessing&quot;:&quot;false&quot;,&quot;AssignmentType&quot;:&quot;0&quot;},&quot;ActionType&quot;:&quot;Action-Assignment&quot;,&quot;ChildActions&quot;:[]}, [rest of string was truncated]&quot;;.
+</summary>
+</member>
+<member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Admin_aspx.OWS_Configuration_List">
+<summary>
+  Looks up a localized string similar to {&quot;Name&quot;:&quot;OWSConfiguration.List&quot;,&quot;ConfigurationID&quot;:&quot;12025045-0297-2e6a-f9a5-00171c237eb2&quot;,&quot;searchItems&quot;:[],&quot;queryItems&quot;:[],&quot;listItems&quot;:[],&quot;messageItems&quot;:[{&quot;Index&quot;:1,&quot;Level&quot;:0,&quot;Parameters&quot;:{&quot;Name&quot;:&quot;OnLoad&quot;,&quot;RenderType&quot;:&quot;0&quot;,&quot;skipDebug&quot;:&quot;False&quot;,&quot;includeSearch&quot;:&quot;False&quot;},&quot;ActionType&quot;:&quot;Action-Region&quot;,&quot;ChildActions&quot;:[{&quot;Index&quot;:2,&quot;Level&quot;:0,&quot;Parameters&quot;:{&quot;Type&quot;:&quot;&amp;lt;Action&amp;gt;&quot;,&quot;Name&quot;:&quot;StatusMessage&quot;,&quot;Value&quot;:&quot;&quot;,&quot;SkipProcessing&quot;:&quot;false&quot;,&quot;AssignmentType&quot;:&quot;0&quot;},&quot;ActionType&quot;:&quot;Action-Assignment&quot;,&quot;ChildActions&quot;:[]},{&quot;Index&quot;: [rest of string was truncated]&quot;;.
+</summary>
+</member>
+<member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Admin_aspx.OWS_Configuration_List_Exporter">
+<summary>
+  Looks up a localized string similar to {&quot;Name&quot;:&quot;OWSConfiguration.List&quot;,&quot;ConfigurationID&quot;:&quot;12025045-0297-2e6a-f9a5-00171c237eb2&quot;,&quot;searchItems&quot;:[],&quot;queryItems&quot;:[],&quot;listItems&quot;:[],&quot;messageItems&quot;:[{&quot;Index&quot;:1,&quot;Level&quot;:0,&quot;Parameters&quot;:{&quot;Name&quot;:&quot;OnLoad&quot;,&quot;RenderType&quot;:&quot;0&quot;,&quot;skipDebug&quot;:&quot;False&quot;,&quot;includeSearch&quot;:&quot;False&quot;},&quot;ActionType&quot;:&quot;Action-Region&quot;,&quot;ChildActions&quot;:[{&quot;Index&quot;:2,&quot;Level&quot;:1,&quot;Parameters&quot;:{&quot;Value&quot;:&quot;Place all general operations within this region as a starting point. This includes Template and Variable assignments.&quot;},&quot;ActionType&quot;:&quot;Action-Comment&quot;,&quot;ChildA [rest of string was truncated]&quot;;.
+</summary>
+</member>
+<member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Admin_aspx.OWS_Configuration_Repository">
+<summary>
+  Looks up a localized string similar to {&quot;Name&quot;:&quot;OWS.Configuration.Repository&quot;,&quot;ConfigurationID&quot;:&quot;12029631-8826-86ee-cd1e-9da1abf43dce&quot;,&quot;searchItems&quot;:[],&quot;queryItems&quot;:null,&quot;listItems&quot;:null,&quot;messageItems&quot;:[{&quot;Index&quot;:1,&quot;Level&quot;:0,&quot;Parameters&quot;:{&quot;Name&quot;:&quot;OnLoad&quot;,&quot;RenderType&quot;:&quot;0&quot;,&quot;skipDebug&quot;:&quot;False&quot;,&quot;includeSearch&quot;:&quot;False&quot;},&quot;ActionType&quot;:&quot;Action-Region&quot;,&quot;ChildActions&quot;:[{&quot;Index&quot;:2,&quot;Level&quot;:0,&quot;Parameters&quot;:{&quot;Name&quot;:&quot;Query Variables&quot;,&quot;RenderType&quot;:&quot;0&quot;,&quot;skipDebug&quot;:&quot;False&quot;,&quot;includeSearch&quot;:&quot;False&quot;},&quot;ActionType&quot;:&quot;Action-Region&quot;,&quot;ChildActions&quot;:[{&quot;Index&quot;:3,&quot;Level&quot;:0,&quot;P [rest of string was truncated]&quot;;.
+</summary>
+</member>
+<member name="T:r2i.OWS.Wrapper.DNN.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:r2i.OWS.Wrapper.DNN.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:r2i.OWS.Wrapper.DNN.DataAccess.Factories.ProviderFactory.CreateObject(System.String,System.String,System.String,System.String,System.Boolean,System.Boolean)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Creates an object
+ </summary>
+ <param name="ObjectProviderType">The type of Object to create (data/navigation)</param>
+ <param name="ObjectProviderName">The name of the Provider</param>
+ <param name="ObjectNamespace">The namespace of the object to create.</param>
+ <param name="ObjectAssemblyName">The assembly of the object to create.</param>
+ <param name="UseCache">Caching switch</param>
+ <returns>The created Object</returns>
+ <remarks>Overload for creating an object from a Provider including NameSpace, 
+ AssemblyName and ProviderName</remarks>
+ <history>
+ 	[cnurse]	    10/13/2005	Documented
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:r2i.OWS.Wrapper.DNN.DataAccess.Factories.ProviderFactory.CreateObject(System.String,System.String,System.Boolean)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Creates an object
+ </summary>
+ <param name="TypeName">The fully qualified TypeName</param>
+ <param name="CacheKey">The Cache Key</param>
+ <param name="UseCache">Caching switch</param>
+ <returns>The created Object</returns>
+ <remarks>Overload that takes a fully-qualified typename and a Cache Key</remarks>
+ <history>
+ 	[cnurse]	    10/13/2005	Documented
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="M:r2i.OWS.Wrapper.DNN.DnnSingleton.#ctor(System.Web.HttpContext)">
+ <summary> 
+ Initializes a new instance of the <see cref="T:r2i.OWS.Wrapper.DNN.DnnSingleton"/> class. 
+ </summary> 
+ <param name="ctx">The CTX.</param> 
+</member>
+<member name="M:r2i.OWS.Wrapper.DNN.Entities.PortalSettingsController.GetPortalSettings(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ The GetPortalSettings method builds the site Settings
+ </summary>
+ <remarks>
+ </remarks>
+	<param name="TabId">The current tabs id</param>
+	<param name="objPortalAliasInfo">The Portal Alias object</param>
+ <history>
+ </history>
+ -----------------------------------------------------------------------------
+</member>
+<member name="P:r2i.OWS.Wrapper.DNN.Dnn.ModuleActions">
+ ----------------------------------------------------------------------------- 
+ <summary> 
+ Registers the module actions required for interfacing with the portal framework 
+ </summary> 
+ <value></value> 
+ <returns></returns> 
+ <remarks></remarks> 
+ <history> 
+ </history> 
+ ----------------------------------------------------------------------------- 
+</member>
+<member name="P:r2i.OWS.Wrapper.DNN.Module.ModuleActions">
+ ----------------------------------------------------------------------------- 
+ <summary> 
+ Registers the module actions required for interfacing with the portal framework 
+ </summary> 
+ <value></value> 
+ <returns></returns> 
+ <remarks></remarks> 
+ <history> 
+ </history> 
+ ----------------------------------------------------------------------------- 
+</member>
+<member name="F:r2i.OWS.Wrapper.DNN.Authenticate._ows">
+<summary>
+ows control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+</members>
+</doc>
