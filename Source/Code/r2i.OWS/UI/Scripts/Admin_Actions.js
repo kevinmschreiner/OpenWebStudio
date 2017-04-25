@@ -1707,7 +1707,7 @@ function onClick_Actions_Message() {
 }
 function onClick_Actions_Query() {
 	//ADD A NEW ACTION
-	AddAction("Action-Execute",{"Name":"New Query","Query":"Enter Query Here","IsProcess":"False","Connection":""});
+    AddAction("Action-Execute", { "Name": "New Query", "Query": "SELECT * \nFROM <DB>.dbo.<table>", "IsProcess": "False", "Connection": "" });
 }
 function onClick_Actions_Log() {
 	//ADD A NEW ACTION
@@ -2518,7 +2518,9 @@ var sysAction_Types = [
      "<td class=SubHead width=151>" +
 	 "Query<br><a href='javascript:QueryExecute();'>(Execute&nbsp;Query)</a>" + 
      "</td>" +
-     "<td id=cActionQuery_Query><textarea wrap=off name=frmActionQuery_Query id=frmActionQuery_Query style=\"height: 150px; width:100%;\" richtext=true ></textarea></td>" +
+     "<td id=cActionQuery_Query>" +
+     "<textarea onfocus=\"cInit(this.id);\" autofocus wrap=off name=frmActionQuery_Query id=frmActionQuery_Query style=\"height: 250px; width:100%;\" richtext=true ></textarea>" +
+     "</td>" +
     "</tr>" +
     "<tr>" +
      "<td class=SubHead width=151>" + 
@@ -2968,7 +2970,9 @@ var sysAction_Types = [
      "<input  name=frmActionAssignment_IgnoreTags id=frmActionAssignment_IgnoreTags type=\"checkbox\"/>" +
      "<label for=\"frmActionAssignment_IgnoreTags\">Value (Ignore Tags)</label>" +
      "</td>" +
-     "<td><textarea wrap=off name=frmActionAssignment_Value id=frmActionAssignment_Value style=\"height: 150px; width:100%;\" richtext=true></textarea></td>" +
+     "<td>" +
+     "<textarea onfocus=\"cInit(this.id);\" autofocus wrap=off name=frmActionAssignment_Value id=frmActionAssignment_Value style=\"height: 250px; width:100%;\" richtext=true></textarea>" +
+     "</td>" +
     "</tr>" +
     "<tr>" +
      "<td class=SubHead width=151>Assignment Type</td>" +
@@ -3267,7 +3271,9 @@ var sysAction_Types = [
      "<td class=SubHead width=151>" +
 	 "Content" +
      "</td>" +
-     "<td><textarea wrap=off name=frmActionTemplate_Value id=frmActionTemplate_Value style=\"height: 150px; width:100%;\" richtext=true></textarea></td>" +
+     "<td>" +
+     "<textarea onfocus=\"cInit(this.id);\" autofocus wrap=off name=frmActionTemplate_Value id=frmActionTemplate_Value style=\"height: 250px; width:100%;\" richtext=true></textarea>" +
+     "</td>" +
     "</tr>" +
     "<tr>" +
      "<td class=SubHead width=151><div id=dGroup8>Cache (seconds)</div></td>" +

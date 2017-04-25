@@ -15,3 +15,12 @@ D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\ASPNe
 D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Debug\r2i.OWS.Wrapper.ASPNET.dll
 D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Debug\r2i.OWS.Core.Generic.xml
 D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Debug\r2i.OWS.Wrapper.ASPNET.pdb
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Build\r2i.OWS.Wrapper.ASPNET.dll
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Build\r2i.OWS.Wrapper.ASPNET.pdb
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Build\r2i.OWS.Core.Generic.xml
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Debug\r2i.OWS.Wrapper.ASPNET.vbprojResolveAssemblyReference.cache
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Debug\r2i.OWS.Wrapper.ASPNET.Resources.resources
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Debug\r2i.OWS.Wrapper.ASPNET.vbproj.GenerateResource.Cache
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Debug\r2i.OWS.Wrapper.ASPNET.dll
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Debug\r2i.OWS.Core.Generic.xml
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Debug\r2i.OWS.Wrapper.ASPNET.pdb

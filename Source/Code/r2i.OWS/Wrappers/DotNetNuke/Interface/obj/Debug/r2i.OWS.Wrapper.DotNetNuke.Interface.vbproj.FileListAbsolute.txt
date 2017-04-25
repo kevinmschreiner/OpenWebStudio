@@ -16,3 +16,12 @@ D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNe
 D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Debug\r2i.OWS.Wrapper.DotNetNuke.Interface.dll
 D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Debug\r2i.OWS.Wrapper.DotNetNuke.Interface.xml
 D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Debug\r2i.OWS.Wrapper.DotNetNuke.Interface.pdb
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Build\r2i.OWS.Wrapper.DotNetNuke.Interface.dll
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Build\r2i.OWS.Wrapper.DotNetNuke.Interface.pdb
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Build\r2i.OWS.Wrapper.DotNetNuke.Interface.xml
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Debug\r2i.OWS.Wrapper.DotNetNuke.Interface.vbprojResolveAssemblyReference.cache
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Debug\r2i.OWS.Wrapper.DNN.Interface.Resources.resources
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Debug\r2i.OWS.Wrapper.DotNetNuke.Interface.vbproj.GenerateResource.Cache
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Debug\r2i.OWS.Wrapper.DotNetNuke.Interface.dll
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Debug\r2i.OWS.Wrapper.DotNetNuke.Interface.xml
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Debug\r2i.OWS.Wrapper.DotNetNuke.Interface.pdb
