@@ -26,3 +26,17 @@ D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNe
 D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Wrapper\obj\Debug\r2i.OWS.Wrapper.DotNetNuke.dll
 D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Wrapper\obj\Debug\r2i.OWS.Core.DNN.xml
 D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Wrapper\obj\Debug\r2i.OWS.Wrapper.DotNetNuke.pdb
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Build\r2i.OWS.Wrapper.DotNetNuke.dll
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Build\r2i.OWS.Wrapper.DotNetNuke.pdb
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Build\r2i.OWS.Core.DNN.xml
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Wrapper\obj\Debug\r2i.OWS.Wrapper.DotNetNuke.vbprojResolveAssemblyReference.cache
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Wrapper\obj\Debug\r2i.OWS.Wrapper.DNN.Admin.resources
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Wrapper\obj\Debug\r2i.OWS.Wrapper.DNN.installerDnn.resources
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Wrapper\obj\Debug\r2i.OWS.Wrapper.DNN.Dnn.resources
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Wrapper\obj\Debug\r2i.OWS.Wrapper.DNN.Resources.resources
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Wrapper\obj\Debug\r2i.OWS.Wrapper.DNN.PackageCreator.resources
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Wrapper\obj\Debug\r2i.OWS.Wrapper.DNN.Authenticate.resources
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Wrapper\obj\Debug\r2i.OWS.Wrapper.DotNetNuke.vbproj.GenerateResource.Cache
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Wrapper\obj\Debug\r2i.OWS.Wrapper.DotNetNuke.dll
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Wrapper\obj\Debug\r2i.OWS.Core.DNN.xml
+C:\Users\eschmuecker\Source\Repos\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Wrapper\obj\Debug\r2i.OWS.Wrapper.DotNetNuke.pdb

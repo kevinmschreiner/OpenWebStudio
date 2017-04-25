@@ -1,8 +1,20 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Source"
+    "\\Source",
+    "\\Source\\Code",
+    "\\Source\\Code\\r2i.OWS",
+    "\\Source\\Code\\r2i.OWS\\Engine",
+    "\\Source\\Code\\r2i.OWS\\Engine\\My Project",
+    "\\Source\\Code\\r2i.OWS\\Framework",
+    "\\Source\\Code\\r2i.OWS\\UI",
+    "\\Source\\Code\\r2i.OWS\\UI\\Scripts",
+    "\\Source\\Code\\r2i.OWS\\UI\\Scripts\\CodeMirror",
+    "\\Source\\Code\\r2i.OWS\\Wrappers",
+    "\\Source\\Code\\r2i.OWS\\Wrappers\\ASPNet",
+    "\\Source\\Code\\r2i.OWS\\Wrappers\\DotNetNuke",
+    "\\Source\\Code\\r2i.OWS\\Wrappers\\DotNetNuke\\Extensions",
+    "\\Source\\Code\\r2i.OWS\\Wrappers\\DotNetNuke\\Wrapper"
   ],
-  "SelectedNode": "\\Source\\Source.sln",
   "PreviewInSolutionExplorer": false
 }
