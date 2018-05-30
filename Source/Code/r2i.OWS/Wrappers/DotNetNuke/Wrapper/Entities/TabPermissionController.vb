@@ -32,8 +32,8 @@ Namespace Entities
             Return CType(TabPermissionFactory.Instance.CreateNewTabPermissionInfo, ITabPermissionInfo)
         End Function
 
-        Public Function GetTabPermissionsCollectionByTabID(ByVal tabId As String) As ITabPermissionCollection Implements ITabPermissionController.GetTabPermissionsCollectionByTabID
-            Return CType(TabPermissionFactory.Instance.GetTabPermissionsCollectionByTabID(tabId), ITabPermissionCollection)
+        Public Function GetTabPermissionsCollectionByTabID(ByVal portalId As String, ByVal tabId As String) As ITabPermissionCollection Implements ITabPermissionController.GetTabPermissionsCollectionByTabID
+            Return CType(TabPermissionFactory.Instance.GetTabPermissionsCollectionByTabID(portalId, tabId), ITabPermissionCollection)
         End Function
 
     End Class

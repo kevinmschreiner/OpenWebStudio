@@ -72,7 +72,7 @@ Namespace r2i.OWS.Framework.Entities
         Sub UpdatePageModuleSetting(ByVal pagemoduleId As String, ByVal name As String, ByVal value As String)
 
         Function GetHostSettings(ByVal parameter As String) As String
-        Function GetRichTextEditor(ByRef Page As System.Web.UI.Page, ByVal IdNameParameter As String, ByVal Width As String, ByVal Height As String, ByVal Value As String) As String
+        Function GetRichTextEditor(ByRef Page As System.Web.UI.Page, ParentID As String, ByVal TabModuleId As String, ByVal ModuleId As String, ByVal IdNameParameter As String, ByVal Width As String, ByVal Height As String, ByVal Value As String) As String
         Function GetOpenControlBase(ByRef Page As System.Web.UI.Page, ByVal Id As String, ByVal ModuleID As String, ByVal PageID As String, ByVal ConfigurationID As String, ByVal ResourceFile As String, ByVal ResourceKey As String, ByVal ListSource As String, ByVal ModulePath As String, ByVal BasePath As String, ByVal ControlType As String) As String
 
         'Public Shared Function GetCache(ByVal CacheKey As String) As Object 

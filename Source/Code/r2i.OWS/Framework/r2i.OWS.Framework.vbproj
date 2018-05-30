@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -17,7 +17,7 @@
     <SccProvider>SubversionScc</SccProvider>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>keypair.snk</AssemblyOriginatorKeyFile>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
@@ -37,6 +37,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,6 +48,7 @@
     <DocumentationFile>r2i.OWS.Framework.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -57,6 +59,7 @@
     <DocumentationFile>r2i.OWS.Framework.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="r2i.OWS.Newtonsoft.Json">
@@ -209,6 +212,51 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <None Include="Samples\Captcha.Example.Using.ReCaptcha.json" />
+    <None Include="Samples\Charting.DotNetNuke.SiteLog.Reports.json" />
+    <None Include="Samples\Charting.Fusion.Charts.Settings.json" />
+    <None Include="Samples\Charting.Fusion.Charts.With.Data.Feed.json" />
+    <None Include="Samples\Charting.Fusion.Charts.With.Inline.Data.json" />
+    <None Include="Samples\Charting.Google.Charts.json" />
+    <None Include="Samples\Charting.Google.Charts.Settings.json" />
+    <None Include="Samples\Country.Region.AJAX.DropDown.json" />
+    <None Include="Samples\Directory.List.with.Version.and.Image.Dimensions.json" />
+    <None Include="Samples\DotNetNuke.Create.Portal.json" />
+    <None Include="Samples\Example.Image.Text.Writer.json" />
+    <None Include="Samples\Sampe.Custom.Pager.using.lxPager.json" />
+    <None Include="Samples\Sampe.Custom.Paging.json" />
+    <None Include="Samples\Sample.Assign.Page.Title.Advanced.json" />
+    <None Include="Samples\Sample.Assign.Page.Title.json" />
+    <None Include="Samples\Sample.Compress.Portal.Files.With.Extension.Filter.json" />
+    <None Include="Samples\Sample.Encode.Formatter.json" />
+    <None Include="Samples\Sample.File.Upload.with.Verification.json" />
+    <None Include="Samples\Sample.Files.Upload.Download.Compress.json" />
+    <None Include="Samples\Sample.jQuery.DatePicker.json" />
+    <None Include="Samples\Sample.Professional.TextEditor.json" />
+    <None Include="Samples\Sample.System.Query.Action.json" />
+    <None Include="Samples\Sample.System.Query.Cache.json" />
+    <None Include="Samples\Sample.System.Query.Context.json" />
+    <None Include="Samples\Sample.System.Query.Cookie.json" />
+    <None Include="Samples\Sample.System.Query.Form.json" />
+    <None Include="Samples\Sample.System.Query.Headers.json" />
+    <None Include="Samples\Sample.System.Query.Messages.json" />
+    <None Include="Samples\Sample.System.Query.ModuleSettings.json" />
+    <None Include="Samples\Sample.System.Query.Portal.json" />
+    <None Include="Samples\Sample.System.Query.QueryString.json" />
+    <None Include="Samples\Sample.System.Query.Session.json" />
+    <None Include="Samples\Sample.System.Query.User.json" />
+    <None Include="Samples\Sample.System.Query.ViewState.json" />
+    <None Include="Samples\Sample.Three.Columns.With.Alternate.json" />
+    <None Include="Samples\Sample.Using.Module.Settings.json" />
+    <None Include="Samples\Sample.Using.Module.Settings.Settings.json" />
+    <None Include="Samples\Sample.XML.Feed.json" />
+    <None Include="Samples\Sample.Xml.Query.json" />
+    <None Include="Samples\Sample.XML.Query.SiteUrls.config.json" />
+    <None Include="Samples\Simple.List.Query.json" />
+    <None Include="Samples\Simple.List.Query.With.Grouping.json" />
+    <None Include="Samples\Simple.Notes.Add.Edit.List.json" />
+    <None Include="Samples\Tree.Sample.Using.OWS.Tree.js.json" />
+    <None Include="Samples\Wrapper.Test.Routine.json" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
@@ -229,6 +277,9 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Samples\Sample.Using.Custom.Variables.json.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

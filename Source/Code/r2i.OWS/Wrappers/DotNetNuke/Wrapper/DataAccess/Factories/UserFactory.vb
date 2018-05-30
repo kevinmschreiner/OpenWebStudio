@@ -32,8 +32,7 @@ Namespace DataAccess.Factories
 
         Public Sub SetPassword(ByVal user As UserInfo, ByVal passValue As String)
             'Dim UserControl As UserController
-            Dim UserControl As New DotNetNuke.Entities.Users.UserController
-            UserControl.SetPassword(user, passValue)
+            DotNetNuke.Security.Membership.MembershipProvider.Instance.ResetAndChangePassword(user, passValue)
         End Sub
 
         Public Function AddUser(ByVal user As UserInfo, ByVal AddToMembershipProvider As Boolean) As Integer
@@ -113,7 +112,7 @@ Namespace DataAccess.Factories
 
         Public Function GetUserByUsername(ByVal portalID As Integer, ByVal username As String) As DataAccess.User
             Dim UserControl As New DotNetNuke.Entities.Users.UserController
-            Dim uinfo As DotNetNuke.Entities.Users.UserInfo = UserControl.GetUserByUsername(portalID, username)
+            Dim uinfo As DotNetNuke.Entities.Users.UserInfo = DotNetNuke.Entities.Users.UserController.GetUserByName(portalID, username)
             If Not uinfo Is Nothing Then
                 Return New DataAccess.User(uinfo)
             Else

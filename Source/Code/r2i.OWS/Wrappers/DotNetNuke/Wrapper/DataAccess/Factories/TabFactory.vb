@@ -13,15 +13,15 @@ Namespace DataAccess.Factories
         End Function
 
         Public Function GetTabs(ByVal portalId As String) As ArrayList
-            Dim tC As New DotNetNuke.Entities.Tabs.TabController
             Dim portalIdConverted As Integer
             If Integer.TryParse(portalId, portalIdConverted) Then
-                Dim tabs As ArrayList = tC.GetTabs(CInt(portalId))
+                Dim tabs As List(Of DotNetNuke.Entities.Tabs.TabInfo) = DotNetNuke.Entities.Tabs.TabController.GetPortalTabs(CInt(portalId), -1, True, True)
+                Dim output As New ArrayList
                 Dim i As Integer = 0
                 For i = 0 To tabs.Count - 1
-                    tabs(i) = New DataAccess.TabInfo(CType(tabs(i), DotNetNuke.Entities.Tabs.TabInfo))
+                    output.Add(New DataAccess.TabInfo(tabs(i)))
                 Next
-                Return tabs
+                Return output
             Else : Return Nothing
             End If
         End Function
@@ -92,7 +92,7 @@ Namespace DataAccess.Factories
 
         Public Function GetPortalTabs() As System.Collections.ArrayList
             Dim dnnPortalSettings As DotNetNuke.Entities.Portals.PortalSettings = CType(System.Web.HttpContext.Current.Items("PortalSettings"), DotNetNuke.Entities.Portals.PortalSettings)
-            Return DotNetNuke.Common.GetPortalTabs(dnnPortalSettings.DesktopTabs, True, True)
+            Return New ArrayList(DotNetNuke.Entities.Tabs.TabController.GetPortalTabs(dnnPortalSettings.PortalId, -1, True, True))
         End Function
     End Class
 End Namespace

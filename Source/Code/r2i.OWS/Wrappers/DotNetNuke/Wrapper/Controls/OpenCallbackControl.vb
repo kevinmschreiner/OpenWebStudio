@@ -74,7 +74,8 @@ Public Class OpenCallbackControl
     End Sub
     Public Overrides Sub ClearPageCache()
         Try
-            DotNetNuke.Common.Utilities.DataCache.ClearTabCache(CInt(_pageID), CInt(_portalSettings.PortalId))
+            'DotNetNuke.Common.Utilities.DataCache.ClearTabCache(CInt(_pageID), CInt(_portalSettings.PortalId))
+            DotNetNuke.Common.Utilities.DataCache.ClearModuleCache(CInt(_pageID))
         Catch ex As Exception
         End Try
     End Sub
@@ -209,23 +210,26 @@ Public Class OpenCallbackControl
                 Return True
             Else
                 Dim tbInfo As DotNetNuke.Entities.Tabs.TabInfo = Nothing
+                Dim mInfo As DotNetNuke.Entities.Modules.ModuleInfo = Nothing
+                If Not ModuleId Is Nothing AndAlso IsNumeric(ModuleId) Then
+                    mInfo = (New DotNetNuke.Entities.Modules.ModuleController).GetModule(CInt(Me.ModuleId), CInt(Me.PageId))
+                End If
+                'If we have module info here at this point, this will override any other permission we have.
+                If Not mInfo Is Nothing Then
+                    Return DotNetNuke.Security.Permissions.ModulePermissionController.CanEditModuleContent(mInfo) OrElse DotNetNuke.Security.Permissions.ModulePermissionController.CanAdminModule(mInfo) OrElse
+                        DotNetNuke.Security.Permissions.ModulePermissionController.CanManageModule(mInfo)
+                End If
+                'We do not have module info here, so we need to defer to the tab info
                 If Not _parent.PortalSettings.ActiveTab Is Nothing Then
                     tbInfo = _parent.PortalSettings.ActiveTab
                 Else
                     If Not PageId Is Nothing AndAlso IsNumeric(PageId) Then
-                        tbInfo = (New DotNetNuke.Entities.Tabs.TabController).GetTab(CInt(PageId))
+                        tbInfo = (New DotNetNuke.Entities.Tabs.TabController).GetTab(CInt(PageId), CInt(Me.SiteId))
                     End If
                 End If
-                If Not tbInfo Is Nothing AndAlso DotNetNuke.Security.PortalSecurity.IsInRoles(tbInfo.AdministratorRoles.ToString) Then
-                    Return True
-                Else
-                    If Not ModuleId Is Nothing AndAlso IsNumeric(ModuleId) Then
-                        Dim mInfo As DotNetNuke.Entities.Modules.ModuleInfo
-                        mInfo = (New DotNetNuke.Entities.Modules.ModuleController).GetModule(CInt(Me.ModuleId), CInt(Me.PageId))
-                        If Not mInfo Is Nothing AndAlso DotNetNuke.Security.PortalSecurity.IsInRoles(mInfo.AuthorizedEditRoles) Then
-                            Return True
-                        End If
-                    End If
+                If Not tbInfo Is Nothing Then
+                    Return DotNetNuke.Security.Permissions.TabPermissionController.CanAdminPage(tbInfo) OrElse
+                        DotNetNuke.Security.Permissions.TabPermissionController.CanManagePage(tbInfo)
                 End If
             End If
             Return False
@@ -237,23 +241,24 @@ Public Class OpenCallbackControl
                 Return True
             Else
                 Dim tbInfo As DotNetNuke.Entities.Tabs.TabInfo = Nothing
+                Dim mInfo As DotNetNuke.Entities.Modules.ModuleInfo = Nothing
+                If Not ModuleId Is Nothing AndAlso IsNumeric(ModuleId) Then
+                    mInfo = (New DotNetNuke.Entities.Modules.ModuleController).GetModule(CInt(Me.ModuleId), CInt(Me.PageId))
+                End If
+                'If we have module info here at this point, this will override any other permission we have.
+                If Not mInfo Is Nothing Then
+                    Return DotNetNuke.Security.Permissions.ModulePermissionController.CanViewModule(mInfo)
+                End If
+                'We do not have module info here, so we need to defer to the tab info
                 If Not _parent.PortalSettings.ActiveTab Is Nothing Then
                     tbInfo = _parent.PortalSettings.ActiveTab
                 Else
                     If Not PageId Is Nothing AndAlso IsNumeric(PageId) Then
-                        tbInfo = (New DotNetNuke.Entities.Tabs.TabController).GetTab(CInt(PageId))
+                        tbInfo = (New DotNetNuke.Entities.Tabs.TabController).GetTab(CInt(PageId), CInt(Me.SiteId))
                     End If
                 End If
-                If Not tbInfo Is Nothing AndAlso DotNetNuke.Security.PortalSecurity.IsInRoles(tbInfo.AuthorizedRoles.ToString) Then
-                    Return True
-                Else
-                    If Not ModuleId Is Nothing AndAlso IsNumeric(ModuleId) Then
-                        Dim mInfo As DotNetNuke.Entities.Modules.ModuleInfo
-                        mInfo = (New DotNetNuke.Entities.Modules.ModuleController).GetModule(CInt(Me.ModuleId), CInt(Me.PageId))
-                        If Not mInfo Is Nothing AndAlso DotNetNuke.Security.PortalSecurity.IsInRoles(mInfo.AuthorizedViewRoles) Then
-                            Return True
-                        End If
-                    End If
+                If Not tbInfo Is Nothing Then
+                    Return DotNetNuke.Security.Permissions.TabPermissionController.CanViewPage(tbInfo)
                 End If
             End If
             Return False

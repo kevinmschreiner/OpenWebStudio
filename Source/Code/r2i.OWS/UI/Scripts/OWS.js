@@ -732,7 +732,7 @@ this.GetForm = function GetForm(fobj)
 		else
 		    this.Fetch(TM,this.items['o'+TM].page,appendQuery,targetobjectid);
 	}
-	//DATA AJAX FUNCTIONALITYz
+	//DATA AJAX FUNCTIONALITY
 	this.Fetch=function (TM,page,appendQuery,targetobjectid)
 	{
 	    if (typeof TM!='undefined'&&TM!=null) //added to force id to a string.
@@ -878,23 +878,6 @@ this.GetForm = function GetForm(fobj)
 		    qParams.QueryString = qParams.QueryString + '&' + getQuery;
 		
 		url = this.CallbackUrl(oParams,qParams);
-		/*
-		var Qs = "lxC=" + this.items['o'+TM].rpp + "&lxP=" + pgValue + "&" + this.items['o'+TM].request;
-
-		if (appendQuery.length > 0)
-		{
-		  Qs = Qs + '&' + appendQuery;
-		}
-		
-		getQuery = this.GetQuery(Qs);
-
-		if (getQuery.length>0)
-		{
-		  Qs = Qs + '&' + getQuery;
-		}
-		
-		url = this.urlbase + "IM.aspx?" + this.CleanQuery(Qs);
-        */
 
 		if (window.XMLHttpRequest)
 		{
@@ -934,11 +917,21 @@ this.GetForm = function GetForm(fobj)
 					var fstr = ""
 				var random_num = (Math.round((Math.random()*100000000)+1))
 				if (!isIframe) {
+					/*
 					if (targetobjectid!=null)
     					eval('this.items[\'o' + TM + '\'].xml.onreadystatechange = function() {ows.FetchEnd(\'' + TM + '\',\'' + targetobjectid + '\',\'' + ignoreResultStats + '\');}');
 					else
 	    				eval('this.items[\'o' + TM + '\'].xml.onreadystatechange = function() {ows.FetchEnd(\'' + TM + '\');}');
-					
+					*/
+					if (targetobjectid!=null) {
+						var _tm=TM;
+						var _targetobjectid=targetobjectid;
+						var _ignoreresultstats=ignoreResultStats;
+						this.items['o'+TM].xml.onreadystatechange = function(){
+							if (_targetobjectid!=null) ows.FetchEnd(_tm,_targetobjectid,_ignoreresultstats);
+							else ows.FetchEnd(_tm); 
+						}
+					}
 					this.items['o'+TM].xml.open("POST", url + '&RA=' + random_num, true);
 					this.items['o'+TM].xml.setRequestHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8");
 					this.items['o'+TM].xml.send(fstr);

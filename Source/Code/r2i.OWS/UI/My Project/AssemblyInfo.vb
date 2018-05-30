@@ -45,7 +45,7 @@ Imports System.Security
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
 <Assembly: System.Security.AllowPartiallyTrustedCallers()> 
-<Assembly: AssemblyVersion("02.02.18.00")>
+<Assembly: AssemblyVersion("02.02.16.00")>
 
-<Assembly: AssemblyFileVersion("02.02.18.00")>
+<Assembly: AssemblyFileVersion("02.02.16.00")>
 

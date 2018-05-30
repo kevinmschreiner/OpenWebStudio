@@ -25,6 +25,6 @@ Imports r2i.OWS.Framework.DataAccess
 Namespace r2i.OWS.Framework.Entities
     Public Interface ITabPermissionController
         Function CreateNewTabPermissionInfo() As ITabPermissionInfo
-        Function GetTabPermissionsCollectionByTabID(ByVal tabId As String) As ITabPermissionCollection
+        Function GetTabPermissionsCollectionByTabID(ByVal portalId As String, ByVal tabId As String) As ITabPermissionCollection
     End Interface
 End Namespace

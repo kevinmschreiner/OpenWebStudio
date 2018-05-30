@@ -11,8 +11,7 @@ Namespace DataAccess.Factories
         Public Function GetRolesByUser(ByVal UserId As String, ByVal PortalId As String) As String()
             Dim userIdConvert As Integer
             If Integer.TryParse(UserId, userIdConvert) Then
-                Dim objRoleController As New DotNetNuke.Security.Roles.RoleController
-                Return objRoleController.GetRolesByUser(CInt(UserId), CInt(PortalId))
+                Return DotNetNuke.Entities.Users.UserController.GetUserById(CInt(PortalId), CInt(UserId)).Roles
             Else : Return Nothing
             End If
         End Function
@@ -42,7 +41,7 @@ Namespace DataAccess.Factories
             Dim RoleIdConvert As Integer
             If Integer.TryParse(CStr(UserId), UserIdConvert) AndAlso Integer.TryParse(CStr(RoleId), RoleIdConvert) Then
                 Dim roleControl As New DotNetNuke.Security.Roles.RoleController
-                Return roleControl.DeleteUserRole(CInt(PortalId), UserIdConvert, RoleIdConvert)
+                DotNetNuke.Security.Roles.RoleController.Instance.UpdateUserRole(CInt(PortalId), UserIdConvert, RoleIdConvert, DotNetNuke.Security.Roles.RoleStatus.Disabled, False, False)
             Else
                 Return False
             End If

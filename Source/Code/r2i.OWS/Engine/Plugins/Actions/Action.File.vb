@@ -378,6 +378,7 @@ Namespace r2i.OWS.Actions
                     Case "Path"
                         Dim bRecurseSubDirectories As Boolean = False
                         Dim sFileFilter As String = "*"
+                        Dim sFiltered As Boolean = False
                         Dim sDirectoryFilter As String = "*"
                         Dim bRetry As Boolean = False
                         Dim sPath As String = Utility.GetDictionaryValue(parms, MessageActionsConstants.ACTIONFILE_SOURCE_KEY)
@@ -393,6 +394,7 @@ Namespace r2i.OWS.Actions
                                 Dim sCheck As String = sDirectoryFilter.Substring(sDirectoryFilter.LastIndexOf("/") + 1)
                                 If sCheck.Length > 0 Then
                                     sFileFilter = sCheck
+                                    sFiltered = True
                                 End If
                                 sDirectoryFilter = sDirectoryFilter.Substring(0, sDirectoryFilter.LastIndexOf("/"))
                             End If
@@ -434,6 +436,7 @@ Namespace r2i.OWS.Actions
                                 bRetry = True
                                 sFileFilter = IO.Path.GetFileName(sPath)
                                 sPath = IO.Path.GetDirectoryName(sPath)
+                                sFiltered = True
                             End Try
                             If bRetry Then
                                 Try
@@ -445,7 +448,7 @@ Namespace r2i.OWS.Actions
                                 Dim sDir As String = IO.Path.GetDirectoryName(sPath)
                                 sFileFilter = IO.Path.GetFileName(sPath)
                                 sPath = sDir
-                            ElseIf IO.Directory.Exists(sPath) And Not sFileFilter Is Nothing AndAlso Not sFileFilter.Length = 0 Then
+                            ElseIf IO.Directory.Exists(sPath) AndAlso sFiltered And Not sFileFilter Is Nothing AndAlso Not sFileFilter.Length = 0 Then
                                 '02/22/2010 [KMS]: If the sFileFilter is meant for MULTIPLE files, this logic clears the filter.
                                 'If Not IO.File.Exists(IO.Path.Combine(sPath, sFileFilter)) Then
                                 '    sFileFilter = ""
@@ -1458,7 +1461,6 @@ Namespace r2i.OWS.Actions
                                         dStream = Nothing
                                     End Try
                                 End If
-
                             Next
                         Else
                             If Not Debugger Is Nothing Then
@@ -1499,6 +1501,8 @@ Namespace r2i.OWS.Actions
                         'Caller.Engine.Response.AddHeader("Cache-Control", "private")
 
                         Utility.StreamTransfer(fi.Source, Caller.Engine.Response.OutputStream)
+
+                        Handle_File_Complete_Transfer(Caller.Engine.Context)
                     Catch ex As Exception
                         If Not Debugger Is Nothing Then
                             r2i.OWS.Framework.Debugger.ContinueDebugMessage(Debugger, "Failed to add file to response: " & ex.ToString, True)
@@ -1730,7 +1734,6 @@ Namespace r2i.OWS.Actions
             End If
         End Sub
         Public Overrides Function Handle_Action(ByRef Caller As RuntimeBase, ByRef sharedds As System.Data.DataSet, ByRef act As MessageActionItem, ByRef previous As Runtime.ActionExecutionResult, ByRef Debugger As Framework.Debugger) As Runtime.ExecutableResult
-            Dim DestinationTargetType As String = ""
             Try
                 If Not act.Parameters Is Nothing Then
                     'Dim splitter As New Utility.SmartSplitter
@@ -1749,7 +1752,7 @@ Namespace r2i.OWS.Actions
                     'Dim SourceContentType As String = ""
                     Dim DestinationType As String = Utility.GetDictionaryValue(parms, MessageActionsConstants.ACTIONFILE_DESTINATIONTYPE_KEY)
                     Dim DestinationAction As String = ""
-
+                    Dim DestinationTargetType As String = ""
                     Dim DestinationTargetMimeType As String = ""
                     Dim DestinationTarget As String = ""
                     Dim DestinationIncludeColumnName As Boolean = False
@@ -1891,7 +1894,6 @@ Namespace r2i.OWS.Actions
                             End If
                         End Try
                     Next
-
                     '' REG - 4/23/2007
                     '' If SourcePath is a folder, delete it and all child elements
                     'If DeleteSource Then
@@ -1913,12 +1915,6 @@ Namespace r2i.OWS.Actions
                 If Not Debugger Is Nothing Then
                     r2i.OWS.Framework.Debugger.ContinueDebugMessage(Debugger, "Unabled to handle file action: " & ex.ToString(), True)
                 End If
-            End Try
-            Try
-                If DestinationTargetType.Replace("&lt;", "<").Replace("&gt;", ">").ToUpper() = "<RESPONSE>" Then
-                    Handle_File_Complete_Transfer(Caller.Engine.Context)
-                End If
-            Catch ex As Exception
             End Try
             Return Nothing
         End Function

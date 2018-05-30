@@ -17,12 +17,16 @@ Namespace DataAccess.Factories
             Dim tpCtrl As New DotNetNuke.Security.Permissions.ModulePermissionController
             Dim moduleIdConverted As Integer
             If Integer.TryParse(moduleId, moduleIdConverted) Then
-                Dim tpc As New DataAccess.ModulePermissionCollection(tpCtrl.GetModulePermissionsCollectionByModuleID(CInt(moduleId)))
-                Return tpc
+                Dim tb As IList(Of DotNetNuke.Entities.Modules.ModuleInfo) = DotNetNuke.Entities.Modules.ModuleController.Instance.GetTabModulesByModule(moduleIdConverted)
+                If Not tb Is Nothing AndAlso tb.Count > 0 Then
+                    Return New DataAccess.ModulePermissionCollection(tb(0).ModulePermissions)
+                End If
             Else
                 Return Nothing
             End If
+            Return Nothing
         End Function
     End Class
 End Namespace
+
 

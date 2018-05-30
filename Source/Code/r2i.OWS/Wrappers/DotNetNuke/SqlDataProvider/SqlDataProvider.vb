@@ -25,6 +25,7 @@ Imports System.Data
 Imports System.Data.SqlClient
 Imports Microsoft.ApplicationBlocks.Data
 Imports System.Collections.Generic
+Imports System.Configuration
 Imports r2i.OWS.Framework.Utilities
 
 
@@ -65,7 +66,13 @@ Imports r2i.OWS.Framework.Utilities
         If objProvider.Attributes("connectionStringName") <> "" AndAlso Utility.ConfigurationSetting(objProvider.Attributes("connectionStringName")) <> "" Then
             _connectionString = Utility.ConfigurationSetting(objProvider.Attributes("connectionStringName"))
         Else
-            _connectionString = objProvider.Attributes("connectionString")
+            Try
+                _connectionString = ConfigurationManager.ConnectionStrings(objProvider.Attributes("connectionStringName")).ConnectionString
+            Catch EX As Exception
+            End Try
+            If (String.IsNullOrWhiteSpace(_connectionString)) Then
+                _connectionString = objProvider.Attributes("connectionString")
+            End If
         End If
 
         _providerPath = objProvider.Attributes("providerPath")

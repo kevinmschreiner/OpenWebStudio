@@ -87,8 +87,8 @@ Namespace r2i.OWS.Wrapper.DNN.Extensions.Professional.Renderers
                         'Source = Source.Replace("[ListX.ChildControls.TextEditor,CONTENT]", contentparameter)
                         'REPLACED = True
                         'MERGE START
-                        Try                            
-                            Source = GetRichTextEditor(Caller, Caller.Caller.Page, idnameparameter, width, height, contentparameter)
+                        Try
+                            Source = GetRichTextEditor(Caller, Caller.Caller.Page, Caller.ModuleID, idnameparameter, width, height, contentparameter)
                             Firewall.Firewall(Source, True, Firewall.FirewallDirectiveEnum.None, False)
                             DotNetNuke.UI.Utilities.ClientAPI.RegisterClientVariable(Caller.Caller.Page, "editorModuleId", Caller.ModuleID, True)
                             DotNetNuke.UI.Utilities.ClientAPI.RegisterClientVariable(Caller.Caller.Page, "editorTabId", Caller.TabID, True)
@@ -132,12 +132,14 @@ Namespace r2i.OWS.Wrapper.DNN.Extensions.Professional.Renderers
             Private _height As String
             Private _value As String
             Private _id As String
+            Private _moduleId As String
 
-            Public Sub New(ByRef Caller As EngineBase, ByVal id As String, ByVal value As String, ByVal width As String, ByVal height As String)
+            Public Sub New(ByRef Caller As EngineBase, ByVal moduleId As String, ByVal id As String, ByVal value As String, ByVal width As String, ByVal height As String)
                 _caller = Caller
                 _width = width
                 _height = height
                 _id = id
+                _moduleId = moduleId
                 _value = value
             End Sub
             Public Shadows ReadOnly Property Request As System.Web.HttpRequest
@@ -171,8 +173,11 @@ Namespace r2i.OWS.Wrapper.DNN.Extensions.Professional.Renderers
 
             Protected Sub Page_Load(ByVal Sender As Object, ByVal e As EventArgs) Handles MyBase.Load
                 Dim rte As DotNetNuke.Modules.HTMLEditorProvider.HtmlEditorProvider = DotNetNuke.Modules.HTMLEditorProvider.HtmlEditorProvider.Instance()
-                rte.ID = _id
-                rte.ControlID = _id                
+                rte.ID = "dnn_ctr" + _moduleId + "_" + _id
+                rte.ControlID = "dnn_ctr" + _moduleId + "_" + _id
+
+                rte.Page = Page
+                rte.Initialize()
 
                 'PAGE LOAD
                 If _width.EndsWith("%") Then
@@ -194,18 +199,24 @@ Namespace r2i.OWS.Wrapper.DNN.Extensions.Professional.Renderers
                     _value = Web.HttpUtility.UrlDecode(_value)
                 End If
                 rte.Text = _value
-                rte.Initialize()
+                'rte.Initialize()
+                Try
+                    rte.HtmlEditorControl.GetType().InvokeMember("OnPreRender", Reflection.BindingFlags.InvokeMethod Or Reflection.BindingFlags.NonPublic Or Reflection.BindingFlags.Instance, Nothing, rte.HtmlEditorControl, New Object() {Nothing})
+                Catch Ex As Exception
+
+                End Try
+
                 Form.Controls.Add(rte.HtmlEditorControl)
             End Sub
         End Class
-        Public Function GetRichTextEditor(ByRef Caller As EngineBase, ByRef Page As System.Web.UI.Page, ByVal IdNameParameter As String, ByVal Width As String, ByVal Height As String, ByVal Value As String) As String
+        Public Function GetRichTextEditor(ByRef Caller As EngineBase, ByRef Page As System.Web.UI.Page, ByVal ModuleID As String, ByVal IdNameParameter As String, ByVal Width As String, ByVal Height As String, ByVal Value As String) As String
             Dim sb As New System.Text.StringBuilder
             Dim tw As New IO.StringWriter(sb)
             Dim twHTML As New System.Web.UI.HtmlTextWriter(tw)
             Dim sval As String
-            Dim hp As New HybridEditorPage(Caller, IdNameParameter, Value, Width, Height)
+            Dim hp As New HybridEditorPage(Caller, ModuleID, IdNameParameter, Value, Width, Height)
 
-            Try                
+            Try
                 Caller.Context.Server.Execute(hp, twHTML, True)
             Catch ex As Exception
                 'Ignore this...
@@ -222,7 +233,7 @@ Namespace r2i.OWS.Wrapper.DNN.Extensions.Professional.Renderers
             sb.AppendLine("<!--")
             sb.AppendLine(String.Format("Caller.PortalID = {0}", Caller.PortalID))
             sb.AppendLine(String.Format("Caller.PortalSettings.HTTPAlias = {0}", Caller.PortalSettings.HTTPAlias))
-            sb.AppendLine(String.Format("FriendlyUrl = {0}", DotNetNuke.Services.Url.FriendlyUrl.FriendlyUrlProvider.Instance().FriendlyUrl(activeTab, "")))            
+            sb.AppendLine(String.Format("FriendlyUrl = {0}", DotNetNuke.Services.Url.FriendlyUrl.FriendlyUrlProvider.Instance().FriendlyUrl(activeTab, "")))
             sb.AppendLine("-->")
             IO.File.WriteAllText(Caller.Context.Server.MapPath("~/BeforeReplacements.html"), sb.ToString())
 #End If

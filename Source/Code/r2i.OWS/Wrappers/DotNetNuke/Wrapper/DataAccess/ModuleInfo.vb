@@ -77,28 +77,28 @@ Namespace DataAccess
 
         Public Property AuthorizedEditRoles() As String Implements Framework.DataAccess.IModuleInfo.AuthorizedEditRoles
             Get
-                Return _obj.AuthorizedEditRoles
+                Return _obj.ModulePermissions.ToString("EDIT")
             End Get
             Set(ByVal value As String)
-                _obj.AuthorizedEditRoles = value
+                Throw New Exception("Not Implemented")
             End Set
         End Property
 
         Public Property AuthorizedRoles() As String Implements Framework.DataAccess.IModuleInfo.AuthorizedRoles
             Get
-                Return _obj.AuthorizedRoles
+                Return _obj.ModulePermissions.ToString("VIEW")
             End Get
             Set(ByVal value As String)
-                _obj.AuthorizedRoles = value
+                Throw New Exception("Not Implemented")
             End Set
         End Property
 
         Public Property AuthorizedViewRoles() As String Implements Framework.DataAccess.IModuleInfo.AuthorizedViewRoles
             Get
-                Return _obj.AuthorizedViewRoles
+                Return _obj.ModulePermissions.ToString("VIEW")
             End Get
             Set(ByVal value As String)
-                _obj.AuthorizedViewRoles = value
+                Throw New Exception("Not Implemented")
             End Set
         End Property
 
@@ -113,10 +113,10 @@ Namespace DataAccess
 
         Public Property BusinessControllerClass() As String Implements Framework.DataAccess.IModuleInfo.BusinessControllerClass
             Get
-                Return _obj.BusinessControllerClass
+                Return _obj.DesktopModule.BusinessControllerClass
             End Get
             Set(ByVal value As String)
-                _obj.BusinessControllerClass = value
+                _obj.DesktopModule.BusinessControllerClass = value
             End Set
         End Property
 
@@ -158,28 +158,28 @@ Namespace DataAccess
 
         Public Property ControlSrc() As String Implements Framework.DataAccess.IModuleInfo.ControlSrc
             Get
-                Return _obj.ControlSrc
+                Return _obj.ModuleControl.ControlSrc
             End Get
             Set(ByVal value As String)
-                _obj.ControlSrc = value
+                _obj.ModuleControl.ControlSrc = value
             End Set
         End Property
 
         Public Property ControlTitle() As String Implements Framework.DataAccess.IModuleInfo.ControlTitle
             Get
-                Return _obj.ControlTitle
+                Return _obj.ModuleControl.ControlTitle
             End Get
             Set(ByVal value As String)
-                _obj.ControlTitle = value
+                _obj.ModuleControl.ControlTitle = value
             End Set
         End Property
 
         Public Property Description() As String Implements Framework.DataAccess.IModuleInfo.Description
             Get
-                Return _obj.Description
+                Return _obj.DesktopModule.Description
             End Get
             Set(ByVal value As String)
-                _obj.Description = value
+                _obj.DesktopModule.Description = value
             End Set
         End Property
 
@@ -239,10 +239,10 @@ Namespace DataAccess
 
         Public Property FriendlyName() As String Implements Framework.DataAccess.IModuleInfo.FriendlyName
             Get
-                Return _obj.FriendlyName
+                Return _obj.ModuleDefinition.FriendlyName
             End Get
             Set(ByVal value As String)
-                _obj.FriendlyName = value
+                _obj.ModuleDefinition.FriendlyName = value
             End Set
         End Property
 
@@ -257,10 +257,10 @@ Namespace DataAccess
 
         Public Property HelpUrl() As String Implements Framework.DataAccess.IModuleInfo.HelpUrl
             Get
-                Return _obj.HelpUrl
+                Return _obj.ModuleControl.HelpURL
             End Get
             Set(ByVal value As String)
-                _obj.HelpUrl = value
+                _obj.ModuleControl.HelpURL = value
             End Set
         End Property
 
@@ -285,10 +285,10 @@ Namespace DataAccess
 
         Public Property IsAdmin() As Boolean Implements Framework.DataAccess.IModuleInfo.IsAdmin
             Get
-                Return _obj.IsAdmin
+                Return _obj.DesktopModule.IsAdmin
             End Get
             Set(ByVal value As Boolean)
-                _obj.IsAdmin = value
+                _obj.DesktopModule.IsAdmin = value
             End Set
         End Property
 
@@ -312,28 +312,28 @@ Namespace DataAccess
 
         Public ReadOnly Property IsPortable() As Boolean Implements Framework.DataAccess.IModuleInfo.IsPortable
             Get
-                Return _obj.IsPortable
+                Return _obj.DesktopModule.IsPortable
             End Get
         End Property
 
         Public Property IsPremium() As Boolean Implements Framework.DataAccess.IModuleInfo.IsPremium
             Get
-                Return _obj.IsPremium
+                Return _obj.DesktopModule.IsPremium
             End Get
             Set(ByVal value As Boolean)
-                _obj.IsPremium = value
+                _obj.DesktopModule.IsPremium = value
             End Set
         End Property
 
         Public ReadOnly Property IsSearchable() As Boolean Implements Framework.DataAccess.IModuleInfo.IsSearchable
             Get
-                Return _obj.IsSearchable
+                Return _obj.DesktopModule.IsSearchable
             End Get
         End Property
 
         Public ReadOnly Property IsUpgradeable() As Boolean Implements Framework.DataAccess.IModuleInfo.IsUpgradeable
             Get
-                Return _obj.IsUpgradeable
+                Return _obj.DesktopModule.IsUpgradeable
             End Get
         End Property
 
@@ -438,10 +438,10 @@ Namespace DataAccess
 
         Public Property SupportedFeatures() As Integer Implements Framework.DataAccess.IModuleInfo.SupportedFeatures
             Get
-                Return _obj.SupportedFeatures
+                Return _obj.DesktopModule.SupportedFeatures
             End Get
             Set(ByVal value As Integer)
-                _obj.SupportedFeatures = value
+                _obj.DesktopModule.SupportedFeatures = value
             End Set
         End Property
 
@@ -465,10 +465,10 @@ Namespace DataAccess
 
         Public Property Version() As String Implements Framework.DataAccess.IModuleInfo.Version
             Get
-                Return _obj.Version
+                Return _obj.DesktopModule.Version
             End Get
             Set(ByVal value As String)
-                _obj.Version = value
+                _obj.DesktopModule.Version = value
             End Set
         End Property
 

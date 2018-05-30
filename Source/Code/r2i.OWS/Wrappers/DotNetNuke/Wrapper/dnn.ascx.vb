@@ -46,7 +46,6 @@ Partial Public Class Dnn
         Wrapper.DNN.Entities.WrapperFactory.Create()
     End Sub
     Private Sub onModuleCommunicationEvent(ByVal Caller As Object, ByVal Text As String, ByVal Value As String, ByVal Sender As String, ByVal Target As String) Handles xdnn.ModuleCommunication
-
         RaiseEvent ModuleCommunication(Caller, New ModuleCommunicationEventArgs(Text, Value, Sender, Target))
     End Sub
 
@@ -121,14 +120,14 @@ Partial Public Class Dnn
 
                 cM = pGI.Actions.Add(GetNextActionID(), "Clear Module Cache", "ClearModCache", "", "restore.gif", "", True, SecurityAccessLevel.Edit, True, False)
                 cW = pGI.Actions.Add(GetNextActionID(), "Clear Web Cache", "ClearWebCache", "", "restore.gif", "", True, SecurityAccessLevel.Edit, True, False)
-                pGI.Actions.Add(GetNextActionID(), "Package", ModuleActionType.AddContent, "", "save.gif", EditUrl("Package"), UseActionEvent:=False, Secure:=SecurityAccessLevel.Edit, Visible:=True)
+                pGI.Actions.Add(GetNextActionID(), "Package", ModuleActionType.AddContent, "", "save.gif", EditUrl("Package"), False, SecurityAccessLevel.Edit, True, True)
 
                 If major < 7 Then
                     cBreak1 = pGI.Actions.Add(GetNextActionID(), "~", "Break1", "", "", "", False, SecurityAccessLevel.Anonymous, True, False)
                     Dim cBreak3 As ModuleAction = act.Add(GetNextActionID(), "~", "Break2", "", "", "", False, SecurityAccessLevel.Anonymous, True, False)
                 End If
 
-                Dim cH As ModuleAction = act.Add(GetNextActionID(), "Online Help", "Help", "", "Help.gif", Me.ModulePath + "Help.html", "", False, SecurityAccessLevel.Edit, True, True)
+                Dim cH As ModuleAction = act.Add(GetNextActionID(), "Online Help", "Help", "", "Help.gif", Me.ControlPath + "Help.html", "", False, SecurityAccessLevel.Edit, True, True)
                 'Dim cadmin As ModuleAction = act.Add(GetNextActionID(), "Administration", ModuleActionType.AddContent, "", "~" & Me.ModulePath + "images/publish.gif", "", Me.GetAdminUrl(), False, SecurityAccessLevel.Edit, True, True)
                 'Dim cadmin As ModuleAction = act.Add(GetNextActionID(), "Administration", ModuleActionType.AddContent, "", "settings.gif", "", Me.GetAdminUrl(), False, SecurityAccessLevel.Edit, True, True)
                 Dim cadmin As ModuleAction
@@ -157,7 +156,7 @@ Partial Public Class Dnn
     End Sub
 
     Private Function GetAdminUrl() As String
-        Dim adminUrl As String = ModulePath & "Admin.aspx"
+        Dim adminUrl As String = ControlPath & "Admin.aspx"
         ' add a direct link to edit this configuration, if one has been selected
         If Me.Settings("ConfigurationID") IsNot Nothing Then
             adminUrl = adminUrl & "#config/" & Me.Settings("ConfigurationID").ToString
@@ -181,7 +180,8 @@ Partial Public Class Dnn
             End If
         End If
         Try
-            DotNetNuke.Common.Utilities.DataCache.ClearTabCache(TabId, PortalId)
+            DotNetNuke.Entities.Tabs.TabController.Instance.ClearCache(PortalId)
+            DotNetNuke.Common.Utilities.DataCache.ClearModuleCache(TabId)
         Catch ex As Exception
         End Try
     End Sub

@@ -45,12 +45,12 @@ Namespace DataAccess.Factories
         End Function
 
         Public Shared Function GetSkin(ByVal SkinRoot As String, ByVal PortalId As String, ByVal SkinType As DotNetNuke.UI.Skins.SkinType) As ISkinInfo
-            Dim dnnSkin As DotNetNuke.UI.Skins.SkinInfo
+            Dim dnnSkin As DotNetNuke.UI.Skins.SkinPackageInfo
             Dim iskin As New SkinInfo
-            dnnSkin = DotNetNuke.UI.Skins.SkinController.GetSkin(SkinRoot, CInt(PortalId), SkinType)
+            dnnSkin = DotNetNuke.UI.Skins.SkinController.GetSkinPackage(CInt(PortalId), SkinRoot, SkinType.ToString())
             If Not dnnSkin Is Nothing Then
-                iskin.Id = CStr(dnnSkin.SkinId)
-                iskin.SkinSrc = dnnSkin.SkinSrc
+                iskin.Id = CStr(dnnSkin.SkinPackageID)
+                iskin.SkinSrc = dnnSkin.SkinName
             End If
             Return iskin
         End Function

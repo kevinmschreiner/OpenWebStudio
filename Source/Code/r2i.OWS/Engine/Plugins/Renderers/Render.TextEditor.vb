@@ -85,7 +85,7 @@ Namespace r2i.OWS.Renderers
                     'Source = Source.Replace("[ListX.ChildControls.TextEditor,CONTENT]", contentparameter)
                     'REPLACED = True
                     'MERGE START
-                    Source = AbstractFactory.Instance.EngineController.GetRichTextEditor(Caller.Caller.Page, idnameparameter, width, height, contentparameter)
+                    Source = AbstractFactory.Instance.EngineController.GetRichTextEditor(Caller.Caller.Page, Caller.Caller.Parent.Parent.Parent.Parent.ClientID, Caller.TabModuleID, Caller.ModuleID, idnameparameter, width, height, contentparameter)
                     'MERGE STOP
                     REPLACED = True
                 End If

@@ -7,11 +7,25 @@ D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\UI\obj\Debug\r2i.OWS
 D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\UI\obj\Debug\r2i.OWS.UI.pdb
 D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\UI\obj\Debug\r2i.OWS.UI.vbproj.GenerateResource.Cache
 D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\UI\obj\Debug\r2i.OWS.UI.vbprojResolveAssemblyReference.cache
-D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Build\r2i.OWS.UI.dll
-D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Build\r2i.OWS.UI.pdb
-D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Build\r2i.OWS.UI.DNN.xml
-D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\UI\obj\Debug\Resources.resources
-D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\UI\obj\Debug\r2i.OWS.UI.vbproj.GenerateResource.Cache
-D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\UI\obj\Debug\r2i.OWS.UI.dll
-D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\UI\obj\Debug\r2i.OWS.UI.DNN.xml
-D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\UI\obj\Debug\r2i.OWS.UI.pdb
+G:\Work\Current\Corporate\OpenWebStudio\Source - Copy\Build\r2i.OWS.UI.dll
+G:\Work\Current\Corporate\OpenWebStudio\Source - Copy\Build\r2i.OWS.UI.pdb
+G:\Work\Current\Corporate\OpenWebStudio\Source - Copy\Build\r2i.OWS.UI.DNN.xml
+G:\Work\Current\Corporate\OpenWebStudio\Source - Copy\Code\r2i.OWS\UI\obj\Debug\r2i.OWS.UI.vbprojResolveAssemblyReference.cache
+G:\Work\Current\Corporate\OpenWebStudio\Source - Copy\Code\r2i.OWS\UI\obj\Debug\Resources.resources
+G:\Work\Current\Corporate\OpenWebStudio\Source - Copy\Code\r2i.OWS\UI\obj\Debug\r2i.OWS.UI.vbproj.GenerateResource.Cache
+G:\Work\Current\Corporate\OpenWebStudio\Source - Copy\Code\r2i.OWS\UI\obj\Debug\r2i.OWS.UI.vbproj.CoreCompileInputs.cache
+G:\Work\Current\Corporate\OpenWebStudio\Source - Copy\Code\r2i.OWS\UI\obj\Debug\r2i.OWS.UI.dll
+G:\Work\Current\Corporate\OpenWebStudio\Source - Copy\Code\r2i.OWS\UI\obj\Debug\r2i.OWS.UI.DNN.xml
+G:\Work\Current\Corporate\OpenWebStudio\Source - Copy\Code\r2i.OWS\UI\obj\Debug\r2i.OWS.UI.pdb
+G:\Work\Current\Corporate\OpenWebStudio\Source - Copy\Build\r2i.OWS.UI.dll.config
+G:\Work\GitHub\OpenWebStudio\Source\Build\r2i.OWS.UI.dll.config
+G:\Work\GitHub\OpenWebStudio\Source\Build\r2i.OWS.UI.dll
+G:\Work\GitHub\OpenWebStudio\Source\Build\r2i.OWS.UI.pdb
+G:\Work\GitHub\OpenWebStudio\Source\Build\r2i.OWS.UI.DNN.xml
+G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\UI\obj\Debug\r2i.OWS.UI.vbprojResolveAssemblyReference.cache
+G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\UI\obj\Debug\Resources.resources
+G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\UI\obj\Debug\r2i.OWS.UI.vbproj.GenerateResource.Cache
+G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\UI\obj\Debug\r2i.OWS.UI.vbproj.CoreCompileInputs.cache
+G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\UI\obj\Debug\r2i.OWS.UI.dll
+G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\UI\obj\Debug\r2i.OWS.UI.DNN.xml
+G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\UI\obj\Debug\r2i.OWS.UI.pdb

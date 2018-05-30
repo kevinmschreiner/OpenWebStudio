@@ -123,8 +123,17 @@ Namespace Entities
         Public Function GetLocalization(ByVal sKey As String, ByVal fileName As String) As String Implements IEngineController.GetLocalization
             Return EngineFactory.Instance.GetLocalization(sKey, fileName)
         End Function
-        Public Function GetRichTextEditor(ByRef Page As System.Web.UI.Page, ByVal IdNameParameter As String, ByVal Width As String, ByVal Height As String, ByVal Value As String) As String Implements IEngineController.GetRichTextEditor
-            Return EngineFactory.Instance.GetRichTextEditor(Page, IdNameParameter, Width, Height, Value)
+        Public Function GetRichTextEditor(ByRef Page As System.Web.UI.Page, ByVal ParentId As String, ByVal TabModuleId As String, ByVal ModuleId As String, ByVal IdNameParameter As String, ByVal Width As String, ByVal Height As String, ByVal Value As String) As String Implements IEngineController.GetRichTextEditor
+            DotNetNuke.Entities.Modules.ModuleController.Instance().GetTabModule(CInt(TabModuleId))
+            Dim placeholder As New DotNetNuke.Entities.Modules.PortalModuleBase()
+            'Dim modInfo As New Modules.ModuleInfo()
+            'modInfo.ModuleID = CInt(ModuleId)
+            'modInfo.TabModuleID = CInt(TabModuleId)
+
+            placeholder.ModuleContext.Configuration = DotNetNuke.Entities.Modules.ModuleController.Instance().GetTabModule(CInt(TabModuleId))
+            placeholder.ID = ParentId
+
+            Return EngineFactory.Instance.GetRichTextEditor(Page, placeholder, TabModuleId, ModuleId, IdNameParameter, Width, Height, Value)
         End Function
         Public Function GetOpenControlBase(ByRef Page As System.Web.UI.Page, ByVal Id As String, ByVal ModuleID As String, ByVal PageID As String, ByVal ConfigurationID As String, ByVal ResourceFile As String, ByVal ResourceKey As String, ByVal ListSource As String, ByVal ModulePath As String, ByVal BasePath As String, ByVal ControlType As String) As String Implements IEngineController.GetOpenControlBase
             Return EngineFactory.Instance.GetOpenControlBase(Page, Id, ModuleID, PageID, ConfigurationID, ResourceFile, ResourceKey, ModulePath, BasePath, ListSource, ControlType)
@@ -141,7 +150,11 @@ Namespace Entities
         End Sub
 
         Public Function GetHostSettings(ByVal parameter As String) As String Implements IEngineController.GetHostSettings
-            Return EngineFactory.Instance.GetHostSettings(parameter)
+            If Not parameter Is Nothing AndAlso parameter.ToLower() = "smtppassword" Then
+                Return DotNetNuke.Entities.Host.Host.SMTPPassword
+            Else
+                Return EngineFactory.Instance.GetHostSettings(parameter)
+            End If
         End Function
         Public Function GetCache(ByVal cacheKey As String) As Object Implements IEngineController.GetCache
             Return EngineFactory.GetCache(cacheKey)

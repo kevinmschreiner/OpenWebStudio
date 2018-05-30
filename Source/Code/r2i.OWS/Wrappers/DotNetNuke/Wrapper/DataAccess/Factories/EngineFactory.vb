@@ -164,7 +164,12 @@ Namespace DataAccess.Factories
         End Function
 
         Public Function GetConnectionString() As String
-            Return DotNetNuke.Common.Utilities.Config.GetConnectionString("SiteSqlServer")
+            Dim result As String = DotNetNuke.Common.Utilities.Config.GetConnectionString("SiteSqlServer")
+            Try
+                If (String.IsNullOrWhiteSpace(result)) Then result = System.Configuration.ConfigurationManager.ConnectionStrings("SiteSqlServer").ConnectionString
+            Catch EX As Exception
+            End Try
+            Return result
         End Function
 
         Public Function GetApplicationPath() As String
@@ -217,7 +222,7 @@ Namespace DataAccess.Factories
         End Sub
 
         Public Function GetHostSettings(ByVal parameter As String) As String
-            Return Convert.ToString(Globals.HostSettings(parameter))
+            Return DotNetNuke.Entities.Controllers.HostController.Instance().GetSettingsDictionary(parameter) '.GetSettings()(parameter).Value '(Globals.HostSettings(parameter))
         End Function
 
         Public Shared Function GetCache(ByVal CacheKey As String) As Object
@@ -228,18 +233,23 @@ Namespace DataAccess.Factories
             DotNetNuke.Common.Utilities.DataCache.SetCache(CacheKey, curObject)
         End Sub
 
-        Public Function GetRichTextEditor(ByRef Page As System.Web.UI.Page, ByVal IdNameParameter As String, ByVal Width As String, ByVal Height As String, ByVal Value As String) As String
+        Public Function GetRichTextEditor(ByRef Page As System.Web.UI.Page, ByVal Parent As System.Web.UI.Control, TabModuleID As String, ModuleID As String, ByVal IdNameParameter As String, ByVal Width As String, ByVal Height As String, ByVal Value As String) As String
             Dim sb As New System.Text.StringBuilder
             Dim tw As New IO.StringWriter(sb)
             Dim twHTML As New System.Web.UI.HtmlTextWriter(tw)
 
-            Dim ctlRTE As DotNetNuke.Modules.HTMLEditorProvider.HtmlEditorProvider = DotNetNuke.Modules.HTMLEditorProvider.HtmlEditorProvider.Instance()
-            ctlRTE.ControlID = IdNameParameter
-            ctlRTE.ID = IdNameParameter
-            ctlRTE.Initialize()
-            ctlRTE.HtmlEditorControl.ID = IdNameParameter
 
+            Dim ctlRTE As DotNetNuke.Modules.HTMLEditorProvider.HtmlEditorProvider = DotNetNuke.Modules.HTMLEditorProvider.HtmlEditorProvider.Instance()
+
+            ctlRTE.ControlID = Parent.ClientID + "_" + IdNameParameter
+            ctlRTE.ID = Parent.ClientID + "_" + IdNameParameter
             ctlRTE.Page = Page
+
+
+            ctlRTE.Initialize()
+            'Parent.Controls.Add(ctlRTE.HtmlEditorControl)
+            '"dnn_ctr" + ModuleId + "_" + 
+            ctlRTE.HtmlEditorControl.ID = Parent.ClientID + "_" + IdNameParameter ' Parent.ClientID + "_" + IdNameParameter
             ctlRTE.HtmlEditorControl.Page = Page
 
             If Width.EndsWith("%") Then
@@ -257,12 +267,24 @@ Namespace DataAccess.Factories
 
             ctlRTE.Text = Value
 
-            ctlRTE.HtmlEditorControl.GetType().InvokeMember("OnInit", Reflection.BindingFlags.InvokeMethod Or Reflection.BindingFlags.NonPublic Or Reflection.BindingFlags.Instance, Nothing, ctlRTE.HtmlEditorControl, New Object() {Nothing})
-            ctlRTE.HtmlEditorControl.GetType().InvokeMember("OnPreRender", Reflection.BindingFlags.InvokeMethod Or Reflection.BindingFlags.NonPublic Or Reflection.BindingFlags.Instance, Nothing, ctlRTE.HtmlEditorControl, New Object() {Nothing})
+            Try
+                ctlRTE.HtmlEditorControl.GetType().InvokeMember("OnInit", Reflection.BindingFlags.InvokeMethod Or Reflection.BindingFlags.NonPublic Or Reflection.BindingFlags.Instance, Nothing, ctlRTE.HtmlEditorControl, New Object() {Nothing})
+            Catch Ex As Exception
+
+            End Try
+            Try
+                ctlRTE.HtmlEditorControl.GetType().InvokeMember("OnPreRender", Reflection.BindingFlags.InvokeMethod Or Reflection.BindingFlags.NonPublic Or Reflection.BindingFlags.Instance, Nothing, ctlRTE.HtmlEditorControl, New Object() {Nothing})
+            Catch Ex As Exception
+
+            End Try
 
             ctlRTE.HtmlEditorControl.RenderControl(twHTML)
+            'Parent.Controls.Remove(ctlRTE.HtmlEditorControl)
 
             tw.Flush()
+
+            sb = sb.Replace("name=""" + ctlRTE.HtmlEditorControl.ID + """", "name=""" + IdNameParameter + """")
+
             Return sb.ToString
         End Function
 

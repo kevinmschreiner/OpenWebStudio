@@ -27,7 +27,16 @@ Namespace DataAccess.Factories
 
         Public Function UserLogin(ByVal Username As String, ByVal Password As String, ByVal PortalID As Integer, ByVal PortalName As String, ByVal IP As String, ByVal CreatePersistentCookie As Boolean) As Integer
             Dim portalSecurity As New DotNetNuke.Security.PortalSecurity
-            Return portalSecurity.UserLogin(Username, Password, PortalID, PortalName, IP, CreatePersistentCookie)
+            'DotNetNuke.Security.Membership.MembershipProvider.Instance.UserLogin
+            'DotNetNuke.Entities.Users.UserController.UserLogin(PortalID, Username, Password,)
+            Dim uservalue As DotNetNuke.Entities.Users.UserInfo = DotNetNuke.Entities.Users.UserController.GetUserByName(Username)
+            If (Not uservalue Is Nothing AndAlso uservalue.UserID >= 0) Then
+                'Return portalSecurity.UserLogin(Username, Password, PortalID, PortalName, IP, CreatePersistentCookie)
+                DotNetNuke.Entities.Users.UserController.UserLogin(PortalID, uservalue, PortalName, IP, CreatePersistentCookie)
+
+
+            End If
+            Return -1
         End Function
 
         Public Function UserLogoff() As Boolean
@@ -132,7 +141,12 @@ Namespace DataAccess.Factories
         End Function
 
         Public Shared Function HasEditPermissions(ByVal ModuleId As Integer) As Boolean
-            Return DotNetNuke.Security.PortalSecurity.HasEditPermissions(ModuleId)
+            'Return DotNetNuke.Security.Permissions.ModulePermissionController.CanEditModuleContent(DotNetNuke.Entities.Modules.ModuleController.Instance.GetModulePermissions).HasEditPermissions(ModuleId)
+            'DotNetNuke.Security.Permissions.ModulePermissionController.CanEditModuleContent()
+            Dim tb As IList(Of DotNetNuke.Entities.Modules.ModuleInfo) = DotNetNuke.Entities.Modules.ModuleController.Instance.GetTabModulesByModule(CInt(ModuleId))
+            If Not tb Is Nothing AndAlso tb.Count > 0 Then
+                Return DotNetNuke.Security.Permissions.ModulePermissionController.CanEditModuleContent(tb(0))
+            End If
         End Function
 
         Public Shared Function IsInRoles(ByVal roles As String) As Boolean

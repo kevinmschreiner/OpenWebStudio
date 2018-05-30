@@ -12,12 +12,11 @@ Namespace DataAccess.Factories
             Return New DataAccess.TabPermissionInfo
         End Function
 
-        Public Function GetTabPermissionsCollectionByTabID(ByVal tabId As String) As DataAccess.TabPermissionCollection
+        Public Function GetTabPermissionsCollectionByTabID(ByVal portalId As String, ByVal tabId As String) As DataAccess.TabPermissionCollection
             Dim tpCtrl As New DotNetNuke.Security.Permissions.TabPermissionController
             Dim tabIdConverted As Integer
             If Integer.TryParse(tabId, tabIdConverted) Then
-                Dim tpc As New DataAccess.TabPermissionCollection(tpCtrl.GetTabPermissionsCollectionByTabID(CInt(tabId)))
-                Return tpc
+                Return New DataAccess.TabPermissionCollection(DotNetNuke.Security.Permissions.TabPermissionController.GetTabPermissions(tabIdConverted, CInt(portalId)))
             Else
                 Return Nothing
             End If

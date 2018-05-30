@@ -143,7 +143,7 @@ Namespace DataAccess.Factories
 
                     If UseCache Then
                         ' insert the type into the cache
-                        DataCache.Add(CacheKey, objType, Nothing, Date.MaxValue, Nothing, System.Web.Caching.CacheItemPriority.Normal, Nothing)
+                        DataCache.Insert(CacheKey, objType, Nothing, Date.MaxValue, Nothing, System.Web.Caching.CacheItemPriority.Normal, Nothing)
                     End If
                 Catch exc As Exception
 

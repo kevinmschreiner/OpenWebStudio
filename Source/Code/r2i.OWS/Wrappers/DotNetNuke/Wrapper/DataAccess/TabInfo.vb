@@ -38,19 +38,40 @@ Namespace DataAccess
         End Sub
         Public Property AdministratorRoles() As String Implements Framework.DataAccess.ITabInfo.AdministratorRoles
             Get
-                Return _obj.AdministratorRoles
+                Return _obj.TabPermissions.ToString("EDIT")
             End Get
             Set(ByVal value As String)
-                _obj.AdministratorRoles = value
+                '_obj.TabPermissions = value
+                _obj.TabPermissions.Clear()
+                For Each role As String In value.Split(","c)
+                    Dim t As DotNetNuke.Security.Permissions.TabPermissionInfo = New DotNetNuke.Security.Permissions.TabPermissionInfo()
+                    t.AllowAccess = True
+                    t.RoleName = value
+                    t.PermissionKey = "EDIT"
+                    t.TabID = Integer.Parse(Me.TabID)
+                    t.PermissionID = 4
+                    t.RoleID = 0
+                    _obj.TabPermissions.Add(t)
+                Next
             End Set
         End Property
 
         Public Property AuthorizedRoles() As String Implements Framework.DataAccess.ITabInfo.AuthorizedRoles
             Get
-                Return _obj.AuthorizedRoles
+                Return _obj.TabPermissions.ToString("VIEW")
             End Get
             Set(ByVal value As String)
-                _obj.AuthorizedRoles = value
+                _obj.TabPermissions.Clear()
+                For Each role As String In value.Split(","c)
+                    Dim t As DotNetNuke.Security.Permissions.TabPermissionInfo = New DotNetNuke.Security.Permissions.TabPermissionInfo()
+                    t.AllowAccess = True
+                    t.RoleName = value
+                    t.PermissionKey = "VIEW"
+                    t.TabID = Integer.Parse(Me.TabID)
+                    t.PermissionID = 3
+                    t.RoleID = 1
+                    _obj.TabPermissions.Add(t)
+                Next
             End Set
         End Property
 
@@ -134,7 +155,7 @@ Namespace DataAccess
 
         Public ReadOnly Property IsAdminTab() As Boolean Implements Framework.DataAccess.ITabInfo.IsAdminTab
             Get
-                Return _obj.IsAdminTab
+                Return _obj.IsSuperTab
             End Get
         End Property
 
@@ -214,7 +235,9 @@ Namespace DataAccess
                 Return _obj.Panes
             End Get
             Set(ByVal value As System.Collections.ArrayList)
-                _obj.Panes = value
+                _obj.Panes.Clear()
+                _obj.Panes.AddRange(value)
+                '_obj.Panes = value
             End Set
         End Property
 
@@ -319,7 +342,11 @@ Namespace DataAccess
                 Return (New DataAccess.TabPermissionCollection(_obj.TabPermissions))
             End Get
             Set(ByVal value As Framework.DataAccess.ITabPermissionCollection)
-                _obj.TabPermissions = CType(CType(value, DataAccess.TabPermissionCollection).Save, DotNetNuke.Security.Permissions.TabPermissionCollection)
+                '_obj.TabPermissions = CType(CType(value, DataAccess.TabPermissionCollection).Save, DotNetNuke.Security.Permissions.TabPermissionCollection)
+                _obj.TabPermissions.Clear()
+                For Each tabp As DotNetNuke.Security.Permissions.TabPermissionInfo In value
+                    _obj.TabPermissions.Add(tabp)
+                Next
             End Set
         End Property
 

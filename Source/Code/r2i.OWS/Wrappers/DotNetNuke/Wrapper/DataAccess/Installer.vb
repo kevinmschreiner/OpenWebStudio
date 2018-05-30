@@ -51,7 +51,7 @@ Namespace DataAccess
 
         Public ReadOnly Property ModulePath() As String Implements IInstaller.ModulePath
             Get
-                Return currentModuleSettingsBase.ModulePath
+                Return currentModuleSettingsBase.ControlPath
             End Get
         End Property
 
@@ -102,7 +102,7 @@ Namespace DataAccess
                     iPortSet.PortalId = CStr(dnnPortSet.PortalId)
                     iPortSet.PortalName = dnnPortSet.PortalName
                     'iPortSet.portalSettingsProperty dictionary with all the properties
-                    iPortSet.Version = dnnPortSet.Version
+                    'iPortSet.Version = dnnPortSet.Version
                 End If
                 Return iPortSet
             End Get

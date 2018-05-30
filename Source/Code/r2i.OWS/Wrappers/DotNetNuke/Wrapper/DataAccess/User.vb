@@ -385,7 +385,7 @@ Namespace DataAccess
             'GET THE EXISTING USER
             Dim userObj As DotNetNuke.Entities.Users.UserInfo
             If CInt(Me.Id) > 0 Then
-                userObj = DotNetNuke.Entities.Users.UserController.GetUser(CInt(Me.SiteId), CInt(Me.Id), True)
+                userObj = DotNetNuke.Entities.Users.UserController.Instance.GetUser(CInt(Me.SiteId), CInt(Me.Id))
             Else
                 userObj = New DotNetNuke.Entities.Users.UserInfo
                 userObj.UserID = -1
@@ -398,7 +398,7 @@ Namespace DataAccess
             SavedProperties.Add("Profile.FullName")
             If Utility.CNullStr(userObj.Email) <> Utility.CNullStr(Me.Email) Then
                 userObj.Email = Me.Email
-                userObj.Membership.Email = Me.Email
+                'userObj.Membership.Email = Me.Email
             End If
             SavedProperties.Add("Email")
             SavedProperties.Add("Membership.Email")
@@ -427,13 +427,13 @@ Namespace DataAccess
             SavedProperties.Add("IsSuperUser")
             If userObj.Username <> Me.UserName Then
                 userObj.Username = Me.UserName
-                userObj.Membership.Username = Me.UserName
+                'userObj.Membership = Me.UserName
             End If
             SavedProperties.Add("Username")
             SavedProperties.Add("Membership.Username")
             If Not Me.Password Is Nothing AndAlso Utility.CNullStr(userObj.Membership.Password, "") <> Me.Password Then
                 userObj.Membership.Password = Me.Password
-                userObj.Membership.UpdatePassword = True
+                'userObj.Membership.UpdatePassword = True
             End If
             SavedProperties.Add("Password")
             SavedProperties.Add("UpdatePassword")

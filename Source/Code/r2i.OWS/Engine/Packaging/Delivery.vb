@@ -632,7 +632,7 @@ Namespace r2i.OWS.Packaging
                     ' REG - 1.9.8+
                     ' - Then, we populate the collection, and check before each add.
                     'tpI = tpCtrl.GetTabPermissionsCollectionByTabID(tbi.TabID)
-                    tpI = tpCtrl.GetTabPermissionsCollectionByTabID(tbi.TabId)
+                    tpI = tpCtrl.GetTabPermissionsCollectionByTabID(tbi.PortalID, tbi.TabID)
 
                     If (Not roles_View Is Nothing AndAlso roles_View.Count > 0) OrElse (Not roles_Edit Is Nothing AndAlso roles_Edit.Count > 0) Then
                         If Not roles_View Is Nothing AndAlso roles_View.Count > 0 Then

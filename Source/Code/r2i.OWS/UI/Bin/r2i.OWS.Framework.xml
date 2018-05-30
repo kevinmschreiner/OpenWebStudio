@@ -6,7 +6,164 @@ r2i.OWS.Framework
 </name>
 </assembly>
 <members>
-<member name="M:r2i.OWS.Framework.Utilities.JSON.JsonToDataset.renderJsonObject(System.Object,System.String,System.String[],System.Collections.Generic.Dictionary{System.String,System.String})">
+<member name="M:r2i.OWS.Framework.Config.SectionItem.#ctor(System.String,System.String,r2i.OWS.Framework.Config.Section,r2i.OWS.Framework.Config.SectionType)">
+	<summary>
+ If SectionType is Administration, then "Type" means the ScriptPath
+ </summary>
+	<param name="Name"></param>
+	<param name="Type"></param>
+	<param name="Section"></param>
+	<param name="SectionType"></param>
+	<remarks></remarks>
+</member><member name="M:r2i.OWS.Framework.Config.SectionItem.#ctor(System.String,System.String,r2i.OWS.Framework.Config.Section,r2i.OWS.Framework.Config.SectionType,System.String)">
+	<summary>
+ If SectionType is Administration, then "Type" means the ScriptPath
+ </summary>
+	<param name="Name"></param>
+	<param name="Type"></param>
+	<param name="Section"></param>
+	<param name="SectionType"></param>
+	<param name="Title"></param>
+	<remarks></remarks>
+</member><member name="M:r2i.OWS.Framework.Config.SectionItem.#ctor(System.String,System.String,r2i.OWS.Framework.Config.Section,r2i.OWS.Framework.Config.SectionType,System.String,System.String)">
+	<summary>
+ If SectionType is Administration, then "Type" means the ScriptPath
+ </summary>
+	<param name="Name"></param>
+	<param name="Type"></param>
+	<param name="Section"></param>
+	<param name="SectionType"></param>
+	<param name="Title"></param>
+	<param name="Required"></param>
+	<remarks></remarks>
+</member><member name="M:r2i.OWS.Framework.Config.SectionItem.#ctor(System.String,System.String,r2i.OWS.Framework.Config.Section,r2i.OWS.Framework.Config.SectionType,System.String,System.String,System.String,System.String)">
+	<summary>
+ If SectionType is Administration, then "Type" means the ScriptPath
+ </summary>
+	<param name="Name"></param>
+	<param name="Type"></param>
+	<param name="Section"></param>
+	<param name="SectionType"></param>
+	<param name="Title"></param>
+	<param name="Required"></param>
+	<remarks></remarks>
+</member><member name="M:r2i.OWS.Framework.Utilities.Utility.ReplaceBetween(System.String,System.String,System.String,System.String)">
+	<summary>
+ Replaces text between two tags
+ </summary>
+	<param name="Original">Incoming string</param>
+	<param name="StartTag">First instance of this tag marks the beginning of the replacement</param>
+	<param name="EndTag">First instance of this tag marks the end of the replacement</param>
+	<param name="ReplaceWith">Replace the text with this</param>
+	<returns>Replaced string</returns>
+</member><member name="M:r2i.OWS.Framework.Utilities.Utility.GetBetween(System.String,System.String,System.String)">
+	<summary>
+ Returns all text between two given tags
+ </summary>
+	<param name="Original">Incoming string</param>
+	<param name="StartTag">First instance of this tag marks the beginning of the inner text</param>
+	<param name="EndTag">First instance of this tag marks the end of the inner text</param>
+	<returns>String in between</returns>
+</member><member name="M:r2i.OWS.Framework.Utilities.Utility.Join(System.Collections.Generic.List{System.String},System.String)">
+	<summary>
+ Returns a single string of all Items joined together
+ </summary>
+	<param name="Items">Strings to join</param>
+	<param name="JoinCharacter">String to insert between items. <i>Default is ,</i></param>
+	<returns>String</returns>
+</member><member name="M:r2i.OWS.Framework.Utilities.Utility.Join(System.String,System.String[])">
+	<summary>
+ Returns a concatenated string for all JoinValues, joined with JoinChar.  Checks if each part ends with
+ JoinChar first.  If not, then it appends JoinChar prior to JoinValues(i).
+ </summary>
+	<param name="JoinChar">String to appear between JoinValues</param>
+	<param name="JoinValues">Array of strings</param>
+	<returns>Single string</returns>
+	<remarks></remarks>
+</member><member name="M:r2i.OWS.Framework.Utilities.Utility.GetHexString(System.Byte[])">
+	<summary>
+ Returns a valid HEX representation of the incoming byte array
+ </summary>
+	<param name="Bytes"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:r2i.OWS.Framework.Entities.LogSeverity.NONE">
+	<summary>
+ Use for logging a message
+ </summary>
+</member><member name="F:r2i.OWS.Framework.Entities.LogSeverity.Low">
+	<summary>
+ Minor exception
+ </summary>
+</member><member name="F:r2i.OWS.Framework.Entities.LogSeverity.Medium">
+	<summary>
+ Possibly a problem - worth noting
+ </summary>
+</member><member name="F:r2i.OWS.Framework.Entities.LogSeverity.High">
+	<summary>
+ Could possibly lead to more severe problems in the future
+ </summary>
+</member><member name="F:r2i.OWS.Framework.Entities.LogSeverity.Severe">
+	<summary>
+ Catastrophic. Investigate this immediately.
+ </summary>
+</member><member name="F:r2i.OWS.Framework.Entities.LogSeverity.Error">
+	<summary>
+ Generic error. Could be ok - could be really bad.
+ </summary>
+</member><member name="F:r2i.OWS.Framework.Plugins.Renderers.RenderTypes.Variable">
+	<summary>
+ Starts with a [.  Used for replacing values.
+ </summary>
+</member><member name="F:r2i.OWS.Framework.Plugins.Renderers.RenderTypes.Functional">
+	<summary>
+ Starts with a {.  Used for producing actions.
+ </summary>
+</member><member name="T:r2i.OWS.Framework.Plugins.Renderers.RenderTypes">
+	<summary>
+ Determines structure of tag
+ </summary>
+</member><member name="M:r2i.OWS.Framework.Utilities.JSON.JsonDataTable.ConvertTableToJson(System.Data.DataTable)">
+	<summary> 
+ Conv 
+ </summary>
+	<param name="dt"></param>
+	<returns></returns>
+</member><member name="M:r2i.OWS.Framework.Utilities.JSON.JsonDataTable.GetJsonNode(System.Object,System.String)">
+	<summary>
+ Fetches a JSON node from the path.
+ </summary>
+	<param name="o">JSON object to traverse</param>
+	<param name="path">JSON object path ie</param>
+	<returns>The best effort at find the new node</returns>
+</member><member name="T:r2i.OWS.Framework.Utilities.JSON.JsonDataTable">
+	<summary> 
+ Builds a JSON string based on a DataTable in the following format: 
+ {"Columns":[ 
+8 {"Name":"ContactID"}, 
+9 {"Name":"FirstName"}, 
+10 {"Name":"LastName"}, 
+11 {"Name":"Company"}, 
+12 {"Name":"Department"}, 
+13 {"Name":"Title"}, 
+14 {"Name":"Email"}, 
+15 {"Name":"Phone"}, 
+16 {"Name":"Address"}, 
+17 {"Name":"City"}, 
+18 {"Name":"Region"}, 
+19 {"Name":"PostalCode"}, 
+20 {"Name":"Country"}, 
+21 {"Name":"UserName"}], 
+22 "Rows":[ 
+23 {"Columns":["1","Paul","Anderson","Corporate America","Sales","Director","panderson@camerica.com","420-232-4231","123 Oakdale Ave.","Columbia","MD","21046","USA","panders"]}, 
+24 {"Columns":["2","Steve","Bronson","Windows Unlimited","Sales","Director","sabronson@wutld.com","420-232-4231","123 Oakdale Ave.","Columbia","MD","21046","USA","panders"]}, 
+25 {"Columns":["3","Debbie","Charles","Doors to Tomorrow","Sales","Director","dcharles@d2t.com","420-232-4231","123 Oakdale Ave.","Columbia","MD","21046","USA","panders"]}, 
+26 {"Columns":["4","John","Dobb","Stocks And Bonds","Sales","Director","jdobb@standBonds.com","420-232-4231","123 Oakdale Ave.","Columbia","MD","21046","USA","panders"]}, 
+27 {"Columns":["5","Wayne","Earl","Clients Corporation","Sales","Director","wearl@ccorporate.com","420-232-4231","123 Oakdale Ave.","Columbia","MD","21046","USA","panders"]} 
+28 ] 
+29} 
+ </summary>
+</member><member name="M:r2i.OWS.Framework.Utilities.JSON.JsonToDataset.renderJsonObject(System.Object,System.String,System.String[],System.Collections.Generic.Dictionary{System.String,System.String})">
 	<summary> 
  Fetches a DataTable from a JSON object. 
  </summary>
@@ -1680,163 +1837,6 @@ r2i.OWS.Framework
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
-</member><member name="M:r2i.OWS.Framework.Utilities.Utility.ReplaceBetween(System.String,System.String,System.String,System.String)">
-	<summary>
- Replaces text between two tags
- </summary>
-	<param name="Original">Incoming string</param>
-	<param name="StartTag">First instance of this tag marks the beginning of the replacement</param>
-	<param name="EndTag">First instance of this tag marks the end of the replacement</param>
-	<param name="ReplaceWith">Replace the text with this</param>
-	<returns>Replaced string</returns>
-</member><member name="M:r2i.OWS.Framework.Utilities.Utility.GetBetween(System.String,System.String,System.String)">
-	<summary>
- Returns all text between two given tags
- </summary>
-	<param name="Original">Incoming string</param>
-	<param name="StartTag">First instance of this tag marks the beginning of the inner text</param>
-	<param name="EndTag">First instance of this tag marks the end of the inner text</param>
-	<returns>String in between</returns>
-</member><member name="M:r2i.OWS.Framework.Utilities.Utility.Join(System.Collections.Generic.List{System.String},System.String)">
-	<summary>
- Returns a single string of all Items joined together
- </summary>
-	<param name="Items">Strings to join</param>
-	<param name="JoinCharacter">String to insert between items. <i>Default is ,</i></param>
-	<returns>String</returns>
-</member><member name="M:r2i.OWS.Framework.Utilities.Utility.Join(System.String,System.String[])">
-	<summary>
- Returns a concatenated string for all JoinValues, joined with JoinChar.  Checks if each part ends with
- JoinChar first.  If not, then it appends JoinChar prior to JoinValues(i).
- </summary>
-	<param name="JoinChar">String to appear between JoinValues</param>
-	<param name="JoinValues">Array of strings</param>
-	<returns>Single string</returns>
-	<remarks></remarks>
-</member><member name="M:r2i.OWS.Framework.Utilities.Utility.GetHexString(System.Byte[])">
-	<summary>
- Returns a valid HEX representation of the incoming byte array
- </summary>
-	<param name="Bytes"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="F:r2i.OWS.Framework.Entities.LogSeverity.NONE">
-	<summary>
- Use for logging a message
- </summary>
-</member><member name="F:r2i.OWS.Framework.Entities.LogSeverity.Low">
-	<summary>
- Minor exception
- </summary>
-</member><member name="F:r2i.OWS.Framework.Entities.LogSeverity.Medium">
-	<summary>
- Possibly a problem - worth noting
- </summary>
-</member><member name="F:r2i.OWS.Framework.Entities.LogSeverity.High">
-	<summary>
- Could possibly lead to more severe problems in the future
- </summary>
-</member><member name="F:r2i.OWS.Framework.Entities.LogSeverity.Severe">
-	<summary>
- Catastrophic. Investigate this immediately.
- </summary>
-</member><member name="F:r2i.OWS.Framework.Entities.LogSeverity.Error">
-	<summary>
- Generic error. Could be ok - could be really bad.
- </summary>
-</member><member name="M:r2i.OWS.Framework.Config.SectionItem.#ctor(System.String,System.String,r2i.OWS.Framework.Config.Section,r2i.OWS.Framework.Config.SectionType)">
-	<summary>
- If SectionType is Administration, then "Type" means the ScriptPath
- </summary>
-	<param name="Name"></param>
-	<param name="Type"></param>
-	<param name="Section"></param>
-	<param name="SectionType"></param>
-	<remarks></remarks>
-</member><member name="M:r2i.OWS.Framework.Config.SectionItem.#ctor(System.String,System.String,r2i.OWS.Framework.Config.Section,r2i.OWS.Framework.Config.SectionType,System.String)">
-	<summary>
- If SectionType is Administration, then "Type" means the ScriptPath
- </summary>
-	<param name="Name"></param>
-	<param name="Type"></param>
-	<param name="Section"></param>
-	<param name="SectionType"></param>
-	<param name="Title"></param>
-	<remarks></remarks>
-</member><member name="M:r2i.OWS.Framework.Config.SectionItem.#ctor(System.String,System.String,r2i.OWS.Framework.Config.Section,r2i.OWS.Framework.Config.SectionType,System.String,System.String)">
-	<summary>
- If SectionType is Administration, then "Type" means the ScriptPath
- </summary>
-	<param name="Name"></param>
-	<param name="Type"></param>
-	<param name="Section"></param>
-	<param name="SectionType"></param>
-	<param name="Title"></param>
-	<param name="Required"></param>
-	<remarks></remarks>
-</member><member name="M:r2i.OWS.Framework.Config.SectionItem.#ctor(System.String,System.String,r2i.OWS.Framework.Config.Section,r2i.OWS.Framework.Config.SectionType,System.String,System.String,System.String,System.String)">
-	<summary>
- If SectionType is Administration, then "Type" means the ScriptPath
- </summary>
-	<param name="Name"></param>
-	<param name="Type"></param>
-	<param name="Section"></param>
-	<param name="SectionType"></param>
-	<param name="Title"></param>
-	<param name="Required"></param>
-	<remarks></remarks>
-</member><member name="F:r2i.OWS.Framework.Plugins.Renderers.RenderTypes.Variable">
-	<summary>
- Starts with a [.  Used for replacing values.
- </summary>
-</member><member name="F:r2i.OWS.Framework.Plugins.Renderers.RenderTypes.Functional">
-	<summary>
- Starts with a {.  Used for producing actions.
- </summary>
-</member><member name="T:r2i.OWS.Framework.Plugins.Renderers.RenderTypes">
-	<summary>
- Determines structure of tag
- </summary>
-</member><member name="M:r2i.OWS.Framework.Utilities.JSON.JsonDataTable.ConvertTableToJson(System.Data.DataTable)">
-	<summary> 
- Conv 
- </summary>
-	<param name="dt"></param>
-	<returns></returns>
-</member><member name="M:r2i.OWS.Framework.Utilities.JSON.JsonDataTable.GetJsonNode(System.Object,System.String)">
-	<summary>
- Fetches a JSON node from the path.
- </summary>
-	<param name="o">JSON object to traverse</param>
-	<param name="path">JSON object path ie</param>
-	<returns>The best effort at find the new node</returns>
-</member><member name="T:r2i.OWS.Framework.Utilities.JSON.JsonDataTable">
-	<summary> 
- Builds a JSON string based on a DataTable in the following format: 
- {"Columns":[ 
-8 {"Name":"ContactID"}, 
-9 {"Name":"FirstName"}, 
-10 {"Name":"LastName"}, 
-11 {"Name":"Company"}, 
-12 {"Name":"Department"}, 
-13 {"Name":"Title"}, 
-14 {"Name":"Email"}, 
-15 {"Name":"Phone"}, 
-16 {"Name":"Address"}, 
-17 {"Name":"City"}, 
-18 {"Name":"Region"}, 
-19 {"Name":"PostalCode"}, 
-20 {"Name":"Country"}, 
-21 {"Name":"UserName"}], 
-22 "Rows":[ 
-23 {"Columns":["1","Paul","Anderson","Corporate America","Sales","Director","panderson@camerica.com","420-232-4231","123 Oakdale Ave.","Columbia","MD","21046","USA","panders"]}, 
-24 {"Columns":["2","Steve","Bronson","Windows Unlimited","Sales","Director","sabronson@wutld.com","420-232-4231","123 Oakdale Ave.","Columbia","MD","21046","USA","panders"]}, 
-25 {"Columns":["3","Debbie","Charles","Doors to Tomorrow","Sales","Director","dcharles@d2t.com","420-232-4231","123 Oakdale Ave.","Columbia","MD","21046","USA","panders"]}, 
-26 {"Columns":["4","John","Dobb","Stocks And Bonds","Sales","Director","jdobb@standBonds.com","420-232-4231","123 Oakdale Ave.","Columbia","MD","21046","USA","panders"]}, 
-27 {"Columns":["5","Wayne","Earl","Clients Corporation","Sales","Director","wearl@ccorporate.com","420-232-4231","123 Oakdale Ave.","Columbia","MD","21046","USA","panders"]} 
-28 ] 
-29} 
- </summary>
 </member>
 </members>
 </doc>

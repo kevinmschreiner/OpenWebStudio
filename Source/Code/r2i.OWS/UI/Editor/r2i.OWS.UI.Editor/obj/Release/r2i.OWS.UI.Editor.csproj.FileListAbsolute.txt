@@ -2,8 +2,3 @@ D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\UI\Editor\r2i.OWS.UI
 D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\UI\Editor\r2i.OWS.UI.Editor\bin\r2i.OWS.UI.Editor.pdb
 D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\UI\Editor\r2i.OWS.UI.Editor\obj\Release\r2i.OWS.UI.Editor.dll
 D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\UI\Editor\r2i.OWS.UI.Editor\obj\Release\r2i.OWS.UI.Editor.pdb
-D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\UI\Editor\r2i.OWS.UI.Editor\bin\r2i.OWS.UI.Editor.dll
-D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\UI\Editor\r2i.OWS.UI.Editor\bin\r2i.OWS.UI.Editor.pdb
-D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\UI\Editor\r2i.OWS.UI.Editor\obj\Release\r2i.OWS.UI.Editor.dll
-D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\UI\Editor\r2i.OWS.UI.Editor\obj\Release\r2i.OWS.UI.Editor.pdb
-D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\UI\Editor\r2i.OWS.UI.Editor\obj\Release\r2i.OWS.UI.Editor.csprojResolveAssemblyReference.cache

@@ -5,10 +5,3 @@ D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Engine\obj\Release\r
 D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Engine\obj\Release\r2i.OWS.Engine.xml
 D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Engine\obj\Release\r2i.OWS.Engine.pdb
 D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Engine\obj\Release\r2i.OWS.Engine.vbprojResolveAssemblyReference.cache
-D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Build\r2i.OWS.Engine.dll
-D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Build\r2i.OWS.Engine.pdb
-D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Build\r2i.OWS.Engine.xml
-D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Engine\obj\Release\r2i.OWS.Engine.vbprojResolveAssemblyReference.cache
-D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Engine\obj\Release\r2i.OWS.Engine.dll
-D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Engine\obj\Release\r2i.OWS.Engine.xml
-D:\Users\Kevin\Documents\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Engine\obj\Release\r2i.OWS.Engine.pdb

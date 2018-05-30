@@ -215,7 +215,7 @@ Namespace DataAccess
         End Property
         Public Property TimeZoneOffset() As Integer Implements IPortalSettings.TimeZoneOffset
             Get
-                Return _portalSettings.TimeZoneOffset
+                Return CType(_portalSettings.TimeZone.BaseUtcOffset.TotalHours, Integer)
             End Get
             Set(ByVal value As Integer)
 
@@ -343,7 +343,7 @@ Namespace DataAccess
         Public Property Version() As String Implements IPortalSettings.Version
             Get
                 LoadPortalSettings()
-                Return _portalSettings.Version
+                Return _portalSettings.CdfVersion.ToString()
             End Get
             Set(ByVal value As String)
 
@@ -362,11 +362,16 @@ Namespace DataAccess
 
         Public Function GetModuleSettings(ByVal moduleId As Integer) As System.Collections.Hashtable Implements IPortalSettings.GetModuleSettings
             'LoadPortalSettings()
-            Return DotNetNuke.Entities.Portals.PortalSettings.GetModuleSettings(moduleId)
+            Dim lst As IList(Of DotNetNuke.Entities.Modules.ModuleInfo) = DotNetNuke.Entities.Modules.ModuleController.Instance.GetTabModulesByModule(moduleId)
+            If Not lst Is Nothing AndAlso lst.Count > 0 Then
+                Return lst(0).ModuleSettings
+            End If
+            Return Nothing
         End Function
 
         Public Function GetTabModuleSettings(ByVal tabModuleId As Integer, ByVal settings As System.Collections.Hashtable) As System.Collections.Hashtable Implements IPortalSettings.GetTabModuleSettings
-            Return DotNetNuke.Entities.Portals.PortalSettings.GetTabModuleSettings(tabModuleId, settings)
+            'Return DotNetNuke.Entities.Portals.PortalSettings.GetTabModuleSettings(tabModuleId, settings)
+            Return DotNetNuke.Entities.Modules.ModuleController.Instance.GetTabModule(tabModuleId).TabModuleSettings
         End Function
     End Class
 End Namespace
