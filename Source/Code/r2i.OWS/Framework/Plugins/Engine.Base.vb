@@ -43,6 +43,7 @@ Namespace r2i.OWS.Framework
         Public Response As HttpResponse
         Public Context As HttpContext
         Public ViewState As StateBag
+
         'Public JSONState As Dictionary(Of String, String)
         Public PortalSettings As IPortalSettings
         Public ModuleID As String
@@ -160,11 +161,66 @@ Namespace r2i.OWS.Framework
         Public MustOverride Property TotalPages() As Integer
         Public MustOverride Property RecordsPerPage() As Integer
         Public MustOverride Property OverridePaging() As Boolean
+        Public MustOverride Property CurrentUser() As IUser
+
 
 #Region "Internal - Single Usage Variables"
         Public MustOverride Function ActionVariableSearch(ByVal Query As String) As String()
         Public MustOverride Property ActionVariable(ByVal Name As String) As Object
         Public MustOverride ReadOnly Property ActionVariables() As SortedList(Of String, Object)
+        Private Shared _SharedCache As New Dictionary(Of String, Object)
+        Private Shared _SharedCache_event As New System.Threading.Mutex
+        Private Enum SharedCacheAction
+            Read
+            Write
+            Contains
+        End Enum
+        Private Shared Function SharedCache_SetGet(ByVal Name As String, ByVal Value As Object, ByVal Action As SharedCacheAction) As Object
+            Dim o As Object = Nothing
+            _SharedCache_event.WaitOne()
+            Try
+                If (Action = SharedCacheAction.Read) Then
+                    If (_SharedCache.ContainsKey(Name)) Then
+                        o = _SharedCache.Item(Name)
+                    End If
+                ElseIf (Action = SharedCacheAction.Write) Then
+                    If (Value Is Nothing) Then
+                        If (_SharedCache.ContainsKey(Name)) Then
+                            _SharedCache.Remove(Name)
+                        End If
+                    Else
+                        If (_SharedCache.ContainsKey(Name)) Then
+                            _SharedCache.Item(Name) = Value
+                        Else
+                            _SharedCache.Add(Name, Value)
+                        End If
+                    End If
+                Else
+                    If (_SharedCache.ContainsKey(Name)) Then
+                        o = True
+                    Else
+                        o = False
+                    End If
+                End If
+            Catch ex As Exception
+            Finally
+                _SharedCache_event.ReleaseMutex()
+            End Try
+            Return o
+        End Function
+        Public Shared Function SharedCache_Contains(ByVal Name As String) As Boolean
+            Dim result As Boolean = SharedCache_SetGet(Name, Nothing, SharedCacheAction.Contains)
+            Return result
+        End Function
+        Public Shared Sub SharedCache_Remove(ByVal Name As String)
+            SharedCache_SetGet(Name, Nothing, SharedCacheAction.Write)
+        End Sub
+        Public Shared Sub SharedCache_Set(ByVal Name As String, ByVal Value As Object)
+            SharedCache_SetGet(Name, Value, SharedCacheAction.Write)
+        End Sub
+        Public Shared Function SharedCache_Get(ByVal Name As String) As Object
+            Return SharedCache_SetGet(Name, Nothing, SharedCacheAction.Read)
+        End Function
 #End Region
 #Region "Protected Members"
         '        Protected excelData As Text.StringBuilder

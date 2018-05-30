@@ -252,7 +252,7 @@ GO
 
 CREATE Procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetPackageItems(@PackageID int)
 AS
-Select * from {databaseOwner}{objectQualifier}OpenWebStudio_PackageItem (nolock) where PackageID = @PackageID
+Select * from {databaseOwner}{objectQualifier}OpenWebStudio_PackageItem where PackageID = @PackageID
  order by SequenceNumber
 GO
 

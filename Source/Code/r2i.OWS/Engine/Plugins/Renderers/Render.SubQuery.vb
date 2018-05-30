@@ -94,6 +94,7 @@ Namespace r2i.OWS.Renderers
                     Dim sNoResultFormat As String = ""
                     Dim sNoQueryFormat As String = ""
                     Dim sSelFormat As String = ""
+                    Dim sJSON As String = ""
                     Dim sAltFormat As String = ""
                     Dim sSelItems As String = ""
                     Dim sSelField As String = ""
@@ -121,6 +122,8 @@ Namespace r2i.OWS.Renderers
                                 sNoResultFormat = str.Remove(0, 16).TrimEnd(New Char() {""""c})
                             Case str.ToUpper.StartsWith("SELECTEDFORMAT=")
                                 sSelFormat = str.Remove(0, 16).TrimEnd(New Char() {""""c})
+                            Case str.ToUpper.StartsWith("TOJSON=")
+                                sJSON = str.Remove(0, 8).TrimEnd(New Char() {""""c}).ToUpper()
                             Case str.ToUpper.StartsWith("ALTERNATEFORMAT=")
                                 sAltFormat = str.Remove(0, 17).TrimEnd(New Char() {""""c})
                             Case str.ToUpper.StartsWith("SELECTEDITEMS=")
@@ -233,86 +236,104 @@ Namespace r2i.OWS.Renderers
                                 End If
                             End If
                         End If
-                        End If
+                    End If
 
-                        If bDebug Then
-                            Debugger.AppendLine("<li><b>Query: </b>" & Utility.HTMLEncode(sQuery) & "</li><br>")
-                        End If
+                    If bDebug Then
+                        Debugger.AppendLine("<li><b>Query: </b>" & Utility.HTMLEncode(sQuery) & "</li><br>")
+                    End If
 
-                        If bDebug Then
-                            Debugger.AppendLine("<li><b>Header: </b>" & Utility.HTMLEncode(sHeader) & "</li><br>")
-                            Debugger.AppendLine("<li><b>Format: </b>" & Utility.HTMLEncode(sFormat) & "</li><br>")
-                            Debugger.AppendLine("<li><b>AltFormat: </b>" & Utility.HTMLEncode(sAltFormat) & "</li><br>")
-                            Debugger.AppendLine("<li><b>Footer: </b>" & Utility.HTMLEncode(sFooter) & "</li><br>")
-                            Debugger.AppendLine("<li><b>NoQueryFormat: </b>" & Utility.HTMLEncode(sNoQueryFormat) & "</li><br>")
-                            Debugger.AppendLine("<li><b>NoResultFormat: </b>" & Utility.HTMLEncode(sNoResultFormat) & "</li><br>")
-                            Debugger.AppendLine("<li><b>SelFormat: </b>" & Utility.HTMLEncode(sSelFormat) & "</li><br>")
-                            Debugger.AppendLine("<li><b>SelField: </b>" & Utility.HTMLEncode(sSelField) & "</li><br>")
-                            Debugger.AppendLine("<li><b>SelItems: </b>" & Utility.HTMLEncode(sSelItems) & "</li><br>")
-                        End If
+                    If bDebug Then
+                        Debugger.AppendLine("<li><b>Header: </b>" & Utility.HTMLEncode(sHeader) & "</li><br>")
+                        Debugger.AppendLine("<li><b>Format: </b>" & Utility.HTMLEncode(sFormat) & "</li><br>")
+                        Debugger.AppendLine("<li><b>AltFormat: </b>" & Utility.HTMLEncode(sAltFormat) & "</li><br>")
+                        Debugger.AppendLine("<li><b>Footer: </b>" & Utility.HTMLEncode(sFooter) & "</li><br>")
+                        Debugger.AppendLine("<li><b>NoQueryFormat: </b>" & Utility.HTMLEncode(sNoQueryFormat) & "</li><br>")
+                        Debugger.AppendLine("<li><b>NoResultFormat: </b>" & Utility.HTMLEncode(sNoResultFormat) & "</li><br>")
+                        Debugger.AppendLine("<li><b>SelFormat: </b>" & Utility.HTMLEncode(sSelFormat) & "</li><br>")
+                        Debugger.AppendLine("<li><b>SelField: </b>" & Utility.HTMLEncode(sSelField) & "</li><br>")
+                        Debugger.AppendLine("<li><b>SelItems: </b>" & Utility.HTMLEncode(sSelItems) & "</li><br>")
+                        Debugger.AppendLine("<li><b>ToJSON: </b>" & Utility.HTMLEncode(sJSON) & "</li><br>")
+                    End If
 
 
-                        If sQuery Is Nothing OrElse sQuery.Length = 0 Then
-                            sbvalue.Append(sNoQueryFormat)
-                        ElseIf Not sFormat Is Nothing AndAlso sFormat.Length > 0 Then
-                            Dim dt As DataTable = Nothing, iTable As Integer = 0  'Use to iterate through tables
-                            Dim drSub As DataRow = Nothing, iIndex As Integer = -1
-                            Dim isAlternate As Boolean = False
-                            Dim dc As DataColumn = Nothing
-
-                            If Not DS Is Nothing AndAlso DS.Tables.Count > 0 AndAlso DS.Tables(0).Rows.Count > 0 Then
-                                dt = DS.Tables(iTable)
-                                'RENDER HEADER
-                                'WE MAY HAVE TO ADD THE DATA TABLE INTO THE SHAREDDS.. BUT THIS IS NOT OPTIMAL
-                                'If SharedDS.Tables.Contains(sName) Then
-                                '    SharedDS.Tables.Remove(sName)
-                                'End If
-                                'dt.TableName = sName
-                                'SharedDS.Tables.Add(dt.Clone)
-
-                                Dim sRep As String
-                                If Not sHeader Is Nothing AndAlso sHeader.Length > 0 Then
-                                    sRep = sHeader
-                                    Caller.RenderString(-2, sRep, startvalues, endvalues, escapechar, SharedDS, drSub, RuntimeMessages, False, False, NullReturn:=NullReturn, ProtectSession:=ProtectSession, SessionDelimiter:=SessionDelimiter, useSessionQuotes:=useSessionQuotes, DebugWriter:=Debugger)
-                                    sbvalue.Append(sRep)
+                    If sQuery Is Nothing OrElse sQuery.Length = 0 Then
+                        sbvalue.Append(sNoQueryFormat)
+                    ElseIf Not sJSON Is Nothing AndAlso sJSON.Length > 0 Then
+                        Dim jsonNames As String() = sJSON.Split(",")
+                        If Not DS Is Nothing AndAlso DS.Tables.Count > 0 Then
+                            Dim xi As Integer
+                            For xi = 0 To DS.Tables.Count - 1
+                                If (xi > 0) Then
+                                    sbvalue.Append(",")
                                 End If
-
-                                For Each drSub In dt.Rows
-                                    sRep = ""
-
-                                    If Not isAlternate Or (sAltFormat = "") Then
-                                        sRep = sFormat
-                                    ElseIf isAlternate And (sAltFormat <> "") Then
-                                        sRep = sAltFormat
-                                    End If
-                                    If sSelField <> "" AndAlso sSelFormat <> "" AndAlso arrSelItems.Count > 0 Then
-                                        Dim sSelValue As String = Utility.CNullData(drSub, sSelField)
-                                        If arrSelItems.Contains(sSelValue) Then
-                                            sRep = sSelFormat
-                                        End If
-                                    End If
-
-                                    'RenderString(0, sRep, startvalues, endvalues, escapechar, DSSub, dr, RuntimeMessages, False, False, NullReturn:=NullReturn, ProtectSession:=ProtectSession, SessionDelimiter:=SessionDelimiter, useSessionQuotes:=useSessionQuotes, Debugger:=Debugger)
-                                    'VERSION: 1.9.9 - Changed Subquery Rendering to include Header, Footer, NoQuery, NoResult and modified to include the Index (negative) to force alternate to work as prescribed.
-                                    Caller.RenderString(iIndex, sRep, startvalues, endvalues, escapechar, SharedDS, drSub, RuntimeMessages, False, False, NullReturn:=NullReturn, ProtectSession:=ProtectSession, SessionDelimiter:=SessionDelimiter, useSessionQuotes:=useSessionQuotes, DebugWriter:=Debugger)
-
-                                    sbvalue.Append(sRep)
-                                    iIndex -= 1
-                                    isAlternate = Not isAlternate
-                                Next
-
-                                'RENDER FOOT
-                                If Not sFooter Is Nothing AndAlso sFooter.Length > 0 Then
-                                    sRep = sFooter
-                                    Caller.RenderString(iIndex, sRep, startvalues, endvalues, escapechar, SharedDS, drSub, RuntimeMessages, False, False, NullReturn:=NullReturn, ProtectSession:=ProtectSession, SessionDelimiter:=SessionDelimiter, useSessionQuotes:=useSessionQuotes, DebugWriter:=Debugger)
-                                    sbvalue.Append(sRep)
+                                Dim dname As String = jsonNames(0)
+                                If (xi < jsonNames.Length) Then
+                                    dname = jsonNames(xi)
                                 End If
-                                'SharedDS.Tables.Remove(sName)
-                            Else
-                                'NO RESULT
-                                sbvalue.Append(sNoResultFormat)
+                                sbvalue.Append("{""" + dname + """:")
+                                sbvalue.Append(JSON.JsonDataTable.ConvertTableToJson(DS.Tables(xi)))
+                                sbvalue.Append("}")
+                            Next
+                        End If
+                    ElseIf Not sFormat Is Nothing AndAlso sFormat.Length > 0 Then
+                        Dim dt As DataTable = Nothing, iTable As Integer = 0  'Use to iterate through tables
+                        Dim drSub As DataRow = Nothing, iIndex As Integer = -1
+                        Dim isAlternate As Boolean = False
+                        Dim dc As DataColumn = Nothing
+
+                        If Not DS Is Nothing AndAlso DS.Tables.Count > 0 AndAlso DS.Tables(0).Rows.Count > 0 Then
+                            dt = DS.Tables(iTable)
+                            'RENDER HEADER
+                            'WE MAY HAVE TO ADD THE DATA TABLE INTO THE SHAREDDS.. BUT THIS IS NOT OPTIMAL
+                            'If SharedDS.Tables.Contains(sName) Then
+                            '    SharedDS.Tables.Remove(sName)
+                            'End If
+                            'dt.TableName = sName
+                            'SharedDS.Tables.Add(dt.Clone)
+
+                            Dim sRep As String
+                            If Not sHeader Is Nothing AndAlso sHeader.Length > 0 Then
+                                sRep = sHeader
+                                Caller.RenderString(-2, sRep, startvalues, endvalues, escapechar, SharedDS, drSub, RuntimeMessages, False, False, NullReturn:=NullReturn, ProtectSession:=ProtectSession, SessionDelimiter:=SessionDelimiter, useSessionQuotes:=useSessionQuotes, DebugWriter:=Debugger)
+                                sbvalue.Append(sRep)
                             End If
+
+                            For Each drSub In dt.Rows
+                                sRep = ""
+
+                                If Not isAlternate Or (sAltFormat = "") Then
+                                    sRep = sFormat
+                                ElseIf isAlternate And (sAltFormat <> "") Then
+                                    sRep = sAltFormat
+                                End If
+                                If sSelField <> "" AndAlso sSelFormat <> "" AndAlso arrSelItems.Count > 0 Then
+                                    Dim sSelValue As String = Utility.CNullData(drSub, sSelField)
+                                    If arrSelItems.Contains(sSelValue) Then
+                                        sRep = sSelFormat
+                                    End If
+                                End If
+
+                                'RenderString(0, sRep, startvalues, endvalues, escapechar, DSSub, dr, RuntimeMessages, False, False, NullReturn:=NullReturn, ProtectSession:=ProtectSession, SessionDelimiter:=SessionDelimiter, useSessionQuotes:=useSessionQuotes, Debugger:=Debugger)
+                                'VERSION: 1.9.9 - Changed Subquery Rendering to include Header, Footer, NoQuery, NoResult and modified to include the Index (negative) to force alternate to work as prescribed.
+                                Caller.RenderString(iIndex, sRep, startvalues, endvalues, escapechar, SharedDS, drSub, RuntimeMessages, False, False, NullReturn:=NullReturn, ProtectSession:=ProtectSession, SessionDelimiter:=SessionDelimiter, useSessionQuotes:=useSessionQuotes, DebugWriter:=Debugger)
+
+                                sbvalue.Append(sRep)
+                                iIndex -= 1
+                                isAlternate = Not isAlternate
+                            Next
+
+                            'RENDER FOOT
+                            If Not sFooter Is Nothing AndAlso sFooter.Length > 0 Then
+                                sRep = sFooter
+                                Caller.RenderString(iIndex, sRep, startvalues, endvalues, escapechar, SharedDS, drSub, RuntimeMessages, False, False, NullReturn:=NullReturn, ProtectSession:=ProtectSession, SessionDelimiter:=SessionDelimiter, useSessionQuotes:=useSessionQuotes, DebugWriter:=Debugger)
+                                sbvalue.Append(sRep)
+                            End If
+                            'SharedDS.Tables.Remove(sName)
+                        Else
+                            'NO RESULT
+                            sbvalue.Append(sNoResultFormat)
                         End If
+                    End If
                 Catch ex As Exception
                     If bDebug Then
                         Debugger.AppendLine("<span style=""color: #FF0000; font-weight: bold;"">Error: </span>" & Utility.HTMLEncode(ex.Message) & "<br>" & Utility.HTMLEncode(ex.StackTrace) & "<br>")

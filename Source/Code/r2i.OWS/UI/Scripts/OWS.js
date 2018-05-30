@@ -923,15 +923,15 @@ this.GetForm = function GetForm(fobj)
 					else
 	    				eval('this.items[\'o' + TM + '\'].xml.onreadystatechange = function() {ows.FetchEnd(\'' + TM + '\');}');
 					*/
-					if (targetobjectid!=null) {
-						var _tm=TM;
-						var _targetobjectid=targetobjectid;
-						var _ignoreresultstats=ignoreResultStats;
-						this.items['o'+TM].xml.onreadystatechange = function(){
-							if (_targetobjectid!=null) ows.FetchEnd(_tm,_targetobjectid,_ignoreresultstats);
-							else ows.FetchEnd(_tm); 
-						}
-					}
+                    if (targetobjectid!=null) {
+                        var _tm=TM;
+                        var _targetobjectid=targetobjectid;
+                        var _ignoreresultstats=ignoreResultStats;
+                        this.items['o'+TM].xml.onreadystatechange = function(){
+                            if (_targetobjectid!=null) ows.FetchEnd(_tm,_targetobjectid,_ignoreresultstats);
+                            else ows.FetchEnd(_tm);
+                        }
+                    }
 					this.items['o'+TM].xml.open("POST", url + '&RA=' + random_num, true);
 					this.items['o'+TM].xml.setRequestHeader("Content-Type","application/x-www-form-urlencoded; charset=UTF-8");
 					this.items['o'+TM].xml.send(fstr);

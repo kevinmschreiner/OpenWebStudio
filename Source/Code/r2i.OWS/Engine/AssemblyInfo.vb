@@ -29,14 +29,14 @@ Imports System.Security
 ' associated with an assembly.
 ' Review the values of the assembly attributes
 <Assembly: AssemblyTitle("r2i.OWS.Engine")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("R2 Integrated Inc. ( http://www.r2integrated.com )")> 
-<Assembly: AssemblyProduct("Open Web Studio")> 
-<Assembly: AssemblyCopyright("Copyright 2011 R2i.ntegrated Inc.")> 
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("OpenWebStudio ( http://www.openwebstudio.com )")>
+<Assembly: AssemblyProduct("Open Web Studio")>
+<Assembly: AssemblyCopyright("Copyright 2018 OpenWebStudio")>
 <Assembly: AssemblyTrademark("Open Web Studio")> 
 <Assembly: CLSCompliant(True)> 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("B242CC5C-FF9E-45AC-9EA4-D043AA1AE614")> 
+<Assembly: Guid("B242CC5C-FF9E-45AC-9EA4-D043AA1AE614")>
 ' Version information for an assembly consists of the following four values:
 '      Major Version
 '      Minor Version 
@@ -44,8 +44,8 @@ Imports System.Security
 '      Revision
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
-<Assembly: AssemblyVersion("02.02.16.00")>
+<Assembly: AssemblyVersion("02.03.00.00")>
 
-<Assembly: AssemblyFileVersion("02.02.16.00")>
+<Assembly: AssemblyFileVersion("02.03.00.00")>
 
 <Assembly: AllowPartiallyTrustedCallers()>

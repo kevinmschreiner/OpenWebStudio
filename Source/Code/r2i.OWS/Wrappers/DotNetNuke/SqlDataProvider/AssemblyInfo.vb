@@ -28,14 +28,14 @@ Imports System.Runtime.InteropServices
 ' associated with an assembly.
 ' Review the values of the assembly attributes
 <Assembly: AssemblyTitle("r2i.OWS.Wrapper.Dotnetnuke Data Provider")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("R2 Integrated Inc. ( http://www.r2integrated.com )")> 
-<Assembly: AssemblyProduct("Open Web Studio")> 
-<Assembly: AssemblyCopyright("Copyright 2008 R2i.ntegrated Inc.")> 
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("OpenWebStudio ( http://www.openwebstudio.com )")>
+<Assembly: AssemblyProduct("Open Web Studio")>
+<Assembly: AssemblyCopyright("Copyright 2018 OpenWebStudio")>
 <Assembly: AssemblyTrademark("Open Web Studio")> 
 <Assembly: CLSCompliant(True)> 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("453F7808-7C13-4B8A-A480-6700BED660B3")> 
+<Assembly: Guid("453F7808-7C13-4B8A-A480-6700BED660B3")>
 ' Version information for an assembly consists of the following four values:
 '      Major Version
 '      Minor Version 
@@ -43,7 +43,7 @@ Imports System.Runtime.InteropServices
 '      Revision
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
-<Assembly: AssemblyVersion("02.02.16.00")>
+<Assembly: AssemblyVersion("02.03.00.00")>
 
-<Assembly: AssemblyFileVersion("02.02.16.00")>
+<Assembly: AssemblyFileVersion("02.03.00.00")>
 

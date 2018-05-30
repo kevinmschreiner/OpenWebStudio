@@ -1848,6 +1848,7 @@ function onGeneralLoad(template,action)
 	var vAjaxM = $('chkEnableAjaxManual');
 	var vAjaxPH = $('chkAjaxPageHistory');
 	var vAjaxCPH = $('txtAjaxPageHistory');
+	var vnoOWSCreate = $('chknoOWSCreate');
 	var vAjaxCS = $('chkAjaxCustomStatus');
 	var vAjacCP = $('chkAjaxCustomPaging');
 	var vAjaxAuto = $('txtAjaxAutoRefresh');
@@ -1887,7 +1888,8 @@ function onGeneralLoad(template,action)
 	sysSetCheck(vAjaxM,configuration.enableAJAXManual);
 	sysSetCheck(vAjaxPaging,configuration.enableAJAXPaging);
 	sysSetCheck(vAjaxPH,configuration.enableAJAXPageHistory);
-	sysSetText(vAjaxCPH,configuration.customAJAXPageHistory);
+	sysSetText(vAjaxCPH, configuration.customAJAXPageHistory);
+	sysSetText(vnoOWSCreate, configuration.noOWSCreate);
 	sysSetCheck(vAjaxCS,configuration.enableAJAXCustomStatus);
 	sysSetCheck(vAjacCP,configuration.enableAJAXCustomPaging);
 	sysSetText(vAjaxAuto,configuration.autoRefreshInterval);
@@ -1972,6 +1974,7 @@ function onGeneralSave(template,action)
 	var vAjaxPaging = $('chkEnableAjaxPaging');
 	var vAjaxM = $('chkEnableAjaxManual');
 	var vAjaxPH = $('chkAjaxPageHistory');
+	var vnoOWSCreate = $('chknoOWSCreate');
 	var vAjaxCPH = $('txtAjaxPageHistory');
 	var vAjaxCS = $('chkAjaxCustomStatus');
 	var vAjacCP = $('chkAjaxCustomPaging');
@@ -2008,6 +2011,7 @@ function onGeneralSave(template,action)
 	configuration.enableAJAXPaging = sysGetCheck(vAjaxPaging);
 	configuration.enableAJAXManual = sysGetCheck(vAjaxM);
 	configuration.enableAJAXPageHistory = sysGetCheck(vAjaxPH);
+	configuration.noOWSCreate = sysGetCheck(vnoOWSCreate);
 	configuration.customAJAXPageHistory = sysGetText(vAjaxCPH);
 	configuration.enableAJAXCustomStatus = sysGetCheck(vAjaxCS);
 	configuration.enableAJAXCustomPaging = sysGetCheck(vAjacCP);
@@ -2378,8 +2382,9 @@ return {
     " <TR>" +
     "  <TD class=\"SubHead\" vAlign=\"top\" align=\"right\" width=\"200\">Options:&nbsp;</TD>" +
     "  <TD class=\"Normal\" style=\"HEIGHT: 19px\">" +
-	"   <div style=\"display: none;\"><input type=checkbox id=\"chkUseListX\" style=\"left-margin: -2px\">Use the ListX Script tags, in place of Open Script</div>" +
+    "   <div style=\"display: none;\"><input type=checkbox id=\"chkUseListX\" style=\"left-margin: -2px\">Use the ListX Script tags, in place of Open Script</div>" +
     "   <div><input type=checkbox id=\"chkUseExplicit\" style=\"left-margin: -2px\">Use Explicit System Variables [Name,System] or [*Name]</div>" +
+    "   <div><input type=checkbox id=\"chknoOWSCreate\" style=\"left-margin: -2px\">Suppress creation of ows tokens and ows.create calls. OWS will only operate with standard callbacks and no ows.js support.</div>" +
     "   <div style=\"display: none;\"><input type=checkbox checked=\"checked\" id=\"chkUseAdvancedParsing\" style=\"left-margin: -2px\">Use Advanced Parsing (Not Backwards Compatible)</div>" +
     "   <div><input type=checkbox id=\"chkUseCompoundIIFConditions\" style=\"left-margin: -2px\">Use Compound Conditions and Math in IIF tags</div>" +
     "   <div><input type=checkbox id=\"chkUseGoSplit\" style=\"left-margin: -2px\">Use Query Command Separation on GO</div>" +
@@ -2790,6 +2795,7 @@ var sysAction_Types = [
       "<option value=\"compress\">Compress Source into Target</option>" +	  
       "<option value=\"csv\">CSV Delimited (SQL Source Only)</option>" +
       "<option value=\"tab\">Tab Delimited (SQL Source Only)</option>" +
+      "<option value=\"semicolon\">Semicolon Delimited (SQL Source Only)</option>" +
      "</select></div>" +
      "</td>" +
     "</tr>" +	
@@ -2933,6 +2939,7 @@ var sysAction_Types = [
       "<option value=\"&amp;lt;Module Setting&amp;gt;\">&lt;Module Setting&gt;</option>" +
       "<option value=\"&amp;lt;Tab Module Setting&amp;gt;\">&lt;Tab Module Setting&gt;</option>" +
       "<option value=\"&amp;lt;UserInfo&amp;gt;\">&lt;UserInfo&gt;</option>" +
+      "<option value=\"&amp;lt;SharedCache&amp;gt;\">&lt;SharedCache&gt;</option>" +
       "<option value=\"&amp;lt;System&amp;gt;\">&lt;System&gt;</option>" +
       "<option value=\"CONTROL.HEADER\">Control.Header</option>" +   
       "<option value=\"CONTROL.FOOTER\">Control.Footer</option>" +   
@@ -3311,6 +3318,7 @@ var sysAction_Types = [
       "<option value=\"&lt;Message&gt;\">&lt;Message&gt;</option>" +
 	  "<option value=\"&lt;QueryString&gt;\">&lt;QueryString&gt;</option>" +
       "<option value=\"&lt;Session&gt;\">&lt;Session&gt;</option>" +
+      "<option value=\"&lt;SharedCache&gt;\">&lt;SharedCache&gt;</option>" +
       "<option value=\"&lt;ViewState&gt;\">&lt;ViewState&gt;</option>" +
       "<option value=\"TabId\">TabId</option>" +
       "<option value=\"ModuleId\">ModuleId</option>" +

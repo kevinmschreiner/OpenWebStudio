@@ -83,41 +83,47 @@ Namespace r2i.OWS.Framework.Utilities.JSON
         ''' <param name="path">JSON object path ie</param> 
         ''' <returns>The best effort at find the new node</returns> 
         Public Shared Function getJsonNode(ByVal o As Object, ByVal path As String) As Object
-            For Each item As String In path.Split("."c)
-                If item.Length = 0 Then
-                    Exit For
-                End If
-                If o IsNot Nothing Then
-                    If item.IndexOf("["c) >= 0 Then
-                        If item.IndexOf("["c) = 0 Then
-                            If o.[GetType]() Is GetType(JavaScriptArray) Then
-                                Dim itemX As Integer = Integer.Parse(item.Substring(1, item.Length - 2))
-                                o = DirectCast(o, JavaScriptArray)(itemX)
-                            End If
-                        Else
-                            Dim itemRoot As String = item.Substring(0, item.IndexOf("["c))
-                            Dim bracketIndex As Integer = item.IndexOf("["c)
-                            If o.[GetType]() Is GetType(JavaScriptObject) Then
-                                o = DirectCast(o, JavaScriptObject)(itemRoot)
-                            End If
-                            If o.[GetType]() Is GetType(JavaScriptArray) Then
-                                Dim itemX As Integer = Integer.Parse(item.Substring(bracketIndex + 1, item.Length - 2 - bracketIndex))
-                                If DirectCast(o, JavaScriptArray).Count > itemX Then
+            If Not path.ToLower() = "tojson()" Then
+                For Each item As String In path.Split("."c)
+                    If item.Length = 0 Then
+                        Exit For
+                    End If
+                    If o IsNot Nothing Then
+                        If item.IndexOf("["c) >= 0 Then
+                            If item.IndexOf("["c) = 0 Then
+                                If o.[GetType]() Is GetType(JavaScriptArray) Then
+                                    Dim itemX As Integer = Integer.Parse(item.Substring(1, item.Length - 2))
                                     o = DirectCast(o, JavaScriptArray)(itemX)
-                                Else
-                                    o = Nothing
+                                End If
+                            Else
+                                Dim itemRoot As String = item.Substring(0, item.IndexOf("["c))
+                                Dim bracketIndex As Integer = item.IndexOf("["c)
+                                If o.[GetType]() Is GetType(JavaScriptObject) Then
+                                    o = DirectCast(o, JavaScriptObject)(itemRoot)
+                                End If
+                                If o.[GetType]() Is GetType(JavaScriptArray) Then
+                                    Dim itemX As Integer = Integer.Parse(item.Substring(bracketIndex + 1, item.Length - 2 - bracketIndex))
+                                    If DirectCast(o, JavaScriptArray).Count > itemX Then
+                                        o = DirectCast(o, JavaScriptArray)(itemX)
+                                    Else
+                                        o = Nothing
+                                    End If
                                 End If
                             End If
-                        End If
-                    Else
-                        If o.[GetType]() Is GetType(JavaScriptObject) AndAlso DirectCast(o, JavaScriptObject).ContainsKey(item) Then
-                            o = DirectCast(o, JavaScriptObject)(item)
                         Else
-                            o = Nothing
+                            If o.[GetType]() Is GetType(JavaScriptObject) AndAlso DirectCast(o, JavaScriptObject).ContainsKey(item) Then
+                                o = DirectCast(o, JavaScriptObject)(item)
+                            Else
+                                o = Nothing
+                            End If
                         End If
                     End If
+                Next
+            Else
+                If Not o Is Nothing Then
+                    o = JavaScriptConvert.SerializeObject(o)
                 End If
-            Next
+            End If
             Return o
         End Function
     End Class

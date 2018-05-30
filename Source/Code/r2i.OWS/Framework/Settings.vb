@@ -48,6 +48,7 @@ Namespace r2i.OWS.Framework
 
         Private m_name As String
         Public recordsPerPage As Integer
+        Public noOWSCreate As Boolean
         Public enableAlphaFilter As Boolean
         Public enablePageSelection As Boolean
         Public enableRecordsPerPage As Boolean
@@ -423,6 +424,7 @@ Namespace r2i.OWS.Framework
             c.Title = src.Title
             c.Version = src.Version
             c.ResourceKey = src.ResourceKey
+            c.noOWSCreate = src.noOWSCreate
             'Me._RenderType As RenderType = RenderType.Default
             'Me._DelimiterChar = x
             'Me._FileName = x

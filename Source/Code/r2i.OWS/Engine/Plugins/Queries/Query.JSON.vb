@@ -118,6 +118,10 @@ Namespace r2i.OWS.Queries
                     Dim strPath As String = ""
                     Dim strAuthentication As String = ""
                     Dim strMethod_Get As String = ""
+                    Dim strLength As String = ""
+                    Dim strIndex As String = ""
+                    Dim strPage As String = ""
+                    Dim strSize As String = ""
                     Dim strMethod_Put As String = ""
                     Dim strMethod_Delete As String = ""
                     Dim strMethod_Soap As String = ""
@@ -138,6 +142,10 @@ Namespace r2i.OWS.Queries
                     strAuthentication = Utility.XMLPropertyParse_Quick(Query, "authentication")
                     strMethod_Post = Utility.XMLPropertyParse_Quick(Query, "post")
                     strMethod_Get = Utility.XMLPropertyParse_Quick(Query, "get")
+                    strLength = Utility.XMLPropertyParse_Quick(Query, "length")
+                    strIndex = Utility.XMLPropertyParse_Quick(Query, "index")
+                    strPage = Utility.XMLPropertyParse_Quick(Query, "page")
+                    strSize = Utility.XMLPropertyParse_Quick(Query, "size")
                     strMethod_put = Utility.XMLPropertyParse_Quick(Query, "put")
                     strMethod_delete = Utility.XMLPropertyParse_Quick(Query, "delete")
                     strMethod_Value = Utility.XMLPropertyParse_Quick(Query, "value")
@@ -440,16 +448,107 @@ Namespace r2i.OWS.Queries
                         End If
 
 
-                        Dim o As Object = JavaScriptConvert.DeserializeObject(strResult)
-                        o = JsonToDataset.getJsonNode(o, rootJSONPath)
+                        If rootJSONPath = "" AndAlso columnList.Count = 0 Then
+                            dt = New Data.DataTable()
+                            dt.Columns.Add("Value", GetType(String))
+                            Dim dr As Data.DataRow = dt.NewRow()
+                            dr("Value") = strResult
+                            dt.Rows.Add(dr)
+                            rslt.Value.Tables.Add(dt)
 
-                        If Not strResult_Action Is Nothing AndAlso strResult_Action.Length > 0 Then
-                            Caller.ActionVariables.Add(strResult_Action, o)
+                            Dim dt2 As New DataTable()
+                            dt2.Columns.Add("Count")
+                            Dim dr2 As DataRow = dt2.NewRow()
+                            dr2(0) = 1
+                            dt2.Rows.Add(dr2)
+                        Else
+                            Dim o As Object = JavaScriptConvert.DeserializeObject(strResult)
+
+                            Dim lenvalue As String = Nothing
+                            Try
+                                If Not strLength Is Nothing AndAlso strLength.Length > 0 Then
+                                    If o IsNot Nothing AndAlso o.[GetType]() Is GetType(JavaScriptObject) Then
+                                        Dim l As Object = JsonToDataset.getJsonNode(o, strLength)
+                                        If Not l Is Nothing AndAlso IsNumeric(l) Then
+                                            lenvalue = DirectCast(l, Int64).ToString()
+                                        End If
+                                    End If
+                                End If
+                            Catch ex As Exception
+
+                            End Try
+
+                            Dim indexvalue As String = Nothing
+                            Try
+                                If Not strIndex Is Nothing AndAlso strIndex.Length > 0 Then
+                                    If o IsNot Nothing AndAlso o.[GetType]() Is GetType(JavaScriptObject) Then
+                                        Dim l As Object = JsonToDataset.getJsonNode(o, strIndex)
+                                        If Not l Is Nothing AndAlso IsNumeric(l) Then
+                                            indexvalue = DirectCast(l, Int64).ToString()
+                                        End If
+                                    End If
+                                End If
+                            Catch ex As Exception
+
+                            End Try
+
+                            Dim pagevalue As String = Nothing
+                            Try
+                                If Not strPage Is Nothing AndAlso strPage.Length > 0 Then
+                                    If o IsNot Nothing AndAlso o.[GetType]() Is GetType(JavaScriptObject) Then
+                                        Dim l As Object = JsonToDataset.getJsonNode(o, strPage)
+                                        If Not l Is Nothing AndAlso IsNumeric(l) Then
+                                            pagevalue = DirectCast(l, Int64).ToString()
+                                        End If
+                                    End If
+                                End If
+                            Catch ex As Exception
+
+                            End Try
+
+                            Dim sizevalue As String = Nothing
+                            Try
+                                If Not strSize Is Nothing AndAlso strSize.Length > 0 Then
+                                    If o IsNot Nothing AndAlso o.[GetType]() Is GetType(JavaScriptObject) Then
+                                        Dim l As Object = JsonToDataset.getJsonNode(o, strSize)
+                                        If Not l Is Nothing AndAlso IsNumeric(l) Then
+                                            sizevalue = DirectCast(l, Int64).ToString()
+                                        End If
+                                    End If
+                                End If
+                            Catch ex As Exception
+
+                            End Try
+
+                            o = JsonToDataset.getJsonNode(o, rootJSONPath)
+
+                            If Not strResult_Action Is Nothing AndAlso strResult_Action.Length > 0 Then
+                                Caller.ActionVariables.Add(strResult_Action, o)
+                            End If
+
+                            dt = JsonToDataset.renderJsonObject(o, "Table1", columnList.ToArray(), columnMapping)
+                            rslt.Value.Tables.Add(dt)
+                            If Not lenvalue Is Nothing Then
+                                Dim dt2 As New DataTable()
+                                dt2.Columns.Add("Count")
+                                Dim dr2 As DataRow = dt2.NewRow()
+                                dr2(0) = lenvalue
+                                dt2.Rows.Add(dr2)
+                                rslt.Value.Tables.Add(dt2)
+                                If Not sizevalue Is Nothing AndAlso IsNumeric(sizevalue) Then
+                                    Caller.RecordsPerPage = Int32.Parse(sizevalue)
+                                End If
+                                If Not pagevalue Is Nothing AndAlso IsNumeric(pagevalue) Then
+                                    Caller.PageCurrent = Int32.Parse(pagevalue)
+                                Else
+                                    If Not indexvalue Is Nothing AndAlso IsNumeric(indexvalue) Then
+                                        If Caller.RecordsPerPage > 0 Then
+                                            Caller.PageCurrent = (Int32.Parse(indexvalue) / Caller.RecordsPerPage)
+                                        End If
+                                    End If
+                                End If
+                            End If
                         End If
-
-                        dt = JsonToDataset.renderJsonObject(o, "Table1", columnList.ToArray(), columnMapping)
-
-                        rslt.Value.Tables.Add(dt)
                     End If
                 End If
             Catch ex As Exception

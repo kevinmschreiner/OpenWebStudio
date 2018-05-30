@@ -207,6 +207,19 @@ Namespace r2i.OWS.Renderers
                             vr.Source = ""
                             b = True
                         End If
+                    Case "SHAREDCACHE"
+                        Dim val As String = Utility.CNullStr(Engine.SharedCache_Get(lhv))
+                        If Not val Is Nothing Then
+                            vr.Source = val
+                            Firewall.Firewall(vr.Source, False, firewallDirective, firewallList)
+                            b = True
+                        ElseIf NullOverride Then
+                            vr.Source = Nothing
+                            b = True
+                        ElseIf NullReturn Then
+                            vr.Source = ""
+                            b = True
+                        End If
                     Case "CONTEXT"
                         Dim val As String
                         If Caller.Context.Items.Contains(lhv) Then
@@ -605,6 +618,29 @@ Namespace r2i.OWS.Renderers
                                 Case "*ROWNUMBER", "ROWNUMBER", "ROWNUMBER,SYSTEM", "INDEX,SYSTEM"
                                     vr.Source = Index.ToString
                                     b = True
+                                Case "*STARTINDEX", "STARTINDEX", "STARTINDEX,SYSTEM", "STARTINDEX,SYSTEM"
+                                    Dim si As Integer
+                                    si = (Caller.PageCurrent + 1)
+                                    If (si > 1) Then
+                                        vr.Source = (Caller.PageCurrent * Caller.RecordsPerPage) + 1
+                                    Else
+                                        vr.Source = 1
+                                    End If
+                                    b = True
+                                Case "*ENDINDEX", "ENDINDEX", "ENDINDEX,SYSTEM", "ENDINDEX,SYSTEM"
+                                    Dim si As Integer
+                                    si = (Caller.PageCurrent + 1)
+                                    If (si > 1) Then
+                                        si = (Caller.PageCurrent * Caller.RecordsPerPage) + 1
+                                    Else
+                                        si = 1
+                                    End If
+                                    Dim ei As Integer = si + (Caller.RecordsPerPage - 1)
+                                    If ei > Caller.TotalRecords Then
+                                        ei = Caller.TotalRecords
+                                    End If
+                                    vr.Source = ei
+                                    b = True
                                 Case "*ROWS", "ROWS", "ROWS,SYSTEM"
                                     If Not DR Is Nothing Then
                                         vr.Source = DR.Table.Rows.Count
@@ -679,7 +715,11 @@ Namespace r2i.OWS.Renderers
                                     End If
                                     b = True
                                 Case "*USERID", "USERID", "USERID,SYSTEM"
-                                    vr.Source = Caller.UserID.ToString
+                                    If Not Caller.UserInfo Is Nothing Then
+                                        vr.Source = Caller.UserInfo.UserId.ToString
+                                    Else
+                                        vr.Source = Caller.UserID.ToString
+                                    End If
                                     b = True
                                 Case "*DATE", "DATE", "DATE,SYSTEM"
                                     vr.Source = Now.ToString

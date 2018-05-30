@@ -44,6 +44,9 @@ Namespace r2i.OWS.Formatters
                 ElseIf Formatter.ToLower.StartsWith("{decrypt_sha1") Then
                     type = "sha1"
                     key = Formatter.Substring(size + 4, Formatter.Length - (size + 5))
+                ElseIf Formatter.ToLower.StartsWith("{decrypt_hmacsha256") Then
+                    type = "hmacsha256"
+                    key = Formatter.Substring(size + 10, Formatter.Length - (size + 11))
                 ElseIf Formatter.ToLower.StartsWith("{decrypt_formsauthentication") Then
                 ElseIf Formatter.ToLower.StartsWith("{decrypt_rijndael") Then
                     type = "rijndael"
@@ -105,6 +108,11 @@ Namespace r2i.OWS.Formatters
                 crypto.Key = Convert.FromBase64String(key)
                 crypto.Vector = Convert.FromBase64String(vector)
                 Return crypto.Decrypt(value)
+            ElseIf encType = "hmacsha256" Then
+                Dim crypto As New OWS.Framework.Utilities.Security.Cryptography.HMACSHA256
+                crypto.Key = Convert.FromBase64String(key)
+                crypto.Vector = Convert.FromBase64String(vector)
+                Return crypto.Decrypt(value)
             Else
                 Return AbstractFactory.Instance.SecurityController.RenderString_Decrypt(key, value)
             End If
@@ -120,7 +128,7 @@ Namespace r2i.OWS.Formatters
         End Property
         Public Overrides ReadOnly Property RenderTags() As String()
             Get
-                Static str As String() = New String() {"decrypt", "decrypt_formsauthentication", "decrypt_md5", "decrypt_rc2", "decrypt_rijndael", "decrypt_tripledes", "decrypt_des"}
+                Static str As String() = New String() {"decrypt", "decrypt_formsauthentication", "decrypt_md5", "decrypt_rc2", "decrypt_rijndael", "decrypt_tripledes", "decrypt_des", "decrypt_hmacsha256"}
                 Return str
             End Get
         End Property

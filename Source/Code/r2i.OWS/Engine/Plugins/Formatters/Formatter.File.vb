@@ -196,11 +196,30 @@ Namespace r2i.OWS.Formatters
                                 If IO.File.Exists(Value) AndAlso (System.IO.File.GetAttributes(Value) And IO.FileAttributes.Directory) = 0 Then
                                     Source = System.Text.Encoding.UTF32.GetString(IO.File.ReadAllBytes(Value))
                                 End If
+                            Case "{FILE.BASE64}"
+                                If IO.File.Exists(Value) AndAlso (System.IO.File.GetAttributes(Value) And IO.FileAttributes.Directory) = 0 Then
+                                    Source = Convert.ToBase64String(IO.File.ReadAllBytes(Value))
+                                End If
                             Case "{FILE.LENGTH}", "{FILE.SIZE}"
                                 If IO.File.Exists(Value) AndAlso (System.IO.File.GetAttributes(Value) And IO.FileAttributes.Directory) = 0 Then
                                     Dim fio As New IO.FileInfo(Value)
                                     Source = fio.Length.ToString
                                 End If
+                            Case "{FILE.HASSIZE}", "{FILE.HASLENGTH}"
+                                Try
+                                    If IO.File.Exists(Value) AndAlso (System.IO.File.GetAttributes(Value) And IO.FileAttributes.Directory) = 0 Then
+                                        Dim fio As New IO.FileInfo(Value)
+                                        If fio.Length > 0 Then
+                                            Source = "True"
+                                        Else
+                                            Source = "False"
+                                        End If
+                                    Else
+                                        Source = "False"
+                                    End If
+                                Catch ex As Exception
+                                    Source = "False"
+                                End Try
                             Case "{FILE.CREATED}"
                                 If IO.File.Exists(Value) Then
                                     Source = IO.File.GetCreationTime(Value).ToString
@@ -227,7 +246,7 @@ Namespace r2i.OWS.Formatters
                 Static str As String() = New String() {"file", "file.folder", "file.version", "file.version.major", "file.version.minor", "file.version.build", "file.version.revision", _
                "file.version.product", "file.version.product.major", "file.version.product.minor", "file.version.product.build", "file.version.product.revision", "file.version.product.name", _
                "file.version.name", "file.version.comments", "file.version.company", "file.image", "file.image.width", "file.image.height", "file.image.rawformat", "file.image.horizontalresolution", _
-               "file.image.verticalresolution", "file.image.dimensions", "file.exists", "file.path", "file.name", "file.nameonly", "file.extension", "file.bytes", "file.length", "file.size", "file.created", "file.updated", "file.accessed", "file.image.orientation", "file.image.rotation"}
+               "file.image.verticalresolution", "file.image.dimensions", "file.exists", "file.path", "file.name", "file.nameonly", "file.extension", "file.bytes", "file.length", "file.size", "file.created", "file.updated", "file.accessed", "file.image.orientation", "file.image.rotation", "file.haslength", "file.hassize", "file.base64"}
                 Return str
             End Get
         End Property

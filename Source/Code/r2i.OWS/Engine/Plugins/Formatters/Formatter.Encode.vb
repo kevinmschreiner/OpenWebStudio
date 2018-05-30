@@ -63,6 +63,8 @@ Namespace r2i.OWS.Formatters
                     Case "UTF7", "UTF-7"
                         Source = System.Text.Encoding.UTF7.GetString(System.Text.UTF8Encoding.UTF8.GetBytes(Value))
                         'just for fun
+                    Case "QUERY"
+                        Source = Caller.RenderQuery(DS, FilterField, FilterText, Caller.RecordsPerPage, RuntimeMessages, Nothing, Value)
                     Case "PIGLATIN"
                         Source = PigLatinize(Value)
                     Case "BACKSLANG"

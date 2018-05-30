@@ -69,6 +69,14 @@ Partial Public Class [Module]
         Get
             Dim Actions As New ModuleActionCollection()
             'Actions.Add(GetNextActionID(), Localization.GetString(ModuleActionType.AddContent, LocalResourceFile), ModuleActionType.AddContent, "", "", EditUrl(), false, SecurityAccessLevel.Edit, true, false); 
+            Dim major As Integer = 0
+            Dim minor As Integer = 0
+
+            GetHostVersion(major, minor)
+            If (major >= 7) Then
+                PopulateActionMenu(Actions, True)
+            End If
+
             Return Actions
         End Get
     End Property
@@ -116,11 +124,23 @@ Partial Public Class [Module]
             Next
         End If
     End Sub
-    Private Sub PopulateActionMenu(ByVal Actions As DotNetNuke.Entities.Modules.Actions.ModuleActionCollection)
+    Private Shared Sub GetHostVersion(ByRef major As Integer, ByRef minor As Integer)
+        Dim ass As System.Reflection.Assembly = System.Reflection.Assembly.GetAssembly(GetType(DotNetNuke.Common.Globals))
+        minor = ass.GetName().Version.Minor
+        major = ass.GetName().Version.Major
+    End Sub
+    Private Sub PopulateActionMenu(ByVal Actions As DotNetNuke.Entities.Modules.Actions.ModuleActionCollection, Optional ByVal override As Boolean = False)
+        Dim major As Integer = 0
+        Dim minor As Integer = 0
+
+        GetHostVersion(major, minor)
+
         'POPULATE THIS AND CACHE IT BASED ON THE OLD STYLE METHODS
-        If Actions IsNot Nothing Then
-            If Not ows Is Nothing Then
-                RecursivePopulateActionMenu(Actions, ows.MenuItems)
+        If (major < 7 OrElse override) Then
+            If (Actions IsNot Nothing) AndAlso Me.IsEditable Then
+                If Not ows Is Nothing Then
+                    RecursivePopulateActionMenu(Actions, ows.MenuItems)
+                End If
             End If
         End If
     End Sub

@@ -227,6 +227,40 @@ Namespace r2i.OWS.Actions
                         If Not Debugger Is Nothing Then
                             r2i.OWS.Framework.Debugger.ContinueDebugMessage(Debugger, "Assignment: ViewState[" & strName & "] = '" & Caller.Engine.ViewState.Item(strName) & "'", True)
                         End If
+                    Case "<SharedCache>"
+                        Dim cValue As Object = Nothing
+                        Dim xValue As Object = Nothing
+                        Select Case iAssignmentType
+                            Case 0
+                                If strValue Is Nothing OrElse strValue.Length = 0 Then
+                                    '_Engine.ViewState.Item(strName) = Nothing
+                                    Engine.SharedCache_Remove(strName)
+
+                                    If Not Debugger Is Nothing Then
+                                        r2i.OWS.Framework.Debugger.ContinueDebugMessage(Debugger, "Assignment: SharedCache[" & strName & "] = Nothing", True)
+                                    End If
+                                Else
+                                    xValue = strValue
+                                End If
+                            Case 1
+                                cValue = Engine.SharedCache_Get(strName)
+                                If (cValue Is Nothing) Then cValue = ""
+                                xValue = cValue & strValue
+                            Case 3
+                                cValue = Engine.SharedCache_Get(strName)
+                                If (cValue Is Nothing) Then cValue = ""
+                                xValue = strValue & cValue
+                            Case 2
+                                cValue = Engine.SharedCache_Get(strName)
+                                If (cValue Is Nothing) Then cValue = 0.0
+                                xValue = CType(cValue, Double) + CType(strValue, Double)
+                        End Select
+                        Engine.SharedCache_Set(strName, xValue)
+
+
+                        If Not Debugger Is Nothing Then
+                            r2i.OWS.Framework.Debugger.ContinueDebugMessage(Debugger, "Assignment: SharedCache[" & strName & "] = '" & Engine.SharedCache_Get(strName) & "'", True)
+                        End If
                     Case "<Cache>"
                         Dim cValue As Object = Nothing
                         Dim xValue As Object = Nothing
@@ -611,6 +645,10 @@ Namespace r2i.OWS.Actions
                                                 End If
                                             Else
                                                 '                                            CType(Page, PageBase).SetLanguage(objUserInfo.Profile.PreferredLocale)
+                                                UserObject = UserControl.GetUser(Caller.Engine.PortalSettings.PortalId, result)
+                                                Caller.Engine.ActionVariable("~!UserInformation!~") = UserObject
+                                                Caller.Engine.CurrentUser = UserObject
+                                                Caller.Engine.UserID = UserObject.UserId
                                                 result = 1
                                             End If
                                         Else
@@ -634,6 +672,9 @@ Namespace r2i.OWS.Actions
                                 ElseIf strValue.ToUpper.StartsWith("LOGOFF") Then
                                     Dim SecurityControl As ISecurityController = AbstractFactory.Instance.SecurityController
                                     SecurityControl.UserLogoff()
+                                    Caller.Engine.CurrentUser = Nothing
+                                    Caller.Engine.UserID = "-1"
+                                    Caller.Engine.UserInfo = Nothing
                                 ElseIf strValue.ToUpper.StartsWith("AUTHENTICATE") Then
                                     'FORCE THE LOGIN PROCESS AS DNN HANDLES IT.
                                     'Version: 1.9.8 - Authentication and Login for User via Message Assignment. Result -3 (Not Loaded), -2 (Unknown), -1 (Unapproved), 0 (Locked Out), 1 (Success)
@@ -664,6 +705,8 @@ Namespace r2i.OWS.Actions
                                         Case 0
                                             resultstr = "User Locked Out"
                                         Case 1
+                                            Caller.Engine.CurrentUser = UserObject
+                                            Caller.Engine.UserID = UserObject.UserId
                                             resultstr = ""
                                     End Select
                                     Caller.Engine.ActionVariable(variabletargetname) = result
@@ -691,6 +734,7 @@ Namespace r2i.OWS.Actions
                                             If UserObject.Id = Caller.Engine.UserID Then
                                                 If UserObject.Id <> "-1" Then
                                                     Caller.Engine.UserInfo = UserObject
+                                                    Caller.Engine.UserID = UserObject.UserId
                                                 End If
                                             End If
                                             Caller.Engine.ActionVariable("~!UserInformation!~") = ""
@@ -1101,6 +1145,12 @@ Namespace r2i.OWS.Actions
                                         Caller.Engine.xls.enableAJAXPaging = True
                                     Else
                                         Caller.Engine.xls.enableAJAXPaging = False
+                                    End If
+                                Case "NOOWSCREATE"
+                                    If strValue.ToUpper.StartsWith("T") OrElse strValue = "1" Then
+                                        Caller.Engine.xls.noOWSCreate = True
+                                    Else
+                                        Caller.Engine.xls.noOWSCreate = False
                                     End If
                                 Case "ENABLEALPHAFILTER"
                                     If strValue.ToUpper.StartsWith("T") OrElse strValue = "1" Then

@@ -260,7 +260,7 @@ Namespace r2i.OWS
             Me.TabModuleID = TabModuleID
             Me.ClientID = ClientID
             Me.ConfigurationID = ConfigurationId
-            UserInfo = curUserInfo
+            CurrentUser = curUserInfo
             Me.ModuleIsEditable = canEdit
 
             If isAjax Then
@@ -274,10 +274,6 @@ Namespace r2i.OWS
             Me.CapturedMessages = CapturedMessages
             Me.mDebugWriter = DebugWriter
 
-            If Not UserInfo Is Nothing Then
-                'UserID = UserInfo.UserID
-                UserID = UserInfo.Id
-            End If
             If Not PortalSettings Is Nothing Then
                 Me.PortalID = PortalSettings.PortalId
             End If
@@ -285,7 +281,20 @@ Namespace r2i.OWS
 
             Initialize()
         End Sub
-
+        Public Overrides Property CurrentUser As Framework.DataAccess.IUser
+            Get
+                Return MyBase.UserInfo
+            End Get
+            Set(ByVal value As Framework.DataAccess.IUser)
+                If Not value Is Nothing Then
+                    MyBase.UserInfo = value
+                    MyBase.UserID = MyBase.UserInfo.UserId
+                Else
+                    MyBase.UserInfo = Nothing
+                    MyBase.UserID = -1
+                End If
+            End Set
+        End Property
         'KMS - Added to reduce the memory utilization after disposal. This may cause problems with threaded OWS modules.
         Public Overloads Sub Dispose()
             _ActionVariables = Nothing

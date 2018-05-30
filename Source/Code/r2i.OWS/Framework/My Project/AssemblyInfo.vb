@@ -28,10 +28,10 @@ Imports System.Runtime.InteropServices
 ' associated with an assembly.
 ' Review the values of the assembly attributes
 <Assembly: AssemblyTitle("r2i.OWS.Framework")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("R2 Integrated Inc. ( http://www.r2integrated.com )")> 
-<Assembly: AssemblyProduct("Open Web Studio")> 
-<Assembly: AssemblyCopyright("Copyright 2008 R2i.ntegrated Inc.")> 
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("OpenWebStudio ( http://www.openwebstudio.com )")>
+<Assembly: AssemblyProduct("Open Web Studio")>
+<Assembly: AssemblyCopyright("Copyright 2018 OpenWebStudio")>
 <Assembly: AssemblyTrademark("Open Web Studio")> 
 <Assembly: CLSCompliant(True)> 
 <Assembly: ComVisible(False)>
@@ -44,8 +44,8 @@ Imports System.Runtime.InteropServices
 '      Revision
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
-<Assembly: System.Security.AllowPartiallyTrustedCallers()> 
-<Assembly: AssemblyVersion("02.02.16.00")>
+<Assembly: System.Security.AllowPartiallyTrustedCallers()>
+<Assembly: AssemblyVersion("02.03.00.00")>
 
-<Assembly: AssemblyFileVersion("02.02.16.00")>
+<Assembly: AssemblyFileVersion("02.03.00.00")>
 

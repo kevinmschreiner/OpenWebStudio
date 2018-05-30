@@ -1634,13 +1634,16 @@ Namespace r2i.OWS.UI
                 Try
                     _engine.CurrentPage = Me.PageNumber
                     _engine.RecordsPerPage = Me.RecordsPerPage
-                    Render_Scripts(sb)
                     If Not Configuration Is Nothing Then
                         'Generate the Javascript References
                         '//****BuildJavascript()
                         Control_ExecuteActions()
                         Me.PageNumber = _engine.PageCurrent
                         Me.RecordsPerPage = _engine.RecordsPerPage
+                        If Configuration.noOWSCreate Then
+                            SuppressAJAX = True
+                        End If
+                        Render_Scripts(sb)
                     End If
                 Catch ex As Exception
                     'ProcessModuleLoadException(Me, ex)
@@ -1886,29 +1889,31 @@ Namespace r2i.OWS.UI
             sectionInclusions = r2i.OWS.Framework.Config.Items(Config.Section.Wrapper, Config.SectionType.UI)
             If Not sectionInclusions Is Nothing AndAlso sectionInclusions.Count > 0 Then
                 For Each sectionInclude In sectionInclusions
-                    If Not Page.ClientScript.IsClientScriptBlockRegistered("OWS." & sectionInclude.Name) Then
-                        If sectionInclude.Name.ToUpper = "OWS.UTILITIES" Then
-                            If Configuration.includeJavascriptUtilities Then
-                                Me.RegisterScriptBlock("OWS." & sectionInclude.Name, "<script type=""text/javascript"" src=""" & Me.BasePath & sectionInclude.Type & "?v=" & r2i.OWS.UI.OpenControlBase._JAVASCRIPTVERSION & """></script>")
-                            End If
-                        ElseIf sectionInclude.Name.ToUpper = "OWS.VALIDATION" Then
-                            If Configuration.includeJavascriptValidation Then
-                                Me.RegisterScriptBlock("OWS." & sectionInclude.Name, "<script type=""text/javascript"" src=""" & Me.BasePath & sectionInclude.Type & "?v=" & r2i.OWS.UI.OpenControlBase._JAVASCRIPTVERSION & """></script>")
-                            End If
-                        Else
-                            If (Not sectionInclude.Required Is Nothing AndAlso sectionInclude.Required.ToLower = "true") OrElse (Not Configuration.javascriptInclude Is Nothing AndAlso Array.IndexOf(Configuration.javascriptInclude, sectionInclude.Name) >= 0) Then
-                                If sectionInclude.Path Is Nothing OrElse sectionInclude.Path.Length = 0 Then
-                                    sectionInclude.Path = Me.BasePath
+                    If Not sectionInclude.Name.ToLower = "ows.general" Or Not SuppressAJAX Then
+                        If Not Page.ClientScript.IsClientScriptBlockRegistered("OWS." & sectionInclude.Name) Then
+                            If sectionInclude.Name.ToUpper = "OWS.UTILITIES" Then
+                                If Configuration.includeJavascriptUtilities Then
+                                    Me.RegisterScriptBlock("OWS." & sectionInclude.Name, "<script type=""text/javascript"" src=""" & Me.BasePath & sectionInclude.Type & "?v=" & r2i.OWS.UI.OpenControlBase._JAVASCRIPTVERSION & """></script>")
                                 End If
-                                If sectionInclude.Mime Is Nothing OrElse sectionInclude.Mime.Length = 0 OrElse sectionInclude.Mime = "text/javascript" Then
-                                    Me.RegisterScriptBlock("OWS." & sectionInclude.Name, "<script type=""text/javascript"" src=""" & sectionInclude.Path & sectionInclude.Type & "?v=" & r2i.OWS.UI.OpenControlBase._JAVASCRIPTVERSION & """></script>")
-                                Else
-                                    Select Case sectionInclude.Mime.ToLower
-                                        Case "text/css"
-                                            Me.RegisterScriptBlock("OWS." & sectionInclude.Name, "<link rel=""stylesheet"" type=""text/css"" href=""" & sectionInclude.Path & sectionInclude.Type & "?v=" & r2i.OWS.UI.OpenControlBase._JAVASCRIPTVERSION & """/>")
-                                        Case "text/plain"
-                                            Me.RegisterScriptBlock("OWS." & sectionInclude.Name, sectionInclude.Type)
-                                    End Select
+                            ElseIf sectionInclude.Name.ToUpper = "OWS.VALIDATION" Then
+                                If Configuration.includeJavascriptValidation Then
+                                    Me.RegisterScriptBlock("OWS." & sectionInclude.Name, "<script type=""text/javascript"" src=""" & Me.BasePath & sectionInclude.Type & "?v=" & r2i.OWS.UI.OpenControlBase._JAVASCRIPTVERSION & """></script>")
+                                End If
+                            Else
+                                If (Not sectionInclude.Required Is Nothing AndAlso sectionInclude.Required.ToLower = "true") OrElse (Not Configuration.javascriptInclude Is Nothing AndAlso Array.IndexOf(Configuration.javascriptInclude, sectionInclude.Name) >= 0) Then
+                                    If sectionInclude.Path Is Nothing OrElse sectionInclude.Path.Length = 0 Then
+                                        sectionInclude.Path = Me.BasePath
+                                    End If
+                                    If sectionInclude.Mime Is Nothing OrElse sectionInclude.Mime.Length = 0 OrElse sectionInclude.Mime = "text/javascript" Then
+                                        Me.RegisterScriptBlock("OWS." & sectionInclude.Name, "<script type=""text/javascript"" src=""" & sectionInclude.Path & sectionInclude.Type & "?v=" & r2i.OWS.UI.OpenControlBase._JAVASCRIPTVERSION & """></script>")
+                                    Else
+                                        Select Case sectionInclude.Mime.ToLower
+                                            Case "text/css"
+                                                Me.RegisterScriptBlock("OWS." & sectionInclude.Name, "<link rel=""stylesheet"" type=""text/css"" href=""" & sectionInclude.Path & sectionInclude.Type & "?v=" & r2i.OWS.UI.OpenControlBase._JAVASCRIPTVERSION & """/>")
+                                            Case "text/plain"
+                                                Me.RegisterScriptBlock("OWS." & sectionInclude.Name, sectionInclude.Type)
+                                        End Select
+                                    End If
                                 End If
                             End If
                         End If
@@ -1918,29 +1923,31 @@ Namespace r2i.OWS.UI
             sectionInclusions = r2i.OWS.Framework.Config.Items(Config.Section.General, Config.SectionType.UI)
             If Not sectionInclusions Is Nothing AndAlso sectionInclusions.Count > 0 Then
                 For Each sectionInclude In sectionInclusions
-                    If Not Page.ClientScript.IsClientScriptBlockRegistered("OWS." & sectionInclude.Name) Then
-                        If sectionInclude.Name.ToUpper = "OWS.UTILITIES" Then
-                            If Configuration.includeJavascriptUtilities Then
-                                Me.RegisterScriptBlock("OWS." & sectionInclude.Name, "<script type=""text/javascript"" src=""" & Me.BasePath & sectionInclude.Type & "?v=" & r2i.OWS.UI.OpenControlBase._JAVASCRIPTVERSION & """></script>")
-                            End If
-                        ElseIf sectionInclude.Name.ToUpper = "OWS.VALIDATION" Then
-                            If Configuration.includeJavascriptValidation Then
-                                Me.RegisterScriptBlock("OWS." & sectionInclude.Name, "<script type=""text/javascript"" src=""" & Me.BasePath & sectionInclude.Type & "?v=" & r2i.OWS.UI.OpenControlBase._JAVASCRIPTVERSION & """></script>")
-                            End If
-                        Else
-                            If (Not sectionInclude.Required Is Nothing AndAlso sectionInclude.Required.ToLower = "true") OrElse (Not Configuration.javascriptInclude Is Nothing AndAlso Array.IndexOf(Configuration.javascriptInclude, sectionInclude.Name) >= 0) Then
-                                If sectionInclude.Path Is Nothing OrElse sectionInclude.Path.Length = 0 Then
-                                    sectionInclude.Path = Me.BasePath
+                    If Not sectionInclude.Name.ToLower = "ows.general" Or Not SuppressAJAX Then
+                        If Not Page.ClientScript.IsClientScriptBlockRegistered("OWS." & sectionInclude.Name) Then
+                            If sectionInclude.Name.ToUpper = "OWS.UTILITIES" Then
+                                If Configuration.includeJavascriptUtilities Then
+                                    Me.RegisterScriptBlock("OWS." & sectionInclude.Name, "<script type=""text/javascript"" src=""" & Me.BasePath & sectionInclude.Type & "?v=" & r2i.OWS.UI.OpenControlBase._JAVASCRIPTVERSION & """></script>")
                                 End If
-                                If sectionInclude.Mime Is Nothing OrElse sectionInclude.Mime.Length = 0 OrElse sectionInclude.Mime = "text/javascript" Then
-                                    Me.RegisterScriptBlock("OWS." & sectionInclude.Name, "<script type=""text/javascript"" src=""" & sectionInclude.Path & sectionInclude.Type & "?v=" & r2i.OWS.UI.OpenControlBase._JAVASCRIPTVERSION & """></script>")
-                                Else
-                                    Select Case sectionInclude.Mime.ToLower
-                                        Case "text/css"
-                                            Me.RegisterScriptBlock("OWS." & sectionInclude.Name, "<link rel=""stylesheet"" type=""text/css"" href=""" & sectionInclude.Path & sectionInclude.Type & "?v=" & r2i.OWS.UI.OpenControlBase._JAVASCRIPTVERSION & """/>")
-                                        Case "text/plain"
-                                            Me.RegisterScriptBlock("OWS." & sectionInclude.Name, sectionInclude.Type)
-                                    End Select
+                            ElseIf sectionInclude.Name.ToUpper = "OWS.VALIDATION" Then
+                                If Configuration.includeJavascriptValidation Then
+                                    Me.RegisterScriptBlock("OWS." & sectionInclude.Name, "<script type=""text/javascript"" src=""" & Me.BasePath & sectionInclude.Type & "?v=" & r2i.OWS.UI.OpenControlBase._JAVASCRIPTVERSION & """></script>")
+                                End If
+                            Else
+                                If (Not sectionInclude.Required Is Nothing AndAlso sectionInclude.Required.ToLower = "true") OrElse (Not Configuration.javascriptInclude Is Nothing AndAlso Array.IndexOf(Configuration.javascriptInclude, sectionInclude.Name) >= 0) Then
+                                    If sectionInclude.Path Is Nothing OrElse sectionInclude.Path.Length = 0 Then
+                                        sectionInclude.Path = Me.BasePath
+                                    End If
+                                    If sectionInclude.Mime Is Nothing OrElse sectionInclude.Mime.Length = 0 OrElse sectionInclude.Mime = "text/javascript" Then
+                                        Me.RegisterScriptBlock("OWS." & sectionInclude.Name, "<script type=""text/javascript"" src=""" & sectionInclude.Path & sectionInclude.Type & "?v=" & r2i.OWS.UI.OpenControlBase._JAVASCRIPTVERSION & """></script>")
+                                    Else
+                                        Select Case sectionInclude.Mime.ToLower
+                                            Case "text/css"
+                                                Me.RegisterScriptBlock("OWS." & sectionInclude.Name, "<link rel=""stylesheet"" type=""text/css"" href=""" & sectionInclude.Path & sectionInclude.Type & "?v=" & r2i.OWS.UI.OpenControlBase._JAVASCRIPTVERSION & """/>")
+                                            Case "text/plain"
+                                                Me.RegisterScriptBlock("OWS." & sectionInclude.Name, sectionInclude.Type)
+                                        End Select
+                                    End If
                                 End If
                             End If
                         End If
@@ -2076,7 +2083,7 @@ Namespace r2i.OWS.UI
         Public Sub Render_Search(ByRef sb As Text.StringBuilder)
             If Configuration.searchItems.Count > 0 Then
                 Dim strSep As String = ""
-                Dim strStart As String = "<table width=""100%"" border=""0""><tr><td style=""text-align:left;""><span class=""SubHead"">Search</span><br/><input name=""{0}"" value=""{2}""/><select name=""{1}"">"
+                Dim strStart As String = "<table width=""100%"" border=""0""><tr><td style=""text-align:left;""><span class=""SubHead"">Search</span><br/><input type=""text"" name=""{0}"" value=""{2}""/><select name=""{1}"">"
                 '0-txtName,1-selectName
                 '0-buttonName,1-imageUrl
                 'Dim strStop As String = "</select><input type=""image"" name=""{0}"" src=""{1}"" border=""0"" /></td></table>"

@@ -98,6 +98,8 @@ Namespace r2i.OWS.Queries
                             GetRows_Settings(Caller, strQuery, output)
                         Case "HEADERS"
                             GetRows_Headers(Caller, strQuery, output)
+                        Case "URL"
+                            GetRows_Url(Caller, strSource, strQuery, output)
                     End Select
                 End If
                 If Not strPivot Is Nothing AndAlso strPivot.Length > 0 AndAlso strPivot.ToUpper.StartsWith("T") Then
@@ -115,6 +117,102 @@ Namespace r2i.OWS.Queries
 
             Return rslt
         End Function
+
+        Private Function FindMeta(ByRef Source As String) As Generic.Dictionary(Of String, String)
+            Dim result As New Generic.Dictionary(Of String, String)
+            Try
+                Dim s As Integer
+                Dim e As Integer
+                s = Source.ToLower().IndexOf("<meta ")
+                While s >= 0
+                    e = Source.IndexOf("/>", s)
+                    If e > s Then
+                        Dim name As String = Nothing
+                        Dim content As String = ""
+                        Dim httpequiv As String = Nothing
+                        Dim meta As String = Source.Substring(s, (e + 2) - s)
+                        e = e + 2
+                        If meta.ToLower().Contains("name=") Then
+                            name = meta.Substring(meta.ToLower().IndexOf("name=") + 5)
+                            If name.StartsWith("""") Or name.StartsWith("'") Then
+                                name = name.Substring(1, name.IndexOf(name(0), 1) - 1)
+                            End If
+                        End If
+                        If meta.ToLower().Contains("content=") Then
+                            content = meta.Substring(meta.ToLower().IndexOf("content=") + 8)
+                            If content.StartsWith("""") Or content.StartsWith("'") Then
+                                content = content.Substring(1, content.IndexOf(content(0), 1) - 1)
+                            End If
+                        End If
+                        If meta.ToLower().Contains("http-equiv=") Then
+                            httpequiv = meta.Substring(meta.ToLower().IndexOf("http-equiv=") + 11)
+                            If httpequiv.StartsWith("""") Or httpequiv.StartsWith("'") Then
+                                httpequiv = httpequiv.Substring(1, httpequiv.IndexOf(httpequiv(0), 1) - 1)
+                            End If
+                        End If
+                        If Not name Is Nothing OrElse Not httpequiv Is Nothing Then
+                            If Not name Is Nothing Then
+                                If Not result.ContainsKey(name) Then
+                                    result.Add(name, content)
+                                End If
+                            Else
+                                If Not result.ContainsKey(httpequiv) Then
+                                    result.Add(httpequiv, content)
+                                End If
+                            End If
+                        End If
+                    Else
+                        e = s + 1
+                    End If
+                    s = Source.ToLower().IndexOf("<meta ", e)
+                End While
+            Catch ex As Exception
+            End Try
+            Return result
+        End Function
+        Private Sub GetRows_Url(ByRef Caller As EngineBase, ByVal Path As String, ByVal Query As String, ByRef dt As DataTable)
+            Try
+                Dim wc As New Net.WebClient()
+                Dim result As String = wc.DownloadString(Path)
+                If Not result Is Nothing Then
+                    Dim head As String = Utility.XMLPropertyParse_Quick_FromClose(result, "head")
+                    Dim title As String = Utility.XMLPropertyParse_Quick_FromClose(head, "title")
+                    Dim meta As Generic.Dictionary(Of String, String) = FindMeta(result)
+
+                    Dim dr As DataRow
+                    If Not title Is Nothing Then
+                        dr = dt.NewRow
+                        dr(0) = "title"
+                        dr(1) = title
+                        dt.Rows.Add(dr)
+                    End If
+                    If Not meta Is Nothing Then
+                        Dim k As String
+                        For Each k In meta.Keys
+                            dr = dt.NewRow
+                            dr(0) = k
+                            dr(1) = meta(k)
+                            dt.Rows.Add(dr)
+                        Next
+                    End If
+                End If
+
+                If Not Query Is Nothing AndAlso Query.Length > 0 Then
+                    Dim drf() As System.Data.DataRow = dt.Select(Query)
+                    Dim dtr As DataTable = dt.Clone()
+                    Dim drfr As DataRow
+                    For Each drfr In drf
+                        Dim drx As System.Data.DataRow = dtr.NewRow()
+                        drx(0) = drfr(0)
+                        drx(1) = drfr(1)
+                        dtr.Rows.Add(drx)
+                    Next
+                    dt.Clear()
+                    dt = dtr
+                End If
+            Catch ex As Exception
+            End Try
+        End Sub
 
         Private Sub GetRows_Cache(ByRef Caller As EngineBase, ByVal Query As String, ByRef dt As DataTable)
             Try

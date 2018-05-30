@@ -202,6 +202,7 @@
     <Compile Include="Plugins\Actions\Utilities\ThreadedMessageHandler.vb" />
     <Compile Include="Plugins\Formatters\Formatter.Depricated.Decrypt.vb" />
     <Compile Include="Plugins\Formatters\Formatter.Depricated.Encrypt.vb" />
+    <Compile Include="Plugins\Formatters\Formatter.Render.vb" />
     <Compile Include="Plugins\Formatters\Formatter.SHA1Hash.vb" />
     <Compile Include="Plugins\Formatters\Formatter.Split.vb" />
     <Compile Include="Plugins\Formatters\Formatter.Count.vb" />
