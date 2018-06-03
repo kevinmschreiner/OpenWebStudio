@@ -29,13 +29,30 @@ Namespace DataAccess.Factories
             Dim portalSecurity As New DotNetNuke.Security.PortalSecurity
             'DotNetNuke.Security.Membership.MembershipProvider.Instance.UserLogin
             'DotNetNuke.Entities.Users.UserController.UserLogin(PortalID, Username, Password,)
-            Dim uservalue As DotNetNuke.Entities.Users.UserInfo = DotNetNuke.Entities.Users.UserController.GetUserByName(Username)
-            If (Not uservalue Is Nothing AndAlso uservalue.UserID >= 0) Then
-                'Return portalSecurity.UserLogin(Username, Password, PortalID, PortalName, IP, CreatePersistentCookie)
-                DotNetNuke.Entities.Users.UserController.UserLogin(PortalID, uservalue, PortalName, IP, CreatePersistentCookie)
+            'Dim uservalue As DotNetNuke.Entities.Users.UserInfo = DotNetNuke.Entities.Users.UserController.GetUserByName(Username)
+            'If (Not uservalue Is Nothing AndAlso uservalue.UserID >= 0) Then
+            'Return portalSecurity.UserLogin(Username, Password, PortalID, PortalName, IP, CreatePersistentCookie)
+            'DotNetNuke.Entities.Users.UserController.UserLogin(PortalID, uservalue, PortalName, IP, CreatePersistentCookie)
+            Dim loginStatus As Membership.UserLoginStatus = New Membership.UserLoginStatus()
+            Dim uservalue As DotNetNuke.Entities.Users.UserInfo = DotNetNuke.Entities.Users.UserController.UserLogin(PortalID, Username, Password, "", PortalName, IP, loginStatus, CreatePersistentCookie)
 
+            Select Case loginStatus
+                Case Membership.UserLoginStatus.LOGIN_SUCCESS
+                    Return uservalue.UserID
+                Case Membership.UserLoginStatus.LOGIN_FAILURE,
+                 Membership.UserLoginStatus.LOGIN_INSECUREADMINPASSWORD,
+                    Membership.UserLoginStatus.LOGIN_INSECUREHOSTPASSWORD,
+                    Membership.UserLoginStatus.LOGIN_USERLOCKEDOUT,
+                    Membership.UserLoginStatus.LOGIN_USERNOTAPPROVED
+                    uservalue = DotNetNuke.Entities.Users.UserController.GetUserByName(Username)
+                    If (uservalue Is Nothing OrElse uservalue.UserID < 0) Then Return -4
+                    Return -1
+                Case Membership.UserLoginStatus.LOGIN_SUPERUSER
+                    uservalue = DotNetNuke.Entities.Users.UserController.GetUserByName(Username)
+                    Return uservalue.UserID
+            End Select
 
-            End If
+            'End If
             Return -1
         End Function
 
