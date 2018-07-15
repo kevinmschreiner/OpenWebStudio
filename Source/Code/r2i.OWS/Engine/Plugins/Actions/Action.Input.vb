@@ -143,6 +143,13 @@ Namespace r2i.OWS.Actions
 
                 Dim URL As String = Caller.Engine.RenderString(sharedds, Item_URL, Caller.Engine.CapturedMessages, False, isPreRender:=False, DebugWriter:=Debugger)
                 If Not URL Is Nothing Then
+                    Try
+                        If URL.ToLower().StartsWith("https") Then
+                            System.Net.ServicePointManager.SecurityProtocol = Net.SecurityProtocolType.Tls12
+                        End If
+                    Catch ExSP As Exception
+                    End Try
+
                     Dim webclientCall As New Net.WebClient
 
                     'ASSIGN THE URL
@@ -506,15 +513,15 @@ Namespace r2i.OWS.Actions
                                 End If
                             End If
                         Case "<DATASOURCE>"
-                                'TODO: ALLOW SETTING OVERRIDE OF THE DATASOURCE
-                                If Not Debugger Is Nothing Then
-                                    r2i.OWS.Framework.Debugger.ContinueDebugMessage(Debugger, "Input: Datasource = URL Result of " & responseString.Length & " bytes.", True)
-                                End If
+                            'TODO: ALLOW SETTING OVERRIDE OF THE DATASOURCE
+                            If Not Debugger Is Nothing Then
+                                r2i.OWS.Framework.Debugger.ContinueDebugMessage(Debugger, "Input: Datasource = URL Result of " & responseString.Length & " bytes.", True)
+                            End If
                         Case "<QUERY>"
-                                'TODO: ALLOW SETTING OVERRIDE OF THE QUERY
-                                If Not Debugger Is Nothing Then
-                                    r2i.OWS.Framework.Debugger.ContinueDebugMessage(Debugger, "Input: Query = URL Result of " & responseString.Length & " bytes.", True)
-                                End If
+                            'TODO: ALLOW SETTING OVERRIDE OF THE QUERY
+                            If Not Debugger Is Nothing Then
+                                r2i.OWS.Framework.Debugger.ContinueDebugMessage(Debugger, "Input: Query = URL Result of " & responseString.Length & " bytes.", True)
+                            End If
                     End Select
                 End If
             End If
