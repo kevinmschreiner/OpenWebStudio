@@ -68,6 +68,7 @@ Namespace r2i.OWS.Actions
                 Dim Item_URL As String = Nothing
                 Dim Item_QueryString As String = Nothing
                 Dim Item_Data As String = Nothing
+                Dim Item_ResponseCode As String = Nothing
                 Dim Item_Headers As String = Nothing
                 Dim Item_ContentType As String = Nothing
                 Dim Item_Method As String = Nothing
@@ -82,6 +83,7 @@ Namespace r2i.OWS.Actions
                 Dim Item_SoapAction As String = Nothing
                 Dim Item_StripEnvelopeTag As String = Nothing
                 Dim bDoIt As Boolean = False
+                Dim ResponseCode As String = ""
 
                 If act.Parameters.ContainsKey(MessageActionsConstants.ACTIONINPUT_URL_KEY) AndAlso CStr(act.Parameters(MessageActionsConstants.ACTIONINPUT_URL_KEY)).Length > 0 Then
                     Item_URL = CStr(act.Parameters(MessageActionsConstants.ACTIONINPUT_URL_KEY))
@@ -280,11 +282,17 @@ Namespace r2i.OWS.Actions
                     Try
                         If Not (requestMethod = "PUT" OrElse requestMethod = "DELETE") AndAlso Not data Is Nothing AndAlso data.Length > 0 Then
                             responseData = webclientCall.UploadData("", requestMethod, data)
+                            ResponseCode = "OK"
                         ElseIf requestMethod = "PUT" OrElse requestMethod = "DELETE" Then
                             Dim response As System.Net.HttpWebResponse = Utility.SendHTTPRequest(Credentials, strFullURL, requestMethod, Item_ContentType, data, Item_Headers)
                             If Not response Is Nothing Then
                                 Dim mx As New IO.MemoryStream
                                 Dim b As Integer = Nothing
+                                Try
+                                    ResponseCode = response.StatusCode.ToString()
+                                Catch exrs As Exception
+
+                                End Try
                                 Try
                                     Utility.StreamTransfer(response.GetResponseStream, CType(mx, IO.Stream))
                                 Catch ex As Exception
@@ -309,6 +317,7 @@ Namespace r2i.OWS.Actions
                             End If
                         Else
                             responseData = webclientCall.DownloadData("")
+                            ResponseCode = "OK"
                         End If
                         If Not Item_InputFormat Is Nothing AndAlso Item_InputFormat = "binary" Then
                             responseString = Nothing
@@ -316,7 +325,18 @@ Namespace r2i.OWS.Actions
                         Else
                             responseString = Text.UTF8Encoding.UTF8.GetString(responseData)
                         End If
+                        'Added to support tracking of 500 errors
+                    Catch webex As System.Net.WebException
+                        Try
+                            ResponseCode = webex.Status.ToString()
+                            Using webresult As New System.IO.StreamReader(webex.Response.GetResponseStream())
+                                responseString = webresult.ReadToEnd()
+                            End Using
+                        Catch ex As Exception
+                            responseString = ex.ToString
+                        End Try
                     Catch ex As Exception
+                        ResponseCode = "GeneralException"
                         responseString = ex.ToString
                     Finally
                         If Not webclientCall Is Nothing Then
@@ -452,6 +472,7 @@ Namespace r2i.OWS.Actions
                         Case "<SESSION>"
                             Dim sourcekeyName As String = Caller.Engine.RenderString(sharedds, Item_VariableName, Caller.Engine.CapturedMessages, False, isPreRender:=False)
                             If sourcekeyName.Length > 0 Then
+                                Caller.Engine.Session.Item(sourcekeyName + ".Status") = ResponseCode
                                 If isBinary = True Then
                                     Caller.Engine.Session.Item(sourcekeyName) = responseData
                                     If Not Debugger Is Nothing Then
@@ -473,6 +494,7 @@ Namespace r2i.OWS.Actions
                         Case "<COOKIE>"
                             Dim sourcekeyName As String = Caller.Engine.RenderString(sharedds, Item_VariableName, Caller.Engine.CapturedMessages, False, isPreRender:=False, DebugWriter:=Debugger)
                             If sourcekeyName.Length > 0 Then
+                                Caller.Engine.Response.SetCookie(New Web.HttpCookie(sourcekeyName + ".Status", ResponseCode))
                                 If isBinary = True Then
                                     Caller.Engine.Response.SetCookie(New Web.HttpCookie(sourcekeyName, Convert.ToBase64String(responseData)))
                                     If Not Debugger Is Nothing Then
@@ -494,6 +516,7 @@ Namespace r2i.OWS.Actions
                         Case "<ACTION>"
                             Dim sourcekeyName As String = Caller.Engine.RenderString(sharedds, Item_VariableName, Caller.Engine.CapturedMessages, False, isPreRender:=False, DebugWriter:=Debugger)
                             If sourcekeyName.Length > 0 Then
+                                Caller.Engine.ActionVariable(sourcekeyName + ".Status") = ResponseCode
                                 If isBinary = True Then
                                     Caller.Engine.ActionVariable(sourcekeyName) = responseData
                                     If Not Debugger Is Nothing Then

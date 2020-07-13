@@ -7,3 +7,14 @@ D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\
 D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Interface.pdb
 D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Interface.vbprojResolveAssemblyReference.cache
 D:\Work\Current\Corporate\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Interface.vbproj.GenerateResource.Cache
+G:\Work\GitHub\OpenWebStudio\Source\Build\r2i.OWS.Wrapper.DotNetNuke.Interface.dll
+G:\Work\GitHub\OpenWebStudio\Source\Build\r2i.OWS.Wrapper.DotNetNuke.Interface.pdb
+G:\Work\GitHub\OpenWebStudio\Source\Build\r2i.OWS.Wrapper.DotNetNuke.Interface.xml
+G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Interface.vbprojResolveAssemblyReference.cache
+G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DNN.Interface.Resources.resources
+G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Interface.vbproj.GenerateResource.Cache
+G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Interface.vbproj.CoreCompileInputs.cache
+G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Interface.dll
+G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Interface.xml
+G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Interface.pdb
+G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Interface.vbprojAssemblyReference.cache

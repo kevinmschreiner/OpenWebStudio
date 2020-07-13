@@ -20,6 +20,9 @@
 '   CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
 '   DEALINGS IN THE SOFTWARE.
 '</LICENSE>
+'<ACKNOWLEDGEMENTS>
+'   Dynamic Configuration functionality was provided by Roberto Caporale
+'</ACKNOWLEDGEMENTS>
 Imports r2i.OWS.Framework.Utilities.Compatibility, r2i.OWS.Actions.Utilities
 Imports r2i.OWS.Framework.Plugins.Actions
 Imports r2i.OWS.Framework
@@ -39,6 +42,12 @@ Namespace r2i.OWS.Actions
                 If act.Parameters.ContainsKey(MessageActionsConstants.ACTIONGOTO_CONFIGURATIONNAME_KEY) Then sConfigurationName = act.Parameters(MessageActionsConstants.ACTIONGOTO_CONFIGURATIONNAME_KEY)
                 Dim sRegionName As String = ""
                 If act.Parameters.ContainsKey(MessageActionsConstants.ACTIONGOTO_REGION_KEY) Then sRegionName = act.Parameters(MessageActionsConstants.ACTIONGOTO_REGION_KEY)
+
+                Dim sConfigurationDyn As String = ""
+                If act.Parameters.ContainsKey(MessageActionsConstants.ACTIONGOTO_CONFIGURATIONDYN_KEY) Then sConfigurationDyn = act.Parameters(MessageActionsConstants.ACTIONGOTO_CONFIGURATIONDYN_KEY)
+                Dim sRegionDyn As String = ""
+                If act.Parameters.ContainsKey(MessageActionsConstants.ACTIONGOTO_REGIONDYN_KEY) Then sRegionDyn = act.Parameters(MessageActionsConstants.ACTIONGOTO_REGIONDYN_KEY)
+
                 If sConfigurationName.Length > 0 Then
                     str &= " Configuration: " & sConfigurationName
                 End If
@@ -68,6 +77,18 @@ Namespace r2i.OWS.Actions
                 If act.Parameters.ContainsKey(MessageActionsConstants.ACTIONGOTO_CONFIGURATIONNAME_KEY) Then sConfigurationName = act.Parameters(MessageActionsConstants.ACTIONGOTO_CONFIGURATIONNAME_KEY)
                 Dim sRegionName As String = ""
                 If act.Parameters.ContainsKey(MessageActionsConstants.ACTIONGOTO_REGION_KEY) Then sRegionName = act.Parameters(MessageActionsConstants.ACTIONGOTO_REGION_KEY)
+
+                Dim sConfigurationDyn As String = ""
+                If act.Parameters.ContainsKey(MessageActionsConstants.ACTIONGOTO_CONFIGURATIONDYN_KEY) Then sConfigurationDyn = act.Parameters(MessageActionsConstants.ACTIONGOTO_CONFIGURATIONDYN_KEY)
+                Dim sRegionDyn As String = ""
+                If act.Parameters.ContainsKey(MessageActionsConstants.ACTIONGOTO_REGIONDYN_KEY) Then sRegionDyn = act.Parameters(MessageActionsConstants.ACTIONGOTO_REGIONDYN_KEY)
+
+                If sConfigurationDyn <> "" Then
+                    sConfigurationName = Caller.Engine.RenderString(sharedds, sConfigurationDyn, Caller.Engine.CapturedMessages, False, isPreRender:=False, DebugWriter:=Debugger)
+                End If
+                If sRegionDyn <> "" Then
+                    sRegionName = Caller.Engine.RenderString(sharedds, sRegionDyn, Caller.Engine.CapturedMessages, False, isPreRender:=False, DebugWriter:=Debugger)
+                End If
 
                 If sRegionName.Length > 0 Then
                     Dim rgn As MessageActionItem = r2i.OWS.Framework.Utilities.Engine.Utility.GetRegion(sConfigurationName, sRegionName, Caller.Engine.xls)

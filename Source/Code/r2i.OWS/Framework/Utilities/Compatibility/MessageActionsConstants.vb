@@ -188,5 +188,7 @@ Namespace r2i.OWS.Framework.Utilities.Compatibility
 
         Public Const ACTIONGOTO_CONFIGURATIONNAME_KEY As String = "ConfigurationID"
         Public Const ACTIONGOTO_REGION_KEY As String = "Region"
+        Public Const ACTIONGOTO_CONFIGURATIONDYN_KEY As String = "ConfigurationDyn"
+        Public Const ACTIONGOTO_REGIONDYN_KEY As String = "RegionDyn"
     End Class
 End Namespace

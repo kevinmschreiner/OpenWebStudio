@@ -31,7 +31,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("OpenWebStudio ( http://www.openwebstudio.com )")>
 <Assembly: AssemblyProduct("Open Web Studio")>
-<Assembly: AssemblyCopyright("Copyright 2018 OpenWebStudio")>
+<Assembly: AssemblyCopyright("Copyright ©  2020")>
 <Assembly: AssemblyTrademark("Open Web Studio")> 
 <Assembly: CLSCompliant(True)> 
 <Assembly: ComVisible(False)>
@@ -45,7 +45,7 @@ Imports System.Runtime.InteropServices
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
 <Assembly: System.Security.AllowPartiallyTrustedCallers()>
-<Assembly: AssemblyVersion("02.03.02.00")>
+<Assembly: AssemblyVersion("02.04.00.00")>
 
-<Assembly: AssemblyFileVersion("02.03.02.00")>
+<Assembly: AssemblyFileVersion("02.04.00.00")>
 

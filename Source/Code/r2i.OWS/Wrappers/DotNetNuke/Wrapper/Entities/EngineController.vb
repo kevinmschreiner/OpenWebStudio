@@ -152,6 +152,20 @@ Namespace Entities
         Public Function GetHostSettings(ByVal parameter As String) As String Implements IEngineController.GetHostSettings
             If Not parameter Is Nothing AndAlso parameter.ToLower() = "smtppassword" Then
                 Return DotNetNuke.Entities.Host.Host.SMTPPassword
+            ElseIf Not parameter Is Nothing AndAlso parameter.ToLower() = "smtpauthentication" Then
+                Return DotNetNuke.Entities.Host.Host.SMTPAuthentication
+            ElseIf Not parameter Is Nothing AndAlso parameter.ToLower() = "smtpconnectionlimit" Then
+                Return DotNetNuke.Entities.Host.Host.SMTPConnectionLimit.ToString()
+            ElseIf Not parameter Is Nothing AndAlso parameter.ToLower() = "smtpmaxidletime" Then
+                Return DotNetNuke.Entities.Host.Host.SMTPMaxIdleTime.ToString()
+            ElseIf Not parameter Is Nothing AndAlso parameter.ToLower() = "smtpserver" Then
+                Return DotNetNuke.Entities.Host.Host.SMTPServer
+            ElseIf Not parameter Is Nothing AndAlso parameter.ToLower() = "smtpusername" Then
+                Return DotNetNuke.Entities.Host.Host.SMTPUsername
+            ElseIf Not parameter Is Nothing AndAlso parameter.ToLower() = "enablesmtpssl" Then
+                Return DotNetNuke.Entities.Host.Host.EnableSMTPSSL.ToString()
+            ElseIf Not parameter Is Nothing AndAlso parameter.ToLower() = "smtpenablessl" Then
+                Return DotNetNuke.Entities.Host.Host.EnableSMTPSSL.ToString()
             Else
                 Return EngineFactory.Instance.GetHostSettings(parameter)
             End If

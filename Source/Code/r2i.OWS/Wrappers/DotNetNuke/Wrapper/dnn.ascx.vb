@@ -131,10 +131,10 @@ Partial Public Class Dnn
                 'Dim cadmin As ModuleAction = act.Add(GetNextActionID(), "Administration", ModuleActionType.AddContent, "", "~" & Me.ModulePath + "images/publish.gif", "", Me.GetAdminUrl(), False, SecurityAccessLevel.Edit, True, True)
                 'Dim cadmin As ModuleAction = act.Add(GetNextActionID(), "Administration", ModuleActionType.AddContent, "", "settings.gif", "", Me.GetAdminUrl(), False, SecurityAccessLevel.Edit, True, True)
                 Dim cadmin As ModuleAction
-                If major < 4 Then
-                    cadmin = act.Add(GetNextActionID(), "Administration", ModuleActionType.AddContent, "", "edit.gif", Me.GetAdminUrl(), False, SecurityAccessLevel.Edit, True, True)
+                If major < 4 Or major > 7 Then
+                    cadmin = act.Add(GetNextActionID(), "Administration", ModuleActionType.AddContent, "", "edit.gif", Me.GetAdminUrl(False), False, SecurityAccessLevel.Edit, True, True)
                 Else
-                    cadmin = act.Add(GetNextActionID(), "Administration", ModuleActionType.AddContent, "", "edit.gif", "javascript:" & Me.GetAdminUrl(), False, SecurityAccessLevel.Edit, True, True)
+                    cadmin = act.Add(GetNextActionID(), "Administration", ModuleActionType.AddContent, "", "edit.gif", "javascript:" & Me.GetAdminUrl(True), False, SecurityAccessLevel.Edit, True, True)
                 End If
 
 
@@ -155,13 +155,16 @@ Partial Public Class Dnn
         End If
     End Sub
 
-    Private Function GetAdminUrl() As String
+    Private Function GetAdminUrl(useJS As Boolean) As String
         Dim adminUrl As String = ControlPath & "Admin.aspx"
         ' add a direct link to edit this configuration, if one has been selected
         If Me.Settings("ConfigurationID") IsNot Nothing Then
             adminUrl = adminUrl & "#config/" & Me.Settings("ConfigurationID").ToString
         End If
-        adminUrl = "window.open('" & adminUrl & "')==false"
+
+        If (useJS) Then
+            adminUrl = "window.open('" & adminUrl & "')==false"
+        End If
         Return adminUrl
     End Function
 

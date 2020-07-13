@@ -32,7 +32,7 @@ Imports System.Security
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("OpenWebStudio ( http://www.openwebstudio.com )")>
 <Assembly: AssemblyProduct("Open Web Studio")>
-<Assembly: AssemblyCopyright("Copyright 2018 OpenWebStudio")>
+<Assembly: AssemblyCopyright("Copyright ©  2020")>
 <Assembly: AssemblyTrademark("Open Web Studio")> 
 <Assembly: CLSCompliant(True)> 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
@@ -44,8 +44,8 @@ Imports System.Security
 '      Revision
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
-<Assembly: AssemblyVersion("02.03.02.00")>
+<Assembly: AssemblyVersion("02.04.00.00")>
 
-<Assembly: AssemblyFileVersion("02.03.02.00")>
+<Assembly: AssemblyFileVersion("02.04.00.00")>
 
 <Assembly: AllowPartiallyTrustedCallers()>

@@ -228,9 +228,9 @@ Public Class BaseParentControl
                     Return CType(_Parent, DotNetNuke.UI.Skins.SkinObjectBase).PortalSettings
 
                 ElseIf TypeOf _Parent Is DotNetNuke.Services.Scheduling.SchedulerClient Then
-                    Return DotNetNuke.Entities.Portals.PortalController.GetCurrentPortalSettings()
+                    Return DotNetNuke.Entities.Portals.PortalController.Instance().GetCurrentPortalSettings()
                 ElseIf TypeOf _Parent Is System.Web.UI.Page Then
-                    Return DotNetNuke.Entities.Portals.PortalController.GetCurrentPortalSettings()
+                    Return DotNetNuke.Entities.Portals.PortalController.Instance().GetCurrentPortalSettings()
                 End If
             End If
             Return Nothing

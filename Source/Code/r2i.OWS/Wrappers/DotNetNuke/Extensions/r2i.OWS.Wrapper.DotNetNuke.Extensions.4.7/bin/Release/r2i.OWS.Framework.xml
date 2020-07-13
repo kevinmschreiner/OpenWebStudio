@@ -6,138 +6,2155 @@ r2i.OWS.Framework
 </name>
 </assembly>
 <members>
+<member name="T:My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:My.Resources.MIMETypes">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes._323">
+<summary>
+  Looks up a localized string similar to text/h323.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes._3g2">
+<summary>
+  Looks up a localized string similar to audio/3gpp2.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes._3gp">
+<summary>
+  Looks up a localized string similar to audio/3gpp.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes._3gp2">
+<summary>
+  Looks up a localized string similar to video/3gpp2.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes._3gpp">
+<summary>
+  Looks up a localized string similar to video/3gpp.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes._class">
+<summary>
+  Looks up a localized string similar to java/*.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.aac">
+<summary>
+  Looks up a localized string similar to audio/aac.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.abdata">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.accda">
+<summary>
+  Looks up a localized string similar to application/msaccess.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.accdb">
+<summary>
+  Looks up a localized string similar to application/msaccess.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.accdc">
+<summary>
+  Looks up a localized string similar to application/msaccess.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.accde">
+<summary>
+  Looks up a localized string similar to application/msaccess.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.accdr">
+<summary>
+  Looks up a localized string similar to application/msaccess.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.accdt">
+<summary>
+  Looks up a localized string similar to application/msaccess.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.actproj">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.addin">
+<summary>
+  Looks up a localized string similar to text/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.ade">
+<summary>
+  Looks up a localized string similar to application/msaccess.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.adobebridge">
+<summary>
+  Looks up a localized string similar to application/x-bridge-url.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.adp">
+<summary>
+  Looks up a localized string similar to application/msaccess.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.adts">
+<summary>
+  Looks up a localized string similar to audio/aac.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.ai">
+<summary>
+  Looks up a localized string similar to application/postscript.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.aif">
+<summary>
+  Looks up a localized string similar to audio/aiff.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.aifc">
+<summary>
+  Looks up a localized string similar to audio/aiff.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.aiff">
+<summary>
+  Looks up a localized string similar to audio/aiff.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.amc">
+<summary>
+  Looks up a localized string similar to application/x-mpeg.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.amr">
+<summary>
+  Looks up a localized string similar to audio/AMR.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.application">
+<summary>
+  Looks up a localized string similar to application/x-ms-application.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.asa">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.asax">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.ascx">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.asf">
+<summary>
+  Looks up a localized string similar to video/x-ms-asf.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.ashx">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.asm">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.asmx">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.asp">
+<summary>
+  Looks up a localized string similar to text/asp.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.aspx">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.asx">
+<summary>
+  Looks up a localized string similar to application/x-mplayer2.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.au">
+<summary>
+  Looks up a localized string similar to audio/basic.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.avi">
+<summary>
+  Looks up a localized string similar to video/avi.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.bmp">
+<summary>
+  Looks up a localized string similar to image/bmp.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.c">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.caf">
+<summary>
+  Looks up a localized string similar to audio/x-caf.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.cat">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-pki.seccat.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.cc">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.cd">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.cdda">
+<summary>
+  Looks up a localized string similar to audio/aiff.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.cer">
+<summary>
+  Looks up a localized string similar to application/pkix-cert.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.cfc">
+<summary>
+  Looks up a localized string similar to application/x-cfc.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.cfm">
+<summary>
+  Looks up a localized string similar to application/x-cfm.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.cod">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.collection">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.config">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.coverage">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.cpp">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.crl">
+<summary>
+  Looks up a localized string similar to application/pkix-crl.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.crt">
+<summary>
+  Looks up a localized string similar to application/x-x509-ca-cert.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.cs">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.csdproj">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.csproj">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.css">
+<summary>
+  Looks up a localized string similar to text/css.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.csv">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-excel.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.cur">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.cxx">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.data">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.datasource">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.dbs">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.def">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.der">
+<summary>
+  Looks up a localized string similar to application/x-x509-ca-cert.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.dib">
+<summary>
+  Looks up a localized string similar to image/bmp.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.dll">
+<summary>
+  Looks up a localized string similar to application/x-msdownload.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.dlm">
+<summary>
+  Looks up a localized string similar to text/dlm.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.doc">
+<summary>
+  Looks up a localized string similar to application/msword.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.docm">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-word.document.macroEnabled.12.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.docx">
+<summary>
+  Looks up a localized string similar to application/vnd.openxmlformats-officedocument.wordprocessingml.document.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.dot">
+<summary>
+  Looks up a localized string similar to application/msword.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.dotm">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-word.template.macroEnabled.12.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.dotx">
+<summary>
+  Looks up a localized string similar to application/vnd.openxmlformats-officedocument.wordprocessingml.template.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.dsp">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.dsw">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.dtd">
+<summary>
+  Looks up a localized string similar to application/xml-dtd.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.dtsconfig">
+<summary>
+  Looks up a localized string similar to text/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.dv">
+<summary>
+  Looks up a localized string similar to video/x-dv.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.dwfx">
+<summary>
+  Looks up a localized string similar to model/vnd.dwfx+xps.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.edn">
+<summary>
+  Looks up a localized string similar to application/vnd.adobe.edn.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.eml">
+<summary>
+  Looks up a localized string similar to message/rfc822.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.eps">
+<summary>
+  Looks up a localized string similar to application/postscript.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.etd">
+<summary>
+  Looks up a localized string similar to application/x-ebx.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.etp">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.exe">
+<summary>
+  Looks up a localized string similar to application/x-msdownload.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.ext">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.fdf">
+<summary>
+  Looks up a localized string similar to application/vnd.fdf.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.fif">
+<summary>
+  Looks up a localized string similar to application/fractals.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.fky">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.flc">
+<summary>
+  Looks up a localized string similar to video/flc.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.gif">
+<summary>
+  Looks up a localized string similar to image/gif.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.grv">
+<summary>
+  Looks up a localized string similar to application/vnd.groove-injector.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.gsa">
+<summary>
+  Looks up a localized string similar to application/vnd.groove-space-archive.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.gsm">
+<summary>
+  Looks up a localized string similar to audio/x-gsm.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.gta">
+<summary>
+  Looks up a localized string similar to application/vnd.groove-tool-archive.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.gvp">
+<summary>
+  Looks up a localized string similar to text/google-video-pointer.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.gz">
+<summary>
+  Looks up a localized string similar to application/x-gzip.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.h">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.hpp">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.hqx">
+<summary>
+  Looks up a localized string similar to application/mac-binhex40.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.hta">
+<summary>
+  Looks up a localized string similar to application/hta.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.htc">
+<summary>
+  Looks up a localized string similar to text/x-component.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.htm">
+<summary>
+  Looks up a localized string similar to text/html.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.html">
+<summary>
+  Looks up a localized string similar to text/html.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.htt">
+<summary>
+  Looks up a localized string similar to text/webviewhtml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.hxa">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.hxc">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.hxd">
+<summary>
+  Looks up a localized string similar to application/octet-stream.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.hxe">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.hxf">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.hxh">
+<summary>
+  Looks up a localized string similar to application/octet-stream.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.hxi">
+<summary>
+  Looks up a localized string similar to application/octet-stream.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.hxk">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.hxq">
+<summary>
+  Looks up a localized string similar to application/octet-stream.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.hxr">
+<summary>
+  Looks up a localized string similar to application/octet-stream.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.hxs">
+<summary>
+  Looks up a localized string similar to application/octet-stream.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.hxt">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.hxv">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.hxw">
+<summary>
+  Looks up a localized string similar to application/octet-stream.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.hxx">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.i">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.icl">
+<summary>
+  Looks up a localized string similar to icon library.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.icns">
+<summary>
+  Looks up a localized string similar to image/mac icon.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.ico">
+<summary>
+  Looks up a localized string similar to image/x-icon.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.icpr">
+<summary>
+  Looks up a localized string similar to image/icon project.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.ics">
+<summary>
+  Looks up a localized string similar to text/calendar.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.idl">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.iii">
+<summary>
+  Looks up a localized string similar to application/x-iphone.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.il">
+<summary>
+  Looks up a localized string similar to icon library.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.inc">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.infopathxml">
+<summary>
+  Looks up a localized string similar to application/ms-infopath.xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.inl">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.ins">
+<summary>
+  Looks up a localized string similar to application/x-internet-signup.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.ipproj">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.iqy">
+<summary>
+  Looks up a localized string similar to text/x-ms-iqy.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.isp">
+<summary>
+  Looks up a localized string similar to application/x-internet-signup.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.java">
+<summary>
+  Looks up a localized string similar to text/java.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.jfif">
+<summary>
+  Looks up a localized string similar to image/jpeg.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.jnlp">
+<summary>
+  Looks up a localized string similar to application/x-java-jnlp-file.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.jp2">
+<summary>
+  Looks up a localized string similar to image/jp2.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.jpe">
+<summary>
+  Looks up a localized string similar to image/jpeg.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.jpeg">
+<summary>
+  Looks up a localized string similar to image/jpeg.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.jpg">
+<summary>
+  Looks up a localized string similar to image/jpeg.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.js">
+<summary>
+  Looks up a localized string similar to application/x-javascript.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.jsl">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.jsx">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.jsxbin">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.jtx">
+<summary>
+  Looks up a localized string similar to application/x-jtx+xps.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.kci">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.latex">
+<summary>
+  Looks up a localized string similar to application/x-latex.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.lgn">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.lmf">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-livemeeting.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.lmf_ms">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-livemeeting.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.ls">
+<summary>
+  Looks up a localized string similar to application/x-javascript.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.lst">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.m1v">
+<summary>
+  Looks up a localized string similar to video/mpeg.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.m3u">
+<summary>
+  Looks up a localized string similar to audio/mpegurl.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.m4a">
+<summary>
+  Looks up a localized string similar to audio/x-m4a.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.m4b">
+<summary>
+  Looks up a localized string similar to audio/x-m4b.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.m4p">
+<summary>
+  Looks up a localized string similar to audio/x-m4p.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.m4v">
+<summary>
+  Looks up a localized string similar to video/x-m4v.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mac">
+<summary>
+  Looks up a localized string similar to image/x-macpaint.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mak">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.man">
+<summary>
+  Looks up a localized string similar to application/x-troff-man.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.map">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.master">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mda">
+<summary>
+  Looks up a localized string similar to application/msaccess.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mdb">
+<summary>
+  Looks up a localized string similar to application/msaccess.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mde">
+<summary>
+  Looks up a localized string similar to application/msaccess.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mdi">
+<summary>
+  Looks up a localized string similar to image/vnd.ms-modi.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mdp">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mfp">
+<summary>
+  Looks up a localized string similar to application/x-shockwave-flash.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mht">
+<summary>
+  Looks up a localized string similar to message/rfc822.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mhtml">
+<summary>
+  Looks up a localized string similar to message/rfc822.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mid">
+<summary>
+  Looks up a localized string similar to audio/mid.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.midi">
+<summary>
+  Looks up a localized string similar to audio/mid.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mk">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mocha">
+<summary>
+  Looks up a localized string similar to application/x-javascript.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mov">
+<summary>
+  Looks up a localized string similar to video/quicktime.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.movie">
+<summary>
+  Looks up a localized string similar to video/x-sgi-movie.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mp2">
+<summary>
+  Looks up a localized string similar to video/mpeg.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mp2v">
+<summary>
+  Looks up a localized string similar to video/mpeg.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mp3">
+<summary>
+  Looks up a localized string similar to audio/mp3.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mp4">
+<summary>
+  Looks up a localized string similar to audio/mp4.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mpa">
+<summary>
+  Looks up a localized string similar to video/mpeg.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mpe">
+<summary>
+  Looks up a localized string similar to video/mpeg.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mpeg">
+<summary>
+  Looks up a localized string similar to video/mpeg.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mpf">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-mediapackage.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mpg">
+<summary>
+  Looks up a localized string similar to video/mpeg.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mpv2">
+<summary>
+  Looks up a localized string similar to video/mpeg.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mqv">
+<summary>
+  Looks up a localized string similar to video/quicktime.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.mxp">
+<summary>
+  Looks up a localized string similar to application/x-mmxp.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.nil">
+<summary>
+  Looks up a localized string similar to icon library.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.nix">
+<summary>
+  Looks up a localized string similar to application/x-mix-transfer.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.nmw">
+<summary>
+  Looks up a localized string similar to application/nmwb.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.nws">
+<summary>
+  Looks up a localized string similar to message/rfc822.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.odc">
+<summary>
+  Looks up a localized string similar to text/x-ms-odc.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.odh">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.odl">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.ols">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-publisher.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.one">
+<summary>
+  Looks up a localized string similar to application/msonenote.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.onepkg">
+<summary>
+  Looks up a localized string similar to application/msonenote.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.orderedtest">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.p10">
+<summary>
+  Looks up a localized string similar to application/pkcs10.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.p12">
+<summary>
+  Looks up a localized string similar to application/x-pkcs12.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.p7b">
+<summary>
+  Looks up a localized string similar to application/x-pkcs7-certificates.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.p7c">
+<summary>
+  Looks up a localized string similar to application/pkcs7-mime.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.p7m">
+<summary>
+  Looks up a localized string similar to application/pkcs7-mime.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.p7r">
+<summary>
+  Looks up a localized string similar to application/x-pkcs7-certreqresp.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.p7s">
+<summary>
+  Looks up a localized string similar to application/pkcs7-signature.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.pct">
+<summary>
+  Looks up a localized string similar to image/pict.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.pdf">
+<summary>
+  Looks up a localized string similar to application/pdf.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.pdx">
+<summary>
+  Looks up a localized string similar to application/vnd.adobe.pdx.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.pfx">
+<summary>
+  Looks up a localized string similar to application/x-pkcs12.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.pic">
+<summary>
+  Looks up a localized string similar to image/pict.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.pict">
+<summary>
+  Looks up a localized string similar to image/pict.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.pko">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-pki.pko.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.pl">
+<summary>
+  Looks up a localized string similar to application/x-perl.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.plg">
+<summary>
+  Looks up a localized string similar to text/html.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.pls">
+<summary>
+  Looks up a localized string similar to audio/scpls.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.png">
+<summary>
+  Looks up a localized string similar to image/png.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.pnt">
+<summary>
+  Looks up a localized string similar to image/x-macpaint.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.pntg">
+<summary>
+  Looks up a localized string similar to image/x-macpaint.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.pot">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-powerpoint.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.potm">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-powerpoint.template.macroEnabled.12.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.potx">
+<summary>
+  Looks up a localized string similar to application/vnd.openxmlformats-officedocument.presentationml.template.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.ppa">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-powerpoint.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.ppam">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-powerpoint.addin.macroEnabled.12.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.pps">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-powerpoint.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.ppsm">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-powerpoint.slideshow.macroEnabled.12.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.ppsx">
+<summary>
+  Looks up a localized string similar to application/vnd.openxmlformats-officedocument.presentationml.slideshow.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.ppt">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-powerpoint.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.pptm">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-powerpoint.presentation.macroEnabled.12.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.pptx">
+<summary>
+  Looks up a localized string similar to application/vnd.openxmlformats-officedocument.presentationml.presentation.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.ps">
+<summary>
+  Looks up a localized string similar to application/postscript.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.psess">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.pub">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-publisher.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.pwz">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-powerpoint.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.py">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.pyw">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.qcp">
+<summary>
+  Looks up a localized string similar to audio/vnd.qcelp.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.qht">
+<summary>
+  Looks up a localized string similar to text/x-html-insertion.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.qhtm">
+<summary>
+  Looks up a localized string similar to text/x-html-insertion.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.qt">
+<summary>
+  Looks up a localized string similar to video/quicktime.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.qti">
+<summary>
+  Looks up a localized string similar to image/x-quicktime.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.qtif">
+<summary>
+  Looks up a localized string similar to image/x-quicktime.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.qtl">
+<summary>
+  Looks up a localized string similar to application/x-quicktimeplayer.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.rat">
+<summary>
+  Looks up a localized string similar to application/rat-file.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.rc">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.rc2">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.rct">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.rdlc">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.rels">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-package.relationships+xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.resx">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.rgs">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.rmf">
+<summary>
+  Looks up a localized string similar to application/vnd.adobe.rmf.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.rmi">
+<summary>
+  Looks up a localized string similar to audio/mid.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.rmp">
+<summary>
+  Looks up a localized string similar to application/vnd.rn-rn_music_package.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.rpt">
+<summary>
+  Looks up a localized string similar to application/x-rpt.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.rqy">
+<summary>
+  Looks up a localized string similar to text/x-ms-rqy.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.rsrc">
+<summary>
+  Looks up a localized string similar to image/mac icon.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.rtf">
+<summary>
+  Looks up a localized string similar to application/msword.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.rtsp">
+<summary>
+  Looks up a localized string similar to application/x-rtsp.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.rul">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.s">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.sct">
+<summary>
+  Looks up a localized string similar to text/scriptlet.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.sd2">
+<summary>
+  Looks up a localized string similar to audio/x-sd2.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.sdp">
+<summary>
+  Looks up a localized string similar to application/sdp.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.sdv">
+<summary>
+  Looks up a localized string similar to video/sd-video.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.setpay">
+<summary>
+  Looks up a localized string similar to application/set-payment-initiation.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.setreg">
+<summary>
+  Looks up a localized string similar to application/set-registration-initiation.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.settings">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.sgi">
+<summary>
+  Looks up a localized string similar to image/x-sgi.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.shtml">
+<summary>
+  Looks up a localized string similar to text/html.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.sis">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.sit">
+<summary>
+  Looks up a localized string similar to application/x-stuffit.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.sitemap">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.skin">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.skype">
+<summary>
+  Looks up a localized string similar to application/x-skype.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.sldm">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-powerpoint.slide.macroEnabled.12.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.sldx">
+<summary>
+  Looks up a localized string similar to application/vnd.openxmlformats-officedocument.presentationml.slide.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.slk">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-excel.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.sln">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.snd">
+<summary>
+  Looks up a localized string similar to audio/basic.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.snippet">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.sol">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.sor">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.spc">
+<summary>
+  Looks up a localized string similar to application/x-pkcs7-certificates.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.spl">
+<summary>
+  Looks up a localized string similar to application/futuresplash.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.spt">
+<summary>
+  Looks up a localized string similar to application/ScriptGen.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.srf">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.ssisdeploymentmanifest">
+<summary>
+  Looks up a localized string similar to text/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.sst">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-pki.certstore.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.stl">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-pki.stl.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.stm">
+<summary>
+  Looks up a localized string similar to text/html.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.svc">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.svg">
+<summary>
+  Looks up a localized string similar to image/svg+xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.svgz">
+<summary>
+  Looks up a localized string similar to image/svg+xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.swf">
+<summary>
+  Looks up a localized string similar to application/x-shockwave-flash.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.tab">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.tar">
+<summary>
+  Looks up a localized string similar to application/x-tar.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.targa">
+<summary>
+  Looks up a localized string similar to image/x-targa.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.tdl">
+<summary>
+  Looks up a localized string similar to text/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.testrunconfig">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.tgz">
+<summary>
+  Looks up a localized string similar to application/x-compressed.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.thmx">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-officetheme.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.tif">
+<summary>
+  Looks up a localized string similar to image/tiff.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.tlh">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.tli">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.trx">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.txt">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.udf">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.udt">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.uls">
+<summary>
+  Looks up a localized string similar to text/iuls.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.user">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.usr">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vb">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vbdproj">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vbproj">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vcf">
+<summary>
+  Looks up a localized string similar to text/x-vcard.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vcg">
+<summary>
+  Looks up a localized string similar to application/vnd.groove-vcard.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vcproj">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vddproj">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vdp">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vdproj">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vdx">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-visio.viewer.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.viw">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vjp">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vjsproj">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vscontent">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vsd">
+<summary>
+  Looks up a localized string similar to application/vnd.visio.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vsi">
+<summary>
+  Looks up a localized string similar to application/ms-vsi.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vsl">
+<summary>
+  Looks up a localized string similar to application/vnd.visio.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vsmdi">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vspolicy">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vspolicydef">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vspscc">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vss">
+<summary>
+  Looks up a localized string similar to application/vnd.visio.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vsscc">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vssettings">
+<summary>
+  Looks up a localized string similar to text/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vssscc">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vst">
+<summary>
+  Looks up a localized string similar to application/vnd.visio.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vstemplate">
+<summary>
+  Looks up a localized string similar to text/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vsto">
+<summary>
+  Looks up a localized string similar to application/x-ms-vsto.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vsu">
+<summary>
+  Looks up a localized string similar to application/vnd.visio.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vsw">
+<summary>
+  Looks up a localized string similar to application/vnd.visio.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vsx">
+<summary>
+  Looks up a localized string similar to application/vnd.visio.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.vtx">
+<summary>
+  Looks up a localized string similar to application/vnd.visio.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.wal">
+<summary>
+  Looks up a localized string similar to interface/x-winamp3-skin.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.wav">
+<summary>
+  Looks up a localized string similar to audio/wav.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.wave">
+<summary>
+  Looks up a localized string similar to audio/wav.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.wax">
+<summary>
+  Looks up a localized string similar to audio/x-ms-wax.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.wbk">
+<summary>
+  Looks up a localized string similar to application/msword.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.wdp">
+<summary>
+  Looks up a localized string similar to image/vnd.ms-photo.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.wiz">
+<summary>
+  Looks up a localized string similar to application/msword.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.wlz">
+<summary>
+  Looks up a localized string similar to interface/x-winamp-lang.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.wm">
+<summary>
+  Looks up a localized string similar to video/x-ms-wm.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.wma">
+<summary>
+  Looks up a localized string similar to audio/x-ms-wma.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.wmd">
+<summary>
+  Looks up a localized string similar to application/x-ms-wmd.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.wmv">
+<summary>
+  Looks up a localized string similar to video/x-ms-wmv.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.wmx">
+<summary>
+  Looks up a localized string similar to video/x-ms-wmx.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.wmz">
+<summary>
+  Looks up a localized string similar to application/x-ms-wmz.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.workspace">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.wpl">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-wpl.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.wsc">
+<summary>
+  Looks up a localized string similar to text/scriptlet.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.wsdl">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.wsz">
+<summary>
+  Looks up a localized string similar to interface/x-winamp-skin.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.wvx">
+<summary>
+  Looks up a localized string similar to video/x-ms-wvx.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xaml">
+<summary>
+  Looks up a localized string similar to application/xaml+xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xbap">
+<summary>
+  Looks up a localized string similar to application/x-ms-xbap.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xdp">
+<summary>
+  Looks up a localized string similar to application/vnd.adobe.xdp+xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xdr">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xfd">
+<summary>
+  Looks up a localized string similar to application/vnd.adobe.xfd+xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xfdf">
+<summary>
+  Looks up a localized string similar to application/vnd.adobe.xfdf.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xht">
+<summary>
+  Looks up a localized string similar to application/xhtml+xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xhtml">
+<summary>
+  Looks up a localized string similar to application/xhtml+xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xla">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-excel.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xlam">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-excel.addin.macroEnabled.12.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xlk">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-excel.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xll">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-excel.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xlm">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-excel.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xls">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-excel.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xlsb">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-excel.sheet.binary.macroEnabled.12.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xlsm">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-excel.sheet.macroEnabled.12.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xlsx">
+<summary>
+  Looks up a localized string similar to application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xlt">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-excel.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xltm">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-excel.template.macroEnabled.12.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xltx">
+<summary>
+  Looks up a localized string similar to application/vnd.openxmlformats-officedocument.spreadsheetml.template.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xlw">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-excel.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xml">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xmta">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xoml">
+<summary>
+  Looks up a localized string similar to text/plain.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xpi">
+<summary>
+  Looks up a localized string similar to application/x-xpinstall;app=firefox.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xps">
+<summary>
+  Looks up a localized string similar to application/vnd.ms-xpsdocument.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xsc">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xsd">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xsl">
+<summary>
+  Looks up a localized string similar to text/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xslt">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.xss">
+<summary>
+  Looks up a localized string similar to application/xml.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.z">
+<summary>
+  Looks up a localized string similar to application/x-compress.
+</summary>
+</member>
+<member name="P:My.Resources.MIMETypes.zip">
+<summary>
+  Looks up a localized string similar to application/x-zip-compressed.
+</summary>
+</member>
 <member name="M:r2i.OWS.Framework.Config.SectionItem.#ctor(System.String,System.String,r2i.OWS.Framework.Config.Section,r2i.OWS.Framework.Config.SectionType)">
-	<summary>
+ <summary>
  If SectionType is Administration, then "Type" means the ScriptPath
  </summary>
-	<param name="Name"></param>
-	<param name="Type"></param>
-	<param name="Section"></param>
-	<param name="SectionType"></param>
-	<remarks></remarks>
-</member><member name="M:r2i.OWS.Framework.Config.SectionItem.#ctor(System.String,System.String,r2i.OWS.Framework.Config.Section,r2i.OWS.Framework.Config.SectionType,System.String)">
-	<summary>
+ <param name="Name"></param>
+ <param name="Type"></param>
+ <param name="Section"></param>
+ <param name="SectionType"></param>
+ <remarks></remarks>
+</member>
+<member name="M:r2i.OWS.Framework.Config.SectionItem.#ctor(System.String,System.String,r2i.OWS.Framework.Config.Section,r2i.OWS.Framework.Config.SectionType,System.String)">
+ <summary>
  If SectionType is Administration, then "Type" means the ScriptPath
  </summary>
-	<param name="Name"></param>
-	<param name="Type"></param>
-	<param name="Section"></param>
-	<param name="SectionType"></param>
-	<param name="Title"></param>
-	<remarks></remarks>
-</member><member name="M:r2i.OWS.Framework.Config.SectionItem.#ctor(System.String,System.String,r2i.OWS.Framework.Config.Section,r2i.OWS.Framework.Config.SectionType,System.String,System.String)">
-	<summary>
+ <param name="Name"></param>
+ <param name="Type"></param>
+ <param name="Section"></param>
+ <param name="SectionType"></param>
+ <param name="Title"></param>
+ <remarks></remarks>
+</member>
+<member name="M:r2i.OWS.Framework.Config.SectionItem.#ctor(System.String,System.String,r2i.OWS.Framework.Config.Section,r2i.OWS.Framework.Config.SectionType,System.String,System.String)">
+ <summary>
  If SectionType is Administration, then "Type" means the ScriptPath
  </summary>
-	<param name="Name"></param>
-	<param name="Type"></param>
-	<param name="Section"></param>
-	<param name="SectionType"></param>
-	<param name="Title"></param>
-	<param name="Required"></param>
-	<remarks></remarks>
-</member><member name="M:r2i.OWS.Framework.Config.SectionItem.#ctor(System.String,System.String,r2i.OWS.Framework.Config.Section,r2i.OWS.Framework.Config.SectionType,System.String,System.String,System.String,System.String)">
-	<summary>
+ <param name="Name"></param>
+ <param name="Type"></param>
+ <param name="Section"></param>
+ <param name="SectionType"></param>
+ <param name="Title"></param>
+ <param name="Required"></param>
+ <remarks></remarks>
+</member>
+<member name="M:r2i.OWS.Framework.Config.SectionItem.#ctor(System.String,System.String,r2i.OWS.Framework.Config.Section,r2i.OWS.Framework.Config.SectionType,System.String,System.String,System.String,System.String)">
+ <summary>
  If SectionType is Administration, then "Type" means the ScriptPath
  </summary>
-	<param name="Name"></param>
-	<param name="Type"></param>
-	<param name="Section"></param>
-	<param name="SectionType"></param>
-	<param name="Title"></param>
-	<param name="Required"></param>
-	<remarks></remarks>
-</member><member name="M:r2i.OWS.Framework.Utilities.Utility.ReplaceBetween(System.String,System.String,System.String,System.String)">
-	<summary>
- Replaces text between two tags
- </summary>
-	<param name="Original">Incoming string</param>
-	<param name="StartTag">First instance of this tag marks the beginning of the replacement</param>
-	<param name="EndTag">First instance of this tag marks the end of the replacement</param>
-	<param name="ReplaceWith">Replace the text with this</param>
-	<returns>Replaced string</returns>
-</member><member name="M:r2i.OWS.Framework.Utilities.Utility.GetBetween(System.String,System.String,System.String)">
-	<summary>
- Returns all text between two given tags
- </summary>
-	<param name="Original">Incoming string</param>
-	<param name="StartTag">First instance of this tag marks the beginning of the inner text</param>
-	<param name="EndTag">First instance of this tag marks the end of the inner text</param>
-	<returns>String in between</returns>
-</member><member name="M:r2i.OWS.Framework.Utilities.Utility.Join(System.Collections.Generic.List{System.String},System.String)">
-	<summary>
- Returns a single string of all Items joined together
- </summary>
-	<param name="Items">Strings to join</param>
-	<param name="JoinCharacter">String to insert between items. <i>Default is ,</i></param>
-	<returns>String</returns>
-</member><member name="M:r2i.OWS.Framework.Utilities.Utility.Join(System.String,System.String[])">
-	<summary>
- Returns a concatenated string for all JoinValues, joined with JoinChar.  Checks if each part ends with
- JoinChar first.  If not, then it appends JoinChar prior to JoinValues(i).
- </summary>
-	<param name="JoinChar">String to appear between JoinValues</param>
-	<param name="JoinValues">Array of strings</param>
-	<returns>Single string</returns>
-	<remarks></remarks>
-</member><member name="M:r2i.OWS.Framework.Utilities.Utility.GetHexString(System.Byte[])">
-	<summary>
- Returns a valid HEX representation of the incoming byte array
- </summary>
-	<param name="Bytes"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="F:r2i.OWS.Framework.Entities.LogSeverity.NONE">
-	<summary>
+ <param name="Name"></param>
+ <param name="Type"></param>
+ <param name="Section"></param>
+ <param name="SectionType"></param>
+ <param name="Title"></param>
+ <param name="Required"></param>
+ <remarks></remarks>
+</member>
+<member name="F:r2i.OWS.Framework.Entities.LogSeverity.NONE">
+ <summary>
  Use for logging a message
  </summary>
-</member><member name="F:r2i.OWS.Framework.Entities.LogSeverity.Low">
-	<summary>
+</member>
+<member name="F:r2i.OWS.Framework.Entities.LogSeverity.Low">
+ <summary>
  Minor exception
  </summary>
-</member><member name="F:r2i.OWS.Framework.Entities.LogSeverity.Medium">
-	<summary>
+</member>
+<member name="F:r2i.OWS.Framework.Entities.LogSeverity.Medium">
+ <summary>
  Possibly a problem - worth noting
  </summary>
-</member><member name="F:r2i.OWS.Framework.Entities.LogSeverity.High">
-	<summary>
+</member>
+<member name="F:r2i.OWS.Framework.Entities.LogSeverity.High">
+ <summary>
  Could possibly lead to more severe problems in the future
- </summary>
-</member><member name="F:r2i.OWS.Framework.Entities.LogSeverity.Severe">
-	<summary>
+ </summary>        
+</member>
+<member name="F:r2i.OWS.Framework.Entities.LogSeverity.Severe">
+ <summary>
  Catastrophic. Investigate this immediately.
  </summary>
-</member><member name="F:r2i.OWS.Framework.Entities.LogSeverity.Error">
-	<summary>
+</member>
+<member name="F:r2i.OWS.Framework.Entities.LogSeverity.Error">
+ <summary>
  Generic error. Could be ok - could be really bad.
  </summary>
-</member><member name="F:r2i.OWS.Framework.Plugins.Renderers.RenderTypes.Variable">
-	<summary>
- Starts with a [.  Used for replacing values.
- </summary>
-</member><member name="F:r2i.OWS.Framework.Plugins.Renderers.RenderTypes.Functional">
-	<summary>
- Starts with a {.  Used for producing actions.
- </summary>
-</member><member name="T:r2i.OWS.Framework.Plugins.Renderers.RenderTypes">
-	<summary>
+</member>
+<member name="T:r2i.OWS.Framework.Plugins.Renderers.RenderTypes">
+ <summary>
  Determines structure of tag
  </summary>
-</member><member name="M:r2i.OWS.Framework.Utilities.JSON.JsonDataTable.ConvertTableToJson(System.Data.DataTable)">
-	<summary> 
- Conv 
+</member>
+<member name="F:r2i.OWS.Framework.Plugins.Renderers.RenderTypes.Variable">
+ <summary>
+ Starts with a [.  Used for replacing values.
  </summary>
-	<param name="dt"></param>
-	<returns></returns>
-</member><member name="M:r2i.OWS.Framework.Utilities.JSON.JsonDataTable.GetJsonNode(System.Object,System.String)">
-	<summary>
- Fetches a JSON node from the path.
+</member>
+<member name="F:r2i.OWS.Framework.Plugins.Renderers.RenderTypes.Functional">
+ <summary>
+ Starts with a {.  Used for producing actions.
  </summary>
-	<param name="o">JSON object to traverse</param>
-	<param name="path">JSON object path ie</param>
-	<returns>The best effort at find the new node</returns>
-</member><member name="T:r2i.OWS.Framework.Utilities.JSON.JsonDataTable">
-	<summary> 
+</member>
+<member name="T:r2i.OWS.Framework.Utilities.JSON.JsonDataTable">
+ <summary> 
  Builds a JSON string based on a DataTable in the following format: 
  {"Columns":[ 
 8 {"Name":"ContactID"}, 
@@ -162,1681 +2179,99 @@ r2i.OWS.Framework
 27 {"Columns":["5","Wayne","Earl","Clients Corporation","Sales","Director","wearl@ccorporate.com","420-232-4231","123 Oakdale Ave.","Columbia","MD","21046","USA","panders"]} 
 28 ] 
 29} 
+ </summary> 
+</member>
+<member name="M:r2i.OWS.Framework.Utilities.JSON.JsonDataTable.ConvertTableToJson(System.Data.DataTable)">
+ <summary> 
+ Conv 
+ </summary> 
+ <param name="dt"></param> 
+ <returns></returns> 
+</member>
+<member name="M:r2i.OWS.Framework.Utilities.JSON.JsonDataTable.GetJsonNode(System.Object,System.String)">
+ <summary>
+ Fetches a JSON node from the path.
  </summary>
-</member><member name="M:r2i.OWS.Framework.Utilities.JSON.JsonToDataset.renderJsonObject(System.Object,System.String,System.String[],System.Collections.Generic.Dictionary{System.String,System.String})">
-	<summary> 
- Fetches a DataTable from a JSON object. 
- </summary>
-	<param name="o">JSON object to iterate over.</param>
-	<param name="TableName">Name of the System.Data.DataTable to create</param>
-	<param name="columns">Array of columns to map.</param>
-	<param name="columnMappings">key, value pairs with the values being the paths to the data to extract.</param>
-	<returns></returns>
-</member><member name="M:r2i.OWS.Framework.Utilities.JSON.JsonToDataset.renderJsonObject(System.Object,System.String[],System.Collections.Generic.Dictionary{System.String,System.String})">
-	<summary> 
- Create a DataTable with the default name of Table1. 
- </summary>
-	<param name="o"></param>
-	<param name="columns"></param>
-	<param name="columnMappings"></param>
-	<returns></returns>
-</member><member name="M:r2i.OWS.Framework.Utilities.JSON.JsonToDataset.getJsonNode(System.Object,System.String)">
-	<summary> 
- Fetches a JSON node from the path. 
- </summary>
-	<param name="o">JSON object to traverse</param>
-	<param name="path">JSON object path ie</param>
-	<returns>The best effort at find the new node</returns>
-</member><member name="T:r2i.OWS.Framework.Utilities.JSON.JsonToDataset">
-	<summary> 
+ <param name="o">JSON object to traverse</param>
+ <param name="path">JSON object path ie</param>
+ <returns>The best effort at find the new node</returns>
+</member>
+<member name="T:r2i.OWS.Framework.Utilities.JSON.JsonToDataset">
+ <summary> 
  Builds a System.Data.DataTable based on a json object and a series of columns. 
+ </summary> 
+</member>
+<member name="M:r2i.OWS.Framework.Utilities.JSON.JsonToDataset.renderJsonObject(System.Object,System.String,System.String[],System.Collections.Generic.Dictionary{System.String,System.String})">
+ <summary> 
+ Fetches a DataTable from a JSON object. 
+ </summary> 
+ <param name="o">JSON object to iterate over.</param> 
+ <param name="TableName">Name of the System.Data.DataTable to create</param> 
+ <param name="columns">Array of columns to map.</param> 
+ <param name="columnMappings">key, value pairs with the values being the paths to the data to extract.</param> 
+ <returns></returns> 
+</member>
+<member name="M:r2i.OWS.Framework.Utilities.JSON.JsonToDataset.renderJsonObject(System.Object,System.String[],System.Collections.Generic.Dictionary{System.String,System.String})">
+ <summary> 
+ Create a DataTable with the default name of Table1. 
+ </summary> 
+ <param name="o"></param> 
+ <param name="columns"></param> 
+ <param name="columnMappings"></param> 
+ <returns></returns> 
+</member>
+<member name="M:r2i.OWS.Framework.Utilities.JSON.JsonToDataset.getJsonNode(System.Object,System.String)">
+ <summary> 
+ Fetches a JSON node from the path. 
+ </summary> 
+ <param name="o">JSON object to traverse</param> 
+ <param name="path">JSON object path ie</param> 
+ <returns>The best effort at find the new node</returns> 
+</member>
+<member name="M:r2i.OWS.Framework.Utilities.Utility.ReplaceBetween(System.String,System.String,System.String,System.String)">
+ <summary>
+ Replaces text between two tags
  </summary>
-</member><member name="P:My.Resources.Resources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:My.Resources.Resources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="P:My.Resources.MIMETypes._323">
-	<summary>
-  Looks up a localized string similar to text/h323.
-</summary>
-</member><member name="P:My.Resources.MIMETypes._3g2">
-	<summary>
-  Looks up a localized string similar to audio/3gpp2.
-</summary>
-</member><member name="P:My.Resources.MIMETypes._3gp">
-	<summary>
-  Looks up a localized string similar to audio/3gpp.
-</summary>
-</member><member name="P:My.Resources.MIMETypes._3gp2">
-	<summary>
-  Looks up a localized string similar to video/3gpp2.
-</summary>
-</member><member name="P:My.Resources.MIMETypes._3gpp">
-	<summary>
-  Looks up a localized string similar to video/3gpp.
-</summary>
-</member><member name="P:My.Resources.MIMETypes._class">
-	<summary>
-  Looks up a localized string similar to java/*.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.aac">
-	<summary>
-  Looks up a localized string similar to audio/aac.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.abdata">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.accda">
-	<summary>
-  Looks up a localized string similar to application/msaccess.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.accdb">
-	<summary>
-  Looks up a localized string similar to application/msaccess.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.accdc">
-	<summary>
-  Looks up a localized string similar to application/msaccess.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.accde">
-	<summary>
-  Looks up a localized string similar to application/msaccess.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.accdr">
-	<summary>
-  Looks up a localized string similar to application/msaccess.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.accdt">
-	<summary>
-  Looks up a localized string similar to application/msaccess.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.actproj">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.addin">
-	<summary>
-  Looks up a localized string similar to text/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.ade">
-	<summary>
-  Looks up a localized string similar to application/msaccess.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.adobebridge">
-	<summary>
-  Looks up a localized string similar to application/x-bridge-url.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.adp">
-	<summary>
-  Looks up a localized string similar to application/msaccess.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.adts">
-	<summary>
-  Looks up a localized string similar to audio/aac.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.ai">
-	<summary>
-  Looks up a localized string similar to application/postscript.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.aif">
-	<summary>
-  Looks up a localized string similar to audio/aiff.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.aifc">
-	<summary>
-  Looks up a localized string similar to audio/aiff.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.aiff">
-	<summary>
-  Looks up a localized string similar to audio/aiff.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.amc">
-	<summary>
-  Looks up a localized string similar to application/x-mpeg.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.amr">
-	<summary>
-  Looks up a localized string similar to audio/AMR.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.application">
-	<summary>
-  Looks up a localized string similar to application/x-ms-application.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.asa">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.asax">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.ascx">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.asf">
-	<summary>
-  Looks up a localized string similar to video/x-ms-asf.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.ashx">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.asm">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.asmx">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.asp">
-	<summary>
-  Looks up a localized string similar to text/asp.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.aspx">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.asx">
-	<summary>
-  Looks up a localized string similar to application/x-mplayer2.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.au">
-	<summary>
-  Looks up a localized string similar to audio/basic.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.avi">
-	<summary>
-  Looks up a localized string similar to video/avi.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.bmp">
-	<summary>
-  Looks up a localized string similar to image/bmp.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.c">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.caf">
-	<summary>
-  Looks up a localized string similar to audio/x-caf.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.cat">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-pki.seccat.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.cc">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.cd">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.cdda">
-	<summary>
-  Looks up a localized string similar to audio/aiff.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.cer">
-	<summary>
-  Looks up a localized string similar to application/pkix-cert.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.cfc">
-	<summary>
-  Looks up a localized string similar to application/x-cfc.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.cfm">
-	<summary>
-  Looks up a localized string similar to application/x-cfm.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.cod">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.collection">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.config">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.coverage">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.cpp">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.crl">
-	<summary>
-  Looks up a localized string similar to application/pkix-crl.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.crt">
-	<summary>
-  Looks up a localized string similar to application/x-x509-ca-cert.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.cs">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.csdproj">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.csproj">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.css">
-	<summary>
-  Looks up a localized string similar to text/css.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.csv">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-excel.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.cur">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.cxx">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.data">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.datasource">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.dbs">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.def">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.der">
-	<summary>
-  Looks up a localized string similar to application/x-x509-ca-cert.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.dib">
-	<summary>
-  Looks up a localized string similar to image/bmp.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.dll">
-	<summary>
-  Looks up a localized string similar to application/x-msdownload.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.dlm">
-	<summary>
-  Looks up a localized string similar to text/dlm.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.doc">
-	<summary>
-  Looks up a localized string similar to application/msword.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.docm">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-word.document.macroEnabled.12.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.docx">
-	<summary>
-  Looks up a localized string similar to application/vnd.openxmlformats-officedocument.wordprocessingml.document.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.dot">
-	<summary>
-  Looks up a localized string similar to application/msword.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.dotm">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-word.template.macroEnabled.12.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.dotx">
-	<summary>
-  Looks up a localized string similar to application/vnd.openxmlformats-officedocument.wordprocessingml.template.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.dsp">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.dsw">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.dtd">
-	<summary>
-  Looks up a localized string similar to application/xml-dtd.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.dtsconfig">
-	<summary>
-  Looks up a localized string similar to text/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.dv">
-	<summary>
-  Looks up a localized string similar to video/x-dv.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.dwfx">
-	<summary>
-  Looks up a localized string similar to model/vnd.dwfx+xps.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.edn">
-	<summary>
-  Looks up a localized string similar to application/vnd.adobe.edn.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.eml">
-	<summary>
-  Looks up a localized string similar to message/rfc822.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.eps">
-	<summary>
-  Looks up a localized string similar to application/postscript.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.etd">
-	<summary>
-  Looks up a localized string similar to application/x-ebx.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.etp">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.exe">
-	<summary>
-  Looks up a localized string similar to application/x-msdownload.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.ext">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.fdf">
-	<summary>
-  Looks up a localized string similar to application/vnd.fdf.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.fif">
-	<summary>
-  Looks up a localized string similar to application/fractals.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.fky">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.flc">
-	<summary>
-  Looks up a localized string similar to video/flc.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.gif">
-	<summary>
-  Looks up a localized string similar to image/gif.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.grv">
-	<summary>
-  Looks up a localized string similar to application/vnd.groove-injector.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.gsa">
-	<summary>
-  Looks up a localized string similar to application/vnd.groove-space-archive.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.gsm">
-	<summary>
-  Looks up a localized string similar to audio/x-gsm.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.gta">
-	<summary>
-  Looks up a localized string similar to application/vnd.groove-tool-archive.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.gvp">
-	<summary>
-  Looks up a localized string similar to text/google-video-pointer.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.gz">
-	<summary>
-  Looks up a localized string similar to application/x-gzip.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.h">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.hpp">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.hqx">
-	<summary>
-  Looks up a localized string similar to application/mac-binhex40.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.hta">
-	<summary>
-  Looks up a localized string similar to application/hta.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.htc">
-	<summary>
-  Looks up a localized string similar to text/x-component.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.htm">
-	<summary>
-  Looks up a localized string similar to text/html.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.html">
-	<summary>
-  Looks up a localized string similar to text/html.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.htt">
-	<summary>
-  Looks up a localized string similar to text/webviewhtml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.hxa">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.hxc">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.hxd">
-	<summary>
-  Looks up a localized string similar to application/octet-stream.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.hxe">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.hxf">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.hxh">
-	<summary>
-  Looks up a localized string similar to application/octet-stream.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.hxi">
-	<summary>
-  Looks up a localized string similar to application/octet-stream.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.hxk">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.hxq">
-	<summary>
-  Looks up a localized string similar to application/octet-stream.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.hxr">
-	<summary>
-  Looks up a localized string similar to application/octet-stream.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.hxs">
-	<summary>
-  Looks up a localized string similar to application/octet-stream.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.hxt">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.hxv">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.hxw">
-	<summary>
-  Looks up a localized string similar to application/octet-stream.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.hxx">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.i">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.icl">
-	<summary>
-  Looks up a localized string similar to icon library.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.icns">
-	<summary>
-  Looks up a localized string similar to image/mac icon.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.ico">
-	<summary>
-  Looks up a localized string similar to image/x-icon.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.icpr">
-	<summary>
-  Looks up a localized string similar to image/icon project.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.ics">
-	<summary>
-  Looks up a localized string similar to text/calendar.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.idl">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.iii">
-	<summary>
-  Looks up a localized string similar to application/x-iphone.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.il">
-	<summary>
-  Looks up a localized string similar to icon library.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.inc">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.infopathxml">
-	<summary>
-  Looks up a localized string similar to application/ms-infopath.xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.inl">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.ins">
-	<summary>
-  Looks up a localized string similar to application/x-internet-signup.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.ipproj">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.iqy">
-	<summary>
-  Looks up a localized string similar to text/x-ms-iqy.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.isp">
-	<summary>
-  Looks up a localized string similar to application/x-internet-signup.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.java">
-	<summary>
-  Looks up a localized string similar to text/java.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.jfif">
-	<summary>
-  Looks up a localized string similar to image/jpeg.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.jnlp">
-	<summary>
-  Looks up a localized string similar to application/x-java-jnlp-file.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.jp2">
-	<summary>
-  Looks up a localized string similar to image/jp2.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.jpe">
-	<summary>
-  Looks up a localized string similar to image/jpeg.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.jpeg">
-	<summary>
-  Looks up a localized string similar to image/jpeg.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.jpg">
-	<summary>
-  Looks up a localized string similar to image/jpeg.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.js">
-	<summary>
-  Looks up a localized string similar to application/x-javascript.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.jsl">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.jsx">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.jsxbin">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.jtx">
-	<summary>
-  Looks up a localized string similar to application/x-jtx+xps.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.kci">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.latex">
-	<summary>
-  Looks up a localized string similar to application/x-latex.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.lgn">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.lmf">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-livemeeting.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.lmf_ms">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-livemeeting.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.ls">
-	<summary>
-  Looks up a localized string similar to application/x-javascript.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.lst">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.m1v">
-	<summary>
-  Looks up a localized string similar to video/mpeg.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.m3u">
-	<summary>
-  Looks up a localized string similar to audio/mpegurl.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.m4a">
-	<summary>
-  Looks up a localized string similar to audio/x-m4a.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.m4b">
-	<summary>
-  Looks up a localized string similar to audio/x-m4b.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.m4p">
-	<summary>
-  Looks up a localized string similar to audio/x-m4p.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.m4v">
-	<summary>
-  Looks up a localized string similar to video/x-m4v.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mac">
-	<summary>
-  Looks up a localized string similar to image/x-macpaint.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mak">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.man">
-	<summary>
-  Looks up a localized string similar to application/x-troff-man.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.map">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.master">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mda">
-	<summary>
-  Looks up a localized string similar to application/msaccess.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mdb">
-	<summary>
-  Looks up a localized string similar to application/msaccess.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mde">
-	<summary>
-  Looks up a localized string similar to application/msaccess.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mdi">
-	<summary>
-  Looks up a localized string similar to image/vnd.ms-modi.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mdp">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mfp">
-	<summary>
-  Looks up a localized string similar to application/x-shockwave-flash.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mht">
-	<summary>
-  Looks up a localized string similar to message/rfc822.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mhtml">
-	<summary>
-  Looks up a localized string similar to message/rfc822.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mid">
-	<summary>
-  Looks up a localized string similar to audio/mid.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.midi">
-	<summary>
-  Looks up a localized string similar to audio/mid.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mk">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mocha">
-	<summary>
-  Looks up a localized string similar to application/x-javascript.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mov">
-	<summary>
-  Looks up a localized string similar to video/quicktime.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.movie">
-	<summary>
-  Looks up a localized string similar to video/x-sgi-movie.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mp2">
-	<summary>
-  Looks up a localized string similar to video/mpeg.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mp2v">
-	<summary>
-  Looks up a localized string similar to video/mpeg.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mp3">
-	<summary>
-  Looks up a localized string similar to audio/mp3.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mp4">
-	<summary>
-  Looks up a localized string similar to audio/mp4.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mpa">
-	<summary>
-  Looks up a localized string similar to video/mpeg.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mpe">
-	<summary>
-  Looks up a localized string similar to video/mpeg.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mpeg">
-	<summary>
-  Looks up a localized string similar to video/mpeg.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mpf">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-mediapackage.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mpg">
-	<summary>
-  Looks up a localized string similar to video/mpeg.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mpv2">
-	<summary>
-  Looks up a localized string similar to video/mpeg.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mqv">
-	<summary>
-  Looks up a localized string similar to video/quicktime.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.mxp">
-	<summary>
-  Looks up a localized string similar to application/x-mmxp.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.nil">
-	<summary>
-  Looks up a localized string similar to icon library.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.nix">
-	<summary>
-  Looks up a localized string similar to application/x-mix-transfer.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.nmw">
-	<summary>
-  Looks up a localized string similar to application/nmwb.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.nws">
-	<summary>
-  Looks up a localized string similar to message/rfc822.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.odc">
-	<summary>
-  Looks up a localized string similar to text/x-ms-odc.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.odh">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.odl">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.ols">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-publisher.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.one">
-	<summary>
-  Looks up a localized string similar to application/msonenote.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.onepkg">
-	<summary>
-  Looks up a localized string similar to application/msonenote.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.orderedtest">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.p10">
-	<summary>
-  Looks up a localized string similar to application/pkcs10.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.p12">
-	<summary>
-  Looks up a localized string similar to application/x-pkcs12.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.p7b">
-	<summary>
-  Looks up a localized string similar to application/x-pkcs7-certificates.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.p7c">
-	<summary>
-  Looks up a localized string similar to application/pkcs7-mime.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.p7m">
-	<summary>
-  Looks up a localized string similar to application/pkcs7-mime.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.p7r">
-	<summary>
-  Looks up a localized string similar to application/x-pkcs7-certreqresp.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.p7s">
-	<summary>
-  Looks up a localized string similar to application/pkcs7-signature.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.pct">
-	<summary>
-  Looks up a localized string similar to image/pict.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.pdf">
-	<summary>
-  Looks up a localized string similar to application/pdf.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.pdx">
-	<summary>
-  Looks up a localized string similar to application/vnd.adobe.pdx.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.pfx">
-	<summary>
-  Looks up a localized string similar to application/x-pkcs12.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.pic">
-	<summary>
-  Looks up a localized string similar to image/pict.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.pict">
-	<summary>
-  Looks up a localized string similar to image/pict.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.pko">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-pki.pko.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.pl">
-	<summary>
-  Looks up a localized string similar to application/x-perl.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.plg">
-	<summary>
-  Looks up a localized string similar to text/html.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.pls">
-	<summary>
-  Looks up a localized string similar to audio/scpls.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.png">
-	<summary>
-  Looks up a localized string similar to image/png.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.pnt">
-	<summary>
-  Looks up a localized string similar to image/x-macpaint.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.pntg">
-	<summary>
-  Looks up a localized string similar to image/x-macpaint.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.pot">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-powerpoint.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.potm">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-powerpoint.template.macroEnabled.12.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.potx">
-	<summary>
-  Looks up a localized string similar to application/vnd.openxmlformats-officedocument.presentationml.template.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.ppa">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-powerpoint.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.ppam">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-powerpoint.addin.macroEnabled.12.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.pps">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-powerpoint.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.ppsm">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-powerpoint.slideshow.macroEnabled.12.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.ppsx">
-	<summary>
-  Looks up a localized string similar to application/vnd.openxmlformats-officedocument.presentationml.slideshow.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.ppt">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-powerpoint.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.pptm">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-powerpoint.presentation.macroEnabled.12.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.pptx">
-	<summary>
-  Looks up a localized string similar to application/vnd.openxmlformats-officedocument.presentationml.presentation.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.ps">
-	<summary>
-  Looks up a localized string similar to application/postscript.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.psess">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.pub">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-publisher.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.pwz">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-powerpoint.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.py">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.pyw">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.qcp">
-	<summary>
-  Looks up a localized string similar to audio/vnd.qcelp.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.qht">
-	<summary>
-  Looks up a localized string similar to text/x-html-insertion.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.qhtm">
-	<summary>
-  Looks up a localized string similar to text/x-html-insertion.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.qt">
-	<summary>
-  Looks up a localized string similar to video/quicktime.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.qti">
-	<summary>
-  Looks up a localized string similar to image/x-quicktime.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.qtif">
-	<summary>
-  Looks up a localized string similar to image/x-quicktime.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.qtl">
-	<summary>
-  Looks up a localized string similar to application/x-quicktimeplayer.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.rat">
-	<summary>
-  Looks up a localized string similar to application/rat-file.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.rc">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.rc2">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.rct">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.rdlc">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.rels">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-package.relationships+xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.resx">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.rgs">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.rmf">
-	<summary>
-  Looks up a localized string similar to application/vnd.adobe.rmf.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.rmi">
-	<summary>
-  Looks up a localized string similar to audio/mid.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.rmp">
-	<summary>
-  Looks up a localized string similar to application/vnd.rn-rn_music_package.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.rpt">
-	<summary>
-  Looks up a localized string similar to application/x-rpt.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.rqy">
-	<summary>
-  Looks up a localized string similar to text/x-ms-rqy.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.rsrc">
-	<summary>
-  Looks up a localized string similar to image/mac icon.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.rtf">
-	<summary>
-  Looks up a localized string similar to application/msword.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.rtsp">
-	<summary>
-  Looks up a localized string similar to application/x-rtsp.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.rul">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.s">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.sct">
-	<summary>
-  Looks up a localized string similar to text/scriptlet.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.sd2">
-	<summary>
-  Looks up a localized string similar to audio/x-sd2.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.sdp">
-	<summary>
-  Looks up a localized string similar to application/sdp.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.sdv">
-	<summary>
-  Looks up a localized string similar to video/sd-video.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.setpay">
-	<summary>
-  Looks up a localized string similar to application/set-payment-initiation.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.setreg">
-	<summary>
-  Looks up a localized string similar to application/set-registration-initiation.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.settings">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.sgi">
-	<summary>
-  Looks up a localized string similar to image/x-sgi.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.shtml">
-	<summary>
-  Looks up a localized string similar to text/html.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.sis">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.sit">
-	<summary>
-  Looks up a localized string similar to application/x-stuffit.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.sitemap">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.skin">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.skype">
-	<summary>
-  Looks up a localized string similar to application/x-skype.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.sldm">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-powerpoint.slide.macroEnabled.12.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.sldx">
-	<summary>
-  Looks up a localized string similar to application/vnd.openxmlformats-officedocument.presentationml.slide.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.slk">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-excel.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.sln">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.snd">
-	<summary>
-  Looks up a localized string similar to audio/basic.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.snippet">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.sol">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.sor">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.spc">
-	<summary>
-  Looks up a localized string similar to application/x-pkcs7-certificates.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.spl">
-	<summary>
-  Looks up a localized string similar to application/futuresplash.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.spt">
-	<summary>
-  Looks up a localized string similar to application/ScriptGen.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.srf">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.ssisdeploymentmanifest">
-	<summary>
-  Looks up a localized string similar to text/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.sst">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-pki.certstore.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.stl">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-pki.stl.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.stm">
-	<summary>
-  Looks up a localized string similar to text/html.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.svc">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.svg">
-	<summary>
-  Looks up a localized string similar to image/svg+xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.svgz">
-	<summary>
-  Looks up a localized string similar to image/svg+xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.swf">
-	<summary>
-  Looks up a localized string similar to application/x-shockwave-flash.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.tab">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.tar">
-	<summary>
-  Looks up a localized string similar to application/x-tar.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.targa">
-	<summary>
-  Looks up a localized string similar to image/x-targa.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.tdl">
-	<summary>
-  Looks up a localized string similar to text/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.testrunconfig">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.tgz">
-	<summary>
-  Looks up a localized string similar to application/x-compressed.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.thmx">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-officetheme.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.tif">
-	<summary>
-  Looks up a localized string similar to image/tiff.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.tlh">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.tli">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.trx">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.txt">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.udf">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.udt">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.uls">
-	<summary>
-  Looks up a localized string similar to text/iuls.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.user">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.usr">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vb">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vbdproj">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vbproj">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vcf">
-	<summary>
-  Looks up a localized string similar to text/x-vcard.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vcg">
-	<summary>
-  Looks up a localized string similar to application/vnd.groove-vcard.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vcproj">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vddproj">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vdp">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vdproj">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vdx">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-visio.viewer.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.viw">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vjp">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vjsproj">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vscontent">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vsd">
-	<summary>
-  Looks up a localized string similar to application/vnd.visio.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vsi">
-	<summary>
-  Looks up a localized string similar to application/ms-vsi.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vsl">
-	<summary>
-  Looks up a localized string similar to application/vnd.visio.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vsmdi">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vspolicy">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vspolicydef">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vspscc">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vss">
-	<summary>
-  Looks up a localized string similar to application/vnd.visio.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vsscc">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vssettings">
-	<summary>
-  Looks up a localized string similar to text/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vssscc">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vst">
-	<summary>
-  Looks up a localized string similar to application/vnd.visio.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vstemplate">
-	<summary>
-  Looks up a localized string similar to text/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vsto">
-	<summary>
-  Looks up a localized string similar to application/x-ms-vsto.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vsu">
-	<summary>
-  Looks up a localized string similar to application/vnd.visio.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vsw">
-	<summary>
-  Looks up a localized string similar to application/vnd.visio.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vsx">
-	<summary>
-  Looks up a localized string similar to application/vnd.visio.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.vtx">
-	<summary>
-  Looks up a localized string similar to application/vnd.visio.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.wal">
-	<summary>
-  Looks up a localized string similar to interface/x-winamp3-skin.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.wav">
-	<summary>
-  Looks up a localized string similar to audio/wav.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.wave">
-	<summary>
-  Looks up a localized string similar to audio/wav.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.wax">
-	<summary>
-  Looks up a localized string similar to audio/x-ms-wax.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.wbk">
-	<summary>
-  Looks up a localized string similar to application/msword.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.wdp">
-	<summary>
-  Looks up a localized string similar to image/vnd.ms-photo.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.wiz">
-	<summary>
-  Looks up a localized string similar to application/msword.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.wlz">
-	<summary>
-  Looks up a localized string similar to interface/x-winamp-lang.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.wm">
-	<summary>
-  Looks up a localized string similar to video/x-ms-wm.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.wma">
-	<summary>
-  Looks up a localized string similar to audio/x-ms-wma.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.wmd">
-	<summary>
-  Looks up a localized string similar to application/x-ms-wmd.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.wmv">
-	<summary>
-  Looks up a localized string similar to video/x-ms-wmv.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.wmx">
-	<summary>
-  Looks up a localized string similar to video/x-ms-wmx.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.wmz">
-	<summary>
-  Looks up a localized string similar to application/x-ms-wmz.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.workspace">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.wpl">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-wpl.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.wsc">
-	<summary>
-  Looks up a localized string similar to text/scriptlet.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.wsdl">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.wsz">
-	<summary>
-  Looks up a localized string similar to interface/x-winamp-skin.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.wvx">
-	<summary>
-  Looks up a localized string similar to video/x-ms-wvx.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xaml">
-	<summary>
-  Looks up a localized string similar to application/xaml+xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xbap">
-	<summary>
-  Looks up a localized string similar to application/x-ms-xbap.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xdp">
-	<summary>
-  Looks up a localized string similar to application/vnd.adobe.xdp+xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xdr">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xfd">
-	<summary>
-  Looks up a localized string similar to application/vnd.adobe.xfd+xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xfdf">
-	<summary>
-  Looks up a localized string similar to application/vnd.adobe.xfdf.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xht">
-	<summary>
-  Looks up a localized string similar to application/xhtml+xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xhtml">
-	<summary>
-  Looks up a localized string similar to application/xhtml+xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xla">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-excel.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xlam">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-excel.addin.macroEnabled.12.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xlk">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-excel.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xll">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-excel.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xlm">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-excel.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xls">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-excel.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xlsb">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-excel.sheet.binary.macroEnabled.12.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xlsm">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-excel.sheet.macroEnabled.12.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xlsx">
-	<summary>
-  Looks up a localized string similar to application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xlt">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-excel.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xltm">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-excel.template.macroEnabled.12.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xltx">
-	<summary>
-  Looks up a localized string similar to application/vnd.openxmlformats-officedocument.spreadsheetml.template.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xlw">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-excel.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xml">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xmta">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xoml">
-	<summary>
-  Looks up a localized string similar to text/plain.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xpi">
-	<summary>
-  Looks up a localized string similar to application/x-xpinstall;app=firefox.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xps">
-	<summary>
-  Looks up a localized string similar to application/vnd.ms-xpsdocument.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xsc">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xsd">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xsl">
-	<summary>
-  Looks up a localized string similar to text/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xslt">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.xss">
-	<summary>
-  Looks up a localized string similar to application/xml.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.z">
-	<summary>
-  Looks up a localized string similar to application/x-compress.
-</summary>
-</member><member name="P:My.Resources.MIMETypes.zip">
-	<summary>
-  Looks up a localized string similar to application/x-zip-compressed.
-</summary>
-</member><member name="T:My.Resources.MIMETypes">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
+ <param name="Original">Incoming string</param>
+ <param name="StartTag">First instance of this tag marks the beginning of the replacement</param>
+ <param name="EndTag">First instance of this tag marks the end of the replacement</param>
+ <param name="ReplaceWith">Replace the text with this</param>
+ <returns>Replaced string</returns>
+</member>
+<member name="M:r2i.OWS.Framework.Utilities.Utility.GetBetween(System.String,System.String,System.String)">
+ <summary>
+ Returns all text between two given tags
+ </summary>
+ <param name="Original">Incoming string</param>
+ <param name="StartTag">First instance of this tag marks the beginning of the inner text</param>
+ <param name="EndTag">First instance of this tag marks the end of the inner text</param>
+ <returns>String in between</returns>
+</member>
+<member name="M:r2i.OWS.Framework.Utilities.Utility.Join(System.Collections.Generic.List{System.String},System.String)">
+ <summary>
+ Returns a single string of all Items joined together
+ </summary>
+ <param name="Items">Strings to join</param>
+ <param name="JoinCharacter">String to insert between items. <i>Default is ,</i></param>
+ <returns>String</returns>
+</member>
+<member name="M:r2i.OWS.Framework.Utilities.Utility.Join(System.String,System.String[])">
+ <summary>
+ Returns a concatenated string for all JoinValues, joined with JoinChar.  Checks if each part ends with
+ JoinChar first.  If not, then it appends JoinChar prior to JoinValues(i).
+ </summary>
+ <param name="JoinChar">String to appear between JoinValues</param>
+ <param name="JoinValues">Array of strings</param>
+ <returns>Single string</returns>
+ <remarks></remarks>
+</member>
+<member name="M:r2i.OWS.Framework.Utilities.Utility.GetHexString(System.Byte[])">
+ <summary>
+ Returns a valid HEX representation of the incoming byte array
+ </summary>
+ <param name="Bytes"></param>
+ <returns></returns>
+ <remarks></remarks>
 </member>
 </members>
 </doc>

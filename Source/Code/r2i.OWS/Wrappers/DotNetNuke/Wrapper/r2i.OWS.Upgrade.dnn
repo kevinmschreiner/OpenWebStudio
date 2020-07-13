@@ -4,7 +4,7 @@
 		<folder>
 			<name>OWS</name>
 			<description>Open Web Studio - Universal Presentation Layer for building Interactive Web systems.</description>
-<version>02.02.16</version>
+<version>02.04.00</version>
 			<businesscontrollerclass>R2i.OWS.Wrapper.DNN.ControlInterface, r2i.OWS.Wrapper.DotNetNuke</businesscontrollerclass>
       <resourcefile>Resources.zip</resourcefile>
 			<modules>
@@ -69,31 +69,31 @@
         </file>
         <file>
           <name>r2i.OWS.UI.dll</name>
-<version>02.02.16</version>
+<version>02.04.00</version>
         </file>
         <file>
           <name>r2i.OWS.Engine.dll</name>
-<version>02.02.16</version>
+<version>02.04.00</version>
         </file>
         <file>
           <name>r2i.OWS.Framework.dll</name>
-<version>02.02.16</version>
+<version>02.04.00</version>
         </file>
         <file>
           <name>r2i.OWS.SqlDataProvider.dll</name>
-<version>02.02.16</version>
+<version>02.04.00</version>
         </file>
         <file>
           <name>r2i.OWS.Wrapper.DotNetNuke.dll</name>
-<version>02.02.16</version>
+<version>02.04.00</version>
         </file>
         <file>
           <name>r2i.OWS.Wrapper.DotNetNuke.Interface.dll</name>
-<version>02.02.16</version>
+<version>02.04.00</version>
         </file>
         <file>
           <name>r2i.OWS.Wrapper.DNN.Extensions.dll</name>
-<version>02.02.16</version>
+<version>02.04.00</version>
         </file>        
         <file>
           <name>02.00.00.SqlDataProvider</name>

@@ -140,18 +140,34 @@ function onActionSave_Comment(template,action) {
 
 //REGION-CONFIG SWITCHER
 function onActionPrint_Goto(template,action) { 
-var summary = '';
-if (typeof action.Parameters.ConfigurationID!='undefined' && action.Parameters.ConfigurationID.length > 0 && action.Parameters.ConfigurationID!='00000000-0000-0000-0000-000000000000')
-			summary += 'Configuration:' + action.Parameters.Name + ' ';
-if (action.Parameters.Region.length > 0)
- summary += 'Region:' + action.Parameters.Region + ' ';
-return sysActionSummary(template.Name,summary,null,actionDisplay(action));
+	var summary = '';
+	var configheader = "Configuration:";
+	var regionheader = "Region:";
+	if (typeof action.Parameters.ConfigurationID != 'undefined' && action.Parameters.ConfigurationID.length > 0 && action.Parameters.ConfigurationID != '00000000-0000-0000-0000-000000000000') {
+		summary += configheader + action.Parameters.Name + ' ';
+		configheader = '';
+	}
+	if (typeof action.Parameters.ConfigurationDyn != 'undefined' && action.Parameters.ConfigurationDyn.length > 0) {
+		summary += configheader +'(dynamic) ' + action.Parameters.ConfigurationDyn + ' ';
+	}
+
+	if (action.Parameters.Region.length > 0) {
+		summary += regionheader + action.Parameters.Region + ' ';
+		regionheader = '';
+	}
+	if (typeof action.Parameters.RegionDyn != 'undefined' && action.Parameters.RegionDyn.length > 0) {
+		summary += regionheader + '(dynamic) ' + action.Parameters.RegionDyn + ' ';
+	}
+
+	return sysActionSummary(template.Name,summary,null,actionDisplay(action));
 }
 
 function onActionLoad_Goto(template,action) { 
 	var vname = $('frmActionGoto_Name');
 	var vid = $('frmActionGoto_ConfigurationID');
 	var vregion = $('frmActionGoto_Region');
+	var vnameDyn = $('frmActionGoto_ConfigurationDyn');
+	var vregionDyn = $('frmActionGoto_RegionDyn');
 	
 	sysSetText(vname,action.Parameters.Name);
 	
@@ -166,18 +182,35 @@ function onActionLoad_Goto(template,action) {
 	}
 	sysSetSelect(vid,action.Parameters.ConfigurationID);
 	sysSetSelect(vregion,action.Parameters.Region);
-	
+
+	sysSetText(vnameDyn, '');
+	sysSetText(vregionDyn, '');
+	if (action.Parameters.ConfigurationDyn != null) {
+		sysSetText(vnameDyn, action.Parameters.ConfigurationDyn);
+	}
+	if (action.Parameters.RegionDyn != null) {
+		sysSetText(vregionDyn, action.Parameters.RegionDyn);
+	}	
 }
 function onActionSave_Goto(template,action) { 
 	var vid = $('frmActionGoto_ConfigurationID');
 	var vregion = $('frmActionGoto_Region');
+	var vnameDyn = $('frmActionGoto_ConfigurationDyn');
+	var vregionDyn = $('frmActionGoto_RegionDyn');
 	
 	action.Parameters.Name = sysGetSelectText(vid);
 	action.Parameters.ConfigurationID = sysGetSelect(vid);
 	action.Parameters.Region = sysGetSelect(vregion);
+	action.Parameters.ConfigurationDyn = sysGetText(vnameDyn);
+	action.Parameters.RegionDyn = sysGetText(vregionDyn);
 return true;
 }
-
+function openConfig_Goto(cid) {
+    if (cid != '00000000-0000-0000-0000-000000000000') {
+        var url = '/DesktopModules/OWS/Admin.aspx#config/' + cid;
+        window.open(url, '_blank');
+    }
+}
 function loadConfigurationChoices_Goto(cid)
 {
 
@@ -2473,19 +2506,29 @@ var sysAction_Types = [
    "Template" :
    "<table class=Normal width=100% border=0 cellpadding=1 cellspacing=0>" +
     " <tr>" +
-    "  <td class=\"SubHead\" width=\"151\">Configuration</td>" +
+    "  <td class=\"SubHead\" width=\"151\">Configuration (static)</td>" +
     "  <td class=\"Normal\" style=\"HEIGHT: 19px\"><input type=\"hidden\" name=frmActionGoto_Name id=frmActionGoto_Name /><div id=fi1>" +
-     "<select name=frmActionGoto_ConfigurationID id=frmActionGoto_ConfigurationID onchange=\"onGotoConfigChanged();\">" +
-      "<option value=\"\">Select a Configuration</option>" +
-     "</select>&nbsp;<a href=\"#\" onclick=\"loadConfigurationChoices_Goto(sysGetSelect($('frmActionGoto_ConfigurationID')));return false;\">refresh</a></div></td>" +
-    " </tr>" +
-    " <tr>" +
-    "  <td class=\"SubHead\" width=\"151\">Region</td>" +
-    "  <td class=\"Normal\" style=\"HEIGHT: 19px\"><div id=fi1>" +
-     "<select name=frmActionGoto_Region id=frmActionGoto_Region>" +
-      "<option value=\"\">Select a Region</option>" +
-     "</select>&nbsp;<a href=\"#\" onclick=\"configRegions=0;loadConfigurationRegions_Goto(sysGetSelect($('frmActionGoto_ConfigurationID')));return false;\">refresh</a></div></td>" +
-    " </tr>" +
+    "	<select name=frmActionGoto_ConfigurationID id=frmActionGoto_ConfigurationID onchange=\"onGotoConfigChanged();\">" +
+    "	<option value=\"\">Select a Configuration</option>" +
+    "	</select>&nbsp;<a href=\"#\" onclick=\"loadConfigurationChoices_Goto(sysGetSelect($('frmActionGoto_ConfigurationID')));return false;\">refresh</a>&nbsp;<a href=\"#\" onclick=\"openConfig_Goto(sysGetSelect($('frmActionGoto_ConfigurationID')));return false;\">edit</a></div></td>" +
+	" </tr>" +
+	" <tr>" +
+	" <td class=\"SubHead\" width=\"151\">Region (static)</td>" +
+	" <td class=\"Normal\" style=\"HEIGHT: 19px\"><div id=fi1>" +
+	"	<select name=frmActionGoto_Region id=frmActionGoto_Region>" +
+	"		<option value=\"\">Select a Region</option>" +
+	"	</select>&nbsp;<a href=\"#\" onclick=\"configRegions=0;loadConfigurationRegions_Goto(sysGetSelect($('frmActionGoto_ConfigurationID')));return false;\">refresh</a></div></td>" +
+	"</tr>" +
+	"<tr><td colspan=\"2\"><hr></td></tr>"+
+	"<tr>" +
+	   "<td class=\"SubHead\" width=\"151\">Configuration (dynamic)</td>" +
+	   "<td class=\"Normal\" style=\"HEIGHT: 19px\"><input style=\"width:500px\" type=\"text\" name=frmActionGoto_ConfigurationDyn id=frmActionGoto_ConfigurationDyn /></td>" +
+	 " </tr>" +
+	 "<tr>" +
+	 "  <td class=\"SubHead\" width=\"151\">Region (dynamic)</td>" +
+	 "  <td class=\"Normal\" style=\"HEIGHT: 19px\">" +
+	 "<input style=\"width:500px\" type=\"text\" name=frmActionGoto_RegionDyn id=frmActionGoto_RegionDyn>" +
+	 " </td></tr>" +
    "</table>"
   },  
   {

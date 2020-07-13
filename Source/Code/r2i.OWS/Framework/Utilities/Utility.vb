@@ -558,6 +558,12 @@ Namespace r2i.OWS.Framework.Utilities
 
                 'GET THE RESPONSE
                 Return CType(request.GetResponse(), System.Net.HttpWebResponse)
+            Catch webex As System.Net.WebException
+                Try
+                    Return CType(webex.Response, System.Net.HttpWebResponse)
+                Catch ex As Exception
+                    Throw webex
+                End Try
             Catch ex As Exception
                 Throw ex
             End Try

@@ -31,8 +31,8 @@ Imports System.Security
 <Assembly: AssemblyTitle("r2i.OWS.UI")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("R2 Integrated Inc. ( http://www.r2integrated.com )")> 
-<Assembly: AssemblyProduct("Open Web Studio")> 
-<Assembly: AssemblyCopyright("Copyright 2008 R2i.ntegrated Inc.")> 
+<Assembly: AssemblyProduct("Open Web Studio")>
+<Assembly: AssemblyCopyright("Copyright ©  2020")>
 <Assembly: AssemblyTrademark("Open Web Studio")> 
 <Assembly: ComVisible(False)> 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
@@ -44,8 +44,8 @@ Imports System.Security
 '      Revision
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
-<Assembly: System.Security.AllowPartiallyTrustedCallers()> 
-<Assembly: AssemblyVersion("02.02.16.00")>
+<Assembly: System.Security.AllowPartiallyTrustedCallers()>
+<Assembly: AssemblyVersion("02.04.00.00")>
 
-<Assembly: AssemblyFileVersion("02.02.16.00")>
+<Assembly: AssemblyFileVersion("02.04.00.00")>
 
