@@ -20,11 +20,11 @@ Open Web Studio is not bound to any specific platform. DotNetNuke is where we co
 Just like you can create modules and solutions with Open Web Studio, you can also utilize these as Skin elements and even full blown PA modules and distribute these because of the OWS portability. Build your solutions and use them on multiple portals simply by packaging your solution and installing the OWS engine and package on the site.
 
 # Extensions
-<div><img height="251" alt="OWS Tools" width="413" border="0" align="left" style="padding:0 20px 20px 0" src="http://www.openwebstudio.com/portals/0/Img/UI Screenshots/ows-tools.jpg"> OWS would not have the level of versatility possible if it wasn't so extendable. While out of the box you can do pretty much anything you could imagine, we also took into consideration times when you as the developer come up with something that "we" couldn't imagine. Out of the box we provide samples of creating your own syntax, formats and runtime tasks. Extensions are easy to create and are linked to the runtime via a standard configuration file.</div>
-
+OWS would not have the level of versatility possible if it wasn't so extendable. While out of the box you can do pretty much anything you could imagine, we also took into consideration times when you as the developer come up with something that "we" couldn't imagine. Out of the box we provide samples of creating your own syntax, formats and runtime tasks. Extensions are easy to create and are linked to the runtime via a standard configuration file.
+<br/>
 
 # Quick Builder
-Get started fast with OWS using this advanced yet easy to use utility. The OWS Quick Builder enables the everyday non-technical person to build data sourced modules from an existing table structures. This allows OWS to build advanced data related forms with search, filter, sort, add, view, update and delete quickly. For experienced engineers the Quick Builder provides a fast method for starting your development creating a rich UI experience in just a few clicks.
-
+<img height="251" alt="OWS Tools" width="413" border="0" align="left" style="padding:0 20px 20px 0" src="http://www.openwebstudio.com/portals/0/Img/UI Screenshots/ows-tools.jpg">Get started fast with OWS using this advanced yet easy to use utility. The OWS Quick Builder enables the everyday non-technical person to build data sourced modules from an existing table structures. This allows OWS to build advanced data related forms with search, filter, sort, add, view, update and delete quickly. For experienced engineers the Quick Builder provides a fast method for starting your development creating a rich UI experience in just a few clicks.
+<br/><br/><br/><br/>
 # Support and Learning OWS
 We have a growing number of examples that exist with open web studio, some simple examples and how to and others, like our Wiki are full blown modules that replace the need for any competing module of the same type. Because we are releasing as open source, we will also be releasing large packages meant to be used as either example or modules themselves from wiki and issue tracking to just about any other need.
