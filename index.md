@@ -2,11 +2,13 @@
 Open Web Studio is a complete development platform, allowing you to create any module you would like, from the ground up, all from the comfort of your own browser, using an easy to pick up syntax and action driven flow that anyone can learn. 
 
 # Interface
-<div><img height="182" alt="OWS Home" width="320" border="0" align="left" style="padding:0 20px 20px 0" src="http://www.openwebstudio.com/portals/0/Img/UI Screenshots/ows-home.jpg"> A completely web based Integrated Development Environment. It's a familiar layout similar to what you experience within Visual Studio and the Microsoft office suite. We built the interface from the ground up with the user in mind. All aspects of the environment are intuitive and easy to use and accessible from anywhere since the whole framework is online and not on your desktop.</div>
+<img height="182" alt="OWS Home" width="320" border="0" align="left" style="padding:0 20px 20px 0" src="http://www.openwebstudio.com/portals/0/Img/UI Screenshots/ows-home.jpg"> A completely web based Integrated Development Environment. It's a familiar layout similar to what you experience within Visual Studio and the Microsoft office suite. We built the interface from the ground up with the user in mind. All aspects of the environment are intuitive and easy to use and accessible from anywhere since the whole framework is online and not on your desktop.
+<br/>
 
 # Ribbon
-<div>Rounding out the administrative interface is a fluent ribbon control we call jRibbon which has the look and feel of the Microsoft Ribbon control, but has a tiny javascript footprint. This control will be available on its own as a free open source project thru the google code site.
-<img height="177" alt="OWS Actions" width="495" border="0" align="right" style="padding:0 0 20px 20px" src="http://www.openwebstudio.com/portals/0/Img/UI Screenshots/ows-actions.jpg">  </div>
+Rounding out the administrative interface is a fluent ribbon control we call jRibbon which has the look and feel of the Microsoft Ribbon control, but has a tiny javascript footprint. This control will be available on its own as a free open source project thru the google code site.
+<img height="177" alt="OWS Actions" width="495" border="0" align="right" style="padding:0 0 20px 20px" src="http://www.openwebstudio.com/portals/0/Img/UI Screenshots/ows-actions.jpg">
+<br/>
 
 # Architecture
 The technology behind the interface is advanced, using Javascript and JSON to handle the majority of the runtime and the storage of the configurations.
