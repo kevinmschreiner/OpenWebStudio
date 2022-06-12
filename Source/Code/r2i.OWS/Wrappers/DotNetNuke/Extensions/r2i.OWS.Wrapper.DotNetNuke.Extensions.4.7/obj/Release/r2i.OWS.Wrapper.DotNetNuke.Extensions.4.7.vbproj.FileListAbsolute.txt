@@ -25,5 +25,6 @@ G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\
 G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\obj\Release\r2i.OWS.Wrapper.DNN.Extensions.dll
 G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Extensions._4._7.xml
 G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\obj\Release\r2i.OWS.Wrapper.DNN.Extensions.pdb
-G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7.vbprojAssemblyReference.cache
 G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7.vbproj.CopyComplete
+G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7.vbproj.AssemblyReference.cache
+G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.7.vbproj.CoreCompileInputs.cache

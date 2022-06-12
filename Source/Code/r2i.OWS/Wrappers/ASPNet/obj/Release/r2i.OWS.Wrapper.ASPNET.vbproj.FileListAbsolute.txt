@@ -15,5 +15,6 @@ G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Release\r2i
 G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Release\r2i.OWS.Wrapper.ASPNET.dll
 G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Release\r2i.OWS.Core.Generic.xml
 G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Release\r2i.OWS.Wrapper.ASPNET.pdb
-G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Release\r2i.OWS.Wrapper.ASPNET.vbprojAssemblyReference.cache
 G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Release\r2i.OWS.Wrapper.ASPNET.vbproj.CopyComplete
+G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Release\r2i.OWS.Wrapper.ASPNET.vbproj.AssemblyReference.cache
+G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Release\r2i.OWS.Wrapper.ASPNET.vbproj.CoreCompileInputs.cache
