@@ -362,16 +362,33 @@ Namespace DataAccess
 
         Public Function GetModuleSettings(ByVal moduleId As Integer) As System.Collections.Hashtable Implements IPortalSettings.GetModuleSettings
             'LoadPortalSettings()
-            Dim lst As IList(Of DotNetNuke.Entities.Modules.ModuleInfo) = DotNetNuke.Entities.Modules.ModuleController.Instance.GetTabModulesByModule(moduleId)
-            If Not lst Is Nothing AndAlso lst.Count > 0 Then
-                Return lst(0).ModuleSettings
-            End If
-            Return Nothing
+
+            'Dim lst As IList(Of DotNetNuke.Entities.Modules.ModuleInfo) = DotNetNuke.Entities.Modules.ModuleController.Instance.GetTabModulesByModule(moduleId)
+            'If Not lst Is Nothing AndAlso lst.Count > 0 Then
+            '    Return lst(0).ModuleSettings
+            'End If
+            Return ModuleControllerInstance().GetModuleSettings(moduleId)
         End Function
 
         Public Function GetTabModuleSettings(ByVal tabModuleId As Integer, ByVal settings As System.Collections.Hashtable) As System.Collections.Hashtable Implements IPortalSettings.GetTabModuleSettings
             'Return DotNetNuke.Entities.Portals.PortalSettings.GetTabModuleSettings(tabModuleId, settings)
-            Return DotNetNuke.Entities.Modules.ModuleController.Instance.GetTabModule(tabModuleId).TabModuleSettings
+            Return ModuleControllerInstance().GetTabModule(tabModuleId).TabModuleSettings
+        End Function
+
+        Private Shared Function UserControllerInstance() As DotNetNuke.Entities.Users.UserController
+            'Return DotNetNuke.Entities.Users.UserController.Instance()
+            Dim temporary As New DotNetNuke.Entities.Users.UserController()
+            Return temporary
+        End Function
+        Private Shared Function ModuleControllerInstance() As DotNetNuke.Entities.Modules.ModuleController
+            'Return DotNetNuke.Entities.Modules.ModuleController.Instance()
+            Dim temporary As New DotNetNuke.Entities.Modules.ModuleController()
+            Return temporary
+        End Function
+        Private Shared Function TabControllerInstance() As DotNetNuke.Entities.Tabs.TabController
+            'Return DotNetNuke.Entities.Tabs.TabController.Instance()
+            Dim temporary As New DotNetNuke.Entities.Tabs.TabController()
+            Return temporary
         End Function
     End Class
 End Namespace

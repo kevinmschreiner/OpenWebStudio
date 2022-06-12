@@ -224,7 +224,7 @@ Public Class OpenCallbackControl
                     tbInfo = _parent.PortalSettings.ActiveTab
                 Else
                     If Not PageId Is Nothing AndAlso IsNumeric(PageId) Then
-                        tbInfo = (New DotNetNuke.Entities.Tabs.TabController).GetTab(CInt(PageId), CInt(Me.SiteId))
+                        tbInfo = (New DotNetNuke.Entities.Tabs.TabController).GetTab(CInt(PageId), CInt(Me.SiteId), False)
                     End If
                 End If
                 If Not tbInfo Is Nothing Then
@@ -254,7 +254,7 @@ Public Class OpenCallbackControl
                     tbInfo = _parent.PortalSettings.ActiveTab
                 Else
                     If Not PageId Is Nothing AndAlso IsNumeric(PageId) Then
-                        tbInfo = (New DotNetNuke.Entities.Tabs.TabController).GetTab(CInt(PageId), CInt(Me.SiteId))
+                        tbInfo = (New DotNetNuke.Entities.Tabs.TabController).GetTab(CInt(PageId), CInt(Me.SiteId), False)
                     End If
                 End If
                 If Not tbInfo Is Nothing Then

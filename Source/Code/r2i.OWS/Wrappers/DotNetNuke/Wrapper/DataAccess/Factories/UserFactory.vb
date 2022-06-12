@@ -32,7 +32,7 @@ Namespace DataAccess.Factories
 
         Public Sub SetPassword(ByVal user As UserInfo, ByVal passValue As String)
             'Dim UserControl As UserController
-            DotNetNuke.Security.Membership.MembershipProvider.Instance.ResetAndChangePassword(user, passValue)
+            DotNetNuke.Security.Membership.MembershipProvider.Instance.ResetPassword(user, passValue)
         End Sub
 
         Public Function AddUser(ByVal user As UserInfo, ByVal AddToMembershipProvider As Boolean) As Integer

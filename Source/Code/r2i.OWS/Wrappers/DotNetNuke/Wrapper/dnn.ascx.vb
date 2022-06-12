@@ -183,7 +183,8 @@ Partial Public Class Dnn
             End If
         End If
         Try
-            DotNetNuke.Entities.Tabs.TabController.Instance.ClearCache(PortalId)
+            'DotNetNuke.Entities.Tabs.TabController.Instance.ClearCache(PortalId)
+            TabControllerInstance.ClearCache(PortalId)
             DotNetNuke.Common.Utilities.DataCache.ClearModuleCache(TabId)
         Catch ex As Exception
         End Try
@@ -305,4 +306,15 @@ Partial Public Class Dnn
             DotNetNuke.Services.Exceptions.LogException(ex)
         End Try
     End Sub
+
+    Private Function ModuleControllerInstance() As DotNetNuke.Entities.Modules.ModuleController
+        'Return DotNetNuke.Entities.Modules.ModuleController.Instance()
+        Dim temporary As New DotNetNuke.Entities.Modules.ModuleController()
+        Return temporary
+    End Function
+    Private Function TabControllerInstance() As DotNetNuke.Entities.Tabs.TabController
+        'Return DotNetNuke.Entities.Modules.ModuleController.Instance()
+        Dim temporary As New DotNetNuke.Entities.Tabs.TabController()
+        Return temporary
+    End Function
 End Class

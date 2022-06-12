@@ -385,7 +385,8 @@ Namespace DataAccess
             'GET THE EXISTING USER
             Dim userObj As DotNetNuke.Entities.Users.UserInfo
             If CInt(Me.Id) > 0 Then
-                userObj = DotNetNuke.Entities.Users.UserController.Instance.GetUser(CInt(Me.SiteId), CInt(Me.Id))
+                'userObj = DotNetNuke.Entities.Users.UserController.Instance.GetUser(CInt(Me.SiteId), CInt(Me.Id))
+                userObj = UserControllerInstance().GetUser(CInt(Me.SiteId), CInt(Me.Id))
             Else
                 userObj = New DotNetNuke.Entities.Users.UserInfo
                 userObj.UserID = -1
@@ -543,6 +544,12 @@ Namespace DataAccess
             DotNetNuke.Entities.Users.UserController.UpdateUser(userObj.PortalID, userObj)
 
         End Sub
+
+        Private Function UserControllerInstance() As DotNetNuke.Entities.Users.UserController
+            'Return DotNetNuke.Entities.Users.UserController.Instance()
+            Dim temporary As New DotNetNuke.Entities.Users.UserController()
+            Return temporary
+        End Function
     End Class
 End Namespace
 

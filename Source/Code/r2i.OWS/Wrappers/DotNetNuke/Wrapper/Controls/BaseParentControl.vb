@@ -228,9 +228,11 @@ Public Class BaseParentControl
                     Return CType(_Parent, DotNetNuke.UI.Skins.SkinObjectBase).PortalSettings
 
                 ElseIf TypeOf _Parent Is DotNetNuke.Services.Scheduling.SchedulerClient Then
-                    Return DotNetNuke.Entities.Portals.PortalController.Instance().GetCurrentPortalSettings()
+                    'Return DotNetNuke.Entities.Portals.PortalController.Instance().GetCurrentPortalSettings()
+                    Return DotNetNuke.Entities.Portals.PortalController.GetCurrentPortalSettings()
                 ElseIf TypeOf _Parent Is System.Web.UI.Page Then
-                    Return DotNetNuke.Entities.Portals.PortalController.Instance().GetCurrentPortalSettings()
+                    'Return DotNetNuke.Entities.Portals.PortalController.Instance().GetCurrentPortalSettings()
+                    Return DotNetNuke.Entities.Portals.PortalController.GetCurrentPortalSettings()
                 End If
             End If
             Return Nothing
@@ -452,8 +454,8 @@ Public Class BaseParentControl
         Get
             If _moduleSettings Is Nothing AndAlso Not PortalSettings Is Nothing AndAlso ModuleId >= 0 Then
                 'Get ModuleSettings
-                _moduleSettings = ModuleController.Instance().GetModule(ModuleId, TabId, False).ModuleSettings
-                '_moduleSettings = PortalSettings.GetModuleSettings(ModuleId)
+                '_moduleSettings = ModuleController.Instance().GetModule(ModuleId, TabId, False).ModuleSettings
+                _moduleSettings = PortalSettings.GetModuleSettings(ModuleId)
             End If
             Return _moduleSettings
         End Get
@@ -463,8 +465,8 @@ Public Class BaseParentControl
         Get
             If _tabmodulesettings Is Nothing AndAlso Not PortalSettings Is Nothing AndAlso TabModuleId >= 0 Then
                 'Get TabModuleSettings
-                '_tabmodulesettings = PortalSettings.GetTabModuleSettings(TabModuleId)
-                _tabmodulesettings = ModuleController.Instance().GetTabModule(TabModuleId).TabModuleSettings
+                '_tabmodulesettings = ModuleController.Instance().GetTabModule(TabModuleId).TabModuleSettings
+                _tabmodulesettings = PortalSettings.GetTabModuleSettings(TabModuleId)
             End If
             Return _tabmodulesettings
         End Get

@@ -124,13 +124,12 @@ Namespace Entities
             Return EngineFactory.Instance.GetLocalization(sKey, fileName)
         End Function
         Public Function GetRichTextEditor(ByRef Page As System.Web.UI.Page, ByVal ParentId As String, ByVal TabModuleId As String, ByVal ModuleId As String, ByVal IdNameParameter As String, ByVal Width As String, ByVal Height As String, ByVal Value As String) As String Implements IEngineController.GetRichTextEditor
-            DotNetNuke.Entities.Modules.ModuleController.Instance().GetTabModule(CInt(TabModuleId))
+            'DotNetNuke.Entities.Modules.ModuleController.Instance().GetTabModule(CInt(TabModuleId))
             Dim placeholder As New DotNetNuke.Entities.Modules.PortalModuleBase()
             'Dim modInfo As New Modules.ModuleInfo()
             'modInfo.ModuleID = CInt(ModuleId)
             'modInfo.TabModuleID = CInt(TabModuleId)
-
-            placeholder.ModuleContext.Configuration = DotNetNuke.Entities.Modules.ModuleController.Instance().GetTabModule(CInt(TabModuleId))
+            placeholder.ModuleContext.Configuration = Instance().GetTabModule(CInt(TabModuleId))
             placeholder.ID = ParentId
 
             Return EngineFactory.Instance.GetRichTextEditor(Page, placeholder, TabModuleId, ModuleId, IdNameParameter, Width, Height, Value)
@@ -155,9 +154,11 @@ Namespace Entities
             ElseIf Not parameter Is Nothing AndAlso parameter.ToLower() = "smtpauthentication" Then
                 Return DotNetNuke.Entities.Host.Host.SMTPAuthentication
             ElseIf Not parameter Is Nothing AndAlso parameter.ToLower() = "smtpconnectionlimit" Then
-                Return DotNetNuke.Entities.Host.Host.SMTPConnectionLimit.ToString()
+                'DNN9: Return DotNetNuke.Entities.Host.Host.SMTPConnectionLimit.ToString()
+                Return Nothing
             ElseIf Not parameter Is Nothing AndAlso parameter.ToLower() = "smtpmaxidletime" Then
-                Return DotNetNuke.Entities.Host.Host.SMTPMaxIdleTime.ToString()
+                'DNN9: Return DotNetNuke.Entities.Host.Host.SMTPMaxIdleTime.ToString()
+                Return Nothing
             ElseIf Not parameter Is Nothing AndAlso parameter.ToLower() = "smtpserver" Then
                 Return DotNetNuke.Entities.Host.Host.SMTPServer
             ElseIf Not parameter Is Nothing AndAlso parameter.ToLower() = "smtpusername" Then
@@ -189,10 +190,16 @@ Namespace Entities
         End Function
         Public Sub Initialize() Implements IEngineController.Initialize
 
-        End Sub        
+        End Sub
         Public Sub RemoveCache(ByVal cacheKey As String) Implements IEngineController.RemoveCache
 
         End Sub
+
+        Private Function Instance() As DotNetNuke.Entities.Modules.ModuleController
+            'Return DotNetNuke.Entities.Modules.ModuleController.Instance()
+            Dim temporary As New DotNetNuke.Entities.Modules.ModuleController()
+            Return temporary
+        End Function
     End Class
 End Namespace
 

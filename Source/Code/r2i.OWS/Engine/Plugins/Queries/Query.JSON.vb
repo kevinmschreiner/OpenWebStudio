@@ -207,8 +207,6 @@ Namespace r2i.OWS.Queries
                                             strAuthenticationDomain = Utility.XMLPropertyParse_Quick(strAuthentication, "domain")
                                         End If
 
-                                        'Dim wc As New Net.WebClient
-                                        Dim wc As New Net.WebClient
 
                                         Dim settings As SortedList = Nothing
                                         Dim strMethod As String = "GET"
@@ -247,6 +245,19 @@ Namespace r2i.OWS.Queries
                                             targeturl = strPath
                                         End If
 
+                                        Try
+                                            If targeturl.ToLower().StartsWith("https") Then
+                                                System.Net.ServicePointManager.SecurityProtocol = Net.SecurityProtocolType.Tls12
+                                                System.Net.ServicePointManager.ServerCertificateValidationCallback =
+  Function(se As Object,
+  cert As System.Security.Cryptography.X509Certificates.X509Certificate,
+  chain As System.Security.Cryptography.X509Certificates.X509Chain,
+  sslerror As System.Net.Security.SslPolicyErrors) True
+
+                                            End If
+                                        Catch ExSP As Exception
+                                        End Try
+                                        Dim wc As New Net.WebClient
                                         wc = New Net.WebClient
                                         wc.BaseAddress = targeturl
                                         wc.Headers = New Net.WebHeaderCollection

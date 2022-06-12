@@ -158,11 +158,14 @@ Namespace DataAccess.Factories
         End Function
 
         Public Shared Function HasEditPermissions(ByVal ModuleId As Integer) As Boolean
-            'Return DotNetNuke.Security.Permissions.ModulePermissionController.CanEditModuleContent(DotNetNuke.Entities.Modules.ModuleController.Instance.GetModulePermissions).HasEditPermissions(ModuleId)
-            'DotNetNuke.Security.Permissions.ModulePermissionController.CanEditModuleContent()
-            Dim tb As IList(Of DotNetNuke.Entities.Modules.ModuleInfo) = DotNetNuke.Entities.Modules.ModuleController.Instance.GetTabModulesByModule(CInt(ModuleId))
-            If Not tb Is Nothing AndAlso tb.Count > 0 Then
-                Return DotNetNuke.Security.Permissions.ModulePermissionController.CanEditModuleContent(tb(0))
+
+            'Dim tb As IList(Of DotNetNuke.Entities.Modules.ModuleInfo) = ModuleControllerInstance().GetTabModulesByModule(CInt(ModuleId))
+            'If Not tb Is Nothing AndAlso tb.Count > 0 Then
+            '    Return DotNetNuke.Security.Permissions.ModulePermissionController.CanEditModuleContent(tb(0))
+            'End If
+            Dim info As DotNetNuke.Entities.Modules.ModuleInfo = ModuleControllerInstance().GetModule(CInt(ModuleId))
+            If Not info Is Nothing Then
+                Return DotNetNuke.Security.Permissions.ModulePermissionController.CanEditModuleContent(info)
             End If
         End Function
 
@@ -172,6 +175,22 @@ Namespace DataAccess.Factories
 
         Public Shared Function IsInRole(ByVal role As String) As Boolean
             Return DotNetNuke.Security.PortalSecurity.IsInRole(role)
+        End Function
+
+        Private Shared Function UserControllerInstance() As DotNetNuke.Entities.Users.UserController
+            'Return DotNetNuke.Entities.Users.UserController.Instance()
+            Dim temporary As New DotNetNuke.Entities.Users.UserController()
+            Return temporary
+        End Function
+        Private Shared Function ModuleControllerInstance() As DotNetNuke.Entities.Modules.ModuleController
+            'Return DotNetNuke.Entities.Modules.ModuleController.Instance()
+            Dim temporary As New DotNetNuke.Entities.Modules.ModuleController()
+            Return temporary
+        End Function
+        Private Shared Function TabControllerInstance() As DotNetNuke.Entities.Tabs.TabController
+            'Return DotNetNuke.Entities.Tabs.TabController.Instance()
+            Dim temporary As New DotNetNuke.Entities.Tabs.TabController()
+            Return temporary
         End Function
     End Class
 End Namespace

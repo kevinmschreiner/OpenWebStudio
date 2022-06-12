@@ -41,7 +41,7 @@ Namespace DataAccess.Factories
             Dim RoleIdConvert As Integer
             If Integer.TryParse(CStr(UserId), UserIdConvert) AndAlso Integer.TryParse(CStr(RoleId), RoleIdConvert) Then
                 Dim roleControl As New DotNetNuke.Security.Roles.RoleController
-                DotNetNuke.Security.Roles.RoleController.Instance.UpdateUserRole(CInt(PortalId), UserIdConvert, RoleIdConvert, DotNetNuke.Security.Roles.RoleStatus.Disabled, False, False)
+                RoleControllerInstance().UpdateUserRole(CInt(PortalId), UserIdConvert, RoleIdConvert, DotNetNuke.Security.Roles.RoleStatus.Disabled, False, False)
             Else
                 Return False
             End If
@@ -84,6 +84,12 @@ Namespace DataAccess.Factories
             Else
                 Return Nothing
             End If
+        End Function
+
+        Private Function RoleControllerInstance() As DotNetNuke.Security.Roles.RoleController
+            'Return DotNetNuke.Entities.Users.UserController.Instance()
+            Dim temporary As New DotNetNuke.Security.Roles.RoleController()
+            Return temporary
         End Function
     End Class
 End Namespace
