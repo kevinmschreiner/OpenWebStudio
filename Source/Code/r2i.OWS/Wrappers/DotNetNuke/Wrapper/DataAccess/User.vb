@@ -258,7 +258,7 @@ Namespace DataAccess
                     Hydrate()
                     userTotallyLoaded = True
                 ElseIf (Not userTotallyLoaded AndAlso Not _Id Is Nothing) Then
-                    userInfo = DotNetNuke.Entities.Users.UserController.GetCurrentUserInfo
+                    userInfo = DotNetNuke.Entities.Users.UserController.Instance.GetCurrentUserInfo()
                     Hydrate()
                     userTotallyLoaded = True
                 ElseIf Not userTotallyLoaded Then

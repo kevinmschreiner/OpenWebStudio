@@ -150,13 +150,15 @@ Partial Public Class installerDnn
             pnlOWS.Visible = False
         End If
         Try
-            ows.SetParentBase(New BaseParentControl(Me))
-            DnnSingleton.GetInstance(ctx).CurrentModuleBase = New BaseParentControl(Me)
-            'Initialize the Control Properties
-            If Not TemplateSourceDirectory.EndsWith("/") Then
-                ows.SetOWSPath(TemplateSourceDirectory & "/")
-            Else
-                ows.SetOWSPath(TemplateSourceDirectory)
+            If Not ows Is Nothing Then
+                ows.SetParentBase(New BaseParentControl(Me))
+                DnnSingleton.GetInstance(ctx).CurrentModuleBase = New BaseParentControl(Me)
+                'Initialize the Control Properties
+                If Not TemplateSourceDirectory.EndsWith("/") Then
+                    ows.SetOWSPath(TemplateSourceDirectory & "/")
+                Else
+                    ows.SetOWSPath(TemplateSourceDirectory)
+                End If
             End If
         Catch ex As Exception
             DotNetNuke.Services.Exceptions.LogException(ex)

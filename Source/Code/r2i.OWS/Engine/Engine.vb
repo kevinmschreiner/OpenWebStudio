@@ -1197,7 +1197,7 @@ Namespace r2i.OWS
             If rslt.Result = RuntimeBase.ExecutableResultEnum.Failed Then
                 isSuccessful = False
             End If
-            If rslt.Result = RuntimeBase.ExecutableResultEnum.Failed AndAlso Not rslt.Error Is Nothing Then
+            If (rslt.Result = RuntimeBase.ExecutableResultEnum.Failed OrElse rslt.Result = RuntimeBase.ExecutableResultEnum.Aborted) AndAlso Not rslt.Error Is Nothing Then
                 thrownError = True
                 isSuccessful = False
                 If thrownError AndAlso (debug OrElse (errorDebug AndAlso thrownError) OrElse traceDebug) AndAlso DebugWriter Is Nothing Then

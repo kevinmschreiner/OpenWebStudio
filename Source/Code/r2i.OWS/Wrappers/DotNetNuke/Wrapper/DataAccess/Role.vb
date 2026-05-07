@@ -32,6 +32,7 @@ Namespace DataAccess
         End Property
 
         Private _id As String
+        Private _siteId As String
 
 
         Private roleTotallyLoaded As Boolean
@@ -42,6 +43,7 @@ Namespace DataAccess
             roleTotallyLoaded = True
             roleInfo = RoleData
             _id = roleInfo.RoleID.ToString
+            _siteId = roleInfo.PortalID.ToString
         End Sub
 
         Public Property Id() As String Implements IRole.Id
@@ -87,19 +89,22 @@ Namespace DataAccess
         Public Property SiteId() As String Implements IRole.SiteId
             Get
                 LoadRole()
-                Return CStr(roleInfo.PortalID)
+                Return _siteId
             End Get
             Set(ByVal value As String)
                 LoadRole()
-                roleInfo.PortalID = CInt(value)
+                If Not value Is Nothing Then
+                    _siteId = value
+                    roleInfo.PortalID = CInt(value)
+                End If
             End Set
         End Property
 
         Private Sub LoadRole()
-            If (Not roleTotallyLoaded AndAlso Not _id Is Nothing) Then
+            If (Not roleTotallyLoaded AndAlso Not _id Is Nothing AndAlso Not _siteId Is Nothing) Then
                 Dim roleController As New DotNetNuke.Security.Roles.RoleController
 
-                roleInfo = roleController.GetRole(CInt(_id), -1)
+                roleInfo = roleController.GetRoleById(CInt(_siteId), CInt(_id))
 
                 roleTotallyLoaded = True
             Else

@@ -23,6 +23,7 @@
 Imports r2i.OWS.Framework.Plugins.Renderers
 Imports r2i.OWS.Framework.Plugins.Actions
 Imports r2i.OWS.Framework.Utilities
+Imports DotNetNuke.Entities.Users
 
 Partial Public Class Admin
     Inherits System.Web.UI.Page
@@ -58,7 +59,7 @@ Partial Public Class Admin
 
         Else
 
-              Try
+            Try
 
                 sectionInclusions = r2i.OWS.Framework.Config.Items(Config.Section.Actions, Config.SectionType.Administration)
                 If Not sectionInclusions Is Nothing AndAlso sectionInclusions.Count > 0 Then
@@ -99,20 +100,25 @@ Partial Public Class Admin
     End Sub
 
     Private Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        If Not DotNetNuke.Entities.Users.UserController.GetCurrentUserInfo.IsSuperUser Then
-            Dim msg As String = ""
-            If DotNetNuke.Entities.Users.UserController.GetCurrentUserInfo Is Nothing OrElse DotNetNuke.Entities.Users.UserController.GetCurrentUserInfo.UserID = -1 Then
-                msg = "<li>Unauthenticated User"
-            Else
-                msg = "<li>Username: " & DotNetNuke.Entities.Users.UserController.GetCurrentUserInfo.Username
-                msg &= "<li>Permission: "
-                If DotNetNuke.Entities.Users.UserController.GetCurrentUserInfo.IsSuperUser Then
-                    msg &= "Super User"
+        Dim current As UserInfo = UserController.Instance.GetCurrentUserInfo()
+        If Not current Is Nothing Then
+            If Not current.IsSuperUser Then
+                Dim msg As String = ""
+                If current.UserID = -1 Then
+                    msg = "<li>Unauthenticated User"
                 Else
-                    msg &= "Not a Super User"
+                    msg = "<li>Username: " & current.Username
+                    msg &= "<li>Permission: "
+                    If current.IsSuperUser Then
+                        msg &= "Super User"
+                    Else
+                        msg &= "Not a Super User"
+                    End If
                 End If
+                AssignError(1, New Exception(msg))
             End If
-            AssignError(1, New Exception(msg))
+        Else
+            AssignError(1, New Exception("<li>Unauthenticated User"))
         End If
     End Sub
     Private Sub GetAboutAssembly(ByRef assemList As Dictionary(Of String, String), ByVal Value As String)

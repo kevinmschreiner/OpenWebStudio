@@ -287,7 +287,7 @@ Namespace DataAccess
 
         Private Sub LoadPortalSettings()
             If (Not portalSettingsTotallyLoaded) Then
-                _portalSettings = DotNetNuke.Entities.Portals.PortalController.GetCurrentPortalSettings()
+                _portalSettings = DotNetNuke.Entities.Portals.PortalController.Instance.GetCurrentPortalSettings()
                 portalSettingsTotallyLoaded = True
             End If
         End Sub

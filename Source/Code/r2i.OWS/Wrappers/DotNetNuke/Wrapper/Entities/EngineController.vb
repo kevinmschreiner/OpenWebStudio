@@ -49,7 +49,7 @@ Namespace Entities
         Public Function PageName(ByVal pageId As String) As String Implements IEngineController.PageName
             Dim tc As New Tabs.TabController
 
-            Dim tinfo As Tabs.TabInfo = tc.GetTab(CInt(pageId))
+            Dim tinfo As Tabs.TabInfo = tc.GetTab(CInt(pageId), DotNetNuke.Common.Utilities.Null.NullInteger)
             If Not tinfo Is Nothing Then
                 'pageConversion_PageID.Item(pageId) = tinfo.TabName
                 tc = Nothing
@@ -60,7 +60,7 @@ Namespace Entities
         Public Function PageTitle(ByVal pageId As String) As String Implements IEngineController.PageTitle
             Dim tc As New Tabs.TabController
 
-            Dim tinfo As Tabs.TabInfo = tc.GetTab(CInt(pageId))
+            Dim tinfo As Tabs.TabInfo = tc.GetTab(CInt(pageId), DotNetNuke.Common.Utilities.Null.NullInteger)
             If Not tinfo Is Nothing Then
                 'pageConversion_PageID.Item(pageId) = tinfo.TabName
                 tc = Nothing
@@ -71,7 +71,7 @@ Namespace Entities
         Public Function PageDescription(ByVal pageId As String) As String Implements IEngineController.PageDescription
             Dim tc As New Tabs.TabController
 
-            Dim tinfo As Tabs.TabInfo = tc.GetTab(CInt(pageId))
+            Dim tinfo As Tabs.TabInfo = tc.GetTab(CInt(pageId), DotNetNuke.Common.Utilities.Null.NullInteger)
             If Not tinfo Is Nothing Then
                 'pageConversion_PageID.Item(pageId) = tinfo.TabName
                 tc = Nothing

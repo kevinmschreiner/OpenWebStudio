@@ -42,7 +42,7 @@ Namespace Entities
         Dim cUser As DataAccess.User
         Public Function CurrentUser() As IUser Implements IUserController.CurrentUser
             If cUser Is Nothing Then
-                Dim uinfo As DotNetNuke.Entities.Users.UserInfo = DotNetNuke.Entities.Users.UserController.GetCurrentUserInfo
+                Dim uinfo As DotNetNuke.Entities.Users.UserInfo = DotNetNuke.Entities.Users.UserController.Instance.GetCurrentUserInfo()
                 If Not uinfo Is Nothing Then
                     cUser = New DataAccess.User(uinfo)
                 End If

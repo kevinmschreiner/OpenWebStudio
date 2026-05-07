@@ -29,3 +29,15 @@ G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Framework\obj\Debug\r2i.OWS.Fra
 G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Framework\obj\Debug\r2i.OWS.Framework.pdb
 G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Framework\obj\Debug\r2i.OWS.Framework.vbprojAssemblyReference.cache
 G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Framework\obj\Debug\r2i.OWS.Framework.vbproj.CopyComplete
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Build\r2i.OWS.Framework.dll
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Build\r2i.OWS.Framework.pdb
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Build\r2i.OWS.Framework.xml
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Framework\obj\Debug\r2i.OWS.Framework.vbproj.AssemblyReference.cache
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Framework\obj\Debug\Resources.resources
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Framework\obj\Debug\MIMETypes.resources
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Framework\obj\Debug\r2i.OWS.Framework.vbproj.GenerateResource.cache
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Framework\obj\Debug\r2i.OWS.Framework.vbproj.CoreCompileInputs.cache
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Framework\obj\Debug\r2i.OWS..7C560CFD.Up2Date
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Framework\obj\Debug\r2i.OWS.Framework.dll
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Framework\obj\Debug\r2i.OWS.Framework.xml
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Framework\obj\Debug\r2i.OWS.Framework.pdb

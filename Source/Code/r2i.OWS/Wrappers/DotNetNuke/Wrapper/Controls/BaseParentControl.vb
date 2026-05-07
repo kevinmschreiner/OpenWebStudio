@@ -30,6 +30,7 @@ Imports DotNetNuke.Entities.Modules.Actions
 Imports DotNetNuke.Security
 Imports DotNetNuke.Services.Exceptions
 Imports DotNetNuke.Services.Localization
+Imports DotNetNuke.Entities.Users
 
 Public Class BaseParentControl
     Inherits r2i.OWS.Framework.UI.Control
@@ -40,7 +41,7 @@ Public Class BaseParentControl
     Private _Path As String
     Private _ModuleID As String
 
-    Public Sub New(ByVal ModSettings As ModuleSettingsBase)
+    Public Sub New(ByVal ModSettings As DotNetNuke.Entities.Modules.ModuleSettingsBase)
         _Parent = ModSettings
     End Sub
     Public Sub New(ByVal SkinObject As DotNetNuke.UI.Skins.SkinObjectBase, ByVal ResourceFile As String, ByVal ResourceKey As String, ByVal Path As String, ByVal ModuleID As String)
@@ -204,11 +205,11 @@ Public Class BaseParentControl
                 ElseIf TypeOf _Parent Is PortalModuleBase Then
                     Return CType(_Parent, PortalModuleBase).UserInfo
                 ElseIf TypeOf _Parent Is DotNetNuke.UI.Skins.SkinObjectBase Then
-                    Return DotNetNuke.Entities.Users.UserController.GetCurrentUserInfo
+                    Return UserController.Instance.GetCurrentUserInfo()
                 ElseIf TypeOf _Parent Is DotNetNuke.Services.Scheduling.SchedulerClient Then
-                    Return DotNetNuke.Entities.Users.UserController.GetCurrentUserInfo
+                    Return UserController.Instance.GetCurrentUserInfo()
                 ElseIf TypeOf _Parent Is System.Web.UI.Page Then
-                    Return DotNetNuke.Entities.Users.UserController.GetCurrentUserInfo
+                    Return UserController.Instance.GetCurrentUserInfo()
                 End If
             End If
             Return Nothing
@@ -244,7 +245,12 @@ Public Class BaseParentControl
                 ElseIf TypeOf _Parent Is PortalModuleBase Then
                     Return CType(_Parent, PortalModuleBase).UserId
                 ElseIf TypeOf _Parent Is DotNetNuke.UI.Skins.SkinObjectBase Then
-                    Return DotNetNuke.Entities.Users.UserController.GetCurrentUserInfo.UserID
+                    Dim user As UserInfo = UserController.Instance.GetCurrentUserInfo()
+                    If Not user Is Nothing Then
+                        Return user.UserID
+                    Else
+                        Return -1
+                    End If
                 ElseIf TypeOf _Parent Is DotNetNuke.Services.Scheduling.SchedulerClient Then
                     Return -1
                 End If

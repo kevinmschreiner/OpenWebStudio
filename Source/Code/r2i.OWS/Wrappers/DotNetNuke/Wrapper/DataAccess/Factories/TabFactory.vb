@@ -38,7 +38,7 @@ Namespace DataAccess.Factories
             Dim tiC As New DotNetNuke.Entities.Tabs.TabController
             Dim moduleParentIdConvert As Integer
             If Integer.TryParse(moduleParentId, moduleParentIdConvert) Then
-                Dim dnnTab As DotNetNuke.Entities.Tabs.TabInfo = tiC.GetTab(moduleParentIdConvert)
+                Dim dnnTab As DotNetNuke.Entities.Tabs.TabInfo = tiC.GetTab(moduleParentIdConvert, DotNetNuke.Common.Utilities.Null.NullInteger)
                 Dim itab As New TabInfo(dnnTab)
                 'itab.TabId = dnnTab.TabID.ToString
                 'itab.AdministratorRoles = dnnTab.AdministratorRoles

@@ -1,3 +1,5 @@
+Imports System.Xml.XPath
+
 Namespace DataAccess.Factories
     Public Class RoleFactory
         Private Shared _instance As RoleFactory = New RoleFactory()
@@ -20,7 +22,7 @@ Namespace DataAccess.Factories
             Dim roleIdConvert As Integer
             If Integer.TryParse(RoleID, roleIdConvert) Then
                 Dim roleControl As New DotNetNuke.Security.Roles.RoleController
-                Return New DataAccess.Role(roleControl.GetRole(CInt(RoleID), CInt(PortalID)))
+                Return New DataAccess.Role(roleControl.GetRoleById(CInt(PortalID), CInt(RoleID)))
             Else
                 Return Nothing
             End If
@@ -52,23 +54,25 @@ Namespace DataAccess.Factories
             Dim RoleIdConvert As Integer
             If Integer.TryParse(CStr(UserId), UserIdConvert) AndAlso Integer.TryParse(CStr(RoleId), RoleIdConvert) Then
                 Dim roleControl As New DotNetNuke.Security.Roles.RoleController
-                roleControl.AddUserRole(CInt(PortalID), UserIdConvert, RoleIdConvert, ExpiryDate)
+                roleControl.AddUserRole(CInt(PortalID), UserIdConvert, RoleIdConvert, DotNetNuke.Security.Roles.RoleStatus.Approved, False, DateTime.Now, ExpiryDate)
             End If
         End Sub
 
         Public Function GetPortalRoles(ByVal PortalId As String) As System.Collections.ArrayList
             Dim rC As New DotNetNuke.Security.Roles.RoleController
-            Dim arr As ArrayList = rC.GetPortalRoles(CInt(PortalId))
+            Dim arr As IList(Of DotNetNuke.Security.Roles.RoleInfo) = rC.GetRoles(CInt(PortalId))
+            Dim result As New ArrayList
+
             If Not arr Is Nothing AndAlso arr.Count > 0 Then
                 Dim i As Integer = 0
                 For i = 0 To arr.Count - 1
                     Dim rolei As DotNetNuke.Security.Roles.RoleInfo = CType(arr(i), DotNetNuke.Security.Roles.RoleInfo)
                     If Not rolei Is Nothing Then
-                        arr(i) = New Role(rolei)
+                        result.Add(rolei) 'New Role(rolei)
                     End If
                 Next
             End If
-            Return arr
+            Return result
         End Function
 
         Public Function GetCurrentRole(ByVal sRole As String, ByVal pRoles As SortedList(Of String, String)) As String

@@ -6,11 +6,11 @@ For a standard module two possible configurations can be executed: One for the d
 Select the runtime of your choice from the options provided below.
 <table width="100%">
 	<tr><td class="SubHead" width="20%">View</td><td>
-        <asp:DropDownList ID="ddlConfigLst" runat="server" Width="80%" visible="<%# DotNetNuke.Entities.Users.UserController.GetCurrentUserInfo.IsSuperUser %>"></asp:DropDownList>&nbsp; 
+        <asp:DropDownList ID="ddlConfigLst" runat="server" Width="80%" visible="<%# DotNetNuke.Entities.Users.UserController.Instance.GetCurrentUserInfo().IsSuperUser %>"></asp:DropDownList>&nbsp; 
         <asp:Label ID="lblEditLink" runat="server" Visible="False"></asp:Label>
         <asp:Label ID="lblNoConfig" runat="server" Visible="False"></asp:Label></td></tr>
 	<tr><td class="SubHead" width="20%">Settings</td><td>
-        <asp:DropDownList ID="ddlConfigLstSettings" runat="server" Width="80%" visible="<%# DotNetNuke.Entities.Users.UserController.GetCurrentUserInfo.IsSuperUser %>"></asp:DropDownList>&nbsp; 
+        <asp:DropDownList ID="ddlConfigLstSettings" runat="server" Width="80%" visible="<%# DotNetNuke.Entities.Users.UserController.Instance.GetCurrentUserInfo().IsSuperUser %>"></asp:DropDownList>&nbsp; 
         <asp:Label ID="lblEditLinkSettings" runat="server" Visible="False"></asp:Label>
         <asp:Label ID="lblNoConfigSettings" runat="server" Visible="False"></asp:Label></td></tr>        
     <tr><td class="SubHead" width="20%">Options</td><td>

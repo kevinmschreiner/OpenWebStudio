@@ -118,7 +118,7 @@ Namespace DataAccess.Factories
                     ' str &= vbTab & vbTab & "<TabModuleName>" & XMLFormat(NameModule(Mi)) & "</TabModuleName>" & vbCrLf
 
                     Dim mc As New DotNetNuke.Entities.Modules.ModuleController
-                    Dim msettings As Hashtable = mc.GetModuleSettings(CInt(Mi.ModuleID))
+                    Dim msettings As Hashtable = mc.GetModule(CInt(Mi.ModuleID)).ModuleSettings
                     If Not msettings Is Nothing AndAlso msettings.Count > 0 Then
                         Dim key As String
                         Dim value As String

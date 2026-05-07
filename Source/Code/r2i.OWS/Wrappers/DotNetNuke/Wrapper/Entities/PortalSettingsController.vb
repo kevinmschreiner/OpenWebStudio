@@ -70,7 +70,7 @@ Namespace Entities
                 mep.KeyWords = objPortal.KeyWords
                 mep.BackgroundFile = objPortal.BackgroundFile
                 mep.DefaultLanguage = objPortal.DefaultLanguage
-                mep.TimeZoneOffset = objPortal.TimeZoneOffset
+                'mep.TimeZoneOffset = objPortal.TimeZoneOffset
                 mep.HomeDirectory = objPortal.HomeDirectory
                 mep.Version = objPortal.Version
 

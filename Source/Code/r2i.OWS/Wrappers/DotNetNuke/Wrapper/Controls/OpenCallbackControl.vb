@@ -406,7 +406,7 @@ Public Class OpenCallbackControl
     Public Overrides ReadOnly Property Settings() As System.Collections.Hashtable
         Get
             If Not ModuleId Is Nothing AndAlso IsNumeric(ModuleId) Then
-                Return (New DotNetNuke.Entities.Modules.ModuleController).GetModuleSettings(CInt(ModuleId))
+                Return (New DotNetNuke.Entities.Modules.ModuleController).GetModule(CInt(ModuleId)).ModuleSettings
             End If
             Return New Hashtable
         End Get
@@ -459,7 +459,7 @@ Public Class OpenCallbackControl
     Public Overrides ReadOnly Property UserInfo() As Framework.DataAccess.IUser
         Get
             If _userInfo Is Nothing Then
-                _userInfo = New r2i.OWS.Wrapper.DNN.DataAccess.User(DotNetNuke.Entities.Users.UserController.GetCurrentUserInfo)
+                _userInfo = New r2i.OWS.Wrapper.DNN.DataAccess.User(DotNetNuke.Entities.Users.UserController.Instance.GetCurrentUserInfo())
             End If
             Return _userInfo
         End Get

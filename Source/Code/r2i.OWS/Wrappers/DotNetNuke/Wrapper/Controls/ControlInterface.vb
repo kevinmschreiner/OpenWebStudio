@@ -26,10 +26,16 @@ Imports r2i.OWS.Framework.DataAccess
 Imports r2i.OWS.Framework.Entities
 Imports r2i.OWS.Framework.Utilities
 Imports r2i.OWS.Framework.Utilities.Compatibility
+'Imports DotNetNuke.Entities.Modules
+Imports DotNetNuke.Services.Search.Entities
+Imports System.Linq
+Imports DotNetNuke.Services.Log.EventLog
 
 Public Class ControlInterface
-    Implements DotNetNuke.Entities.Modules.ISearchable
-    Implements DotNetNuke.Entities.Modules.IPortable    
+    'Implements DotNetNuke.Entities.Modules.ISearchable
+    Inherits DotNetNuke.Entities.Modules.ModuleSearchBase
+    Implements DotNetNuke.Entities.Modules.IPortable
+
     Private Function BuildPortalSettings(ByVal PortalID As Integer, ByVal TabID As Integer, ByVal ModuleID As Integer) As DotNetNuke.Entities.Portals.PortalSettings
         Dim psettings As New DotNetNuke.Entities.Portals.PortalSettings
         Dim pinfo As DotNetNuke.Entities.Portals.PortalInfo
@@ -37,7 +43,7 @@ Public Class ControlInterface
         Dim pctrl As New DotNetNuke.Entities.Portals.PortalController
         Dim pactrl As New DotNetNuke.Entities.Portals.PortalAliasController
         Dim tctrl As New DotNetNuke.Entities.Tabs.TabController
-        tinfo = tctrl.GetTab(TabID)
+        tinfo = tctrl.GetTab(TabID, PortalID)
         pinfo = pctrl.GetPortal(PortalID)
         With psettings
             .ActiveTab = tinfo
@@ -61,12 +67,12 @@ Public Class ControlInterface
             .KeyWords = pinfo.KeyWords
             .LoginTabId = pinfo.LoginTabId
             .LogoFile = pinfo.LogoFile
-            .PortalAlias = pactrl.GetPortalAliasByPortalID(PortalID).Item(CStr(0))
+            .PortalAlias = pactrl.GetPortalAliasesByPortalId(PortalID).First() '.Item(CStr(0))
             .PortalId = pinfo.PortalID
             .PortalName = pinfo.PortalName
             .RegisteredRoleId = pinfo.RegisteredRoleId
             .RegisteredRoleName = pinfo.RegisteredRoleName
-            .SiteLogHistory = pinfo.SiteLogHistory
+            '.SiteLogHistory = pinfo.SiteLogHistory
             .SplashTabId = pinfo.SplashTabId
             .SuperTabId = pinfo.SuperTabId
             '.TimeZoneOffset = pinfo.TimeZoneOffset
@@ -135,12 +141,8 @@ Public Class ControlInterface
                     Dim mctrl As New DotNetNuke.Entities.Modules.ModuleController
                     Dim pctrl As New DotNetNuke.Entities.Portals.PortalController
                     Dim pactrl As New DotNetNuke.Entities.Portals.PortalAliasController
-                    Dim piCol As DotNetNuke.Entities.Portals.PortalAliasCollection = pactrl.GetPortalAliasByPortalID(modInfo.PortalID)
-                    Dim pi As DotNetNuke.Entities.Portals.PortalAliasInfo = Nothing
+                    Dim pi As DotNetNuke.Entities.Portals.PortalAliasInfo = pactrl.GetPortalAliasesByPortalId(modInfo.PortalID).FirstOrDefault()
                     Try
-                        If piCol.HasKeys Then
-                            pi = piCol.Item(CType(New ArrayList(piCol.Keys).Item(0), String))
-                        End If
                         If pi Is Nothing Then
                             pi = New DotNetNuke.Entities.Portals.PortalAliasInfo
                             pi.PortalID = modInfo.PortalID
@@ -176,7 +178,7 @@ Public Class ControlInterface
                     ctl.ID = "Import"
 
                     Dim settings As Hashtable
-                    settings = mctrl.GetModuleSettings(modInfo.ModuleID)
+                    settings = mctrl.GetModule(modInfo.ModuleID).ModuleSettings
 
                     'TRIGGER THE DEBUG START
                     If conf.enableQueryDebug OrElse (conf.canDebug(AbstractFactory.Instance.UserController.CurrentUser(), CType(ipsettings, IPortalSettings), isEditable) And conf.OutputType = r2i.OWS.Framework.Settings.RenderType.Default) Then
@@ -258,15 +260,15 @@ Public Class ControlInterface
                     Dim mctrl As New DotNetNuke.Entities.Modules.ModuleController
                     Dim pctrl As New DotNetNuke.Entities.Portals.PortalController
                     Dim pactrl As New DotNetNuke.Entities.Portals.PortalAliasController
-                    Dim piCol As DotNetNuke.Entities.Portals.PortalAliasCollection = pactrl.GetPortalAliasByPortalID(ModInfo.PortalID)
-                    Dim pi As DotNetNuke.Entities.Portals.PortalAliasInfo = piCol.Item(CType(New ArrayList(piCol.Keys).Item(0), String))
+                    Dim piCol As IEnumerable(Of DotNetNuke.Entities.Portals.PortalAliasInfo) = pactrl.GetPortalAliasesByPortalId(modInfo.PortalID)
+                    Dim pi As DotNetNuke.Entities.Portals.PortalAliasInfo = piCol.FirstOrDefault()
                     Dim pinfo As DotNetNuke.Entities.Portals.PortalInfo
                     Dim psettings As DotNetNuke.Entities.Portals.PortalSettings
-                    pinfo = pctrl.GetPortal(ModInfo.PortalID)
+                    pinfo = pctrl.GetPortal(modInfo.PortalID)
 
                     Try
                         If pinfo.HomeTabId <= 0 And pinfo.SplashTabId <= 0 Then
-                            psettings = New DotNetNuke.Entities.Portals.PortalSettings(ModInfo.TabID, pi)
+                            psettings = New DotNetNuke.Entities.Portals.PortalSettings(modInfo.TabID, pi)
                         ElseIf pinfo.HomeTabId <= 0 Then
                             psettings = New DotNetNuke.Entities.Portals.PortalSettings(pinfo.SplashTabId, pi)
                         Else
@@ -274,10 +276,10 @@ Public Class ControlInterface
                         End If
                     Catch ex As Exception
                         Try
-                            psettings = BuildPortalSettings(ModInfo.PortalID, ModInfo.TabID, ModInfo.ModuleID)
+                            psettings = BuildPortalSettings(modInfo.PortalID, modInfo.TabID, modInfo.ModuleID)
                         Catch ex2 As Exception
                             psettings = New DotNetNuke.Entities.Portals.PortalSettings
-                            psettings.PortalId = ModInfo.PortalID
+                            psettings.PortalId = modInfo.PortalID
                         End Try
                     End Try
                     Dim ipsettings As New DataAccess.PortalSettings(psettings)
@@ -289,7 +291,7 @@ Public Class ControlInterface
                     ctl.ID = "Export"
 
                     Dim settings As Hashtable
-                    settings = mctrl.GetModuleSettings(ModInfo.ModuleID)
+                    settings = mctrl.GetModule(modInfo.ModuleID).ModuleSettings
 
 
                     'TRIGGER THE DEBUG START
@@ -367,8 +369,8 @@ Public Class ControlInterface
         Return DotNetNuke.Common.Utilities.XmlUtils.XMLEncode(sb.ToString)
     End Function
 
-    Public Function GetSearchItems(ByVal ModInfo As DotNetNuke.Entities.Modules.ModuleInfo) As DotNetNuke.Services.Search.SearchItemInfoCollection Implements DotNetNuke.Entities.Modules.ISearchable.GetSearchItems
-        Dim seC As New DotNetNuke.Services.Search.SearchItemInfoCollection
+    Public Overrides Function GetModifiedSearchDocuments(ModInfo As DotNetNuke.Entities.Modules.ModuleInfo, beginDateUtc As Date) As IList(Of SearchDocument)
+        Dim seC As New List(Of SearchDocument) 'DotNetNuke.Services.Search.SearchItemInfoCollection
         Dim renderingEngine As r2i.OWS.Engine = Nothing
         Dim conf As Settings = Nothing
         Dim isEditable As Boolean = False
@@ -383,8 +385,7 @@ Public Class ControlInterface
                     Dim mctrl As New DotNetNuke.Entities.Modules.ModuleController
                     Dim pctrl As New DotNetNuke.Entities.Portals.PortalController
                     Dim pactrl As New DotNetNuke.Entities.Portals.PortalAliasController
-                    Dim piCol As DotNetNuke.Entities.Portals.PortalAliasCollection = pactrl.GetPortalAliasByPortalID(ModInfo.PortalID)
-                    Dim pi As DotNetNuke.Entities.Portals.PortalAliasInfo = piCol.Item(CType(New ArrayList(piCol.Keys).Item(0), String))
+                    Dim pi As DotNetNuke.Entities.Portals.PortalAliasInfo = pactrl.GetPortalAliasesByPortalId(ModInfo.PortalID).FirstOrDefault()
                     Dim pinfo As DotNetNuke.Entities.Portals.PortalInfo
                     Dim psettings As DotNetNuke.Entities.Portals.PortalSettings
                     pinfo = pctrl.GetPortal(ModInfo.PortalID)
@@ -414,7 +415,7 @@ Public Class ControlInterface
                     ctl.ID = "SearchEngine"
 
                     Dim settings As Hashtable
-                    settings = mctrl.GetModuleSettings(ModInfo.ModuleID)
+                    settings = mctrl.GetModule(ModInfo.ModuleID).ModuleSettings
 
                     'TRIGGER THE DEBUG START
                     If conf.canDebug(AbstractFactory.Instance.UserController.CurrentUser(), CType(ipsettings, IPortalSettings), isEditable) And conf.OutputType = r2i.OWS.Framework.Settings.RenderType.Default Then
@@ -506,26 +507,26 @@ Public Class ControlInterface
                                     End If
                                 End If
                                 If Not strTitle Is Nothing AndAlso strTitle.Length > 0 Then
-                                    Dim sei As New DotNetNuke.Services.Search.SearchItemInfo
+                                    Dim sei As New SearchDocument
                                     sei.Title = strTitle.Trim()
                                     If Not strAuthor Is Nothing Then
-                                        sei.Author = CInt(strAuthor)
+                                        sei.AuthorUserId = CInt(strAuthor)
                                     End If
                                     If Not strContent Is Nothing Then
-                                        sei.Content = strContent.Trim()
+                                        sei.Body = strContent.Trim()
                                     End If
                                     If Not strDescription Is Nothing Then
                                         sei.Description = DotNetNuke.Common.Utilities.HtmlUtils.Shorten(DotNetNuke.Common.Utilities.HtmlUtils.Clean(strDescription.Trim(), False), 100, "...")
                                     End If
                                     If Not strLink Is Nothing Then
-                                        sei.GUID = strLink
+                                        sei.Url = strLink
                                     End If
                                     If Not strDate Is Nothing Then
-                                        sei.PubDate = CDate(strDate)
+                                        sei.ModifiedTimeUtc = CDate(strDate)
                                     Else
-                                        sei.PubDate = Now
+                                        sei.ModifiedTimeUtc = Now
                                     End If
-                                    sei.SearchKey = strSearchKey
+                                    sei.UniqueKey = strSearchKey
                                     sei.ModuleId = ModInfo.ModuleID
                                     seC.Add(sei)
                                 End If
@@ -598,7 +599,7 @@ Public Class ControlInterface
             End Try
         End Get
     End Property
-    Private Function LoadConfiguration(ByVal ModuleID As Integer) As Settings        
+    Private Function LoadConfiguration(ByVal ModuleID As Integer) As Settings
         Try
             Return LoadConfiguration(ConfigurationID(ModuleID))
         Catch
@@ -619,7 +620,7 @@ Public Class ControlInterface
         Dim items As String = ""
         Try
             Dim msc As New DotNetNuke.Entities.Modules.ModuleController
-            Dim hsh As Hashtable = msc.GetModuleSettings(ModuleID)
+            Dim hsh As Hashtable = msc.GetModule(ModuleID).ModuleSettings
             If hsh.ContainsKey("ConfigurationID") Then
                 configurationId = CStr(hsh.Item("ConfigurationID"))
             End If
@@ -728,4 +729,5 @@ Public Class ControlInterface
     Public Sub New()
         Wrapper.DNN.Entities.WrapperFactory.Create()
     End Sub
+
 End Class

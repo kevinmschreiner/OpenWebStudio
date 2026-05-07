@@ -170,7 +170,7 @@ Partial Public Class SkinObject
             ows.ModuleId = ModuleID
             'GET THE CONFIGURATIONID FROM THE SETTINGS
             If ConfigurationID = System.Guid.Empty AndAlso IsNumeric(ModuleID) Then
-                Dim hsh As Hashtable = (New DotNetNuke.Entities.Modules.ModuleController).GetModuleSettings(CInt(ModuleID))
+                Dim hsh As Hashtable = (New DotNetNuke.Entities.Modules.ModuleController).GetModule(CInt(ModuleID)).ModuleSettings
                 If hsh.ContainsKey("ConfigurationID") Then
                     ConfigurationID = New System.Guid(hsh("ConfigurationID").ToString)
                 End If
