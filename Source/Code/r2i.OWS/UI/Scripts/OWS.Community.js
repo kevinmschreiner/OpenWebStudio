@@ -8,7 +8,7 @@ function ows_community(){
  "Display":"Sheet",	 
  "onLoad" : "ows_comm_object.onLoad",
  "onSave" : "",
- "Template" : "<iframe style='border:0px;' src='http://www.openwebstudio.com/' width='100%' height='100%' id='ctlCommunity'></iframe>"
+ "Template" : "<iframe style='border:0px;' src='https://github.com/kevinmschreiner/OpenWebStudio/' width='100%' height='100%' id='ctlCommunity'></iframe>"
  }; 
  this.onLoad=function(){ };
  this.onSave=function(){ };
@@ -26,7 +26,7 @@ function community_load(url,ex)
  document.getElementsByTagName('head')[0].appendChild(sc);
  */
  sysProperty_ObjectItem = {"id":"*Ticket*"};
- ows_comm_object.ObjectType.Template = "<iframe src='http://www.openwebstudio.com/" + url + "' width='100%' height='600' id='ctlCommunity'></iframe>";
+ ows_comm_object.ObjectType.Template = "<iframe src='https://github.com/kevinmschreiner/OpenWebStudio/" + url + "' width='100%' height='600' id='ctlCommunity'></iframe>";
  ows_comm_object.ObjectType.Name = ex;
  sysProperty_ObjectType = ows_comm_object.ObjectType;
  LoadProperty(sysProperty_ObjectItem)

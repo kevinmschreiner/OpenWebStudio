@@ -1,5 +1,5 @@
 ﻿'<LICENSE>
-'   Open Web Studio - http://www.OpenWebStudio.com
+'   Open Web Studio - https://github.com/kevinmschreiner/OpenWebStudio
 '   Copyright (c) 2007-2008
 '   by R2Integrated Inc. http://www.R2integrated.com
 '      
@@ -45,7 +45,7 @@ Imports System.Security
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
 <Assembly: System.Security.AllowPartiallyTrustedCallers()>
-<Assembly: AssemblyVersion("02.04.00.00")>
+<Assembly: AssemblyVersion("02.04.01.00")>
 
-<Assembly: AssemblyFileVersion("02.04.00.00")>
+<Assembly: AssemblyFileVersion("02.04.01.00")>
 

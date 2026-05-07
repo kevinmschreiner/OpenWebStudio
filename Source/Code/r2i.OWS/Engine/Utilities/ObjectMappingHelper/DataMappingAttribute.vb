@@ -1,7 +1,7 @@
 '<LICENSE>
-'   Open Web Studio - http://www.openwebstudio.com
-'   Copyright (c) 2006-2008
-'   by R2 Integrated Inc. ( http://www.r2integrated.com )
+'   Open Web Studio - https://github.com/kevinmschreiner/OpenWebStudio
+'   Copyright (c) 2006-2026
+'   by Kevin Schreiner ( https://github.com/kevinmschreiner/OpenWebStudio )
 '   
 '   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
 '   documentation files (the "Software"), to deal in the Software without restriction, including without limitation 

@@ -381,7 +381,7 @@
 								            break;
 								        case 'community':
 								            this.panels.main.layout.open('east');
-								            //this.panels.community.element.html('<iframe src="http://www.openwebstudio.com" width="100%" height="100%"></iframe>');
+								            //this.panels.community.element.html('<iframe src="https://github.com/kevinmschreiner/OpenWebStudio" width="100%" height="100%"></iframe>');
 								            switch (b.toLowerCase()) {
 								                case 'chat':
 								                    this.panels.community.element.html('<div id="dvCommunityChat"></div><div id="dvCommentBox"></div>');

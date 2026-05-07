@@ -1,5 +1,5 @@
 '<LICENSE>
-'   Open Web Studio - http://www.OpenWebStudio.com
+'   Open Web Studio - https://github.com/kevinmschreiner/OpenWebStudio
 '   Copyright (c) 2007-2008
 '   by R2Integrated Inc. http://www.R2integrated.com
 '      
@@ -172,7 +172,7 @@ Public Class ControlInterface
                     End Try
                     Dim ipsettings As New DataAccess.PortalSettings(psettings)
 
-                    Dim httpS As New HttpContext(New HttpRequest("IMPORT", "http://www.openwebstudio.com", ""), New HttpResponse(New System.IO.StringWriter))
+                    Dim httpS As New HttpContext(New HttpRequest("IMPORT", "https://github.com/kevinmschreiner/OpenWebStudio", ""), New HttpResponse(New System.IO.StringWriter))
                     Dim esession As New GenericSession()
                     Dim ctl As New Framework.UI.Control
                     ctl.ID = "Import"
@@ -285,7 +285,7 @@ Public Class ControlInterface
                     Dim ipsettings As New DataAccess.PortalSettings(psettings)
 
                     Dim ds As New DataSet
-                    Dim httpS As New HttpContext(New HttpRequest("EXPORT", "http://www.openwebstudio.com", ""), New HttpResponse(New System.IO.StringWriter))
+                    Dim httpS As New HttpContext(New HttpRequest("EXPORT", "https://github.com/kevinmschreiner/OpenWebStudio", ""), New HttpResponse(New System.IO.StringWriter))
                     Dim esession As New GenericSession()
                     Dim ctl As New Framework.UI.Control
                     ctl.ID = "Export"
@@ -409,7 +409,7 @@ Public Class ControlInterface
                     Dim ipsettings As New DataAccess.PortalSettings(psettings)
 
                     Dim ds As DataSet = Nothing
-                    Dim httpS As New HttpContext(New HttpRequest("SEARCH", "http://www.openwebstudio.com", ""), New HttpResponse(New System.IO.StringWriter))
+                    Dim httpS As New HttpContext(New HttpRequest("SEARCH", "https://github.com/kevinmschreiner/OpenWebStudio", ""), New HttpResponse(New System.IO.StringWriter))
                     Dim esession As New GenericSession()
                     Dim ctl As New Framework.UI.Control
                     ctl.ID = "SearchEngine"

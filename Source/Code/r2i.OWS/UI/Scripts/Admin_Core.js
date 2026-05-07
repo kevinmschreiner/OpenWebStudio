@@ -434,7 +434,7 @@ function viewAbout()
 	outS.push('<tr><th class="LeftCell" width="80">Type</th><th class="Primary" width="150">Name</th><th class="Primary">Library</th></tr>');
 	for (var i = 0;i<adminAbout.Versions.length;i++)
 	{
-	    outS.push('<tr><td class="LeftCell" width="80">Plugins</td><td class="Primary" width="150">'+adminAbout.Versions[i].Name+'</td><td class="Primary" width="150">'+adminAbout.Versions[i].Version+((adminAbout.Versions[i].Name.toLowerCase()=='r2i.ows.engine')?'&nbsp;<a href="http://www.openwebstudio.com" target="_blank"><img src="http://www.openwebstudio.com/version.aspx?v='+adminAbout.Versions[i].Version+'" border="0" /></a>':'')+'</td></tr>');
+	    outS.push('<tr><td class="LeftCell" width="80">Plugins</td><td class="Primary" width="150">'+adminAbout.Versions[i].Name+'</td><td class="Primary" width="150">'+adminAbout.Versions[i].Version+((adminAbout.Versions[i].Name.toLowerCase()=='r2i.ows.engine')?'&nbsp;<a href="https://github.com/kevinmschreiner/OpenWebStudio" target="_blank"><img src="https://github.com/kevinmschreiner/OpenWebStudio/version.aspx?v='+adminAbout.Versions[i].Version+'" border="0" /></a>':'')+'</td></tr>');
 	}
     for (var i = 0;i<adminAbout.Issues.length;i++)
 		outS.push('<tr><td class="LeftCell" width="80">Issues</td><td class="Primary" width="150">'+adminAbout.Issues[i].Name+'</td><td class="Primary" width="150">'+adminAbout.Issues[i].Value+'</td></tr>');

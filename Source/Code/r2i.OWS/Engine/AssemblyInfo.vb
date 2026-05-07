@@ -1,5 +1,5 @@
 '<LICENSE>
-'   Open Web Studio - http://www.OpenWebStudio.com
+'   Open Web Studio - https://github.com/kevinmschreiner/OpenWebStudio
 '   Copyright (c) 2007-2008
 '   by R2Integrated Inc. http://www.R2integrated.com
 '      
@@ -30,9 +30,9 @@ Imports System.Security
 ' Review the values of the assembly attributes
 <Assembly: AssemblyTitle("r2i.OWS.Engine")> 
 <Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("OpenWebStudio ( http://www.openwebstudio.com )")>
+<Assembly: AssemblyCompany("OpenWebStudio")>
 <Assembly: AssemblyProduct("Open Web Studio")>
-<Assembly: AssemblyCopyright("Copyright ©  2020")>
+<Assembly: AssemblyCopyright("Copyright ©  2026")>
 <Assembly: AssemblyTrademark("Open Web Studio")> 
 <Assembly: CLSCompliant(True)> 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
@@ -44,8 +44,8 @@ Imports System.Security
 '      Revision
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
-<Assembly: AssemblyVersion("02.04.00.00")>
+<Assembly: AssemblyVersion("02.04.01.00")>
 
-<Assembly: AssemblyFileVersion("02.04.00.00")>
+<Assembly: AssemblyFileVersion("02.04.01.00")>
 
 <Assembly: AllowPartiallyTrustedCallers()>

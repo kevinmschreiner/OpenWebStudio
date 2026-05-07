@@ -1,6 +1,6 @@
 '<LICENSE>
 '   
-'       Open Web Studio - http://www.OpenWebStudio.com
+'       Open Web Studio - https://github.com/kevinmschreiner/OpenWebStudio
 '       Copyright (c) 2007-2009
 '       by R2Integrated Inc. http://www.R2integrated.com
 '   

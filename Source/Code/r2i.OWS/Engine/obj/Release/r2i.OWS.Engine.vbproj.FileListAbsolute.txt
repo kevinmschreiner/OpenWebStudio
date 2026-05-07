@@ -14,3 +14,12 @@ G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Engine\obj\Release\r2i.OWS.Engi
 G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Engine\obj\Release\r2i.OWS.Engine.vbproj.CopyComplete
 G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Engine\obj\Release\r2i.OWS.Engine.vbproj.AssemblyReference.cache
 G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Engine\obj\Release\r2i.OWS.Engine.vbproj.CoreCompileInputs.cache
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Build\r2i.OWS.Engine.dll
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Build\r2i.OWS.Engine.pdb
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Build\r2i.OWS.Engine.xml
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Engine\obj\Release\r2i.OWS.Engine.vbproj.AssemblyReference.cache
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Engine\obj\Release\r2i.OWS.Engine.vbproj.CoreCompileInputs.cache
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Engine\obj\Release\r2i.OWS..E98D8632.Up2Date
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Engine\obj\Release\r2i.OWS.Engine.dll
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Engine\obj\Release\r2i.OWS.Engine.xml
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Engine\obj\Release\r2i.OWS.Engine.pdb
