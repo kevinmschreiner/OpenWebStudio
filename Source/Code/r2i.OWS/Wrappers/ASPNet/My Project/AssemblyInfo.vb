@@ -31,7 +31,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("Open Web Studio")>
 <Assembly: AssemblyProduct("Open Web Studio")>
-<Assembly: AssemblyCopyright("Copyright ©  2020")>
+<Assembly: AssemblyCopyright("Copyright ©  2026")>
 <Assembly: AssemblyTrademark("Open Web Studio")> 
 <Assembly: ComVisible(False)>
 'The following GUID is for the ID of the typelib if this project is exposed to COM
@@ -44,7 +44,7 @@ Imports System.Runtime.InteropServices
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
-<Assembly: AssemblyVersion("02.04.01.00")>
+<Assembly: AssemblyVersion("02.04.02.00")>
 
-<Assembly: AssemblyFileVersion("02.04.01.00")>
+<Assembly: AssemblyFileVersion("02.04.02.00")>
 
