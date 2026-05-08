@@ -613,7 +613,7 @@ Namespace r2i.OWS.Framework.Utilities.Engine
                     Case 64
                         bitmap = New System.Drawing.Bitmap(nwidth, nheight, System.Drawing.Imaging.PixelFormat.Format64bppArgb)
                     Case Else
-                        bitmap = New System.Drawing.Bitmap(nwidth, nheight, System.Drawing.Imaging.PixelFormat.Format32bppRgb)
+                        bitmap = New System.Drawing.Bitmap(nwidth, nheight, System.Drawing.Imaging.PixelFormat.Format32bppArgb)
                 End Select
 
                 Dim g As System.Drawing.Graphics = System.Drawing.Graphics.FromImage(bitmap)
