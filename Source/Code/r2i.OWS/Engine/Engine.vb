@@ -1197,7 +1197,7 @@ Namespace r2i.OWS
             If rslt.Result = RuntimeBase.ExecutableResultEnum.Failed Then
                 isSuccessful = False
             End If
-            If (rslt.Result = RuntimeBase.ExecutableResultEnum.Failed OrElse rslt.Result = RuntimeBase.ExecutableResultEnum.Aborted) AndAlso Not rslt.Error Is Nothing Then
+            If (rslt.Result = RuntimeBase.ExecutableResultEnum.Failed AndAlso Not rslt.Error Is Nothing) Then
                 thrownError = True
                 isSuccessful = False
                 If thrownError AndAlso (debug OrElse (errorDebug AndAlso thrownError) OrElse traceDebug) AndAlso DebugWriter Is Nothing Then
@@ -1212,6 +1212,9 @@ Namespace r2i.OWS
                     'DotNetNuke.Services.Exceptions.LogException((New Exception("ListX Execute Action Error: " & errorStr)))
                 Catch ex As Exception
                 End Try
+            ElseIf rslt.Result = RuntimeBase.ExecutableResultEnum.Aborted Then
+                isSuccessful = True
+                thrownError = False
             Else
                 Try
                     If debug OrElse (errorDebug AndAlso thrownError) OrElse traceDebug Then
