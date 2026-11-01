@@ -16,3 +16,10 @@ C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\Editor\r2i
 C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\Editor\r2i.OWS.UI.Editor\obj\Release\r2i.OWS.UI.Editor.csproj.CoreCompileInputs.cache
 C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\Editor\r2i.OWS.UI.Editor\obj\Release\r2i.OWS.UI.Editor.dll
 C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\Editor\r2i.OWS.UI.Editor\obj\Release\r2i.OWS.UI.Editor.pdb
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\Editor\r2i.OWS.UI.Editor\bin\r2i.OWS.UI.Editor.dll.config
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\Editor\r2i.OWS.UI.Editor\bin\r2i.OWS.UI.Editor.dll
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\Editor\r2i.OWS.UI.Editor\bin\r2i.OWS.UI.Editor.pdb
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\Editor\r2i.OWS.UI.Editor\obj\Release\r2i.OWS.UI.Editor.csproj.AssemblyReference.cache
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\Editor\r2i.OWS.UI.Editor\obj\Release\r2i.OWS.UI.Editor.csproj.CoreCompileInputs.cache
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\Editor\r2i.OWS.UI.Editor\obj\Release\r2i.OWS.UI.Editor.dll
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\Editor\r2i.OWS.UI.Editor\obj\Release\r2i.OWS.UI.Editor.pdb

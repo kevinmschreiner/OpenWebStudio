@@ -32,3 +32,14 @@ C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotN
 C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Interface.dll
 C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Interface.xml
 C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Interface.pdb
+G:\repos\OpenWebStudio_DNN7\Build\r2i.OWS.Wrapper.DotNetNuke.Interface.dll
+G:\repos\OpenWebStudio_DNN7\Build\r2i.OWS.Wrapper.DotNetNuke.Interface.pdb
+G:\repos\OpenWebStudio_DNN7\Build\r2i.OWS.Wrapper.DotNetNuke.Interface.xml
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Interface.vbproj.AssemblyReference.cache
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DNN.Interface.Resources.resources
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Interface.vbproj.GenerateResource.cache
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Interface.vbproj.CoreCompileInputs.cache
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS..6EA6D5DB.Up2Date
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Interface.dll
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Interface.xml
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Interface.pdb

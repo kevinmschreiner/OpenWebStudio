@@ -31,3 +31,15 @@ C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\obj\Releas
 C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\obj\Release\r2i.OWS.UI.dll
 C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\obj\Release\r2i.OWS.UI.DNN.xml
 C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\obj\Release\r2i.OWS.UI.pdb
+G:\repos\OpenWebStudio_DNN7\Source\Build\r2i.OWS.UI.dll.config
+G:\repos\OpenWebStudio_DNN7\Source\Build\r2i.OWS.UI.dll
+G:\repos\OpenWebStudio_DNN7\Source\Build\r2i.OWS.UI.pdb
+G:\repos\OpenWebStudio_DNN7\Source\Build\r2i.OWS.UI.DNN.xml
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\obj\Release\r2i.OWS.UI.vbproj.AssemblyReference.cache
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\obj\Release\Resources.resources
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\obj\Release\r2i.OWS.UI.vbproj.GenerateResource.cache
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\obj\Release\r2i.OWS.UI.vbproj.CoreCompileInputs.cache
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\obj\Release\r2i.OWS.UI.vbproj.Up2Date
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\obj\Release\r2i.OWS.UI.dll
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\obj\Release\r2i.OWS.UI.DNN.xml
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\UI\obj\Release\r2i.OWS.UI.pdb

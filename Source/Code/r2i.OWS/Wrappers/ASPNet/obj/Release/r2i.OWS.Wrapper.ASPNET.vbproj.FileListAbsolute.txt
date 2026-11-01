@@ -29,3 +29,14 @@ C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\ASPN
 C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Release\r2i.OWS.Wrapper.ASPNET.dll
 C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Release\r2i.OWS.Core.Generic.xml
 C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Release\r2i.OWS.Wrapper.ASPNET.pdb
+G:\repos\OpenWebStudio_DNN7\Source\Build\r2i.OWS.Wrapper.ASPNET.dll
+G:\repos\OpenWebStudio_DNN7\Source\Build\r2i.OWS.Wrapper.ASPNET.pdb
+G:\repos\OpenWebStudio_DNN7\Source\Build\r2i.OWS.Core.Generic.xml
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Release\r2i.OWS.Wrapper.ASPNET.vbproj.AssemblyReference.cache
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Release\r2i.OWS.Wrapper.ASPNET.Resources.resources
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Release\r2i.OWS.Wrapper.ASPNET.vbproj.GenerateResource.cache
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Release\r2i.OWS.Wrapper.ASPNET.vbproj.CoreCompileInputs.cache
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Release\r2i.OWS..8230517C.Up2Date
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Release\r2i.OWS.Wrapper.ASPNET.dll
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Release\r2i.OWS.Core.Generic.xml
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\ASPNet\obj\Release\r2i.OWS.Wrapper.ASPNET.pdb
