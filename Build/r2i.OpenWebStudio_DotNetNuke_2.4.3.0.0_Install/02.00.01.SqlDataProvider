@@ -1,0 +1,71 @@
+ALTER TABLE {databaseOwner}{objectQualifier}OpenWebStudio_Settings ADD UpdatedBy nvarchar(75) NULL
+ALTER TABLE {databaseOwner}{objectQualifier}OpenWebStudio_Settings ADD Created datetime NULL
+CONSTRAINT  {objectQualifier}OpenWebStudio_Settings_Created DEFAULT getdate()
+ALTER TABLE {databaseOwner}{objectQualifier}OpenWebStudio_Settings ADD CreatedBy nvarchar(75) NULL
+ALTER TABLE {databaseOwner}{objectQualifier}OpenWebStudio_Repository ADD CreatedBy nvarchar(75) NULL 
+ALTER TABLE {databaseOwner}{objectQualifier}OpenWebStudio_Repository ADD Created datetime NULL
+CONSTRAINT  {objectQualifier}OpenWebStudio_Repository_Created DEFAULT getdate()
+GO
+
+ALTER procedure {databaseOwner}{objectQualifier}OpenWebStudio_AddSetting
+@ConfigurationID [uniqueidentifier],
+@ConfigurationName varchar(255),
+@SettingValue  ntext,
+@CreatedBy nvarchar(75)
+as
+
+insert into {databaseOwner}{objectQualifier}OpenWebStudio_Settings ( 
+  ConfigurationID,
+  ConfigurationName,
+  SettingValue,
+  LastUpdated,
+  UpdatedBy,
+  Created,
+  CreatedBy
+) 
+values ( 
+  @ConfigurationID,
+  @ConfigurationName,
+  @SettingValue,
+  getdate(),
+  @CreatedBy,
+  getdate(),
+  @CreatedBy 
+)
+
+INSERT INTO {databaseOwner}{objectQualifier}OpenWebStudio_Repository (
+	[Date], 
+	[ConfigurationID],
+	[SettingValue],
+	[ActionTaken],
+    [Created],
+	[CreatedBy])
+SELECT
+	getdate(), @ConfigurationID, @SettingValue, 'I', getdate(), @CreatedBy
+
+GO
+
+ALTER procedure {databaseOwner}{objectQualifier}OpenWebStudio_UpdateSetting
+@ConfigurationID [uniqueidentifier],
+@ConfigurationName varchar(255),
+@SettingValue  ntext,
+@UpdatedBy nvarchar(75)
+as
+update {databaseOwner}{objectQualifier}OpenWebStudio_Settings
+set    SettingValue = @SettingValue,
+        ConfigurationName = @ConfigurationName,
+		LastUpdated = getdate(),
+		UpdatedBy=@UpdatedBy
+where  ConfigurationID = @ConfigurationID
+
+INSERT INTO {databaseOwner}{objectQualifier}OpenWebStudio_Repository (
+	[Date], 
+	[ConfigurationID],
+	[SettingValue],
+	[ActionTaken],
+    [Created],
+	[CreatedBy])
+SELECT
+	getdate(), @ConfigurationID, @SettingValue, 'U',getdate(), @UpdatedBy
+GO
+

@@ -1,0 +1,19 @@
+CREATE TABLE {databaseOwner}{objectQualifier}OpenWebStudio_Shares(
+	[ShareID] [uniqueidentifier] NOT NULL,
+	[Name] [nvarchar](255) NULL,
+	[Created] [datetime] NULL,
+	[CreatedBy] [nvarchar](75) NULL,
+ CONSTRAINT PK_OpenWebStudio_Shares PRIMARY KEY CLUSTERED 
+(
+	[ShareID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] 
+
+GO
+ALTER TABLE {databaseOwner}{objectQualifier}OpenWebStudio_Shares ADD  DEFAULT (newid()) FOR [ShareID]
+GO
+ALTER TABLE {databaseOwner}{objectQualifier}OpenWebStudio_Shares ADD  CONSTRAINT [OpenWebStudio_Shares_Created]  DEFAULT (getdate()) FOR [Created]
+GO
+ALTER TABLE {databaseOwner}{objectQualifier}OpenWebStudio_Settings add ShareID uniqueidentifier
+GO
+

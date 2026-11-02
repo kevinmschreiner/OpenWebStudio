@@ -1,0 +1,9 @@
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetConfigurationList') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetConfigurationList
+GO
+
+CREATE  procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetConfigurationList
+as
+select ConfigurationId, ConfigurationName
+from   {databaseOwner}{objectQualifier}OpenWebStudio_Settings
+order by ConfigurationName

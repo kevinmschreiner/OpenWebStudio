@@ -1,0 +1,101 @@
+--DROP PROCEDURES
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_DeletePackage') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_DeletePackage
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_DeletePackageItem') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_DeletePackageItem
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetPackage') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetPackage
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetPackageItem') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetPackageItem
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetPackageItems') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetPackageItems
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_Log_Add') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_Log_Add
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_Repository_Rollback') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_Repository_Rollback
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_SetPackage') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_SetPackage
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_SetPackageItem') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_SetPackageItem
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_AddSetting') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_AddSetting
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_AddSettingDraft') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_AddSettingDraft
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_UpdateSetting') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_UpdateSetting
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_UpdateSettingDraft') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_UpdateSettingDraft
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_UpdateSetting') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_UpdateSetting
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetConfigNameByConfigurationId') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetConfigNameByConfigurationId
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetSetting') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetSetting
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetSettingDate') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetSettingDate
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetSettingDraft') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetSettingDraft
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetSettingDraftOwners') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetSettingDraftOwners
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetSettings') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetSettings
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetSetting') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetSetting
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_UpdateSetting') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_UpdateSetting
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_UpdateSettingDraft') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_UpdateSettingDraft
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_DeleteSettingDraft') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_DeleteSettingDraft
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetConfigurationList') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetConfigurationList
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_GetConfigurationIdByConfigurationName') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_GetConfigurationIdByConfigurationName
+GO
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_CheckExistingConfiguration') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+drop procedure {databaseOwner}{objectQualifier}OpenWebStudio_CheckExistingConfiguration
+GO
+
+--DROP TABLES
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_Settings') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table {databaseOwner}{objectQualifier}OpenWebStudio_Settings
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_Log') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table {databaseOwner}{objectQualifier}OpenWebStudio_Log
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_Package') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table {databaseOwner}{objectQualifier}OpenWebStudio_Package
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_PackageItem') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table {databaseOwner}{objectQualifier}OpenWebStudio_PackageItem
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_Repository') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table {databaseOwner}{objectQualifier}OpenWebStudio_Repository
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}OpenWebStudio_Draft') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table {databaseOwner}{objectQualifier}OpenWebStudio_Draft

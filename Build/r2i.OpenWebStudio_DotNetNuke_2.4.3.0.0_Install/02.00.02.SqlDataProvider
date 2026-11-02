@@ -1,0 +1,6 @@
+--REMOVE ISSUE WITH OLDER VERSION OF BETA INSTALL
+if exists (select * from sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}EventQueue'))
+	DELETE FROM
+		{databaseOwner}{objectQualifier}EventQueue
+	WHERE CAST(Attributes as varchar(150))
+		LIKE ('%r2i.OWS.Wrapper.DotNetNuke.ControlInterface, r2i.OWS.Wrapper.DotNetNuke%')

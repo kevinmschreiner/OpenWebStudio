@@ -43,7 +43,7 @@ Imports System.Runtime.InteropServices
 '      Revision
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
-<Assembly: AssemblyVersion("02.04.02.00")>
+<Assembly: AssemblyVersion("02.04.03.00")>
 
-<Assembly: AssemblyFileVersion("02.04.02.00")>
+<Assembly: AssemblyFileVersion("02.04.03.00")>
 
