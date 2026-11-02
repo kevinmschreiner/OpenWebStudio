@@ -1427,7 +1427,7 @@ this.onSet=function onSet(moduleid,name,value)
 	
 	this.CheckArray[this.CheckArrayIndex] = new Image();
 	//this.CheckArray[this.CheckArrayIndex].src=this.urlbase + 'IM.aspx?lxA=V&' + this.items['o'+moduleid].request + '&lxIx=' + this.CheckArrayIndex + '&lxM=' + moduleid + '&lxV=' + value + '&lxN=' + sessionVariable;
-    this.CheckArray[this.CheckArrayIndex].src=this.urlbase + 'IM.aspx?_OWS_=' + _OWS_.Action + ':V,' + _OWS_.CheckIndex + ':' + this.CheckArrayIndex + ',' + _OWS_.CheckModuleID + ':' + moduleid + ',' + _OWS_.CheckValue + ':' + val + ',' + _OWS_.Name + ':' + sessionVariable + '&' + this.items['o'+moduleid].request;
+    this.CheckArray[this.CheckArrayIndex].src=this.urlbase + 'IM.aspx?_OWS_=' + _OWS_.Action + ':V,' + _OWS_.CheckIndex + ':' + this.CheckArrayIndex + ',' + _OWS_.CheckModuleID + ':' + moduleid + ',' + _OWS_.CheckValue + ':' + val + ',' + _OWS_.Name + ':' + name + ',' + this.items['o'+moduleid].request;
 
 	this.CheckArrayIndex = this.CheckArrayIndex + 1;
 }

@@ -45,7 +45,7 @@ Imports System.Runtime.InteropServices
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
 <Assembly: System.Security.AllowPartiallyTrustedCallers()>
-<Assembly: AssemblyVersion("02.04.00.00")>
+<Assembly: AssemblyVersion("02.04.04.00")>
 
-<Assembly: AssemblyFileVersion("02.04.00.00")>
+<Assembly: AssemblyFileVersion("02.04.04.00")>
 

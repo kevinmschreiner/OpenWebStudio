@@ -18,3 +18,14 @@ G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\
 G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.3.vbproj.CopyComplete
 G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.3.vbproj.AssemblyReference.cache
 G:\Work\GitHub\OpenWebStudio\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.3.vbproj.CoreCompileInputs.cache
+G:\repos\OpenWebStudio_DNN7\Source\Build\r2i.OWS.Wrapper.DNN.Extensions.dll
+G:\repos\OpenWebStudio_DNN7\Source\Build\r2i.OWS.Wrapper.DNN.Extensions.pdb
+G:\repos\OpenWebStudio_DNN7\Source\Build\r2i.OWS.Wrapper.DotNetNuke.Extensions.xml
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.3.vbproj.AssemblyReference.cache
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions\obj\Release\Resources.resources
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.3.vbproj.GenerateResource.cache
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Extensions.4.3.vbproj.CoreCompileInputs.cache
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions\obj\Release\r2i.OWS..024437A2.Up2Date
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions\obj\Release\r2i.OWS.Wrapper.DNN.Extensions.dll
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Extensions.xml
+G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Extensions\r2i.OWS.Wrapper.DotNetNuke.Extensions\obj\Release\r2i.OWS.Wrapper.DNN.Extensions.pdb

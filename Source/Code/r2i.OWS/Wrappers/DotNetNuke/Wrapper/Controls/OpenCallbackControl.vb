@@ -1,5 +1,5 @@
 '<LICENSE>
-'   Open Web Studio - http://www.OpenWebStudio.com
+'   Open Web Studio - https://github.com/kevinmschreiner/OpenWebStudio
 '   Copyright (c) 2007-2008
 '   by R2Integrated Inc. http://www.R2integrated.com
 '      
@@ -220,12 +220,11 @@ Public Class OpenCallbackControl
                         DotNetNuke.Security.Permissions.ModulePermissionController.CanManageModule(mInfo)
                 End If
                 'We do not have module info here, so we need to defer to the tab info
-                If Not _parent.PortalSettings.ActiveTab Is Nothing Then
+                'SECURITY: PREFER THE PAGE NAMED BY THE REQUEST (SIGNED BY THE CALLBACK TOKEN) OVER IM.aspx'S ACTIVE TAB, WHICH COMES FROM AN UNSIGNED tabid
+                If Not _pageID Is Nothing AndAlso IsNumeric(_pageID) Then
+                    tbInfo = (New DotNetNuke.Entities.Tabs.TabController).GetTab(CInt(_pageID), CInt(Me.SiteId))
+                ElseIf Not _parent.PortalSettings.ActiveTab Is Nothing Then
                     tbInfo = _parent.PortalSettings.ActiveTab
-                Else
-                    If Not PageId Is Nothing AndAlso IsNumeric(PageId) Then
-                        tbInfo = (New DotNetNuke.Entities.Tabs.TabController).GetTab(CInt(PageId), CInt(Me.SiteId))
-                    End If
                 End If
                 If Not tbInfo Is Nothing Then
                     Return DotNetNuke.Security.Permissions.TabPermissionController.CanAdminPage(tbInfo) OrElse
@@ -250,12 +249,11 @@ Public Class OpenCallbackControl
                     Return DotNetNuke.Security.Permissions.ModulePermissionController.CanViewModule(mInfo)
                 End If
                 'We do not have module info here, so we need to defer to the tab info
-                If Not _parent.PortalSettings.ActiveTab Is Nothing Then
+                'SECURITY: PREFER THE PAGE NAMED BY THE REQUEST (SIGNED BY THE CALLBACK TOKEN) OVER IM.aspx'S ACTIVE TAB, WHICH COMES FROM AN UNSIGNED tabid
+                If Not _pageID Is Nothing AndAlso IsNumeric(_pageID) Then
+                    tbInfo = (New DotNetNuke.Entities.Tabs.TabController).GetTab(CInt(_pageID), CInt(Me.SiteId))
+                ElseIf Not _parent.PortalSettings.ActiveTab Is Nothing Then
                     tbInfo = _parent.PortalSettings.ActiveTab
-                Else
-                    If Not PageId Is Nothing AndAlso IsNumeric(PageId) Then
-                        tbInfo = (New DotNetNuke.Entities.Tabs.TabController).GetTab(CInt(PageId), CInt(Me.SiteId))
-                    End If
                 End If
                 If Not tbInfo Is Nothing Then
                     Return DotNetNuke.Security.Permissions.TabPermissionController.CanViewPage(tbInfo)
