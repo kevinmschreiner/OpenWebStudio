@@ -98,13 +98,11 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\References\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
     <Reference Include="r2i.OWS.Newtonsoft.Json">
       <HintPath>..\..\..\References\r2i.OWS.Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpZipLib, Version=0.81.0.1407, Culture=neutral">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\References\SharpZipLib.dll</HintPath>
-      <Private>False</Private>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>

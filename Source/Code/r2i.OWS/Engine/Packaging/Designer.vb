@@ -23,7 +23,7 @@
 Imports System.Xml
 Imports System.Collections.Generic
 Imports ICSharpCode.SharpZipLib.Zip
-Imports ICSharpCode.SharpZipLib.Checksums
+Imports ICSharpCode.SharpZipLib.Checksum
 'Imports DotNetNuke.Entities.Modules
 Imports r2i.OWS.Framework.DataAccess
 Imports r2i.OWS.Framework.Entities

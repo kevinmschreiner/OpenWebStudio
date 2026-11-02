@@ -1237,7 +1237,7 @@ Namespace r2i.OWS.Actions
                             Case "COMPRESS"
                                 Dim zzip As Object
                                 Dim msZipped As New IO.MemoryStream
-                                Dim objCrc32 As New ICSharpCode.SharpZipLib.Checksums.Crc32()
+                                Dim objCrc32 As New ICSharpCode.SharpZipLib.Checksum.Crc32()
                                 Dim sExtension As String
 
                                 Select Case True
