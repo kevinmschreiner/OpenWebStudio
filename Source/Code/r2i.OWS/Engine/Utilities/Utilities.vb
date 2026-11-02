@@ -225,8 +225,10 @@ Namespace r2i.OWS.Framework.Utilities.Engine
 
         Private Const OWS_QS_Key As String = "_OWS_"
         Public Shared Function ParseOWSIncomingParameters(ByVal src As System.Web.HttpRequest) As Dictionary(Of String, String)
+            Return ParseOWSParameters(src.QueryString(OWS_QS_Key))
+        End Function
+        Public Shared Function ParseOWSParameters(ByVal strValue As String) As Dictionary(Of String, String)
             Dim dict As New Dictionary(Of String, String)
-            Dim strValue As String = src.QueryString(OWS_QS_Key)
             If Not strValue Is Nothing AndAlso strValue.Length > 0 Then
                 Dim strNVP As String() = strValue.Split(",")
                 Dim nvp As String
