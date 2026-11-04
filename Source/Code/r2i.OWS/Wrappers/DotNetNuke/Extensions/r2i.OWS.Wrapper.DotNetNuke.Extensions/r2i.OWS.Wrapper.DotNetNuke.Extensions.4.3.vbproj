@@ -60,9 +60,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DotNetNuke, Version=4.3.0.24643, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="DotNetNuke, Version=10.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\References\DotNetNuke.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\References\DNN10\DotNetNuke.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

@@ -43,3 +43,6 @@ G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\ob
 G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Interface.dll
 G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Interface.xml
 G:\repos\OpenWebStudio_DNN7\Source\Code\r2i.OWS\Wrappers\DotNetNuke\Interface\obj\Release\r2i.OWS.Wrapper.DotNetNuke.Interface.pdb
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Build\r2i.OWS.Wrapper.DotNetNuke.Interface.dll
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Build\r2i.OWS.Wrapper.DotNetNuke.Interface.pdb
+C:\Users\kevin\source\repos\OpenWebStudio_DNN7\Source\Build\r2i.OWS.Wrapper.DotNetNuke.Interface.xml

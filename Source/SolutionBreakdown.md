@@ -195,7 +195,7 @@ At runtime, the engine reads a module's instance config (stored in DNN), resolve
 |---|---|---|
 | DotNetNuke.dll | 9.2.0.366 (+ version variants) | Portal platform APIs |
 | `r2i.OWS.Newtonsoft.Json.dll` | Custom wrap | JSON serialization |
-| `SharpZipLib.dll` | 0.81 | ZIP packaging |
+| `ICSharpCode.SharpZipLib.dll` | 1.4.2.13 | ZIP packaging |
 | `Microsoft.ApplicationBlocks.Data.dll` | — | ADO.NET helper blocks |
 
 DNN assemblies are kept per-version under `/References/DNN47/`, `/DNN6/`, `/DNN9/`, `/DNN10/`.
